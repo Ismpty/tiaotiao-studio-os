@@ -38,6 +38,7 @@ Project Assembly
 | Camera DB | CAM-001 — Hero Tracking Camera | Completed |
 | Lighting DB | LGT-001 — Warm Studio Lighting | Completed |
 | Prompt DB | PROMPT-001 — Jump After Work Master Prompt | Completed |
+| Asset DB | ASSET-001 — Jump Character Reference Pack | Completed |
 | Project DB | PROJ-001 — Jump After Work Pilot Project | Completed |
 
 ---
@@ -71,6 +72,7 @@ The completed database records now reference the following Master Knowledge Node
 | Camera DB | CAM-001 | Synced |
 | Lighting DB | LGT-001 | Synced |
 | Prompt DB | PROMPT-001 | Synced |
+| Asset DB | ASSET-001 | Synced |
 | Project DB | PROJ-001 | Synced |
 
 ---
@@ -121,6 +123,8 @@ CAM-001
 LGT-001
 +
 PROMPT-001
++
+ASSET-001
 =
 PROJ-001
 ```
