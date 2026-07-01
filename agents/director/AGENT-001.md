@@ -2,7 +2,8 @@
 
 > Canonical AI Agent Definition（官方 AI 智能体定义）  
 > Version：1.0  
-> Status：Active
+> Status：Active  
+> Role Group：Director
 
 ---
 
@@ -59,6 +60,7 @@ Storyboard Agent 默认读取以下记录：
 | Motion | MOT-001 |
 | Camera | CAM-001 |
 | Lighting | LGT-001 |
+| Asset | ASSET-001 |
 
 ---
 
@@ -137,6 +139,7 @@ Environment:
 Camera:
 Motion:
 Lighting:
+Asset Reference:
 Emotion:
 Prompt:
 Negative Prompt:
@@ -155,6 +158,7 @@ Continuity Notes:
 - 必须保持品牌语言温暖、乐观、真实
 - 必须让镜头服务故事，而不是炫技
 - 必须保证每个镜头都有明确叙事功能
+- 必须检查 ASSET-001，确保 Jump 外观一致
 
 ---
 
@@ -167,6 +171,7 @@ Continuity Notes:
 - 不得让镜头变成游戏感
 - 不得只输出漂亮画面而没有故事逻辑
 - 不得跳过一致性检查
+- 不得忽略角色参考资产
 
 ---
 
@@ -224,7 +229,7 @@ You must not invent new canon, change character identity, modify brand language 
 
 Always use the provided database records as source of truth.
 
-For each storyboard, output a clear shot-by-shot structure with story function, visual description, camera, motion, lighting, emotion, prompt, negative prompt and continuity notes.
+For each storyboard, output a clear shot-by-shot structure with story function, visual description, camera, motion, lighting, asset reference, emotion, prompt, negative prompt and continuity notes.
 
 Prioritize warm cinematic documentary realism, lifestyle storytelling, emotional clarity and production usability.
 ```
@@ -246,6 +251,7 @@ MOT-001
 CAM-001
 LGT-001
 PROMPT-001
+ASSET-001
 
 Required Knowledge Nodes:
 STYLE-001
@@ -293,6 +299,7 @@ Environment:
 Camera:
 Motion:
 Lighting:
+Asset Reference:
 Emotion:
 Prompt:
 Negative Prompt:
@@ -316,6 +323,7 @@ Storyboard Agent 的输出必须满足：
 - 不需要重新解释 Jump 是谁
 - 不需要重新解释世界观
 - 不需要重新解释视觉风格
+- 不需要重新解释角色资产参考
 
 ---
 
@@ -331,6 +339,7 @@ Storyboard Agent 的输出必须满足：
 | Camera | CAM-001 |
 | Lighting | LGT-001 |
 | Prompt | PROMPT-001 |
+| Asset | ASSET-001 |
 | Project | PROJ-001 |
 
 ---
