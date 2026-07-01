@@ -44,7 +44,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Motion Language | Motion principles | ✅ |
 | Outfit | Character outfit system | ✅ |
 | Music | Music language | ✅ |
-| Story Formula | Storytelling framework | ⬜ |
+| Story Formula | Storytelling framework | ✅ |
 | Brand Language | Brand values and tone | ⬜ |
 
 ---
@@ -85,7 +85,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Story Formula
 
-- STORYFORMULA-001 — Work Ends, Adventure Begins（Planned）
+- STORYFORMULA-001 — Work Ends, Adventure Begins
 
 ## Brand Language
 
