@@ -1,112 +1,196 @@
-# PROMPT-001 — TiaoTiao Studio Prompt Standard（TSOS 提示词标准）
+# PROMPT-001 — Jump After Work Master Prompt（跳跳下班啦主提示词）
 
-> **Canonical Prompt Record（官方 Prompt 规范）**
-> Version：1.0
+> Canonical Prompt Record（官方提示词记录）  
+> Version：1.0  
 > Status：Active
 
-# Overview（概述）
+---
 
-## Purpose（用途）
+# Overview（提示词概述）
 
-### 中文
+## 中文
 
-本规范定义了 TiaoTiao Studio 所有 AI 图像、视频、动画 Prompt 的统一编写方式。
+Jump After Work Master Prompt 是《跳跳下班啦》系列的默认主提示词模块。
 
-所有 Prompt 必须遵循模块化组合，不允许临时拼接。
+它不是单次生成用的临时 Prompt，而是一个可重复调用的生产提示词模板。
 
-### English
+它的作用是把当前 TSOS 中已经建立的角色、剧集、故事、环境、动作、镜头、灯光和 Knowledge Layer 组合成一个统一的生成指令。
 
-This document defines the unified prompt standard for all AI-generated images, videos and animations used in TiaoTiao Studio.
+## English
+
+Jump After Work Master Prompt is the default reusable master prompt module for the Jump After Work series.
+
+It combines production database records and Knowledge Layer references into one consistent generation framework.
 
 ---
 
-# Prompt Structure（Prompt 结构）
+# Database References（数据库引用）
 
-标准 Prompt 由六个模块组成：
+| Database | Record |
+|---|---|
+| Character DB | CHAR-001 |
+| Episode DB | EP-001 |
+| Story DB | STORY-001 |
+| Environment DB | ENV-001 |
+| Motion DB | MOT-001 |
+| Camera DB | CAM-001 |
+| Lighting DB | LGT-001 |
+
+---
+
+# Knowledge References（知识引用）
+
+| Category 分类 | Knowledge Node 知识节点 |
+|---|---|
+| Style 视觉风格 | STYLE-001 — Cinematic Documentary |
+| Color 配色 | COLOR-001 — Fire Dragon Fruit Palette |
+| World 世界观 | WORLD-001 — TiaoTiao Universe |
+| Emotion 情绪 | EMOTION-001 — Freedom |
+| Camera Language 镜头语言 | SHOT-001 — Hero Tracking Shot |
+| Motion Language 动作语言 | MOTIONLANG-001 — Natural Walking Language |
+| Outfit 服装 | OUTFIT-001 — Programmer Outfit System |
+| Music 音乐语言 | MUSIC-001 — Lifestyle Music Language |
+| Story Formula 故事公式 | STORYFORMULA-001 — Work Ends, Adventure Begins |
+| Brand Language 品牌语言 | BRAND-001 — TiaoTiao Studio Brand Language |
+
+---
+
+# Prompt Role（提示词作用）
+
+这个 Prompt 主要用于：
+
+- 生成《跳跳下班啦》的分镜
+- 生成单张画面 Prompt
+- 生成视频镜头 Prompt
+- 生成动画动作 Prompt
+- 生成封面主视觉 Prompt
+- 保持 Jump 角色一致性
+- 保持世界观、情绪、镜头和灯光一致性
+
+---
+
+# Master Prompt Structure（主提示词结构）
+
+标准结构：
 
 ```text
-Subject（主体）
-        ↓
-Action（动作）
-        ↓
-Environment（环境）
-        ↓
-Camera（摄影）
-        ↓
-Lighting（灯光）
-        ↓
-Style（风格）
+[Character]
+CHAR-001 — Jump
+
+[Episode]
+EP-001 — Jump After Work
+
+[Story]
+STORY-001 — Work Ends, Adventure Begins
+
+[Environment]
+ENV-001 — TiaoTiao Studio Office
+
+[Motion]
+MOT-001 — Natural Walking
+
+[Camera]
+CAM-001 — Hero Tracking Camera
+
+[Lighting]
+LGT-001 — Warm Studio Lighting
+
+[Knowledge Layer]
+STYLE-001 + COLOR-001 + WORLD-001 + EMOTION-001 + STORYFORMULA-001 + BRAND-001
 ```
 
-示例：
+---
+
+# Prompt Body（提示词正文）
 
 ```text
-Jump（主体）
-+
-Natural Walking（动作）
-+
-Studio Office（环境）
-+
-Hero Tracking Shot（摄影）
-+
-Golden Hour（灯光）
-+
-Cinematic Documentary（风格）
+Create a warm cinematic scene for the Jump After Work series.
+
+Main character: Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly expression, warm optimistic personality, wearing her default programmer outfit with Fire Dragon Fruit Pink brand accents.
+
+Scene context: Jump has just finished work inside TiaoTiao Studio Office. The environment is a warm modern creator studio with a realistic programmer desk, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant.
+
+Story feeling: Work ends, adventure begins. The mood should express freedom, relaxation, everyday joy and the feeling that life begins again after work.
+
+Camera: Hero tracking camera, 35mm lens, eye-level framing, natural camera motion, cinematic documentary style, subtle handheld energy, environmental storytelling.
+
+Motion: Natural walking, relaxed pace, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement, friendly expression.
+
+Lighting: Warm studio lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows, cozy creator studio mood.
+
+Visual style: Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth, soft warm atmosphere, high-quality film still.
+
+Brand consistency: Follow TiaoTiao Studio brand language. Keep the image warm, optimistic, honest, creative and lifestyle-focused.
 ```
 
 ---
 
-# Style Standard（风格标准）
+# Negative Prompt（负面提示词）
 
-默认风格：
-
-* Cinematic
-* Photorealistic
-* Documentary
-* High Detail
-* Natural Lighting
+```text
+Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, or inconsistent outfit.
+```
 
 ---
 
-# Negative Prompt（负面提示）
+# Usage Rule（使用规则）
 
-禁止出现：
+使用这个 Prompt 时必须：
 
-* Plastic Texture（塑料质感）
-* Cartoon Face（卡通脸）
-* Horror Style（恐怖风）
-* Low Resolution（低清晰度）
-* Over Saturation（过饱和）
-* Unrealistic Anatomy（错误人体比例）
-
----
-
-# Prompt Version（版本管理）
-
-每个 Prompt 必须记录：
-
-* Version（版本）
-* Author（作者）
-* Model（模型）
-* Date（日期）
+- 默认保持 Jump 身份一致
+- 默认引用 TSOS Database Record
+- 默认引用 Knowledge Layer
+- 不重复改写角色设定
+- 不临时改变世界观
+- 不使用与品牌语言冲突的风格
 
 ---
 
-# Related Database（关联数据库）
+# Model Use（模型使用）
 
-* Character
-* Motion
-* Environment
-* Camera
-* Lighting
+推荐用于：
+
+- ChatGPT：拆分分镜、生成完整 Prompt
+- Kling：生成视频镜头
+- Veo：生成视频镜头
+- Runway：生成视频镜头
+- Midjourney：生成静帧或封面视觉
+- Flux / ComfyUI：生成角色或环境静帧
+
+---
+
+# Related Database Records（关联数据库记录）
+
+| Database | Record |
+|---|---|
+| Character DB | CHAR-001 |
+| Episode DB | EP-001 |
+| Story DB | STORY-001 |
+| Environment DB | ENV-001 |
+| Motion DB | MOT-001 |
+| Camera DB | CAM-001 |
+| Lighting DB | LGT-001 |
+
+---
+
+# Usage Scope（应用范围）
+
+适用于：
+
+- Prompt
+- Episode
+- Story
+- Project
+- Storyboard
+- Animation
+- Short Video
+- Cover Design
+- AI Video Generation
 
 ---
 
 # Changelog（更新记录）
 
-| Version | Date | Changes                 |
-| ------- | ---- | ----------------------- |
-| 1.0     | 2026 | 创建 TSOS Prompt Standard |
-
----
-
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | 2026 | Initial canonical prompt record |
