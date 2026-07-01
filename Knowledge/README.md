@@ -42,7 +42,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Emotion | Emotional framework | ✅ |
 | Camera Language | Cinematic shot language | ✅ |
 | Motion Language | Motion principles | ✅ |
-| Outfit | Character outfit system | ⬜ |
+| Outfit | Character outfit system | ✅ |
 | Music | Music language | ⬜ |
 | Story Formula | Storytelling framework | ⬜ |
 | Brand Language | Brand values and tone | ⬜ |
@@ -77,7 +77,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Outfit
 
-- OUTFIT-001 — Programmer Hoodie（Planned）
+- OUTFIT-001 — Programmer Outfit System
 
 ## Music
 
