@@ -40,7 +40,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Color | Brand color system | ✅ |
 | World | World building | ⬜ |
 | Emotion | Emotional framework | ⬜ |
-| Camera Language | Cinematic shot language | ⬜ |
+| Camera Language | Cinematic shot language | ✅ |
 | Motion Language | Motion principles | ⬜ |
 | Outfit | Character outfit system | ⬜ |
 | Music | Music language | ⬜ |
@@ -69,7 +69,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Camera Language
 
-- SHOT-001 — Hero Tracking（Planned）
+- SHOT-001 — Hero Tracking Shot
 
 ## Motion Language
 
