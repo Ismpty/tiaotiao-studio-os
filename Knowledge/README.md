@@ -41,7 +41,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | World | World building | ✅ |
 | Emotion | Emotional framework | ✅ |
 | Camera Language | Cinematic shot language | ✅ |
-| Motion Language | Motion principles | ⬜ |
+| Motion Language | Motion principles | ✅ |
 | Outfit | Character outfit system | ⬜ |
 | Music | Music language | ⬜ |
 | Story Formula | Storytelling framework | ⬜ |
@@ -73,7 +73,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Motion Language
 
-- MOTIONLANG-001 — Natural Walking（Planned）
+- MOTIONLANG-001 — Natural Walking Language
 
 ## Outfit
 
