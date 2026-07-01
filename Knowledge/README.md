@@ -43,7 +43,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Camera Language | Cinematic shot language | ✅ |
 | Motion Language | Motion principles | ✅ |
 | Outfit | Character outfit system | ✅ |
-| Music | Music language | ⬜ |
+| Music | Music language | ✅ |
 | Story Formula | Storytelling framework | ⬜ |
 | Brand Language | Brand values and tone | ⬜ |
 
@@ -81,7 +81,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Music
 
-- MUSIC-001 — Lifestyle Upbeat（Planned）
+- MUSIC-001 — Lifestyle Music Language
 
 ## Story Formula
 
