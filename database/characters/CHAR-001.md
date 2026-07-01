@@ -1,7 +1,7 @@
 # CHAR-001 — Jump（跳跳）
 
-> **Canonical Character Record（官方角色记录）**
-> Version：1.0
+> Canonical Character Record（官方角色记录）
+> Version：1.1
 > Status：Active
 
 ---
@@ -10,45 +10,54 @@
 
 ## Basic Information（基础信息）
 
-| 字段 Field     | 内容 Value           |
-| ------------ | ------------------ |
-| ID           | CHAR-001           |
-| English Name | Jump               |
-| Chinese Name | 跳跳                 |
-| Nickname     | 跳跳                 |
-| Species      | Dog（拟人化小狗）         |
-| Gender       | Female             |
-| Occupation   | Programmer（程序员）    |
-| Role         | Main Character（主角） |
-| Universe     | TiaoTiao Universe  |
-| Status       | Active             |
-| Version      | 1.0                |
+| Field 字段         | Value 内容                   |
+| ---------------- | -------------------------- |
+| ID               | CHAR-001                   |
+| English Name 英文名 | Jump                       |
+| Chinese Name 中文名 | 跳跳                         |
+| Species 物种       | Anthropomorphic Dog（拟人化小狗） |
+| Gender 性别        | Female（女）                  |
+| Occupation 职业    | Programmer（程序员）            |
+| Role 角色定位        | Main Character（主角）         |
+| Universe 世界观     | WORLD-001                  |
+| Status 状态        | Active                     |
+| Version 版本       | 1.1                        |
 
 ---
 
-## Character Summary（角色简介）
+# Knowledge References（知识引用）
 
-### 中文
+Jump 默认引用以下官方 Knowledge Nodes：
 
-跳跳是 **TiaoTiao Studio** 的原创核心 IP，也是整个 **TiaoTiao Universe** 的第一位角色。
-
-她是一只热爱编程、热爱生活、热爱探索世界的小狗。
-
-白天，她是一名认真工作的程序员；下班后，她会去冲浪、旅行、露营、摄影、做手工、尝试各种新鲜事物。
-
-她代表着一种生活方式：
-
-> **努力工作，认真生活，自由探索世界。**
+| Category 分类 | Knowledge Node 知识节点                        |
+| ----------- | ------------------------------------------ |
+| World 世界观   | WORLD-001 — TiaoTiao Universe              |
+| Style 视觉风格  | STYLE-001 — Cinematic Documentary          |
+| Color 配色    | COLOR-001 — Fire Dragon Fruit Palette      |
+| Emotion 情绪  | EMOTION-001 — Freedom                      |
+| Outfit 服装   | OUTFIT-001 — Programmer Outfit System      |
+| Motion 动作语言 | MOTIONLANG-001 — Natural Walking Language  |
+| Camera 镜头语言 | SHOT-001 — Hero Tracking Shot              |
+| Music 音乐语言  | MUSIC-001 — Lifestyle Music Language       |
+| Brand 品牌语言  | BRAND-001 — TiaoTiao Studio Brand Language |
 
 ---
 
-### English
+# Character Summary（角色简介）
 
-Jump is the original flagship character of **TiaoTiao Studio** and the first official character of the **TiaoTiao Universe**.
+## 中文
 
-She is a programmer dog who loves technology, creativity, travel and outdoor life.
+Jump（跳跳）是 TiaoTiao Studio 的核心角色，也是整个 TiaoTiao Universe 的第一位主角。
 
-She represents a lifestyle of balancing meaningful work with joyful exploration.
+她是一只热爱编程、生活、旅行、冲浪和探索世界的小狗。
+
+她代表的不是超级英雄，而是一个认真工作、认真生活、下班后依然愿意去探索世界的普通创作者。
+
+## English
+
+Jump is the flagship character of TiaoTiao Studio and the first protagonist of the TiaoTiao Universe.
+
+She represents a creative lifestyle built around work, growth, curiosity and freedom.
 
 ---
 
@@ -56,246 +65,106 @@ She represents a lifestyle of balancing meaningful work with joyful exploration.
 
 ## Core Personality（核心性格）
 
-### 中文
-
-* 乐观
-* 真诚
-* 好奇心强
-* 富有创造力
-* 喜欢分享
-* 行动力强
-
-### English
-
-* Optimistic
-* Curious
-* Creative
-* Friendly
-* Action-oriented
-* Positive
+* 乐观 Optimistic
+* 真诚 Honest
+* 好奇 Curious
+* 行动力强 Action-oriented
+* 热爱创造 Creative
+* 喜欢探索 Exploratory
 
 ---
 
-## Primary Emotion（主要情绪）
+## Emotional Core（情绪核心）
 
-**Freedom（自由）**
+Primary Emotion：
 
-角色的一切故事最终都回归到：
+`EMOTION-001 — Freedom`
 
-> 自由地生活。
+Secondary Emotion：
 
----
-
-## Secondary Emotion（次要情绪）
-
-**Growth（成长）**
-
-通过不断学习、体验和挑战成长。
-
----
-
-## Life Philosophy（生活信条）
-
-### 中文
-
-努力工作，是为了更自由地生活。
-
-### English
-
-Work hard so you can live freely.
+Growth（成长）
 
 ---
 
 # Appearance（角色外观）
 
-## Body（身体）
+## Core Appearance Rules（核心外观规则）
 
-### 中文
+Jump 必须保持：
 
-* 身材苗条
-* 比例自然
-* 毛茸茸
-* 四肢修长
-
-### English
-
-Slim body with natural proportions and fluffy fur.
+* 毛茸茸 fluffy fur
+* 苗条 slim body
+* 友善表情 friendly expression
+* 火龙果粉品牌识别元素 Fire Dragon Fruit Pink brand accent
+* 真实电影质感 cinematic realism
 
 ---
 
-## Face（面部）
+# Production Rules（制作规则）
 
-### 中文
+## Must Keep（必须保持）
 
-保持温暖、亲切、自然微笑。
-
-### English
-
-Always friendly with a natural smile.
-
----
-
-## Eyes（眼睛）
-
-大眼睛。
-
-深色眼珠。
-
-充满好奇。
+* 保持拟人化小狗身份
+* 保持程序员身份
+* 保持火龙果粉视觉识别
+* 保持真实毛发质感
+* 保持温暖、积极、自由的角色气质
 
 ---
 
-## Fur（毛发）
+## Never Change（禁止修改）
 
-必须保持：
-
-* 毛茸茸
-* 柔软
-* 有真实层次
-
-禁止：
-
-* 光滑塑料质感
-* 玩具质感
+* 不要变成真人
+* 不要变成肌肉型角色
+* 不要改成暗黑、恐怖或暴力风格
+* 不要去掉毛茸茸质感
+* 不要改变核心身份：程序员小狗
 
 ---
 
-## Color Palette（配色）
+# AI Implementation（AI 实现）
 
-Primary：
+生成 Jump 时，默认组合：
 
-Fire Dragon Fruit Pink（火龙果粉）
-
-Secondary：
-
-White（白色）
-
-Accent：
-
-Warm Gray（暖灰）
-
----
-
-## Outfit Library（服装库）
-
-默认：
-
-程序员连帽卫衣。
-
-运动：
-
-冲浪服。
-
-旅行：
-
-户外机能风。
-
-冬季：
-
-羽绒服。
+```text
+CHAR-001
++
+WORLD-001
++
+STYLE-001
++
+COLOR-001
++
+EMOTION-001
++
+OUTFIT-001
++
+SHOT-001
++
+MOTIONLANG-001
+```
 
 ---
 
-# Universe（世界设定）
+# Usage Scope（应用范围）
 
-## Home（住所）
+适用于：
 
-TiaoTiao Apartment
-
----
-
-## Workplace（工作地点）
-
-TiaoTiao Studio
-
----
-
-## Lifestyle（生活方式）
-
-白天工作。
-
-下班探索世界。
-
-周末旅行。
-
-持续学习。
-
----
-
-# Production（制作规范）
-
-## Character Prompt Rules（角色生成规则）
-
-### 必须保持（Must）
-
-* 毛茸茸
-* 苗条比例
-* 大眼睛
-* 真实毛发
-* 火龙果粉主色
-* 温暖亲切的微笑
-* 电影级真实感
-
----
-
-### 禁止（Never）
-
-* 肌肉型
-* 恐怖风格
-* 暗黑风格
-* 写实真人脸
-* 塑料玩具质感
-* 卡通夸张比例
-* 更改角色身份
-
----
-
-## Visual Language（视觉语言）
-
-摄影风格：
-
-Cinematic Documentary
-
-ARRI Alexa 65
-
-35mm
-
-Natural Lighting
-
-Golden Hour
-
-真实胶片质感
-
----
-
-# References（参考资料）
-
-## Official Reference
-
-Jump Official Character Design v1.0
-
----
-
-## Related Database
-
-Episode
-
-Story
-
-Environment
-
-Motion
-
-Prompt
-
-Asset
-
-Project
+* Character Design
+* Short Video
+* Animation
+* Prompt
+* Story
+* Episode
+* Project
+* Cover Design
+* Brand Content
 
 ---
 
 # Changelog（更新记录）
 
-| Version | 日期 Date | 更新内容                         |
-| ------- | ------- | ---------------------------- |
-| 1.0     | 2026    | 创建官方角色标准记录（Canonical Record） |
+| Version | Date | Changes                              |
+| ------- | ---- | ------------------------------------ |
+| 1.0     | 2026 | Initial canonical character record   |
+| 1.1     | 2026 | Updated to reference Knowledge Layer |
