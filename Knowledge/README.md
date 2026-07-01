@@ -37,7 +37,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Library | Description | Status |
 |----------|-------------|--------|
 | Style | Visual language and aesthetics | ✅ |
-| Color | Brand color system | ⬜ |
+| Color | Brand color system | ✅ |
 | World | World building | ⬜ |
 | Emotion | Emotional framework | ⬜ |
 | Camera Language | Cinematic shot language | ⬜ |
@@ -57,7 +57,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Color
 
-- COLOR-001 — Fire Dragon Fruit Palette（Planned）
+- COLOR-001 — Fire Dragon Fruit Palette
 
 ## World
 
