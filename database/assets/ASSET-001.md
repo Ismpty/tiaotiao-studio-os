@@ -1,133 +1,177 @@
-# ASSET-001 — Studio Asset Management（Studio 资产管理规范）
+# ASSET-001 — Jump Character Reference Pack（跳跳角色参考资产包）
 
-> **Canonical Asset Record（官方资产规范）**
-
-# Overview（概述）
-
-## Purpose（用途）
-
-### 中文
-
-Asset Database 用于管理 TiaoTiao Studio 所有数字资产，是整个 Studio 的资源索引中心。
-
-它不负责创作，而负责管理、追踪和复用。
-
-### English
-
-The Asset Database manages all digital assets and serves as the central index of reusable resources.
+> Canonical Asset Record（官方资产记录）  
+> Version：1.0  
+> Status：Active
 
 ---
 
-# Asset Categories（资产分类）
+# Overview（资产概述）
 
-角色（Character）
+## 中文
 
-场景（Environment）
+Jump Character Reference Pack 是 Jump 的默认角色参考资产包。
 
-动作（Motion）
+它用于保证 Jump 在图片、视频、封面、分镜和 AI 生成流程中的角色一致性。
 
-Prompt
+这个记录不是角色设定本身，而是用于生产时调用的资产引用说明。
 
-图片（Image）
+## English
 
-视频（Video）
+Jump Character Reference Pack is the default character reference asset package for Jump.
 
-音乐（Music）
-
-字体（Font）
-
-Logo
-
-模板（Template）
+It keeps Jump visually consistent across images, videos, covers, storyboards and AI generation workflows.
 
 ---
 
-# Asset Information（资产信息）
+# Database References（数据库引用）
 
-每个 Asset 必须包含：
-
-* Asset ID
-* Asset Name
-* Asset Type
-* Version
-* Storage Path
-* Source
-* License
-* Status
+| Database | Record |
+|---|---|
+| Character DB | CHAR-001 |
+| Episode DB | EP-001 |
+| Story DB | STORY-001 |
+| Prompt DB | PROMPT-001 |
+| Project DB | PROJ-001 |
 
 ---
 
-# Storage Rules（存储规范）
+# Knowledge References（知识引用）
 
-GitHub：
-
-保存 Markdown。
-
-Cloud：
-
-保存原始素材。
-
-Notion：
-
-保存索引。
+| Category 分类 | Knowledge Node 知识节点 |
+|---|---|
+| Style 视觉风格 | STYLE-001 — Cinematic Documentary |
+| Color 配色 | COLOR-001 — Fire Dragon Fruit Palette |
+| Emotion 情绪 | EMOTION-001 — Freedom |
+| Outfit 服装 | OUTFIT-001 — Programmer Outfit System |
+| Brand Language 品牌语言 | BRAND-001 — TiaoTiao Studio Brand Language |
 
 ---
 
-# Naming Convention（命名规范）
+# Asset Role（资产作用）
 
-统一格式：
+这个资产包主要用于：
+
+- 保持 Jump 角色外观一致
+- 作为 AI 图片生成参考
+- 作为 AI 视频生成参考
+- 作为封面和分镜参考
+- 作为未来角色模型、LoRA、ComfyUI 工作流或参考图集合的索引
+
+---
+
+# Asset Content（资产内容）
+
+当前资产包应包含或未来可包含：
+
+- Front View（正面参考）
+- Side View（侧面参考）
+- Back View（背面参考）
+- Facial Expression Reference（表情参考）
+- Outfit Reference（服装参考）
+- Color Reference（品牌色参考）
+- Fur Texture Reference（毛发质感参考）
+- Pose Reference（姿态参考）
+
+---
+
+# Character Consistency Rules（角色一致性规则）
+
+必须保持：
+
+- Jump 是拟人化小狗
+- 毛茸茸质感清晰
+- 身体苗条
+- 表情友好温暖
+- 程序员身份明确
+- 默认服装遵循 OUTFIT-001
+- 火龙果粉作为品牌识别点缀
+
+---
+
+# Usage Rule（使用规则）
+
+使用 ASSET-001 时，必须同时参考：
 
 ```text
-TYPE-编号-名称
+CHAR-001
++
+OUTFIT-001
++
+COLOR-001
++
+STYLE-001
++
+BRAND-001
+```
 
-例如：
+它不能单独替代角色设定，只能作为生产资产参考。
 
-IMG-001-Jump-Office
+---
 
-VID-008-Surfing
+# AI Prompt Module（AI Prompt 模块）
 
-PSD-002-Cover
+推荐 Prompt：
+
+```text
+Use Jump character reference, anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, cinematic documentary realism, consistent character identity
 ```
 
 ---
 
-# Lifecycle（生命周期）
+# Negative Rule（禁止项）
 
-Draft
+禁止：
 
-↓
-
-Review
-
-↓
-
-Approved
-
-↓
-
-Published
-
-↓
-
-Archived
+```text
+human character, non-dog character, muscular body, no fur, dark horror redesign, cyberpunk armor, inconsistent outfit, exaggerated jewelry, different species, aggressive expression, brand color missing
+```
 
 ---
 
-# Related Database（关联数据库）
+# Related Database Records（关联数据库记录）
 
-Character
+| Database | Record |
+|---|---|
+| Character DB | CHAR-001 |
+| Prompt DB | PROMPT-001 |
+| Project DB | PROJ-001 |
 
-Episode
+---
 
-Project
+# Storage Rule（存储规则）
 
-Prompt
+实际文件未来应存放在：
+
+```text
+references/character/jump/
+```
+
+GitHub 记录路径：
+
+```text
+database/assets/ASSET-001.md
+```
+
+---
+
+# Usage Scope（应用范围）
+
+适用于：
+
+- Character Reference
+- Image Generation
+- Video Generation
+- Storyboard
+- Cover Design
+- Prompt Engineering
+- Asset Management
+- Project Production
 
 ---
 
 # Changelog（更新记录）
 
-Version 1.0
-
----
-
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | 2026 | Initial canonical asset record |
