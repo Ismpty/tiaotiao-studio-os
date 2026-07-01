@@ -45,7 +45,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Outfit | Character outfit system | ✅ |
 | Music | Music language | ✅ |
 | Story Formula | Storytelling framework | ✅ |
-| Brand Language | Brand values and tone | ⬜ |
+| Brand Language | Brand values and tone | ✅ |
 
 ---
 
@@ -89,7 +89,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 ## Brand Language
 
-- BRAND-001 — TiaoTiao Studio Brand Language（Planned）
+- BRAND-001 — TiaoTiao Studio Brand Language
 
 ---
 
