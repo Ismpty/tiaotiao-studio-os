@@ -68,7 +68,7 @@ Shot Name:
 TBD
 
 Model:
-Kling / Veo / Runway / Other
+Jimeng / 即梦 / Veo / Runway / Other
 
 Prompt Source:
 production/PROJ-001/VIDEO-PROMPTS.md

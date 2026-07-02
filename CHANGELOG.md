@@ -1,5 +1,477 @@
 # CHANGELOG
 
+# Phase 12 — Editing Assembly and Final Export Package Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Editing Assembly / Caption Timing / Music & Sound / Final Export  
+> Toolchain：Jimeng / 即梦 + CapCut / 剪映专业版
+
+---
+
+## Summary（总结）
+
+Phase 12 完成了 PROJ-001 — Jump After Work Pilot Project 的最终剪辑装配层。
+
+本阶段目标是让通过审片的真实视频片段，能够进入统一剪辑流程，并最终导出适合发布的平台成片。
+
+当前 PROJ-001 已经具备：
+
+- 剪辑装配指南
+- 字幕时间轴指南
+- 音乐与音效指南
+- 最终导出检查清单
+- 最终发布前 COMMAND-005 检查规则
+
+这意味着《跳跳下班啦》试播项目已经从“视频片段生成准备”推进到“剪辑装配与最终导出准备”。
+
+```text
+Approved Clips
++
+Editing Assembly
++
+Caption Timing
++
+Music / Sound
++
+Final Export Checklist
++
+COMMAND-005 Final Check
+=
+Ready for Final Editing and Publishing Export
+```
+
+---
+
+## Editing Files Added（新增剪辑文件）
+
+| File | Path | Status |
+|---|---|---|
+| Editing Assembly Guide | production/PROJ-001/editing/EDITING-ASSEMBLY.md | Editing Ready |
+| Caption Timing Guide | production/PROJ-001/editing/CAPTION-TIMING.md | Editing Ready |
+| Music and Sound Guide | production/PROJ-001/editing/MUSIC-SOUND.md | Editing Ready |
+| Final Export Checklist | production/PROJ-001/final/FINAL-EXPORT-CHECKLIST.md | Export Ready |
+
+---
+
+## Toolchain Confirmed（工具链确认）
+
+Phase 12 中确认 PROJ-001 默认真实生产工具链为：
+
+```text
+Video Generation:
+Jimeng / 即梦
+
+Backup Video Generation:
+Veo / Runway
+
+Editing:
+CapCut / 剪映专业版
+
+Caption:
+CapCut / 剪映手动添加
+
+Cover:
+ChatGPT Image / Midjourney / Flux
+
+Review:
+COMMAND-005 + production review files
+```
+
+同时已将生产文件中的默认视频生成工具从：
+
+```text
+Kling / 可灵
+```
+
+调整为：
+
+```text
+Jimeng / 即梦
+```
+
+---
+
+## EDITING-ASSEMBLY.md
+
+用于指导最终剪辑装配。
+
+覆盖：
+
+- Source Files
+- Source of Truth
+- Required Approved Clips
+- Final Video Format
+- Timeline Structure
+- Story Rhythm
+- Shot Assembly Rules
+- Transition Rules
+- Caption Placement Rules
+- Voiceover Option
+- Music Direction
+- Sound Design
+- Rough Cut Checklist
+- Fine Cut Checklist
+- Final Edit Decision
+- COMMAND-005 Requirement
+
+推荐最终时间线：
+
+```text
+0:00–0:06
+Shot 1 — Work Ending
+
+0:06–0:12
+Shot 2 — Decision Moment
+
+0:12–0:19
+Shot 3 — Packing Up
+
+0:19–0:29
+Shot 4 — Walking Out
+
+0:29–0:37
+Shot 5 — Door Exit
+
+0:37–0:45
+Shot 6 — Warm Ending
+```
+
+---
+
+## CAPTION-TIMING.md
+
+用于指导字幕内容、时间轴、位置和安全区。
+
+推荐主字幕序列：
+
+```text
+今天的代码写完了
+
+电脑一关，生活上线
+
+想出去走走
+
+不远，也可以是冒险
+
+把时间还给自己一点点
+
+下班啦，生活开始啦
+```
+
+字幕原则：
+
+```text
+简短
+清晰
+温暖
+有生活感
+不焦虑
+不标题党
+不强营销
+不遮挡 Jump
+不遮挡关键动作
+```
+
+---
+
+## MUSIC-SOUND.md
+
+用于指导音乐、音效、环境声和混音方向。
+
+推荐音乐方向：
+
+```text
+Warm lo-fi
+Light acoustic
+Soft indie pop instrumental
+Gentle piano texture
+Light guitar
+Warm lifestyle beat
+Soft evening ambience
+```
+
+推荐音效：
+
+```text
+keyboard typing
+laptop closing
+backpack zipper
+notebook sliding
+headphones placed into bag
+soft footsteps
+door handle
+door opening
+soft evening ambience
+```
+
+首发推荐声音方案：
+
+```text
+Music:
+Warm lo-fi / light acoustic lifestyle music
+
+Sound Effects:
+keyboard typing
+laptop closing
+backpack zipper
+soft footsteps
+door opening
+soft evening ambience
+
+Voiceover:
+Optional
+```
+
+第一版建议：
+
+```text
+音乐 + 轻音效 + 字幕
+```
+
+旁白可以先不加，避免过度解释。
+
+---
+
+## FINAL-EXPORT-CHECKLIST.md
+
+用于最终导出前后的检查。
+
+覆盖：
+
+- Source Files
+- Source of Truth
+- Final Asset Folder
+- Final Video Export Specs
+- Final Cover Export Specs
+- Pre-Export Video Checklist
+- Caption Export Checklist
+- Audio Export Checklist
+- Cover Export Checklist
+- Platform Export Checklist
+- Publishing Copy Export
+- File Naming Rules
+- Final COMMAND-005 Check
+- Release Readiness Decision
+- Final Export Record
+- Post-Export Check
+
+推荐最终资产目录：
+
+```text
+production/PROJ-001/final/
+├── PROJ-001-final-video.mp4
+├── PROJ-001-cover.jpg
+├── PROJ-001-cover.png
+├── PROJ-001-caption.txt
+├── PROJ-001-publishing-copy.txt
+└── FINAL-EXPORT-CHECKLIST.md
+```
+
+---
+
+## Final Export Specs（最终导出规格）
+
+视频：
+
+```text
+Aspect Ratio:
+9:16
+
+Resolution:
+1080 × 1920 px or higher
+
+Frame Rate:
+25 fps / 30 fps
+
+Format:
+MP4
+
+Codec:
+H.264 / H.265
+
+Duration:
+Around 45 seconds
+
+Audio:
+Stereo
+```
+
+封面：
+
+```text
+Aspect Ratio:
+9:16
+
+Resolution:
+1080 × 1920 px or higher
+
+Format:
+JPG / PNG
+
+Text Safe Area:
+Central 3:4 safe area
+
+Recommended Cover Text:
+电脑一关 / 生活上线
+```
+
+---
+
+## Final COMMAND-005 Requirement（最终一致性检查要求）
+
+正式发布前必须运行：
+
+```text
+COMMAND-005 — Run Consistency Check
+```
+
+检查对象：
+
+```text
+Final Video
+Final Cover
+Caption Text
+Publishing Copy
+Music / Sound Direction
+```
+
+允许发布结果：
+
+```text
+PASS
+PASS WITH MINOR FIXES
+```
+
+禁止发布结果：
+
+```text
+FAIL
+```
+
+---
+
+## Final Editing Workflow Confirmed（最终剪辑流程确认）
+
+Phase 12 确认最终剪辑流程为：
+
+```text
+Approved Shot 1–6 Clips
+↓
+Assemble Timeline in CapCut / 剪映专业版
+↓
+Add Captions
+↓
+Add Music and Light Sound Effects
+↓
+Export Rough Cut
+↓
+Run COMMAND-005 Review
+↓
+Fix Issues
+↓
+Export Final Video
+↓
+Export Final Cover
+↓
+Run Final COMMAND-005
+↓
+Publish
+```
+
+---
+
+## Current PROJ-001 Production Structure（当前 PROJ-001 生产结构）
+
+```text
+production/
+└── PROJ-001/
+    ├── VIDEO-PROMPTS.md
+    ├── COVER-PACKAGE.md
+    ├── PUBLISHING-PACKAGE.md
+    ├── POST-PUBLISH-TRACKER.md
+    ├── PRODUCTION-CHECKLIST.md
+    ├── review/
+    │   ├── CLIP-REVIEW-GUIDE.md
+    │   ├── SHOT-REVIEW-TEMPLATE.md
+    │   ├── ITERATION-LOG.md
+    │   └── FINAL-CLIP-SELECTION.md
+    ├── editing/
+    │   ├── EDITING-ASSEMBLY.md
+    │   ├── CAPTION-TIMING.md
+    │   └── MUSIC-SOUND.md
+    └── final/
+        └── FINAL-EXPORT-CHECKLIST.md
+```
+
+---
+
+## Production Status（生产状态）
+
+```text
+PROJ-001 Status:
+Ready for real clip generation, review, editing assembly and final export.
+
+Real clips generated:
+No
+
+Final edit created:
+No
+
+Final export completed:
+No
+
+Publishing completed:
+No
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 13 — Production Runtime and Toolchain Manual
+```
+
+Phase 13 目标：
+
+把真实执行步骤整理成一份操作手册，方便你按顺序使用即梦、剪映和 TSOS 文件生产第一条内容。
+
+优先级：
+
+1. Add production/PROJ-001/RUNBOOK.md
+2. Add production/PROJ-001/TOOLCHAIN.md
+3. Add production/PROJ-001/JIMENG-GENERATION-GUIDE.md
+4. Add production/PROJ-001/CAPCUT-EDITING-GUIDE.md
+5. Add production/PROJ-001/README.md
+6. Confirm first real generation order
+7. Prepare Shot 1 generation prompt copy block
+
+---
+
+## Change Type（变更类型）
+
+- Added editing assembly guide
+- Added caption timing guide
+- Added music and sound guide
+- Added final export checklist
+- Confirmed Jimeng / 即梦 as default video generation tool
+- Confirmed CapCut / 剪映专业版 as editing tool
+- Confirmed final COMMAND-005 publishing gate
+- Prepared final export structure
+
+---
+
+## Status
+
+```text
+Phase 12 Editing Assembly and Final Export Package: Completed
+Ready for Phase 13 Production Runtime and Toolchain Manual
+```
+
+
 # Phase 11 — Real Clip Review and Iteration Infrastructure Completed
 
 > Date：2026  

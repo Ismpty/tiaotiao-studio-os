@@ -417,7 +417,7 @@ Shot:
 Shot X — Name
 
 Model:
-Kling / Veo / Runway
+Jimeng / 即梦 / Veo / Runway / Other
 
 Prompt Version:
 v1 / v2 / v3

@@ -4,7 +4,7 @@
 > Project：PROJ-001 — Jump After Work Pilot Project  
 > Command：COMMAND-002  
 > Workflow：WORKFLOW-003  
-> Target Models：Kling / Veo / Runway  
+> Target Models：Jimeng / Veo / Runway  
 > Version：1.0  
 > Status：Production Ready
 
@@ -16,7 +16,7 @@
 
 本文件用于正式生成《跳跳下班啦》试播项目的逐镜头 AI 视频片段。
 
-每个镜头都可以单独复制到 Kling / Veo / Runway 中生成视频片段，再进入剪辑阶段。
+每个镜头都可以单独复制到 Jimeng / Veo / Runway 中生成视频片段，再进入剪辑阶段。
 
 本文件必须遵守 TSOS Source of Truth：
 
@@ -36,7 +36,7 @@ BRAND-001
 
 This file provides production-ready shot-by-shot AI video prompts for PROJ-001 — Jump After Work Pilot Project.
 
-Each shot can be generated separately in Kling, Veo or Runway, then assembled in editing.
+Each shot can be generated separately in Jimeng, Veo or Runway, then assembled in editing.
 
 ---
 
@@ -129,7 +129,7 @@ Emotion:
 Calm relief
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -199,7 +199,7 @@ Emotion:
 Expectation and freedom
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -269,7 +269,7 @@ Emotion:
 Gentle transition
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -340,7 +340,7 @@ Emotion:
 Freedom begins
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -411,7 +411,7 @@ Emotion:
 Release and openness
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -482,7 +482,7 @@ Emotion:
 Freedom, quiet joy, reflection
 ```
 
-### Kling Prompt
+### Jimeng Prompt
 
 ```text
 Duration:
@@ -654,7 +654,7 @@ Only approved clips should enter editing.
 # 11. Next Production Action（下一步生产动作）
 
 ```text
-1. Copy Shot 1 prompt into Kling / Veo / Runway.
+1. Copy Shot 1 prompt into Jimeng / Veo / Runway.
 2. Generate 2–3 versions.
 3. Select the most stable version.
 4. Run COMMAND-005 visual consistency check.

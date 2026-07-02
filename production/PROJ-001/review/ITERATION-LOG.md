@@ -121,7 +121,7 @@ Clip File:
 production/PROJ-001/clips/SHOT-XXX-vXX.mp4
 
 Model:
-Kling / Veo / Runway / Other
+Jimeng / 即梦 / Veo / Runway / Other
 
 Prompt Source:
 production/PROJ-001/VIDEO-PROMPTS.md

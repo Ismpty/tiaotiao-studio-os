@@ -97,7 +97,8 @@ BRAND-001 — TiaoTiao Studio Brand Language
 
 ```text
 [ ] 已读取 VIDEO-PROMPTS.md
-[ ] 已确认目标模型：Kling / Veo / Runway
+[ ] 已确认目标模型：Jimeng / 即梦
+[ ] Veo / Runway 仅作为备选模型
 [ ] 已确认画幅为 9:16
 [ ] 已确认每个镜头单独生成
 [ ] 已确认使用 Global Character Lock
