@@ -1,5 +1,416 @@
 # CHANGELOG
 
+# Phase 7 — Runtime Docs and Examples Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Runtime Documentation / Examples
+
+---
+
+## Summary（总结）
+
+Phase 7 完成了 TiaoTiao Studio OS 的 Runtime Docs 和 Examples 层。
+
+本阶段目标是让 TSOS 不只是拥有 Knowledge、Database、Agents、Workflows 和 Commands，而是进一步具备可被 ChatGPT、Codex、Cursor、Claude 等 AI 工具读取、理解和执行的运行说明。
+
+现在 TSOS 已经从“结构完整”进入“可运行、可调用、可参考示例”的阶段。
+
+```text
+Knowledge Nodes
++
+Database Records
++
+AI Agents
++
+Workflow Templates
++
+Operating Commands
++
+Runtime Docs
++
+Examples
+=
+Readable and Executable AI Native Studio OS
+```
+
+---
+
+## Runtime Docs Added（新增运行文档）
+
+| Document | Path | Status |
+|---|---|---|
+| RUNTIME | docs/studio-os/RUNTIME.md | Active |
+| CODEX | docs/studio-os/CODEX.md | Active |
+| COMMANDS | docs/studio-os/COMMANDS.md | Active |
+| WORKFLOWS | docs/studio-os/WORKFLOWS.md | Active |
+| AGENTS | docs/studio-os/AGENTS.md | Active |
+
+---
+
+## Runtime Docs Purpose（运行文档职责）
+
+### RUNTIME.md
+
+定义 TSOS 的整体运行方式。
+
+包括：
+
+- Source of Truth
+- Runtime reading order
+- Core system layers
+- Command usage
+- Runtime safety rules
+- Notion / Git policy
+- Standard runtime response format
+
+---
+
+### CODEX.md
+
+定义 Codex 如何读取和操作 TSOS。
+
+包括：
+
+- Codex reading order
+- File creation rules
+- Modification rules
+- Command routing
+- Git commit rules
+- Push policy
+- Notion policy
+- Failure handling
+
+---
+
+### COMMANDS.md
+
+定义 Operating Commands 的使用方式。
+
+包括：
+
+- Current command index
+- Command routing table
+- Command expected outputs
+- Multi-command usage
+- Command safety rules
+- Command failure handling
+
+---
+
+### WORKFLOWS.md
+
+定义 Workflow Templates 的使用方式。
+
+包括：
+
+- Current workflow index
+- Workflow routing
+- Workflow / Command mapping
+- Workflow / Agent mapping
+- Standard workflow execution rule
+- Workflow safety rules
+
+---
+
+### AGENTS.md
+
+定义 AI Agents 的使用方式。
+
+包括：
+
+- Current agent index
+- Agent responsibilities
+- Agent / Command mapping
+- Agent / Workflow mapping
+- Agent source of truth rule
+- Agent safety rules
+- Agent collaboration chain
+
+---
+
+## Examples Added（新增示例）
+
+| Example | Path | Status |
+|---|---|---|
+| COMMAND-001 Output Example | examples/COMMAND-001-output.md | Active |
+| COMMAND-002 Prompt Example | examples/COMMAND-002-prompt.md | Active |
+| COMMAND-003 Storyboard Example | examples/COMMAND-003-storyboard.md | Active |
+
+---
+
+## Examples Purpose（示例职责）
+
+### COMMAND-001-output.md
+
+展示运行完整生产流程后，最终 Production Package 应该长什么样。
+
+覆盖：
+
+- Project Brief
+- Storyboard Output
+- Prompt Output
+- Cinematography Output
+- Script Output
+- Editing Output
+- Publishing Output
+- Final Consistency Checklist
+- Next Production Actions
+
+---
+
+### COMMAND-002-prompt.md
+
+展示短视频 Prompt Package 的标准输出格式。
+
+覆盖：
+
+- Prompt Purpose
+- Target Model
+- Source Records
+- Base Prompt
+- Kling / Veo / Runway Prompt
+- Negative Prompt
+- Chinese Production Notes
+- Consistency Checklist
+- Usage Notes
+
+---
+
+### COMMAND-003-storyboard.md
+
+展示 45 秒竖屏分镜的标准输出格式。
+
+覆盖：
+
+- Storyboard Summary
+- Story Beat Breakdown
+- Shot List
+- Shot Details
+- Camera / Motion / Lighting Mapping
+- Prompt Notes
+- Continuity Checklist
+- Next Production Actions
+
+---
+
+## README Updated（README 已更新）
+
+README.md 已新增 Runtime Entry Points 说明。
+
+新增内容包括：
+
+- Runtime Entry Points
+- Source of Truth
+- Runtime Docs
+- Operating Commands
+- Runtime Layer Structure
+- Default Runtime Project
+- Examples
+- Runtime Safety Rule
+
+---
+
+## Runtime Layer Completed（运行层完成）
+
+Phase 7 后，TSOS 当前运行层结构为：
+
+```text
+knowledge/
+↓
+database/
+↓
+agents/
+↓
+workflows/
+↓
+commands/
+↓
+docs/studio-os/
+↓
+examples/
+```
+
+---
+
+## Runtime Reading Order Confirmed（运行读取顺序确认）
+
+AI 工具进入 TSOS 后，推荐读取顺序为：
+
+```text
+1. README.md
+2. ARCHITECTURE.md
+3. CHANGELOG.md
+4. docs/studio-os/RUNTIME.md
+5. docs/studio-os/CODEX.md
+6. docs/studio-os/COMMANDS.md
+7. docs/studio-os/WORKFLOWS.md
+8. docs/studio-os/AGENTS.md
+9. knowledge/README.md
+10. knowledge/
+11. database/
+12. agents/
+13. workflows/
+14. commands/
+15. examples/
+```
+
+---
+
+## Runtime Source of Truth Confirmed（运行事实来源确认）
+
+```text
+GitHub = Source of Truth
+Notion = Visual Management Layer
+```
+
+Production Database Records：
+
+```text
+GitHub + Notion
+```
+
+Operating layers：
+
+```text
+Agents
+Workflows
+Commands
+Runtime Docs
+Examples
+```
+
+统一策略：
+
+```text
+GitHub only
+```
+
+---
+
+## Default Runtime Commands（默认运行命令）
+
+当前 TSOS 可以通过以下命令直接调用：
+
+```text
+COMMAND-001 — Run Jump After Work Production
+COMMAND-002 — Generate Short Video Prompt
+COMMAND-003 — Generate Storyboard
+COMMAND-004 — Generate Publishing Package
+COMMAND-005 — Run Consistency Check
+```
+
+---
+
+## Runtime Safety Rules Confirmed（运行安全规则确认）
+
+任何 AI 工具运行 TSOS 时不得：
+
+```text
+change Jump's core identity
+change TiaoTiao Universe worldbuilding
+change Brand Language
+skip ASSET-001
+skip Knowledge Nodes
+skip Database Records
+skip consistency checks
+invent unapproved canon
+treat Notion as the source of truth
+```
+
+---
+
+## Standard Runtime Logic（标准运行逻辑）
+
+TSOS 当前标准运行逻辑为：
+
+```text
+User Request
+↓
+Command Routing
+↓
+Workflow Execution
+↓
+Agent Behavior
+↓
+Database References
+↓
+Knowledge Constraints
+↓
+Output Generation
+↓
+Consistency Check
+```
+
+---
+
+## Phase 7 File Structure（Phase 7 文件结构）
+
+```text
+docs/
+└── studio-os/
+    ├── RUNTIME.md
+    ├── CODEX.md
+    ├── COMMANDS.md
+    ├── WORKFLOWS.md
+    └── AGENTS.md
+
+examples/
+├── COMMAND-001-output.md
+├── COMMAND-002-prompt.md
+└── COMMAND-003-storyboard.md
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 8 — Index and Navigation Layer
+```
+
+Phase 8 目标：
+
+建立完整索引层，让 Codex / ChatGPT / Cursor 可以更快定位文件和调用系统。
+
+优先级：
+
+1. Update root README.md final structure
+2. Update ARCHITECTURE.md with Phase 4–7 layers
+3. Add docs/studio-os/INDEX.md
+4. Add commands/README.md
+5. Add workflows/README.md
+6. Add agents/README.md
+7. Add examples/README.md
+8. Add database/README.md if needed
+
+---
+
+## Change Type（变更类型）
+
+- Added runtime documentation
+- Added Codex operating guide
+- Added commands guide
+- Added workflows guide
+- Added agents guide
+- Added command output examples
+- Updated README runtime entry points
+- Confirmed runtime reading order
+- Confirmed GitHub as runtime source of truth
+- Completed first executable runtime documentation layer
+
+---
+
+## Status
+
+```text
+Phase 7 Runtime Docs and Examples: Completed
+Ready for Phase 8 Index and Navigation Layer
+```
+
+
 # Phase 6 — Operating Commands Completed
 
 > Date：2026  
