@@ -1,5 +1,356 @@
 # CHANGELOG
 
+# Phase 11 — Real Clip Review and Iteration Infrastructure Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Clip Review / Iteration / Final Clip Selection  
+> Note：Real generated clips are not reviewed yet. This phase completed the review infrastructure and templates.
+
+---
+
+## Summary（总结）
+
+Phase 11 完成了 PROJ-001 — Jump After Work Pilot Project 的真实视频片段审片与迭代基础设施。
+
+由于当前还没有真实生成的 Shot 1–6 视频文件，本阶段没有进行实际片段审片，而是先建立了完整的审片规则、单镜头审片模板、迭代记录和最终片段选择表。
+
+现在 PROJ-001 已经具备真实视频生成后的完整检查流程：
+
+```text
+Generate Clip
+↓
+Review Clip
+↓
+Record Issues
+↓
+Fix Prompt
+↓
+Regenerate if needed
+↓
+Approve Clip
+↓
+Select Final Clip
+↓
+Enter Editing
+```
+
+这意味着《跳跳下班啦》试播项目已经可以在生成真实视频片段后，按照统一标准进行审片、迭代和最终选择。
+
+---
+
+## Review Files Added（新增审片文件）
+
+| File | Path | Status |
+|---|---|---|
+| Clip Review Guide | production/PROJ-001/review/CLIP-REVIEW-GUIDE.md | Review Ready |
+| Shot Review Template | production/PROJ-001/review/SHOT-REVIEW-TEMPLATE.md | Review Ready |
+| Iteration Log | production/PROJ-001/review/ITERATION-LOG.md | Review Ready |
+| Final Clip Selection | production/PROJ-001/review/FINAL-CLIP-SELECTION.md | Review Ready |
+
+---
+
+## CLIP-REVIEW-GUIDE.md
+
+用于定义真实生成视频片段的审片规则。
+
+覆盖：
+
+- Character Check
+- Motion Check
+- Camera Check
+- Lighting Check
+- Environment Check
+- Continuity Check
+- Emotion Check
+- Technical Quality Check
+- Review Result Levels
+- Prompt Iteration Rule
+- Approved Clip Rule
+- Final Clip Selection Rule
+
+重点检查：
+
+```text
+Jump 是否漂移
+动作是否自然
+脚步是否滑动
+镜头是否游戏感
+灯光是否偏离
+场景是否连续
+情绪是否符合下班后的自由感
+```
+
+---
+
+## SHOT-REVIEW-TEMPLATE.md
+
+用于记录每一个真实生成视频片段的审片结果。
+
+每个生成版本都可以复制该模板建立独立审片文件。
+
+推荐文件命名：
+
+```text
+production/PROJ-001/review/SHOT-001-v01-review.md
+production/PROJ-001/review/SHOT-001-v02-review.md
+production/PROJ-001/review/SHOT-002-v01-review.md
+```
+
+模板覆盖：
+
+- Clip Basic Info
+- Source of Truth
+- Shot Intent
+- Character Check
+- Motion Check
+- Camera Check
+- Lighting Check
+- Environment Check
+- Continuity Check
+- Emotion Check
+- Technical Quality Check
+- Shot-Specific Notes
+- Issue List
+- Prompt Fix Suggestion
+- Final Decision
+- Approved Clip Info
+
+---
+
+## ITERATION-LOG.md
+
+用于记录 Shot 1–6 所有生成版本、审片结果、失败原因和 Prompt 修改。
+
+覆盖：
+
+- Iteration Status Overview
+- Version Status Rules
+- Iteration Entry Template
+- Shot 1–6 Iteration Sections
+- Common Issue Log
+- Prompt Fix Library
+- Approved Clip Register
+- Rejected Clip Register
+- Final Selection Notes
+
+当前状态：
+
+```text
+Shot 1–6:
+Not Started
+
+Generated Versions:
+0
+
+Approved Version:
+TBD
+```
+
+---
+
+## FINAL-CLIP-SELECTION.md
+
+用于在 Shot 1–6 都完成生成和审片后，记录最终进入剪辑的片段版本。
+
+覆盖：
+
+- Final Selection Rule
+- Final Clip Register
+- Approved Clip Paths
+- Shot 1–6 Final Selection
+- Cross-Shot Continuity Check
+- Final Edit Readiness Check
+- Final Clip Decision
+- Notes for Editor
+- COMMAND-005 Final Review Requirement
+
+最终通过片段建议统一放在：
+
+```text
+production/PROJ-001/clips/approved/
+```
+
+推荐命名：
+
+```text
+SHOT-001-approved.mp4
+SHOT-002-approved.mp4
+SHOT-003-approved.mp4
+SHOT-004-approved.mp4
+SHOT-005-approved.mp4
+SHOT-006-approved.mp4
+```
+
+---
+
+## Review Source of Truth（审片事实来源）
+
+Phase 11 审片文件默认引用以下 Source of Truth：
+
+```text
+CHAR-001 — Jump
+ASSET-001 — Jump Character Reference Pack
+ENV-001 — TiaoTiao Studio Office
+MOT-001 — Natural Walking
+CAM-001 — Hero Tracking Camera
+LGT-001 — Warm Studio Lighting
+STYLE-001 — Cinematic Documentary
+COLOR-001 — Fire Dragon Fruit Palette
+EMOTION-001 — Freedom
+BRAND-001 — TiaoTiao Studio Brand Language
+```
+
+---
+
+## Review Decision Levels（审片结果等级）
+
+当前统一使用以下审片等级：
+
+```text
+PASS
+```
+
+可以进入剪辑阶段。
+
+```text
+PASS WITH MINOR FIXES
+```
+
+可作为备用，或轻修后使用。
+
+```text
+FAIL
+```
+
+不能使用，必须重新生成。
+
+---
+
+## Critical Fail Rules（严重失败规则）
+
+以下任意情况出现，片段不能进入最终剪辑：
+
+```text
+Jump 变成人类
+Jump 变成其他动物
+Jump 毛发消失
+Jump 脸部严重变形
+Jump 身体比例严重错误
+Jump 变成恐怖 / 赛博朋克 / 游戏角色
+严重滑步
+身体漂浮
+四肢扭曲
+手部融化
+角色瞬移
+场景无法衔接
+品牌调性错误
+```
+
+---
+
+## Prompt Fix Library Added（Prompt 修正库已建立）
+
+Phase 11 建立了常见问题的 Prompt 修正方向：
+
+```text
+Character Drift Fix
+Sliding Feet Fix
+Hand Distortion Fix
+Backpack Stability Fix
+Camera Drift Fix
+Lighting Drift Fix
+Environment Drift Fix
+Emotion Drift Fix
+```
+
+这些修正不改变 Source of Truth，只用于在真实生成失败时对 Prompt 进行局部强化。
+
+---
+
+## Clip Review Workflow Confirmed（片段审片流程确认）
+
+真实生成后，标准流程为：
+
+```text
+1. Generate Shot 1 v01
+2. Save clip to production/PROJ-001/clips/
+3. Create review file from SHOT-REVIEW-TEMPLATE.md
+4. Review using CLIP-REVIEW-GUIDE.md
+5. Record result in ITERATION-LOG.md
+6. Regenerate if needed
+7. Approve best version
+8. Repeat for Shot 2–6
+9. Fill FINAL-CLIP-SELECTION.md
+10. Run COMMAND-005 final clip review
+11. Enter editing assembly
+```
+
+---
+
+## Current Review Status（当前审片状态）
+
+```text
+Real clips generated:
+No
+
+Real clips reviewed:
+No
+
+Review infrastructure:
+Completed
+
+Ready for real clip generation:
+Yes
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 12 — Editing Assembly and Final Export Package
+```
+
+Phase 12 目标：
+
+在真实片段通过审片后，建立最终剪辑、字幕、音乐、封面和导出文件的装配规范。
+
+优先级：
+
+1. Add production/PROJ-001/editing/EDITING-ASSEMBLY.md
+2. Add production/PROJ-001/editing/CAPTION-TIMING.md
+3. Add production/PROJ-001/editing/MUSIC-SOUND.md
+4. Add production/PROJ-001/final/FINAL-EXPORT-CHECKLIST.md
+5. Add final naming rules
+6. Prepare final COMMAND-005 pre-publish check
+
+---
+
+## Change Type（变更类型）
+
+- Added clip review guide
+- Added shot review template
+- Added iteration log
+- Added final clip selection guide
+- Added review decision rules
+- Added critical fail rules
+- Added prompt fix library
+- Added approved clip workflow
+- Confirmed readiness for real clip review
+
+---
+
+## Status
+
+```text
+Phase 11 Real Clip Review and Iteration Infrastructure: Completed
+Ready for Phase 12 Editing Assembly and Final Export Package
+```
+
+
 # Phase 10 — Production Output and Real Asset Generation Completed
 
 > Date：2026  
