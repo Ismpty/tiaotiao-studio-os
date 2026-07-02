@@ -1,5 +1,299 @@
 # CHANGELOG
 
+# Phase 5 — Workflow Templates Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Workflow Templates
+
+---
+
+## Summary（总结）
+
+Phase 5 完成了 TiaoTiao Studio OS 第一批核心 Workflow Templates。
+
+本阶段目标是让 TSOS 不只是拥有 Knowledge、Database 和 Agents，而是进一步形成可直接执行的标准化生产流程。
+
+现在 TSOS 已经具备从项目启动到提示词生成、视频生成、剪辑发布的完整工作流模板。
+
+```text
+Knowledge Nodes
++
+Database Records
++
+AI Agents
++
+Workflow Templates
+=
+Executable AI Native Studio Operating System
+```
+
+---
+
+## Completed Workflows（已完成工作流）
+
+| Workflow | Name | Path | Status |
+|---|---|---|---|
+| WORKFLOW-001 | Jump After Work Production Workflow | workflows/WORKFLOW-001.md | Active |
+| WORKFLOW-002 | Short Video Prompt Workflow | workflows/WORKFLOW-002.md | Active |
+| WORKFLOW-003 | Storyboard to Video Workflow | workflows/WORKFLOW-003.md | Active |
+| WORKFLOW-004 | Publishing Workflow | workflows/WORKFLOW-004.md | Active |
+
+---
+
+## Workflow Responsibilities（工作流职责）
+
+### WORKFLOW-001 — Jump After Work Production Workflow
+
+用于把《跳跳下班啦》的完整生产流程串联起来。
+
+覆盖：
+
+- Project Setup
+- Storyboard Planning
+- Prompt Generation
+- Cinematography Planning
+- Script Writing
+- Editing Planning
+- Publishing Planning
+- Final Consistency Check
+
+---
+
+### WORKFLOW-002 — Short Video Prompt Workflow
+
+用于把 TSOS 数据库记录和知识节点转化为可执行的 AI 图片 / 视频 Prompt。
+
+覆盖：
+
+- Prompt task setup
+- Source record collection
+- Shot context extraction
+- Prompt variable mapping
+- Base prompt generation
+- Model adaptation
+- Negative prompt generation
+- Consistency check
+
+---
+
+### WORKFLOW-003 — Storyboard to Video Workflow
+
+用于把已完成分镜转化为可生成的视频镜头包。
+
+覆盖：
+
+- Storyboard input review
+- Shot segmentation
+- Video prompt generation
+- Cinematography enhancement
+- Motion continuity setup
+- Lighting and style lock
+- Video clip generation package
+- Clip review
+- Assembly notes
+
+---
+
+### WORKFLOW-004 — Publishing Workflow
+
+用于把完成的视频内容转化为不同平台的发布包。
+
+覆盖：
+
+- Publish asset review
+- Platform selection
+- Title generation
+- Caption / description generation
+- Hashtag generation
+- Cover text planning
+- Publishing time planning
+- Pre-publish checklist
+- Post-publish review
+
+---
+
+## Default Workflow Source Records（默认工作流来源记录）
+
+Phase 5 Workflows 默认读取以下 Production Database Records：
+
+- CHAR-001 — Jump
+- EP-001 — Jump After Work
+- STORY-001 — Work Ends, Adventure Begins
+- ENV-001 — TiaoTiao Studio Office
+- MOT-001 — Natural Walking
+- CAM-001 — Hero Tracking Camera
+- LGT-001 — Warm Studio Lighting
+- PROMPT-001 — Jump After Work Master Prompt
+- ASSET-001 — Jump Character Reference Pack
+- PROJ-001 — Jump After Work Pilot Project
+
+---
+
+## Default Knowledge Constraints（默认知识约束）
+
+Phase 5 Workflows 默认受以下 Knowledge Nodes 约束：
+
+- STYLE-001 — Cinematic Documentary
+- COLOR-001 — Fire Dragon Fruit Palette
+- WORLD-001 — TiaoTiao Universe
+- EMOTION-001 — Freedom
+- SHOT-001 — Hero Tracking Shot
+- MOTIONLANG-001 — Natural Walking Language
+- OUTFIT-001 — Programmer Outfit System
+- MUSIC-001 — Lifestyle Music Language
+- STORYFORMULA-001 — Work Ends, Adventure Begins
+- BRAND-001 — TiaoTiao Studio Brand Language
+
+---
+
+## Default Agent Chain（默认智能体链路）
+
+Phase 5 Workflows 默认调用以下 AI Agents：
+
+```text
+AGENT-001 — Storyboard Agent
+↓
+AGENT-002 — Prompt Agent
+↓
+AGENT-003 — Cinematography Agent
+↓
+AGENT-004 — Script Agent
+↓
+AGENT-005 — Editing Agent
+↓
+AGENT-006 — Publishing Agent
+```
+
+---
+
+## Workflow File Structure（工作流文件结构）
+
+```text
+workflows/
+├── WORKFLOW-001.md
+├── WORKFLOW-002.md
+├── WORKFLOW-003.md
+└── WORKFLOW-004.md
+```
+
+---
+
+## Workflow Naming Rule Confirmed（工作流命名规则确认）
+
+Workflow 文件统一使用以下规则：
+
+```text
+Workflow ID = WORKFLOW-XXX
+File Name = WORKFLOW-XXX.md
+Directory = workflows/
+Page H1 = WORKFLOW-XXX + Human-readable Name
+```
+
+Example：
+
+```text
+Workflow ID:
+WORKFLOW-001
+
+GitHub File:
+workflows/WORKFLOW-001.md
+
+Page H1:
+# WORKFLOW-001 — Jump After Work Production Workflow（跳跳下班啦生产工作流）
+```
+
+---
+
+## Notion Status（Notion 状态）
+
+Phase 5 暂不新增 Notion Workflow DB。
+
+原因：
+
+```text
+Workflows are execution templates, not production database records.
+GitHub is the source of truth for workflow behavior.
+```
+
+当前策略：
+
+```text
+Workflow Templates → GitHub only
+Production Records → GitHub + Notion
+```
+
+以后如果需要可视化 Workflow 面板，可以在后续 Phase 中单独新增 Workflow DB。
+
+---
+
+## Production System Completed（生产系统能力完成）
+
+现在 TSOS 已经形成第一套完整 AI Native Studio 生产系统：
+
+```text
+Knowledge Layer
+↓
+Production Database
+↓
+Asset Reference
+↓
+Prompt System
+↓
+Project Assembly
+↓
+AI Agents
+↓
+Workflow Templates
+↓
+Repeatable Content Production
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 6 — Operating Commands
+```
+
+Phase 6 目标：
+
+建立可直接调用的标准命令，让之后你可以用一句话启动完整流程。
+
+优先级：
+
+1. COMMAND-001 — Run Jump After Work Production
+2. COMMAND-002 — Generate Short Video Prompt
+3. COMMAND-003 — Generate Storyboard
+4. COMMAND-004 — Generate Publishing Package
+5. COMMAND-005 — Run Consistency Check
+
+---
+
+## Change Type（变更类型）
+
+- Added workflow templates
+- Added standard production workflow
+- Added short video prompt workflow
+- Added storyboard to video workflow
+- Added publishing workflow
+- Confirmed Workflow naming rule
+- Confirmed GitHub as Workflow source of truth
+- Completed first executable workflow layer
+
+---
+
+## Status
+
+```text
+Phase 5 Workflow Templates: Completed
+Ready for Phase 6 Operating Commands
+```
+
+
 # Phase 4 — AI Agents Completed
 
 > Date：2026  
