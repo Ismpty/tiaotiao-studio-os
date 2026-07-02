@@ -1,5 +1,378 @@
 # CHANGELOG
 
+# Phase 6 — Operating Commands Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Operating Commands
+
+---
+
+## Summary（总结）
+
+Phase 6 完成了 TiaoTiao Studio OS 第一批核心 Operating Commands。
+
+本阶段目标是让 TSOS 不只是拥有 Knowledge、Database、Agents 和 Workflows，而是进一步形成可以直接调用的标准操作命令。
+
+现在用户可以通过固定命令快速启动：
+
+- 完整生产流程
+- 短视频 Prompt 生成
+- 分镜生成
+- 发布包生成
+- 一致性检查
+
+这意味着 TSOS 已经具备从“系统结构”进入“可调用操作系统”的能力。
+
+```text
+Knowledge Nodes
++
+Database Records
++
+AI Agents
++
+Workflow Templates
++
+Operating Commands
+=
+Callable AI Native Studio OS
+```
+
+---
+
+## Completed Commands（已完成命令）
+
+| Command | Name | Path | Status |
+|---|---|---|---|
+| COMMAND-001 | Run Jump After Work Production | commands/COMMAND-001.md | Active |
+| COMMAND-002 | Generate Short Video Prompt | commands/COMMAND-002.md | Active |
+| COMMAND-003 | Generate Storyboard | commands/COMMAND-003.md | Active |
+| COMMAND-004 | Generate Publishing Package | commands/COMMAND-004.md | Active |
+| COMMAND-005 | Run Consistency Check | commands/COMMAND-005.md | Active |
+
+---
+
+## Command Responsibilities（命令职责）
+
+### COMMAND-001 — Run Jump After Work Production
+
+用于启动《跳跳下班啦》的完整生产流程。
+
+覆盖：
+
+- Project Brief
+- Storyboard Output
+- Prompt Output
+- Cinematography Output
+- Script Output
+- Editing Output
+- Publishing Output
+- Final Consistency Checklist
+
+---
+
+### COMMAND-002 — Generate Short Video Prompt
+
+用于生成可直接复制执行的短视频图片 / 视频 / 封面 / 分镜 Prompt。
+
+覆盖：
+
+- Prompt Purpose
+- Target Model
+- Source Records
+- Base Prompt
+- Model-Specific Prompt
+- Negative Prompt
+- Consistency Checklist
+- Usage Notes
+
+---
+
+### COMMAND-003 — Generate Storyboard
+
+用于生成可生产的短视频分镜。
+
+覆盖：
+
+- Storyboard Summary
+- Story Beat Breakdown
+- Shot List
+- Shot Details
+- Camera / Motion / Lighting Mapping
+- Prompt Notes
+- Continuity Checklist
+- Next Production Actions
+
+---
+
+### COMMAND-004 — Generate Publishing Package
+
+用于生成平台发布包。
+
+覆盖：
+
+- Publishing Summary
+- Platform Strategy
+- Title Options
+- Caption / Description
+- Hashtag Set
+- Cover Text Suggestions
+- Publishing Time Suggestion
+- Pre-Publish Checklist
+- Publishing Record
+- Post-Publish Review Template
+- Brand Safety Check
+
+---
+
+### COMMAND-005 — Run Consistency Check
+
+用于检查任意输出是否符合 TSOS Source of Truth。
+
+覆盖：
+
+- Character Consistency
+- World Consistency
+- Visual Style Check
+- Color Check
+- Emotion Check
+- Motion Check
+- Camera Check
+- Lighting Check
+- Story / Brand Check
+- Workflow Compliance Check
+- Issue List
+- Fix Suggestions
+- Final PASS / FAIL Result
+
+---
+
+## Default Command Source Records（默认命令来源记录）
+
+Phase 6 Commands 默认读取以下 Production Database Records：
+
+- CHAR-001 — Jump
+- EP-001 — Jump After Work
+- STORY-001 — Work Ends, Adventure Begins
+- ENV-001 — TiaoTiao Studio Office
+- MOT-001 — Natural Walking
+- CAM-001 — Hero Tracking Camera
+- LGT-001 — Warm Studio Lighting
+- PROMPT-001 — Jump After Work Master Prompt
+- ASSET-001 — Jump Character Reference Pack
+- PROJ-001 — Jump After Work Pilot Project
+
+---
+
+## Default Knowledge Constraints（默认知识约束）
+
+Phase 6 Commands 默认受以下 Knowledge Nodes 约束：
+
+- STYLE-001 — Cinematic Documentary
+- COLOR-001 — Fire Dragon Fruit Palette
+- WORLD-001 — TiaoTiao Universe
+- EMOTION-001 — Freedom
+- SHOT-001 — Hero Tracking Shot
+- MOTIONLANG-001 — Natural Walking Language
+- OUTFIT-001 — Programmer Outfit System
+- MUSIC-001 — Lifestyle Music Language
+- STORYFORMULA-001 — Work Ends, Adventure Begins
+- BRAND-001 — TiaoTiao Studio Brand Language
+
+---
+
+## Default Workflow References（默认工作流引用）
+
+Phase 6 Commands 默认调用以下 Workflow Templates：
+
+```text
+COMMAND-001 → WORKFLOW-001
+COMMAND-002 → WORKFLOW-002
+COMMAND-003 → WORKFLOW-001 / WORKFLOW-003
+COMMAND-004 → WORKFLOW-004
+COMMAND-005 → WORKFLOW-001 / WORKFLOW-002 / WORKFLOW-003 / WORKFLOW-004
+```
+
+---
+
+## Default Agent References（默认智能体引用）
+
+Phase 6 Commands 默认调用以下 AI Agents：
+
+```text
+COMMAND-001
+→ AGENT-001 + AGENT-002 + AGENT-003 + AGENT-004 + AGENT-005 + AGENT-006
+
+COMMAND-002
+→ AGENT-002
+
+COMMAND-003
+→ AGENT-001
+
+COMMAND-004
+→ AGENT-006
+
+COMMAND-005
+→ Checks outputs from all Agents
+```
+
+---
+
+## Command File Structure（命令文件结构）
+
+```text
+commands/
+├── COMMAND-001.md
+├── COMMAND-002.md
+├── COMMAND-003.md
+├── COMMAND-004.md
+└── COMMAND-005.md
+```
+
+---
+
+## Command Naming Rule Confirmed（命令命名规则确认）
+
+Command 文件统一使用以下规则：
+
+```text
+Command ID = COMMAND-XXX
+File Name = COMMAND-XXX.md
+Directory = commands/
+Page H1 = COMMAND-XXX + Human-readable Name
+```
+
+Example：
+
+```text
+Command ID:
+COMMAND-001
+
+GitHub File:
+commands/COMMAND-001.md
+
+Page H1:
+# COMMAND-001 — Run Jump After Work Production（运行跳跳下班啦完整生产流程）
+```
+
+---
+
+## Notion Status（Notion 状态）
+
+Phase 6 暂不新增 Notion Command DB。
+
+原因：
+
+```text
+Commands are operating instructions, not production database records.
+GitHub is the source of truth for command behavior.
+```
+
+当前策略：
+
+```text
+Operating Commands → GitHub only
+Production Records → GitHub + Notion
+```
+
+以后如果需要可视化 Command 面板，可以在后续 Phase 中单独新增 Command DB。
+
+---
+
+## Operating System Layer Completed（操作系统层完成）
+
+现在 TSOS 已经形成第一套完整 AI Native Studio 操作系统层：
+
+```text
+Knowledge Layer
+↓
+Production Database
+↓
+Asset Reference
+↓
+Prompt System
+↓
+Project Assembly
+↓
+AI Agents
+↓
+Workflow Templates
+↓
+Operating Commands
+↓
+Repeatable Studio Production
+```
+
+---
+
+## Standard User Command Examples（标准用户调用示例）
+
+```text
+Run COMMAND-001.
+```
+
+```text
+运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+```
+
+```text
+运行 COMMAND-003，生成 45 秒竖屏分镜。
+```
+
+```text
+运行 COMMAND-004，生成小红书发布包。
+```
+
+```text
+运行 COMMAND-005，检查这个 Prompt 是否符合跳跳设定。
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 7 — Templates / Examples / Runtime Docs
+```
+
+Phase 7 目标：
+
+建立可直接给 Codex、ChatGPT、Cursor 或其他 AI 工具读取的运行说明与示例。
+
+优先级：
+
+1. README update — explain commands / workflows / agents usage
+2. docs/RUNTIME.md — how to operate TSOS
+3. docs/CODEX.md — how Codex should read and use TSOS
+4. examples/COMMAND-001-output.md — sample production output
+5. examples/COMMAND-002-prompt.md — sample prompt output
+6. examples/COMMAND-003-storyboard.md — sample storyboard output
+
+---
+
+## Change Type（变更类型）
+
+- Added operating commands
+- Added full production command
+- Added short video prompt command
+- Added storyboard command
+- Added publishing package command
+- Added consistency check command
+- Confirmed Command naming rule
+- Confirmed GitHub as Command source of truth
+- Completed first callable operating layer
+
+---
+
+## Status
+
+```text
+Phase 6 Operating Commands: Completed
+Ready for Phase 7 Runtime Docs and Examples
+```
+
 # Phase 5 — Workflow Templates Completed
 
 > Date：2026  
