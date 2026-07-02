@@ -1,5 +1,422 @@
 # CHANGELOG
 
+# Phase 8 — Index and Navigation Layer Completed
+
+> Date：2026  
+> Status：Completed  
+> Scope：Index / Navigation / Architecture Update
+
+---
+
+## Summary（总结）
+
+Phase 8 完成了 TiaoTiao Studio OS 的索引与导航层。
+
+本阶段目标是让 ChatGPT、Codex、Cursor、Claude 或其他 AI 工具进入仓库后，能够快速理解：
+
+- 系统有哪些层
+- 每层放在哪里
+- 应该先读什么
+- 用户任务应该路由到哪个 Command
+- Command 对应哪个 Workflow
+- Workflow 调用哪些 Agents
+- Database Records 和 Knowledge Nodes 如何被引用
+- 示例输出在哪里查看
+
+现在 TSOS 已经具备完整的导航入口，不再只是文件堆叠，而是一个可被 AI 工具快速定位、读取和执行的系统。
+
+```text
+Knowledge Nodes
++
+Production Database
++
+AI Agents
++
+Workflow Templates
++
+Operating Commands
++
+Runtime Docs
++
+Examples
++
+Navigation Index
+=
+Navigable AI Native Studio OS
+```
+
+---
+
+## Navigation Files Added（新增导航文件）
+
+| File | Path | Status |
+|---|---|---|
+| Studio OS Index | docs/studio-os/INDEX.md | Active |
+| Commands Index | commands/README.md | Active |
+| Workflows Index | workflows/README.md | Active |
+| Agents Index | agents/README.md | Active |
+| Examples Index | examples/README.md | Active |
+| Database Index | database/README.md | Active |
+
+---
+
+## Updated Core Files（已更新核心文件）
+
+| File | Purpose | Status |
+|---|---|---|
+| README.md | Updated final repository structure and runtime entry points | Updated |
+| ARCHITECTURE.md | Updated Phase 4–8 system architecture | Updated |
+| CHANGELOG.md | Added Phase 8 checkpoint | Updated |
+
+---
+
+## Navigation Layer Purpose（导航层职责）
+
+### docs/studio-os/INDEX.md
+
+作为 Studio OS 的主导航索引。
+
+它帮助 AI 工具快速定位：
+
+- Knowledge Layer
+- Production Database
+- Agents
+- Workflows
+- Commands
+- Runtime Docs
+- Examples
+
+---
+
+### commands/README.md
+
+作为 `commands/` 目录索引。
+
+它帮助 AI 工具理解：
+
+- 当前有哪些 Operating Commands
+- 每个 Command 何时使用
+- 每个 Command 调用哪些 Workflow / Agent
+- 每个 Command 的标准输出
+
+---
+
+### workflows/README.md
+
+作为 `workflows/` 目录索引。
+
+它帮助 AI 工具理解：
+
+- 当前有哪些 Workflow Templates
+- 每个 Workflow 的使用场景
+- Workflow 和 Command 的映射关系
+- Workflow 和 Agent 的映射关系
+
+---
+
+### agents/README.md
+
+作为 `agents/` 目录索引。
+
+它帮助 AI 工具理解：
+
+- 当前有哪些 AI Agents
+- 每个 Agent 的职责
+- 每个 Agent 的目录位置
+- Agent 与 Command / Workflow 的关系
+
+---
+
+### examples/README.md
+
+作为 `examples/` 目录索引。
+
+它帮助 AI 工具理解：
+
+- 当前有哪些示例输出
+- 示例对应哪个 Command
+- 示例应该何时参考
+- Examples 只是格式参考，不是 Source of Truth
+
+---
+
+### database/README.md
+
+作为 `database/` 目录索引。
+
+它帮助 AI 工具理解：
+
+- 当前 10 个 Production Database Records
+- 每个 Record 的文件路径
+- 每个 Record 对应的 Notion DB
+- Database 与 Knowledge / Commands / Workflows 的映射关系
+
+---
+
+## Architecture Updated（架构已更新）
+
+`ARCHITECTURE.md` 已新增 Phase 4–8 架构说明。
+
+当前 TSOS 系统结构为：
+
+```text
+knowledge/
+↓
+database/
+↓
+agents/
+↓
+workflows/
+↓
+commands/
+↓
+docs/studio-os/
+↓
+examples/
+```
+
+Phase 4–8 已完成层级：
+
+| Phase | Layer | Status |
+|---|---|---|
+| Phase 4 | AI Agents | Completed |
+| Phase 5 | Workflow Templates | Completed |
+| Phase 6 | Operating Commands | Completed |
+| Phase 7 | Runtime Docs and Examples | Completed |
+| Phase 8 | Index and Navigation Layer | Completed |
+
+---
+
+## README Updated（README 已更新）
+
+`README.md` 已更新最终仓库结构。
+
+新增内容包括：
+
+- Repository Structure
+- System Layer Overview
+- Quick Start
+- Current Default Project
+- Navigation Entry Points
+- Source of Truth
+- Runtime Safety
+
+---
+
+## Current Navigation Entry Points（当前导航入口）
+
+| Need | File |
+|---|---|
+| Understand full system | docs/studio-os/INDEX.md |
+| Understand runtime behavior | docs/studio-os/RUNTIME.md |
+| Guide Codex usage | docs/studio-os/CODEX.md |
+| Find command usage | commands/README.md |
+| Find workflow usage | workflows/README.md |
+| Find agent usage | agents/README.md |
+| Find database records | database/README.md |
+| Find example outputs | examples/README.md |
+
+---
+
+## Recommended Reading Order（推荐读取顺序）
+
+AI 工具进入仓库后，推荐读取顺序为：
+
+```text
+1. README.md
+2. ARCHITECTURE.md
+3. CHANGELOG.md
+4. docs/studio-os/INDEX.md
+5. docs/studio-os/RUNTIME.md
+6. docs/studio-os/CODEX.md
+7. docs/studio-os/COMMANDS.md
+8. docs/studio-os/WORKFLOWS.md
+9. docs/studio-os/AGENTS.md
+10. knowledge/README.md
+11. database/README.md
+12. commands/README.md
+13. workflows/README.md
+14. agents/README.md
+15. examples/README.md
+```
+
+---
+
+## Source of Truth Confirmed（事实来源确认）
+
+```text
+GitHub = Source of Truth
+Notion = Visual Management Layer
+```
+
+GitHub 负责：
+
+```text
+Knowledge Nodes
+Database Records
+Agents
+Workflows
+Commands
+Runtime Docs
+Examples
+Architecture
+Changelog
+Navigation Indexes
+```
+
+Notion 负责：
+
+```text
+Visual management
+Database browsing
+Production record visibility
+```
+
+---
+
+## Default Production Stack Confirmed（默认生产栈确认）
+
+当前默认项目：
+
+```text
+PROJ-001 — Jump After Work Pilot Project
+```
+
+默认生产链路：
+
+```text
+CHAR-001
++
+EP-001
++
+STORY-001
++
+ENV-001
++
+MOT-001
++
+CAM-001
++
+LGT-001
++
+PROMPT-001
++
+ASSET-001
+=
+PROJ-001
+```
+
+默认执行链路：
+
+```text
+PROJ-001
+↓
+COMMAND-001
+↓
+WORKFLOW-001
+↓
+AGENT-001
+↓
+AGENT-002
+↓
+AGENT-003
+↓
+AGENT-004
+↓
+AGENT-005
+↓
+AGENT-006
+↓
+COMMAND-005
+```
+
+---
+
+## Runtime Safety Confirmed（运行安全确认）
+
+任何 AI 工具运行 TSOS 时不得：
+
+```text
+change Jump's core identity
+change TiaoTiao Universe worldbuilding
+change Brand Language
+skip ASSET-001
+skip Knowledge Nodes
+skip Database Records
+skip consistency checks
+invent unapproved canon
+treat Notion as the source of truth
+```
+
+正式输出前，建议运行：
+
+```text
+COMMAND-005 — Run Consistency Check
+```
+
+---
+
+## Current Architecture Status（当前架构状态）
+
+```text
+TSOS Architecture Status:
+Readable
+Navigable
+Callable
+Executable
+Extensible
+```
+
+---
+
+## Next Phase（下一阶段）
+
+建议下一阶段：
+
+```text
+Phase 9 — Validation and Test Runs
+```
+
+Phase 9 目标：
+
+开始真正运行 TSOS，验证 Commands、Workflows、Agents、Database Records 和 Knowledge Nodes 是否能组合成稳定输出。
+
+优先级：
+
+1. Run COMMAND-003 — Generate Storyboard
+2. Run COMMAND-002 — Generate Short Video Prompt
+3. Run COMMAND-005 — Consistency Check
+4. Run COMMAND-004 — Generate Publishing Package
+5. Run COMMAND-001 — Full Production Package
+6. Record validation findings
+7. Fix issues if needed
+
+---
+
+## Change Type（变更类型）
+
+- Added Studio OS navigation index
+- Added commands index
+- Added workflows index
+- Added agents index
+- Added examples index
+- Added database index
+- Updated architecture for Phase 4–8
+- Updated README final repository structure
+- Confirmed navigation entry points
+- Confirmed runtime reading order
+- Completed first navigation layer
+
+---
+
+## Status
+
+```text
+Phase 8 Index and Navigation Layer: Completed
+Ready for Phase 9 Validation and Test Runs
+```
+
+
 # Phase 7 — Runtime Docs and Examples Completed
 
 > Date：2026  

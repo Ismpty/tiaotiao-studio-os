@@ -233,20 +233,445 @@ COMMAND-005 — Run Consistency Check
 
 ---
 
-## Repository Structure
+# Repository Structure（仓库结构）
 
-```
-docs/
-database/
-agents/
-skills/
-templates/
-workflows/
-archive/
+TiaoTiao Studio OS 当前仓库结构：
+
+```text
+tiaotiao-studio-os/
+├── README.md
+├── ARCHITECTURE.md
+├── CHANGELOG.md
+│
+├── knowledge/
+│   ├── README.md
+│   ├── style/
+│   │   └── STYLE-001.md
+│   ├── color/
+│   │   └── COLOR-001.md
+│   ├── world/
+│   │   └── WORLD-001.md
+│   ├── emotion/
+│   │   └── EMOTION-001.md
+│   ├── camera-language/
+│   │   └── SHOT-001.md
+│   ├── motion-language/
+│   │   └── MOTIONLANG-001.md
+│   ├── outfit/
+│   │   └── OUTFIT-001.md
+│   ├── music/
+│   │   └── MUSIC-001.md
+│   ├── story-formula/
+│   │   └── STORYFORMULA-001.md
+│   └── brand-language/
+│       └── BRAND-001.md
+│
+├── database/
+│   ├── README.md
+│   ├── characters/
+│   │   └── CHAR-001.md
+│   ├── episodes/
+│   │   └── EP-001.md
+│   ├── stories/
+│   │   └── STORY-001.md
+│   ├── environments/
+│   │   └── ENV-001.md
+│   ├── motions/
+│   │   └── MOT-001.md
+│   ├── cameras/
+│   │   └── CAM-001.md
+│   ├── lighting/
+│   │   └── LGT-001.md
+│   ├── prompts/
+│   │   └── PROMPT-001.md
+│   ├── assets/
+│   │   └── ASSET-001.md
+│   └── projects/
+│       └── PROJ-001.md
+│
+├── agents/
+│   ├── README.md
+│   ├── director/
+│   │   └── AGENT-001.md
+│   ├── prompt-engineer/
+│   │   └── AGENT-002.md
+│   ├── cinematographer/
+│   │   └── AGENT-003.md
+│   ├── writer/
+│   │   └── AGENT-004.md
+│   ├── editor/
+│   │   └── AGENT-005.md
+│   └── publisher/
+│       └── AGENT-006.md
+│
+├── workflows/
+│   ├── README.md
+│   ├── WORKFLOW-001.md
+│   ├── WORKFLOW-002.md
+│   ├── WORKFLOW-003.md
+│   └── WORKFLOW-004.md
+│
+├── commands/
+│   ├── README.md
+│   ├── COMMAND-001.md
+│   ├── COMMAND-002.md
+│   ├── COMMAND-003.md
+│   ├── COMMAND-004.md
+│   └── COMMAND-005.md
+│
+├── docs/
+│   ├── studio-os/
+│   │   ├── INDEX.md
+│   │   ├── RUNTIME.md
+│   │   ├── CODEX.md
+│   │   ├── COMMANDS.md
+│   │   ├── WORKFLOWS.md
+│   │   └── AGENTS.md
+│   ├── creator-bible/
+│   └── changelog/
+│
+└── examples/
+    ├── README.md
+    ├── COMMAND-001-output.md
+    ├── COMMAND-002-prompt.md
+    └── COMMAND-003-storyboard.md
 ```
 
 ---
 
+# System Layer Overview（系统层总览）
+
+TSOS 当前由 7 个核心层组成：
+
+```text
+Knowledge Layer
+↓
+Production Database
+↓
+AI Agents
+↓
+Workflow Templates
+↓
+Operating Commands
+↓
+Runtime Docs
+↓
+Examples
+```
+
+---
+
+## 1. Knowledge Layer（知识层）
+
+Path：
+
+```text
+knowledge/
+```
+
+Purpose：
+
+定义长期稳定规则。
+
+包括：
+
+```text
+STYLE-001
+COLOR-001
+WORLD-001
+EMOTION-001
+SHOT-001
+MOTIONLANG-001
+OUTFIT-001
+MUSIC-001
+STORYFORMULA-001
+BRAND-001
+```
+
+---
+
+## 2. Production Database（生产数据库）
+
+Path：
+
+```text
+database/
+```
+
+Purpose：
+
+定义具体生产记录。
+
+包括：
+
+```text
+CHAR-001
+EP-001
+STORY-001
+ENV-001
+MOT-001
+CAM-001
+LGT-001
+PROMPT-001
+ASSET-001
+PROJ-001
+```
+
+---
+
+## 3. AI Agents（AI 智能体）
+
+Path：
+
+```text
+agents/
+```
+
+Purpose：
+
+定义 AI 执行角色。
+
+包括：
+
+```text
+AGENT-001 — Storyboard Agent
+AGENT-002 — Prompt Agent
+AGENT-003 — Cinematography Agent
+AGENT-004 — Script Agent
+AGENT-005 — Editing Agent
+AGENT-006 — Publishing Agent
+```
+
+---
+
+## 4. Workflow Templates（工作流模板）
+
+Path：
+
+```text
+workflows/
+```
+
+Purpose：
+
+定义任务执行顺序。
+
+包括：
+
+```text
+WORKFLOW-001 — Jump After Work Production Workflow
+WORKFLOW-002 — Short Video Prompt Workflow
+WORKFLOW-003 — Storyboard to Video Workflow
+WORKFLOW-004 — Publishing Workflow
+```
+
+---
+
+## 5. Operating Commands（操作命令）
+
+Path：
+
+```text
+commands/
+```
+
+Purpose：
+
+定义用户可直接调用的操作入口。
+
+包括：
+
+```text
+COMMAND-001 — Run Jump After Work Production
+COMMAND-002 — Generate Short Video Prompt
+COMMAND-003 — Generate Storyboard
+COMMAND-004 — Generate Publishing Package
+COMMAND-005 — Run Consistency Check
+```
+
+---
+
+## 6. Runtime Docs（运行文档）
+
+Path：
+
+```text
+docs/studio-os/
+```
+
+Purpose：
+
+定义 TSOS 如何被 ChatGPT / Codex / Cursor / Claude 等 AI 工具读取和运行。
+
+包括：
+
+```text
+INDEX.md
+RUNTIME.md
+CODEX.md
+COMMANDS.md
+WORKFLOWS.md
+AGENTS.md
+```
+
+---
+
+## 7. Examples（示例层）
+
+Path：
+
+```text
+examples/
+```
+
+Purpose：
+
+展示标准输出格式。
+
+包括：
+
+```text
+COMMAND-001-output.md
+COMMAND-002-prompt.md
+COMMAND-003-storyboard.md
+```
+
+---
+
+# Quick Start（快速开始）
+
+## For AI Tools（给 AI 工具）
+
+推荐读取顺序：
+
+```text
+1. README.md
+2. ARCHITECTURE.md
+3. CHANGELOG.md
+4. docs/studio-os/INDEX.md
+5. docs/studio-os/RUNTIME.md
+6. docs/studio-os/CODEX.md
+7. docs/studio-os/COMMANDS.md
+8. docs/studio-os/WORKFLOWS.md
+9. docs/studio-os/AGENTS.md
+```
+
+---
+
+## For Production（用于生产）
+
+完整生产一条《跳跳下班啦》内容：
+
+```text
+Run COMMAND-001.
+```
+
+生成短视频 Prompt：
+
+```text
+Run COMMAND-002.
+```
+
+生成分镜：
+
+```text
+Run COMMAND-003.
+```
+
+生成发布包：
+
+```text
+Run COMMAND-004.
+```
+
+运行一致性检查：
+
+```text
+Run COMMAND-005.
+```
+
+---
+
+# Current Default Project（当前默认项目）
+
+```text
+PROJ-001 — Jump After Work Pilot Project
+```
+
+默认核心链路：
+
+```text
+CHAR-001
++
+EP-001
++
+STORY-001
++
+ENV-001
++
+MOT-001
++
+CAM-001
++
+LGT-001
++
+PROMPT-001
++
+ASSET-001
+=
+PROJ-001
+```
+
+---
+
+# Navigation Entry Points（导航入口）
+
+| Need | File |
+|---|---|
+| Understand full system | docs/studio-os/INDEX.md |
+| Understand runtime behavior | docs/studio-os/RUNTIME.md |
+| Guide Codex usage | docs/studio-os/CODEX.md |
+| Find command usage | commands/README.md |
+| Find workflow usage | workflows/README.md |
+| Find agent usage | agents/README.md |
+| Find database records | database/README.md |
+| Find example outputs | examples/README.md |
+
+---
+
+# Source of Truth（唯一事实来源）
+
+```text
+GitHub = Source of Truth
+Notion = Visual Management Layer
+```
+
+Notion 用于可视化管理 Production Database Records。  
+GitHub 负责保存所有正式规则、记录、命令、工作流、智能体、运行文档和示例。
+
+---
+
+# Runtime Safety（运行安全）
+
+任何 AI 工具运行 TSOS 时，不得：
+
+```text
+change Jump's core identity
+change TiaoTiao Universe worldbuilding
+change Brand Language
+skip ASSET-001
+skip Knowledge Nodes
+skip Database Records
+skip consistency checks
+invent unapproved canon
+treat Notion as the source of truth
+```
+
+正式输出前，建议运行：
+
+```text
+COMMAND-005 — Run Consistency Check
+```
 ## Core Databases
 
 - Character DB
