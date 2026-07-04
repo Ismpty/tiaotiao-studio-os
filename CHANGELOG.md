@@ -1,5 +1,96 @@
 # CHANGELOG
 
+## 2026 — Prompt Runtime Architecture Update
+
+### Added
+
+- Added `docs/studio-os/PROMPT-RUNTIME-RULES.md`.
+- Added OS-level prompt runtime rules for model-facing prompt generation.
+- Added the rule that internal TSOS IDs must be translated into model-readable natural language before being used in AI tools.
+- Added the default three-layer video prompt architecture:
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+```
+
+### Changed
+
+- Updated the expected role of `COMMAND-002` from generating a single video prompt to generating a complete video prompt package.
+- Updated the expected role of `AGENT-002` from basic prompt writing to model-readable prompt package generation.
+- Standardized TSOS storyboard style as black-and-white rough pencil line art.
+- Added the requirement that storyboards must retain colored dynamic annotation systems.
+- Defined shot detail ownership:
+
+```text
+Identity Card = character appearance
+Storyboard = shot details
+Universal Video Prompt = model execution rules
+```
+
+### New Storyboard Standard
+
+All TSOS storyboards must use:
+
+```text
+black-and-white line art
+rough pencil lines
+minimal details
+fast dynamic sketching
+simple anatomy
+clear silhouettes
+unfinished director storyboard / previs sketch feeling
+```
+
+Storyboard annotation colors:
+
+```text
+Red = camera movement
+Blue = character / dog movement
+Yellow = prop interaction
+Green = lighting / mood
+Purple = continuity / transition
+```
+
+### Jump Character Runtime Rule
+
+For the Jump / 跳跳 series, all model-facing prompts must preserve:
+
+```text
+real dog-form character
+clothes allowed
+small backpack allowed
+badge / collar charm allowed
+dragon-fruit pink accents allowed
+```
+
+And must forbid:
+
+```text
+humanoid body
+human hands
+human arms
+human legs
+bipedal human standing pose
+turning into a human
+turning into another animal
+```
+
+### Production Impact
+
+The new runtime architecture reduces duplicated Shot prompts and makes the production workflow clearer:
+
+```text
+Identity Card = lock character
+Storyboard = lock shots
+Universal Video Prompt = execute model generation
+```
+
+This structure should be used for all future video generation packages.
+
 # Phase 12 — Editing Assembly and Final Export Package Completed
 
 > Date：2026  

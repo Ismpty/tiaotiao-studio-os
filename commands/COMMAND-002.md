@@ -1,691 +1,402 @@
-# COMMAND-002 — Generate Short Video Prompt（生成短视频提示词）
+# COMMAND-002 — Generate Video Prompt Package
 
-> Canonical Operating Command（官方操作命令）  
-> Version：1.0  
+> Operating Command（操作命令）  
+> Category：Prompt Generation  
+> Version：2.0  
 > Status：Active
 
 ---
 
-# Definition（定义）
+# 1. Purpose（目的）
 
-## 中文
+`COMMAND-002` 用于生成视频生产所需的完整提示词包。
 
-Generate Short Video Prompt 是 TiaoTiao Studio OS 的短视频提示词生成命令。
+从 v2.0 开始，`COMMAND-002` 不再只输出单段视频 Prompt，而是输出三层结构：
 
-它用于快速调用 `WORKFLOW-002 — Short Video Prompt Workflow`，将 TSOS 中的角色、故事、环境、动作、镜头、灯光、资产和品牌规范转化为可直接用于 AI 图片 / 视频生成的 Prompt。
+```text
+Identity Card Prompt
++
+Storyboard Prompt
++
+Universal Video Prompt
+```
 
-这个 Command 不负责重新设计角色，也不负责修改故事方向。
-
-它只负责生成稳定、清晰、可复制、可执行的短视频 Prompt。
-
-## English
-
-Generate Short Video Prompt is the short-video prompt generation command of TiaoTiao Studio OS.
-
-It calls WORKFLOW-002 to transform TSOS records into executable AI image and video prompts.
+该结构用于提高角色一致性、镜头准确性、动作连续性和模型可执行性。
 
 ---
 
-# Command Goal（命令目标）
+# 2. When to Use（什么时候使用）
 
-本命令用于：
-
-- 快速生成短视频镜头 Prompt
-- 生成图片 Prompt
-- 生成视频 Prompt
-- 生成分镜 Prompt
-- 生成封面 Prompt
-- 生成角色一致性 Prompt
-- 生成负面提示词
-- 适配不同 AI 模型
-- 保持 Jump 角色一致性
-- 保持 TSOS 世界观、风格和品牌一致性
-
----
-
-# Command Syntax（命令格式）
-
-标准调用方式：
+当用户需要生成以下内容时，使用本命令：
 
 ```text
-Run COMMAND-002.
-```
-
-完整调用方式：
-
-```text
-Run COMMAND-002 for PROJ-001.
-Use WORKFLOW-002.
-Target Model: Kling.
-Prompt Type: Video Prompt.
-```
-
-中文调用方式：
-
-```text
-运行 COMMAND-002，为《跳跳下班啦》生成短视频 Prompt。
+AI video prompt
+即梦视频提示词
+视频生成提示词
+角色视频生成包
+分镜视频生成包
+故事板 + 视频 Prompt
+短视频生成 Prompt
 ```
 
 ---
 
-# Default Workflow（默认工作流）
+# 3. Required Inputs（必需输入）
 
-本命令默认调用：
+执行本命令前，至少需要明确：
 
 ```text
-WORKFLOW-002 — Short Video Prompt Workflow
+Project ID
+Main Character
+Story / Episode
+Target Platform
+Video Length
+Visual Style
+Character Form Rule
 ```
 
----
-
-# Default Project（默认项目）
-
-本命令默认服务：
+对于《跳跳下班啦》当前默认项目：
 
 ```text
+Project:
 PROJ-001 — Jump After Work Pilot Project
+
+Character:
+Jump / 跳跳
+
+Character Form:
+Real dog-form character wearing clothes
+
+Toolchain:
+Jimeng / 即梦
 ```
 
 ---
 
-# Required Database Records（必需数据库记录）
+# 4. Source References（内部来源）
 
-| Database | Record | Purpose |
-|---|---|---|
-| Character DB | CHAR-001 | Jump 角色身份 |
-| Story DB | STORY-001 | 故事目标 |
-| Environment DB | ENV-001 | 场景设定 |
-| Motion DB | MOT-001 | 动作资产 |
-| Camera DB | CAM-001 | 镜头资产 |
-| Lighting DB | LGT-001 | 灯光资产 |
-| Prompt DB | PROMPT-001 | 主提示词 |
-| Asset DB | ASSET-001 | Jump 角色参考资产 |
-| Project DB | PROJ-001 | 项目目标 |
-
----
-
-# Required Knowledge Nodes（必需知识节点）
-
-| Category | Knowledge Node |
-|---|---|
-| Style | STYLE-001 |
-| Color | COLOR-001 |
-| World | WORLD-001 |
-| Emotion | EMOTION-001 |
-| Camera Language | SHOT-001 |
-| Motion Language | MOTIONLANG-001 |
-| Outfit | OUTFIT-001 |
-| Brand Language | BRAND-001 |
-
----
-
-# Required Agent（必需智能体）
-
-| Agent | Role | Purpose |
-|---|---|---|
-| AGENT-002 | Prompt Agent | 生成可执行 AI Prompt |
-
----
-
-# Optional Agent Outputs（可选智能体输出）
-
-本命令可以读取：
-
-| Agent | Output |
-|---|---|
-| AGENT-001 | Storyboard Output |
-| AGENT-003 | Cinematography Output |
-| AGENT-004 | Script Output |
-| AGENT-005 | Editing Output |
-
----
-
-# Execution Order（执行顺序）
-
-本命令必须按照以下顺序执行：
+输出时可以引用内部来源，但这些来源只用于 Git / Notion / Review / Consistency Check。
 
 ```text
-1. Load Prompt Task
-↓
-2. Load Project Record
-↓
-3. Load Required Database Records
-↓
-4. Load Required Knowledge Nodes
-↓
-5. Run WORKFLOW-002
-↓
-6. Run AGENT-002 Prompt Agent
-↓
-7. Generate Base Prompt
-↓
-8. Generate Model-Specific Prompt
-↓
-9. Generate Negative Prompt
-↓
-10. Run Consistency Check
-↓
-11. Output Final Prompt Package
+CHAR-001
+ASSET-001
+EP-001
+STORY-001
+ENV-001
+STYLE-001
+COLOR-001
+EMOTION-001
+BRAND-001
 ```
 
 ---
 
-# Input Requirements（输入要求）
+# 5. Model-Readable Rule（模型可读规则）
 
-用户可以提供以下输入：
+任何复制进模型的 Prompt，必须是模型可读自然语言。
+
+禁止只写：
 
 ```text
-Prompt Type:
-Image Prompt / Video Prompt / Storyboard Prompt / Character Prompt / Environment Prompt / Motion Prompt / Camera Prompt / Lighting Prompt / Thumbnail Prompt
-
-Target Model:
-ChatGPT / Midjourney / Flux / ComfyUI / Kling / Veo / Runway
-
-Aspect Ratio:
-9:16 / 16:9 / 4:3 / 1:1
-
-Language:
-Chinese / English / Bilingual
-
-Target Platform:
-小红书 / 抖音 / 视频号 / YouTube Shorts / TikTok / Instagram Reels
+consistent with ASSET-001
+follow CHAR-001
+use STYLE-001
+match BRAND-001
 ```
 
-如果用户没有指定，默认：
+必须展开成：
 
 ```text
-Prompt Type:
-Video Prompt
-
-Target Model:
-Kling / Veo / Runway
-
-Aspect Ratio:
-9:16
-
-Language:
-Bilingual
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿程序员风格小狗衣服，可以有小背包、工牌、项圈挂饰和少量火龙果粉色点缀。禁止半人身体、人类手掌、人类手臂、人类双腿站立。
 ```
 
 ---
 
-# Forbidden Inputs（禁止输入）
+# 6. Output Structure（输出结构）
 
-不得通过本命令临时修改：
-
-- Jump 的物种
-- Jump 的核心身份
-- Jump 的默认服装系统
-- Jump 的毛茸茸质感
-- TiaoTiao Universe 世界观
-- Brand Language
-- Master Knowledge Nodes
-- Database Record ID
-- 文件命名规范
-
-如果用户输入与 TSOS 核心设定冲突，Command 必须拒绝该修改，并回到 Source of Truth。
-
----
-
-# Output Package（输出包）
-
-本命令最终必须输出：
+`COMMAND-002` 必须输出以下结构：
 
 ```text
-1. Prompt Purpose
-2. Target Model
-3. Source Records
-4. Base Prompt
-5. Model-Specific Prompt
-6. Negative Prompt
-7. Consistency Checklist
-8. Usage Notes
+1. Source References
+2. Identity Card Prompt
+3. Storyboard Prompt
+4. Universal Video Prompt
+5. Runtime Usage Example
+6. Review Checklist
 ```
 
 ---
 
-# Output Format（输出格式）
+# 7. Identity Card Prompt Requirements（身份卡提示词要求）
 
-输出必须使用以下结构：
+身份卡 Prompt 必须用于锁定角色外观。
+
+必须包含：
 
 ```text
-# COMMAND-002 Output
+角色名称
+物种
+身体形态
+体貌特征
+毛发特征
+服装
+配件
+颜色点缀
+禁止漂移规则
+```
 
-## 1. Prompt Purpose
+对于 Jump，必须明确：
 
-## 2. Target Model
-
-## 3. Source Records
-
-## 4. Base Prompt
-
-## 5. Model-Specific Prompt
-
-## 6. Negative Prompt
-
-## 7. Consistency Checklist
-
-## 8. Usage Notes
+```text
+真实小狗本体形态
+穿程序员风格小狗衣服
+可以背小包
+可以有工牌 / 项圈挂饰
+有少量火龙果粉色点缀
+禁止半人拟人化
+禁止人类手掌
+禁止人类手臂
+禁止人类双腿站立
 ```
 
 ---
 
-# Prompt Type Rules（提示词类型规则）
+# 8. Storyboard Prompt Requirements（故事板提示词要求）
 
-## Image Prompt
-
-适用于：
-
-- 静帧
-- 封面
-- 角色图
-- 环境图
-- 主视觉
-
-必须强调：
+故事板 Prompt 必须用于锁定：
 
 ```text
-Subject
-Scene
-Composition
-Lighting
-Style
-Brand Consistency
-Asset Reference
-Negative Prompt
+镜头结构
+镜头顺序
+角色位置
+动作方向
+道具位置
+灯光变化
+情绪变化
+镜头衔接
+```
+
+## Fixed Storyboard Style
+
+故事板主体必须采用：
+
+```text
+黑白线条
+粗略铅笔线条
+极简细节
+快速动态描绘
+简单解剖结构
+清晰轮廓
+轻盈、动态、未完成感
+导演前期预演分镜草图风格
+```
+
+禁止：
+
+```text
+彩色成片插画
+真实渲染成片感
+精修概念图
+儿童绘本风
+漫画上色成稿感
 ```
 
 ---
 
-## Video Prompt
+# 9. Storyboard Color Annotation System（故事板彩色标注系统）
 
-适用于：
-
-- AI 视频镜头
-- 动作镜头
-- 运镜镜头
-- 分镜片段
-
-必须强调：
+虽然故事板主体必须是黑白铅笔草图，但动态标注必须使用彩色系统：
 
 ```text
-Duration
-Subject
-Start Frame
-Action
-End Frame
-Camera Movement
-Motion Continuity
-Lighting
-Environment
-Negative Prompt
+红色：镜头运动（camera movement）
+蓝色：角色动作 / 小狗动作（character motion / dog movement）
+黄色：道具 / 交互（prop interaction）
+绿色：灯光 / 情绪（lighting / mood）
+紫色：镜头衔接 / 转场（continuity / transition）
+```
+
+要求：
+
+```text
+彩色箭头清楚
+动作方向明显
+道具变化有圈注
+灯光和情绪有标注
+镜头衔接有提示
 ```
 
 ---
 
-## Thumbnail Prompt
+# 10. Universal Video Prompt Requirements（通用视频提示词要求）
 
-适用于：
+当身份卡和故事板已经存在时，视频 Prompt 不应重复大量 Shot 细节。
 
-- 小红书封面
-- 抖音封面
-- 视频号封面
-- Shorts / Reels 封面
-
-必须强调：
+通用结构必须为：
 
 ```text
-Clear subject
-Safe text area
-High readability
-Warm lifestyle emotion
-Brand color consistency
-No visual clutter
+请严格参考上传的角色身份卡和故事板生成视频。
+
+本次只生成故事板中的：
+[SHOT NUMBER AND NAME]
+
+角色外观以身份卡为准。
+镜头内容以故事板对应 Shot 为准。
+视频规格、动作要求、场景要求、镜头要求、灯光情绪和负面要求如下……
 ```
 
 ---
 
-# Model Rules（模型规则）
+# 11. Shot Detail Ownership（镜头细节归属）
 
-## Kling / Veo / Runway
-
-输出必须包含：
+`COMMAND-002` 必须遵守以下职责划分：
 
 ```text
-Duration
-Subject
-Action
-Camera
-Motion
-Lighting
-Environment
-Mood
-Style
-Negative Prompt
+Identity Card = 角色外观
+Storyboard = 镜头细节
+Universal Video Prompt = 模型执行规则
+```
+
+不得把所有细节重复塞进每个 Shot Prompt。
+
+---
+
+# 12. Default Jump Character Form Rule（跳跳角色形态规则）
+
+当前 Jump 系列默认规则：
+
+```text
+Jump must remain a real dog-form character wearing clothes.
+No humanoid body.
+No human hands.
+No human arms.
+No human legs.
+No bipedal human standing pose.
+```
+
+中文规则：
+
+```text
+跳跳必须保持真实小狗本体形态。
+可以穿衣服、背小包、戴配件。
+禁止半人身体。
+禁止人类手掌。
+禁止人类手臂。
+禁止人类双腿站立。
+禁止人类比例四肢。
 ```
 
 ---
 
-## Midjourney
+# 13. Default Story Structure Rule（默认故事结构规则）
 
-输出必须包含：
+《跳跳下班啦》系列不应只展示离开办公室。
+
+默认结构：
 
 ```text
-Subject
-Composition
-Lighting
-Style
-Color
-Mood
-Visual Quality
-Negative Direction
+少量下班动作
++
+大量下班后的生活
+```
+
+推荐比例：
+
+```text
+办公室部分：10%–20%
+下班后生活：80%–90%
+```
+
+生活片段可以包括：
+
+```text
+吃饭
+逛超市
+看电影
+买小吃
+散步
+回家
+洗澡
+睡前放松
+周末户外
 ```
 
 ---
 
-## Flux / ComfyUI
+# 14. COMMAND-002 Output Example（输出示例）
 
-输出必须包含：
+执行本命令时，应输出类似结构：
 
 ```text
-Subject clarity
-Material detail
-Fur texture
-Outfit consistency
-Lighting
-Composition
-Negative Prompt
+Source References:
+CHAR-001
+ASSET-001
+STORY-001
+STYLE-001
+BRAND-001
+
+Identity Card Prompt:
+用于生成角色身份卡。
+
+Storyboard Prompt:
+用于生成黑白铅笔线条故事板，并保留彩色动态标注系统。
+
+Universal Video Prompt:
+用于拿身份卡 + 故事板逐镜头生成视频。
 ```
 
 ---
 
-## ChatGPT
+# 15. Runtime Usage（运行方式）
 
-输出必须包含：
+真实生产时执行顺序：
 
 ```text
-Clear sections
-Reference IDs
-Prompt reasoning summary
-Consistency checklist
+1. Generate Identity Card
+2. Generate Storyboard
+3. Upload Identity Card + Storyboard to video model
+4. Use Universal Video Prompt
+5. Replace [SHOT NUMBER AND NAME]
+6. Generate clip
+7. Review clip
+8. Iterate if needed
 ```
 
 ---
 
-# Base Prompt Template（基础提示词模板）
+# 16. Review Checklist（检查清单）
+
+生成 Prompt 后，必须检查：
 
 ```text
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
-
-Scene:
-TiaoTiao Studio Office, warm modern creator studio, realistic programmer workspace, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant.
-
-Action:
-Jump finishes work and begins a small after-work moment, relaxed and natural, expressing freedom and everyday joy.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera motion, cinematic documentary style, environmental storytelling.
-
-Lighting:
-Warm Studio Lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows, cozy creator studio mood.
-
-Mood:
-Freedom, relaxation, warmth, ordinary life becoming meaningful after work.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth, high-quality film still.
-
-Brand Consistency:
-Warm, optimistic, honest, creative, lifestyle-focused TiaoTiao Studio brand language.
-
-Asset Reference:
-Use ASSET-001 for Jump character consistency.
+[ ] 是否包含身份卡 Prompt
+[ ] 是否包含故事板 Prompt
+[ ] 是否包含通用视频 Prompt
+[ ] 模型可复制区域是否没有裸露内部编号
+[ ] 内部编号是否已翻译成自然语言
+[ ] 故事板是否使用黑白铅笔线条风格
+[ ] 故事板是否保留彩色动态标注系统
+[ ] 视频 Prompt 是否避免重复 Shot 细节
+[ ] 角色形态规则是否清楚
+[ ] 负面要求是否清楚
 ```
 
 ---
 
-# Standard Video Prompt Template（标准视频提示词模板）
+# 17. Related Files（相关文件）
 
 ```text
-Duration:
-6–8 seconds
-
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
-
-Start Frame:
-Jump is inside TiaoTiao Studio Office at the end of the workday.
-
-Action:
-Jump finishes work, closes the laptop, packs her backpack and begins to leave the warm studio with a relaxed and natural movement.
-
-End Frame:
-Jump moves toward the office exit, carrying the feeling that life begins again after work.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera movement, subtle handheld documentary energy, environmental storytelling.
-
-Motion:
-Natural walking, relaxed pace, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement.
-
-Lighting:
-Warm Studio Lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows.
-
-Environment:
-TiaoTiao Studio Office, warm modern creator studio, realistic programmer workspace.
-
-Mood:
-Freedom, warmth, relaxation, everyday joy.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth.
-
-Negative Prompt:
-Do not change Jump's species, no human version, no sliding feet, no robotic motion, no game animation, no cyberpunk lighting, no horror mood, no extreme wide-angle distortion.
-```
-
----
-
-# Standard Negative Prompt（标准负面提示词）
-
-```text
-Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not change outfit, do not remove Fire Dragon Fruit Pink accents, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, floating body, mechanical tail movement, impossible motion, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, inconsistent environment, aggressive expression, cheap CGI look, hard-selling commercial mood, clickbait visual style.
-```
-
----
-
-# Consistency Checklist（一致性检查）
-
-本命令结束前必须检查：
-
-```text
-[ ] Jump 是否仍然是拟人化毛茸茸小狗
-[ ] Jump 是否保持程序员身份
-[ ] Jump 是否保持苗条体型
-[ ] Jump 外观是否参考 ASSET-001
-[ ] 是否符合 OUTFIT-001
-[ ] 是否符合 COLOR-001
-[ ] 是否符合 STYLE-001
-[ ] 是否符合 ENV-001
-[ ] 是否符合 CAM-001
-[ ] 是否符合 LGT-001
-[ ] 是否符合 BRAND-001
-[ ] 是否包含 Negative Prompt
-[ ] 是否适配目标模型
-[ ] 是否没有新增未确认设定
-```
-
----
-
-# Usage Notes（使用备注）
-
-输出时必须说明：
-
-```text
-This prompt is generated from TSOS Source of Truth.
-Do not manually rewrite Jump's identity.
-Do not remove ASSET-001 references.
-Use the Negative Prompt together with the main prompt.
-```
-
----
-
-# Command Example（命令示例）
-
-## Example 1
-
-用户输入：
-
-```text
-Run COMMAND-002.
-```
-
-系统应执行：
-
-```text
-Run WORKFLOW-002 for PROJ-001.
-
-Prompt Type:
-Video Prompt
-
-Target Model:
-Kling / Veo / Runway
-```
-
-输出：
-
-```text
-Production-ready short video prompt.
-```
-
----
-
-## Example 2
-
-用户输入：
-
-```text
-运行 COMMAND-002，生成小红书 9:16 视频 Prompt，模型用 Kling。
-```
-
-系统应执行：
-
-```text
-Run COMMAND-002 for PROJ-001.
-
-Target Platform:
-小红书
-
-Aspect Ratio:
-9:16
-
-Target Model:
-Kling
-
-Prompt Type:
-Video Prompt
-```
-
-输出：
-
-```text
-Kling-ready 9:16 short video prompt.
-```
-
----
-
-# Command Rules（命令规则）
-
-## Must Do（必须）
-
-- 必须调用 WORKFLOW-002
-- 必须读取 PROJ-001
-- 必须读取 CHAR-001
-- 必须读取 ASSET-001
-- 必须读取 PROMPT-001
-- 必须调用 AGENT-002
-- 必须生成 Negative Prompt
-- 必须执行一致性检查
-- 必须输出可复制执行的 Prompt
-
----
-
-## Never Do（禁止）
-
-- 不得重新设计 Jump
-- 不得临时修改世界观
-- 不得省略 ASSET-001
-- 不得省略 Negative Prompt
-- 不得输出空泛提示词
-- 不得忽略目标模型差异
-- 不得改变品牌语言
-- 不得输出与 BRAND-001 冲突的内容
-
----
-
-# Related Files（关联文件）
-
-## Workflow
-
-```text
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+production/PROJ-001/VIDEO-PROMPTS.md
+commands/COMMAND-005.md
 workflows/WORKFLOW-002.md
-```
-
-## Database Records
-
-```text
-database/characters/CHAR-001.md
-database/stories/STORY-001.md
-database/environments/ENV-001.md
-database/motions/MOT-001.md
-database/cameras/CAM-001.md
-database/lighting/LGT-001.md
-database/prompts/PROMPT-001.md
-database/assets/ASSET-001.md
-database/projects/PROJ-001.md
-```
-
-## Knowledge Nodes
-
-```text
-knowledge/style/STYLE-001.md
-knowledge/color/COLOR-001.md
-knowledge/world/WORLD-001.md
-knowledge/emotion/EMOTION-001.md
-knowledge/camera-language/SHOT-001.md
-knowledge/motion-language/MOTIONLANG-001.md
-knowledge/outfit/OUTFIT-001.md
-knowledge/brand-language/BRAND-001.md
-```
-
-## Agents
-
-```text
 agents/prompt-engineer/AGENT-002.md
 ```
 
 ---
 
-# Usage Scope（应用范围）
-
-适用于：
-
-- Short Video Prompt
-- AI Video Prompt
-- AI Image Prompt
-- Thumbnail Prompt
-- Character Prompt
-- Environment Prompt
-- Motion Prompt
-- Camera Prompt
-- Lighting Prompt
-- Prompt QA
-
----
-
-# Changelog（更新记录）
+# 18. Changelog（更新记录）
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | 2026 | Initial canonical operating command |
+| 2.0 | 2026 | Updated COMMAND-002 to generate identity card prompt, storyboard prompt and universal video prompt |
+| 1.0 | 2026 | Initial short video prompt command |

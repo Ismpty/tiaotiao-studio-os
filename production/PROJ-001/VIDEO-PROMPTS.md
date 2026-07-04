@@ -1,672 +1,717 @@
-# PROJ-001 — Shot-by-Shot Video Prompts（逐镜头视频提示词）
+# PROJ-001 — Video Generation Package（视频生成总包）
 
 > Production Output（生产输出）  
 > Project：PROJ-001 — Jump After Work Pilot Project  
-> Command：COMMAND-002  
-> Workflow：WORKFLOW-003  
-> Target Models：Jimeng / Veo / Runway  
-> Version：1.0  
-> Status：Production Ready
+> Toolchain：Jimeng / 即梦  
+> Version：3.0  
+> Status：Production Ready  
+> Core Character Rule：Jump must remain a real dog-form character wearing clothes. No humanoid body.
 
 ---
 
-# 1. Production Purpose（生产目的）
+# 1. Purpose（目的）
 
-## 中文
+本文件是 PROJ-001 的统一视频生成包。
 
-本文件用于正式生成《跳跳下班啦》试播项目的逐镜头 AI 视频片段。
+它包含：
 
-每个镜头都可以单独复制到 Jimeng / Veo / Runway 中生成视频片段，再进入剪辑阶段。
+```text
+1. Identity Card Prompt（身份卡提示词）
+2. Storyboard Prompt（故事板提示词）
+3. Shot 1–6 Video Prompts（分镜视频提示词）
+```
 
-本文件必须遵守 TSOS Source of Truth：
+正式生产顺序：
+
+```text
+先生成身份卡
+↓
+再生成故事板
+↓
+再拿身份卡 + 故事板 + 每个 Shot 的视频 Prompt 去即梦生成视频
+```
+
+---
+
+# 2. Core Character Rule（角色核心规则）
+
+跳跳必须保持 **小狗本体形态**。
+
+跳跳不是半人拟人角色，不是人形站立角色，不是人类比例身体。  
+她是一只真实小狗形态的毛茸茸小狗，可以穿衣服、背小包、戴配件、坐在办公椅上、前爪搭在桌边、看电脑、自然走动。
+
+## Required
+
+```text
+跳跳 = 小狗本体形态
+真实小狗身体结构
+四足动物体态
+毛茸茸
+穿程序员风格小狗衣服
+可以有小背包 / 工牌 / 项圈 / 火龙果粉色点缀
+聪明、温暖、轻松、治愈
+```
+
+## Forbidden
+
+```text
+禁止半人身体
+禁止人类躯干
+禁止人类手掌
+禁止人类手臂
+禁止人类双腿站立
+禁止人类比例四肢
+禁止拟人化半人角色
+禁止变成人类
+禁止变成其他动物
+禁止肌肉体型
+禁止普通裸体宠物狗
+```
+
+---
+
+# 3. Model Usage Rule（模型使用规则）
+
+## Internal References（内部索引）
+
+以下内容只用于内部管理，不直接复制进模型：
 
 ```text
 CHAR-001
 ASSET-001
 ENV-001
-MOT-001
-CAM-001
-LGT-001
 STYLE-001
 COLOR-001
+EMOTION-001
 BRAND-001
 ```
 
-## English
+## Model-Readable Rule（模型可读规则）
 
-This file provides production-ready shot-by-shot AI video prompts for PROJ-001 — Jump After Work Pilot Project.
+复制进即梦的 Prompt 必须是完整自然语言描述。
 
-Each shot can be generated separately in Jimeng, Veo or Runway, then assembled in editing.
-
----
-
-# 2. Global Production Settings（全局生产设置）
+禁止只写：
 
 ```text
-Project:
-PROJ-001 — Jump After Work Pilot Project
+consistent with ASSET-001
+use STYLE-001
+follow CHAR-001
+```
 
-Episode:
-EP-001 — Jump After Work
+必须展开成模型可读描述，例如：
 
-Story:
-STORY-001 — Work Ends, Adventure Begins
-
-Character:
-CHAR-001 — Jump
-
-Asset Reference:
-ASSET-001 — Jump Character Reference Pack
-
-Aspect Ratio:
-9:16 vertical video
-
-Target Platform:
-小红书 / 抖音 / 视频号 / YouTube Shorts / TikTok / Instagram Reels
-
-Visual Style:
-Cinematic documentary realism
-
-Core Emotion:
-Freedom
-
-Brand Tone:
-Warm, optimistic, honest, lifestyle-focused
+```text
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿浅色程序员风格小狗卫衣，带少量火龙果粉色点缀，身体轻盈，表情温暖聪明。
 ```
 
 ---
 
-# 3. Global Character Lock（全局角色锁定）
+# 4. Generation Order（生成顺序）
 
-所有镜头必须保持：
+## Step 1 — Generate Identity Card
+
+先生成：
 
 ```text
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
+Jump-Identity-Card-v02.jpg
 ```
+
+## Step 2 — Generate Storyboard
+
+再生成：
+
+```text
+PROJ-001-Storyboard-v02.jpg
+```
+
+## Step 3 — Generate Video Clips
+
+最后拿着：
+
+```text
+Jump-Identity-Card-v02.jpg
+PROJ-001-Storyboard-v02.jpg
+Shot Prompt
+```
+
+去即梦生成：
+
+```text
+SHOT-001-v01
+SHOT-001-v02
+SHOT-001-v03
+
+SHOT-002-v01
+SHOT-002-v02
+SHOT-002-v03
+
+...
+SHOT-006-v03
+```
+
+---
+
+# 5. Identity Card Prompt（身份卡提示词）
+
+## Use
+
+用于先生成跳跳的小狗本体形态角色身份卡，锁定角色外观。
+
+## Prompt
+
+```text
+请生成一张高质量角色身份卡（Character Identity Card / Character Sheet），用于后续 AI 视频生成参考。
+
+角色名称：
+Jump / 跳跳
+
+角色核心设定：
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，不是半人拟人角色。她可以穿衣服、背小包、戴配件，但身体结构必须始终是小狗本体形态。
+
+物种：
+小狗
+
+体貌：
+真实小狗身体结构，四足动物体态，身体轻盈，毛茸茸，柔软真实毛发，脸部圆润友好，眼神聪明、温暖、亲切。
+
+性格气质：
+温暖、轻松、聪明、治愈，有一点下班后的自由感。
+
+角色身份：
+程序员小狗，属于《跳跳下班啦》系列角色。
+
+服装：
+适合小狗穿的程序员风格衣服，例如浅色小狗连帽卫衣、小背心、小马甲、柔软舒适的宠物服装。可以有小工牌、小背包、项圈挂饰。服装上有少量火龙果粉色品牌点缀。服装必须适合小狗身体结构，不要变成人类衣服比例。
 
 禁止：
+不要半人身体，不要人类躯干，不要人类手掌，不要人类手臂，不要人类双腿站立，不要人类比例四肢，不要拟人化半人角色，不要变成人类，不要变成其他动物，不要变肌肉体型，不要去掉毛茸茸质感。
 
-```text
-Do not change Jump's species.
-Do not turn Jump into a human.
-Do not remove fluffy fur.
-Do not make Jump muscular.
-Do not change outfit.
-Do not remove Fire Dragon Fruit Pink accents.
-Do not make Jump aggressive.
-Do not make Jump horror, cyberpunk or game-render style.
+请把这张身份卡设计成专业角色设定卡版式，包含以下内容：
+
+1. 角色主视图：
+- 小狗自然站姿，四足站立
+- 小狗自然坐姿
+- 三分之二角度
+- 侧面视图
+
+2. 细节特征说明：
+- Species: Dog
+- Body Form: Real Dog Form
+- Fur: Soft / Realistic / Fluffy
+- Face: Rounded / Friendly / Smart
+- Body Type: Light / Slim Dog Body
+- Temperament: Warm / Relaxed / Smart / Healing
+- Outfit: Programmer-style Dog Clothing
+- Accent: Dragon-fruit Pink Details
+
+3. 局部特写：
+- 脸部特写
+- 毛发质感特写
+- 前爪特写
+- 小狗服装细节特写
+- 小背包 / 工牌 / 项圈挂饰细节
+
+4. 角色标签区：
+- Name: Jump / 跳跳
+- Species: Fluffy Dog
+- Role: Programmer Dog
+- Mood: Warm / Relaxed / Friendly
+- Body Form: Real Dog Form
+- Style: Cinematic Lifestyle
+
+5. 禁止漂移说明：
+请在版面中清楚强调：
+- Do not become human
+- Do not become humanoid
+- Do not have human hands
+- Do not have human arms
+- Do not stand like a human
+- Do not lose dog body form
+- Do not become another animal
+- Do not lose fluffy fur
+- Do not lose programmer-style outfit
+- Do not lose dragon-fruit pink accents
+
+整体版式要求：
+专业角色设定卡风格，干净清晰，信息明确，高级质感，适合作为 AI 视频生成参考图。白底或浅灰底，带清晰标题与注释，视觉清楚易读。角色必须始终是小狗本体形态。
 ```
 
 ---
 
-# 4. Global Negative Prompt（全局负面提示词）
+# 6. Storyboard Prompt（故事板提示词）
+
+## Use（用途）
+
+用于先生成故事板分镜图，锁定镜头、动作、道具和情绪变化。
+
+这张故事板将作为后续即梦视频生成的镜头参考图。
+
+---
+
+## Core Rule（核心规则）
 
 ```text
-Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not change outfit, do not remove Fire Dragon Fruit Pink accents, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, floating body, mechanical tail movement, impossible motion, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, inconsistent environment, aggressive expression, cheap CGI look, hard-selling commercial mood, clickbait visual style.
+跳跳必须保持真实小狗本体形态。
+可以穿衣服、背小包、戴配件。
+禁止半人拟人化身体。
+禁止人类手掌。
+禁止人类手臂。
+禁止人类双腿站立。
+禁止人类比例四肢。
 ```
 
 ---
 
-# 5. Shot Prompt Package（逐镜头提示词包）
-
----
-
-## Shot 1 — Work Ending
-
-### Shot Info
+## Storyboard Style Rule（故事板风格固定规则）
 
 ```text
-Duration:
-6 seconds
+故事板必须使用黑白线条分镜风格，不要彩色成片效果。
 
-Aspect Ratio:
-9:16
-
-Story Function:
-Establish that Jump has finished a long day of coding work.
-
-Emotion:
-Calm relief
-```
-
-### Jimeng Prompt
-
-```text
-Duration:
-6 seconds
-
-Aspect Ratio:
-9:16 vertical video
-
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit with subtle Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
-
-Start Frame:
-Jump sits at her desk inside TiaoTiao Studio Office at the end of the workday. The laptop screen casts a soft warm glow on her fluffy face. A keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant are visible in the warm creator studio.
-
-Action:
-Jump’s hands pause above the keyboard, then slowly relax and leave the keyboard. Her shoulders soften slightly as she realizes the workday is finished.
-
-End Frame:
-Jump looks calm and quietly relieved. The laptop remains open. The backpack is visible near the desk, suggesting she will leave soon.
-
-Camera:
-Medium desk shot, 35mm lens, eye-level framing, natural documentary stillness, realistic depth, no dramatic camera movement.
-
-Motion:
-Small relaxed hand movement, subtle breathing, soft body mechanics, no exaggerated acting.
-
-Lighting:
-Warm Studio Lighting, soft laptop screen glow, practical desk lamp, gentle warm shadows, cozy creator studio mood.
-
-Mood:
-Calm relief, end of workday, warm and quiet.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, high-quality film still.
-```
-
-### Chinese Notes
-
-```text
-这一镜头重点是“工作结束”的状态，不要太夸张。
-跳跳还坐在桌前，电脑还开着，动作很小，只是手离开键盘、肩膀放松。
-```
-
-### Negative Prompt
-
-```text
-Use Global Negative Prompt.
+画面风格要求：
+- 黑白线条
+- 粗略的铅笔线条
+- 极简的细节
+- 快速的动态描绘
+- 简单的解剖结构
+- 清晰的轮廓
+- 保持轻盈、动态、未完成感
+- 像导演前期预演分镜 / 动作草图 / 电影分镜手稿
+- 不要精修插画感
+- 不要彩色厚涂
+- 不要真实渲染成片感
+- 不要儿童绘本风
+- 不要漫画上色成稿感
 ```
 
 ---
 
-## Shot 2 — Decision Moment
+## Color Annotation System（彩色标注系统）
 
-### Shot Info
+注意：
+虽然故事板主体必须是黑白铅笔线条草图，
+但镜头动态变化必须保留清晰的彩色标注系统。
 
 ```text
-Duration:
-6 seconds
-
-Aspect Ratio:
-9:16
-
-Story Function:
-Show Jump deciding to leave work and begin after-work life.
-
-Emotion:
-Expectation and freedom
+红色：镜头运动（camera movement）
+蓝色：小狗动作（dog movement）
+黄色：道具 / 交互（prop interaction）
+绿色：灯光 / 情绪（lighting / mood）
+紫色：镜头衔接 / 转场（continuity / transition）
 ```
 
-### Jimeng Prompt
+要求：
+- 用彩色箭头明确标出镜头运动和动作方向
+- 用彩色圈注或文字标出关键道具变化
+- 用彩色注释标出情绪和灯光变化
+- 保证黑白主体 + 彩色标注形成清晰对比
+- 标注必须清楚、明显、易读
+
+---
+
+## Prompt
 
 ```text
-Duration:
-6 seconds
+请严格参考上传的角色身份卡生成一张专业电影分镜图 / 故事板（Storyboard），用于后续 AI 视频生成参考。
 
-Aspect Ratio:
-9:16 vertical video
+角色外观必须以身份卡中的 Jump / 跳跳为准：
 
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit with Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，不是半人拟人角色。她穿适合小狗身体结构的程序员风格衣服，例如浅色小狗连帽卫衣、小背心、小马甲或柔软宠物服装，有少量火龙果粉色点缀，可以有小背包、工牌或项圈挂饰。
 
-Start Frame:
-Jump sits near her desk inside TiaoTiao Studio Office. She turns her head slightly toward the window. Golden-hour light spills softly into the warm studio.
+必须保持小狗四足体态。
+不要人类身体。
+不要人类手掌。
+不要人类手臂。
+不要人类站姿。
+不要半人拟人化角色。
 
-Action:
-Jump gives a small, gentle smile. She closes the laptop calmly. As the laptop closes, her expression changes from tired focus to quiet expectation.
+项目主题：
+《跳跳下班啦》第一条视频
 
-End Frame:
-The laptop is closed. Jump looks ready to leave work and begin her after-work life.
+故事核心：
+这条视频是“跳跳下班后的一晚”生活蒙太奇，不是单纯展示离开办公室。办公室部分只占前 3–6 秒，后面重点展示下班后的生活片段：吃饭、逛超市、看电影、买小吃、夜晚散步和暖光结尾。节奏要紧凑，每个生活片段清楚但不要拖沓。
 
-Camera:
-Medium close-up, 50mm lens, soft push-in, eye-level framing, natural camera motion, intimate but not dramatic.
+请把整张故事板设计成 8 格分镜图，适合 9:16 竖屏短视频项目，专业导演分镜风格，信息清楚，适合后续 AI 视频生成参考。
 
-Motion:
-Subtle head turn, gentle smile, natural laptop closing motion, relaxed shoulders, soft breathing.
+重要风格要求：
+整张故事板必须采用黑白线条粗略铅笔分镜风格：
+- 只用黑白线条作为主体
+- 粗略的铅笔线条
+- 极简的细节
+- 快速的动态描绘
+- 简单的解剖结构
+- 清晰的轮廓
+- 保持前期预演分镜草图感
+- 不要彩色成片插画
+- 不要真实渲染
 
-Lighting:
-Warm screen glow fades as the laptop closes. Golden-hour window spill becomes more present. Practical desk lamp remains warm and soft.
+但必须同时保留彩色动态标注系统：
+- 红色箭头：镜头运动
+- 蓝色箭头：小狗动作
+- 黄色圈注 / 箭头：道具变化
+- 绿色注释：灯光 / 情绪变化
+- 紫色注释：镜头衔接 / 连续性提示
 
-Mood:
-Hopeful, quiet, warm, life beginning after work.
+8 个镜头如下：
 
-Style:
-Cinematic documentary realism, soft emotional close-up, warm lifestyle storytelling.
-```
+Shot 1 — Work Ending
+跳跳坐在办公椅或桌边小垫子上，电脑屏幕显示代码后慢慢变暗。她前爪离开键盘附近，身体轻轻放松，快速交代“工作结束”。
 
-### Chinese Notes
+Shot 2 — Clock Out
+跳跳穿着小狗衣服，背着小背包，从办公室门口自然四足走出。门外有温暖傍晚光线。这个镜头只用来完成下班转场，不要拖太久。
 
-```text
-这一镜头是情绪转折点。
-不要大笑，不要夸张表演，只需要一个很轻的微笑和关电脑动作。
-```
+Shot 3 — Dinner Time
+跳跳来到温暖的小餐馆或街边小饭店。画面里有小碗、餐盘、暖灯、餐桌，她坐在桌边或地面小垫子上，开心地看着晚饭。动作符合小狗本体形态，不要像人一样拿筷子。
 
-### Negative Prompt
+Shot 4 — Supermarket Walk
+跳跳在超市零食区或水果区逛逛，旁边有小购物篮、货架、饮料、零食、蔬果。她背着小包，四足自然走动，低头闻一闻或看向货架，表现下班后逛超市的小快乐。
 
-```text
-Use Global Negative Prompt.
+Shot 5 — Movie Night
+跳跳坐在电影院座位或家中投影前，旁边有爆米花、小毯子、柔和屏幕光。她安静看电影，表情放松，氛围温暖治愈。
+
+Shot 6 — Street Snack
+跳跳来到夜晚街边小摊或便利店门口，暖光下有热乎乎的小吃、纸袋或小零食。她低头闻一闻，表现下班后的小奖励。
+
+Shot 7 — Night Walk
+跳跳背着小包走在夜晚街道，路边有暖色橱窗、街灯、植物和生活化街景。她脚步轻松稳定，尾巴自然，表现“时间终于属于自己”。
+
+Shot 8 — Life Begins
+跳跳停在温暖夜色里，回头看一眼或抬头看向前方，表情放松、自由。画面有结尾感，可用于最后一句字幕“下班啦，生活开始啦”。
+
+版式要求：
+- 8 格清晰分镜图
+- 每格标明 Shot 编号和镜头名称
+- 每格都要有简短镜头说明
+- 每格都要明确显示竖屏构图 9:16
+- 每格都要清楚显示角色位置、道具位置和动作方向
+- 每格主体必须是黑白粗略铅笔线条草图
+- 每格必须保留彩色标注系统表示动态变化
+
+视觉风格要求：
+专业导演分镜图风格，黑白线条、粗略铅笔感、极简细节、快速动态描绘、简单解剖结构、清晰轮廓。整体像电影前期分镜手稿，不是成片概念图。
+
+场景要求：
+温暖的创作者工作室办公室、街边小餐馆、超市、电影院或投影空间、夜晚街边小摊、夜晚散步街道。整体是“下班后的一晚”的生活蒙太奇。
+
+灯光要求：
+虽然画面主体是黑白线条草图，但要通过绿色标注清楚说明灯光和情绪变化。Shot 2 开始要出现傍晚暖光，Shot 3–8 体现下班后生活的温暖、自由和松弛感。
+
+重要限制：
+跳跳必须保持真实小狗本体形态。
+禁止半人身体。
+禁止人类手掌。
+禁止人类手臂。
+禁止双腿直立人形站姿。
+禁止拟人化半人角色。
+禁止变成人类。
+禁止变成其他动物。
+禁止失去毛茸茸质感。
+禁止失去小狗衣服和小背包设定。
 ```
 
 ---
 
-## Shot 3 — Packing Up
+# 7. Video Generation Universal Opening（视频生成通用开头）
 
-### Shot Info
-
-```text
-Duration:
-7 seconds
-
-Aspect Ratio:
-9:16
-
-Story Function:
-Show transition from work mode to life mode.
-
-Emotion:
-Gentle transition
-```
-
-### Jimeng Prompt
+以后每个 Shot 的视频 Prompt 开头固定加：
 
 ```text
-Duration:
-7 seconds
-
-Aspect Ratio:
-9:16 vertical video
-
-Subject:
-Jump, anthropomorphic fluffy female dog programmer, consistent with ASSET-001. Focus on her hands, backpack and desk objects while keeping character identity consistent.
-
-Start Frame:
-Close-up of Jump’s hands near the warm desk. Notebook, headphones, laptop, coffee cup and backpack are visible in soft warm light.
-
-Action:
-Jump gently packs her notebook and headphones into the backpack. She closes the backpack zipper naturally. Small desk objects move slightly as she prepares to leave.
-
-End Frame:
-The backpack is packed and ready beside Jump. The desk remains clean but lived-in, warm and realistic.
-
-Camera:
-Detail close-ups, 50mm lens, soft depth of field, tactile realism, no fast camera movement.
-
-Motion:
-Natural hand movement, realistic object handling, gentle zipper closing, no robotic movement.
-
-Lighting:
-Warm practical desk lamp, soft ambient fill, gentle shadows, cozy end-of-work atmosphere.
-
-Mood:
-Quiet transition, warm routine, life mode starting.
-
-Style:
-Cinematic documentary realism, tactile lifestyle detail, natural warm color.
-```
-
-### Chinese Notes
-
-```text
-这一镜头可以多生成几个备用版本。
-重点是手部、背包、耳机、笔记本、拉链这些细节。
-不要让桌面过乱，也不要像商业广告摆拍。
-```
-
-### Negative Prompt
-
-```text
-Use Global Negative Prompt.
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 ```
 
 ---
 
-## Shot 4 — Walking Out
-
-### Shot Info
+# 8. Global Negative Prompt（全局负面提示词）
 
 ```text
-Duration:
-8–10 seconds
-
-Aspect Ratio:
-9:16
-
-Story Function:
-Show Jump physically leaving the work environment.
-
-Emotion:
-Freedom begins
-```
-
-### Jimeng Prompt
-
-```text
-Duration:
-8–10 seconds
-
-Aspect Ratio:
-9:16 vertical video
-
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit with Fire Dragon Fruit Pink brand accents, backpack on, consistent with ASSET-001.
-
-Start Frame:
-Jump stands inside TiaoTiao Studio Office with her backpack. The warm creator studio is visible behind her.
-
-Action:
-Jump walks naturally through the studio toward the office exit. Her steps are grounded and relaxed. Her body weight shifts realistically. Her tail moves subtly with her walking rhythm.
-
-End Frame:
-Jump continues toward the office door, carrying a light sense of freedom and after-work relief.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera movement, subtle handheld documentary energy, environmental storytelling.
-
-Motion:
-Natural walking, relaxed pace, grounded foot contact, realistic weight transfer, soft body mechanics, subtle tail movement.
-
-Lighting:
-Warm Studio Lighting, practical ambient light, soft golden-hour window spill, gentle shadows, realistic depth.
-
-Mood:
-Freedom begins, relaxed movement, warm after-work feeling.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth.
-```
-
-### Chinese Notes
-
-```text
-这一镜头最容易出问题，重点检查脚步。
-必须避免滑步、漂浮、机器人动作。
-镜头是平视跟拍，不要游戏视角，不要无人机环绕。
-```
-
-### Negative Prompt
-
-```text
-Use Global Negative Prompt.
+不要横屏，不要 16:9，不要半人身体，不要人类躯干，不要人类手掌，不要人类手臂，不要人类双腿站立，不要人类比例四肢，不要拟人化半人角色，不要把跳跳变成人，不要变成其他动物，不要变肌肉，不要去掉毛茸茸质感，不要裸体宠物狗，不要丢失衣服，不要丢失小狗本体形态，不要恐怖风，不要赛博朋克，不要游戏感，不要廉价 CGI，不要宠物写真棚拍感，不要办公室杂乱，不要冷色企业办公室，不要强广告感，不要脸部崩坏，不要身体变形，不要四肢扭曲，不要滑步，不要身体漂浮。
 ```
 
 ---
 
-## Shot 5 — Door Exit
+# 9. Shot 1 — Work Ending
 
-### Shot Info
+## Goal
 
-```text
-Duration:
-8 seconds
+工作结束，跳跳坐在桌边，前爪从键盘附近慢慢放松，松一口气，进入下班状态。
 
-Aspect Ratio:
-9:16
-
-Story Function:
-Transition from office to after-work world.
-
-Emotion:
-Release and openness
-```
-
-### Jimeng Prompt
+## Model-Readable Prompt
 
 ```text
-Duration:
-8 seconds
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 
-Aspect Ratio:
-9:16 vertical video
+9:16 竖屏视频，时长 6 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
 
-Subject:
-Jump, anthropomorphic fluffy female dog programmer, slim body, soft realistic fur, default programmer outfit, Fire Dragon Fruit Pink accents, carrying backpack, consistent with ASSET-001.
+角色：
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿适合小狗身体结构的程序员风格衣服，例如浅色小狗卫衣或小马甲，有少量火龙果粉色点缀。她身体轻盈，脸部圆润友好，毛发柔软真实，表情温暖聪明。她不是半人角色，不是人类身体，不是人形站立角色。
 
-Start Frame:
-Jump reaches the office door from inside TiaoTiao Studio Office. Warm indoor light surrounds her.
+场景：
+温暖的创作者工作室办公室，真实程序员办公桌，有电脑屏幕、代码界面、键盘、鼠标、台灯、笔记本、咖啡杯、小背包、耳机和一盆小植物。空间干净但有生活痕迹，不是冷冰冰的企业办公室。
 
-Action:
-Jump opens the door naturally and steps toward the brighter golden outside light. Her movement is calm, grounded and relaxed.
+动作：
+跳跳坐在办公椅或桌边小垫子上，面对电脑屏幕。她的前爪自然搭在桌边或键盘附近，像陪伴式程序员小狗刚完成一天工作。她慢慢放松，前爪轻轻离开键盘附近，身体微微松下来，像是终于完成工作后松了一口气。动作细腻、自然、真实，不要夸张表演。
 
-End Frame:
-The door opens. Warm indoor light transitions into brighter after-work golden light. Jump is about to step into the outside world.
+镜头：
+35mm 视角，平视或略低的中景办公桌镜头，自然电影纪录片感，轻微景深，镜头稳定。不要宠物写真棚拍感，不要让角色一直看镜头，不要椅子后仰。
 
-Camera:
-Rear follow shot, 35mm lens, eye-level hero tracking movement, natural documentary camera, gentle depth.
+灯光：
+温暖工作室灯光，电脑屏幕柔光，台灯暖光，柔和阴影，傍晚氛围。
 
-Motion:
-Natural walking, realistic door opening, slight pause before stepping out, subtle tail motion.
+情绪：
+工作结束后的轻松、温暖、安静、生活即将开始。
 
-Lighting:
-Warm interior light transitioning into golden exterior light, soft shadows, no harsh contrast.
-
-Mood:
-Release, openness, life beginning after work.
-
-Style:
-Warm cinematic documentary realism, soft emotional transition, lifestyle storytelling.
-```
-
-### Chinese Notes
-
-```text
-这一镜头是空间转换。
-不要做成“逃离公司”的戏剧感，而是温暖、轻松、自然地离开。
-门外光线要温暖，不要过曝。
-```
-
-### Negative Prompt
-
-```text
-Use Global Negative Prompt.
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要人类双腿站立，不要人类比例四肢，不要把跳跳变成人，不要变成其他动物，不要变成普通无衣服宠物狗，不要去掉衣服，不要去掉毛茸茸质感，不要改变脸型和体型，不要变肌肉，不要宠物写真风，不要手部变形，不要脸部崩坏，不要恐怖风，不要赛博朋克，不要游戏感，不要办公室杂乱，不要冷色企业办公室，不要强广告感。
 ```
 
 ---
 
-## Shot 6 — Warm Ending
+# 10. Shot 2 — Decision Moment
 
-### Shot Info
+## Goal
 
-```text
-Duration:
-8 seconds
+跳跳看向窗外或一侧，电脑屏幕变暗，完成“工作结束，生活开始”的情绪切换。
 
-Aspect Ratio:
-9:16
-
-Story Function:
-End with emotional memory point.
-
-Emotion:
-Freedom, quiet joy, reflection
-```
-
-### Jimeng Prompt
+## Model-Readable Prompt
 
 ```text
-Duration:
-8 seconds
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 
-Aspect Ratio:
-9:16 vertical video
+9:16 竖屏视频，时长 6 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
 
-Subject:
-Jump, anthropomorphic fluffy female dog programmer, slim body, warm friendly expression, soft realistic fur texture, default programmer outfit with Fire Dragon Fruit Pink brand accents, backpack on, consistent with ASSET-001.
+角色：
+跳跳是一只穿程序员风格小狗服装的毛茸茸小狗，保持真实小狗本体形态，身体轻盈，脸部圆润友好，表情温暖轻松，有少量火龙果粉色点缀。
 
-Start Frame:
-Jump steps into warm after-work golden light outside the studio. The atmosphere feels open, calm and gentle.
+场景：
+同一间温暖创作者工作室办公室，电脑桌、电脑屏幕、键盘、台灯、咖啡杯、小背包、耳机、小植物保持连续性。
 
-Action:
-Jump pauses for a quiet moment. She breathes calmly. Her tail moves subtly. She looks relaxed, like she has given time back to herself.
+动作：
+跳跳坐在桌边或办公椅上，先轻轻看向窗外或一侧，耳朵微微动一下，表情放松。电脑屏幕从代码界面慢慢变暗或进入锁屏状态。跳跳的身体语言表现出“工作结束，准备下班”的轻松期待感。不要让她像人一样用手合电脑。
 
-End Frame:
-A warm emotional ending frame. Jump stands in the after-work light. The final feeling is that life begins again after work.
+镜头：
+平视或略低中景，轻微电影感景深，镜头稳定，画面温暖。
 
-Camera:
-Static hold or slow push-out, 35mm lens, gentle composition, eye-level, natural depth.
+灯光：
+室内暖光 + 傍晚窗外暖光，画面温暖柔和。
 
-Motion:
-Small relaxed breathing, subtle tail movement, soft emotional hold, no exaggerated posing.
+情绪：
+安静、放松、带一点期待感。
 
-Lighting:
-Golden-hour warmth, soft natural light, gentle shadows, warm optimistic atmosphere.
-
-Mood:
-Freedom, quiet joy, warmth, everyday life becoming meaningful.
-
-Style:
-Cinematic lifestyle storytelling, soft warm film still, natural color balance, emotional stillness.
-```
-
-### Final Caption
-
-```text
-下班啦，生活开始啦。
-```
-
-### Chinese Notes
-
-```text
-结尾不要喊口号，不要商业摆拍。
-保持安静、温暖、有一点回味。
-这一帧可以作为系列固定结尾风格参考。
-```
-
-### Negative Prompt
-
-```text
-Use Global Negative Prompt.
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要人类双腿站立，不要人形站姿，不要夸张表演，不要宠物写真棚拍感，不要角色漂移，不要赛博朋克，不要恐怖风。
 ```
 
 ---
 
-# 6. Recommended Generation Order（推荐生成顺序）
+# 11. Shot 3 — Ready to Leave
 
-建议按以下顺序生成：
+## Goal
 
-```text
-1. Shot 1 — Work Ending
-2. Shot 2 — Decision Moment
-3. Shot 3 — Packing Up
-4. Shot 4 — Walking Out
-5. Shot 5 — Door Exit
-6. Shot 6 — Warm Ending
-```
+跳跳靠近自己的小背包，准备离开，从工作状态过渡到下班状态。
 
-原因：
+## Model-Readable Prompt
 
 ```text
-先生成室内稳定镜头，再生成动作复杂的行走镜头。
-Shot 4 和 Shot 5 最容易出现动作漂移，需要多生成几个版本。
-```
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 
----
+9:16 竖屏视频，时长 7 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
 
-# 7. Clip Review Checklist（视频片段检查表）
+角色：
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿浅色程序员风格小狗衣服，有小工牌或项圈挂饰，有少量火龙果粉色点缀。保持身份卡中的脸型、毛发、体型、服装和气质一致。
 
-每个视频片段生成后必须检查：
+场景：
+同一工作室办公室空间。桌边或办公椅边有跳跳的小背包，旁边有耳机、笔记本、咖啡杯等工作物件。桌面温暖、干净、有生活感。
 
-```text
-[ ] Jump 是否仍然是拟人化毛茸茸小狗
-[ ] Jump 是否没有变成人类
-[ ] Jump 是否保持苗条体型
-[ ] Jump 是否保持程序员身份
-[ ] Jump 是否参考 ASSET-001
-[ ] 毛发是否稳定
-[ ] 服装是否稳定
-[ ] 品牌色点缀是否稳定
-[ ] 动作是否自然
-[ ] 脚步是否没有滑动
-[ ] 身体是否没有漂浮
-[ ] 尾巴动作是否自然
-[ ] 镜头是否平视自然
-[ ] 灯光是否温暖
-[ ] 场景是否符合 ENV-001
-[ ] 是否没有赛博朋克 / 恐怖 / 游戏感
+动作：
+跳跳从桌边轻轻转向自己的小背包，低头靠近背包，像是在确认准备离开。她可以轻轻用鼻子碰一下背包或闻一下背包，动作自然、真实、符合小狗本体形态。不要让她像人一样用手收纳物品，不要强行做复杂人类动作。
+
+镜头：
+中近景，以跳跳、小背包和桌边物件为主，镜头稳定。
+
+灯光：
+暖光、柔和、生活感强。
+
+情绪：
+轻松、准备离开、从工作进入生活。
+
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要用人类动作收拾背包，不要物件融化，不要背包消失，不要桌面杂乱失控，不要角色漂移。
 ```
 
 ---
 
-# 8. Continuity Notes（连续性备注）
+# 12. Shot 4 — Walking Out
+
+## Goal
+
+跳跳穿着衣服、背着小背包，从工位自然四足走向办公室出口。
+
+## Model-Readable Prompt
 
 ```text
-Shot 1:
-Laptop is open. Jump is still working.
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 
-Shot 2:
-Laptop closes. Jump decides to leave.
+9:16 竖屏视频，时长 10 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
 
-Shot 3:
-Backpack is packed. Laptop is closed.
+角色：
+跳跳是一只毛茸茸小狗，真实小狗身体结构，四足自然行走，穿程序员风格小狗衣服，背着小背包，有少量火龙果粉色点缀。保持身份卡中的小狗脸型、毛发、体型、服装和气质一致。
 
-Shot 4:
-Jump carries backpack and walks toward the exit.
+场景：
+同一工作室办公室，办公桌、暖光、出口位置延续前镜头空间关系。
 
-Shot 5:
-Jump opens the door and transitions toward outside light.
+动作：
+跳跳背着小背包，从工位附近自然四足走向办公室出口。脚步贴地，步伐稳定，身体不要漂浮，背包保持稳定，不要消失或变形。动作轻松自然，像下班后准备离开的小狗。
 
-Shot 6:
-Jump is outside or near the exit in warm after-work light.
+镜头：
+平视低机位或小狗视角高度的跟拍镜头，轻微跟随角色移动，镜头稳定自然。不要游戏第一视角，不要夸张运镜。
+
+灯光：
+延续暖光工作室氛围，柔和自然。
+
+情绪：
+自由感开始出现，轻松、温暖、准备离开。
+
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要人类双腿站立，不要小狗双腿站立走路，不要滑步，不要身体漂浮，不要 FPS 游戏感，不要背包消失，不要角色变形，不要赛博朋克。
 ```
 
 ---
 
-# 9. Production Notes（制作备注）
+# 13. Shot 5 — Door Exit
+
+## Goal
+
+跳跳走到门口，门半开或自动打开，她走向门外暖光。
+
+## Model-Readable Prompt
 
 ```text
-Shot 1–3:
-Can be generated with stable character and environment priority.
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
 
-Shot 4–5:
-Need stronger motion checking. Generate multiple takes if necessary.
+9:16 竖屏视频，时长 8 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
 
-Shot 6:
-Focus on emotional ending and warm lighting. Avoid overexposure.
+角色：
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿程序员风格小狗衣服，背着小背包，服装和外观延续前镜头。她四足自然走路，不要人形站立。
 
-Recommended workflow:
-Generate each shot separately.
-Review each shot using COMMAND-005.
-Only approved clips should enter editing.
+场景：
+工作室出口门口，门是半开状态或自动门缓缓打开，门外有温暖傍晚光线，室内外光线形成自然过渡。
+
+动作：
+跳跳自然走到门口，从半开的门或自动打开的门旁边走出去。她不需要像人一样伸手开门。重点表现她从办公室走向门外暖光，动作稳定、真实、轻松。
+
+镜头：
+平视低机位或中近景，强调门口空间、跳跳走出门和光线过渡。
+
+灯光：
+室内暖光 + 门外金色傍晚暖光，柔和过渡，不要过曝。
+
+情绪：
+从工作空间进入下班后生活的转折，温暖、轻松、自由。
+
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要人类双腿站立，不要让小狗像人一样伸手开门，不要门把手混乱，不要开门动作诡异，不要过曝，不要戏剧化逃离感。
 ```
 
 ---
 
-# 10. Final Consistency Checklist（最终一致性检查）
+# 14. Shot 6 — Warm Ending
+
+## Goal
+
+跳跳站在暖光里，回头或轻轻停下，形成片尾记忆点。
+
+## Model-Readable Prompt
 
 ```text
-[PASS] Uses PROJ-001.
-[PASS] Uses CHAR-001.
-[PASS] Uses ASSET-001.
-[PASS] Uses ENV-001.
-[PASS] Uses MOT-001.
-[PASS] Uses CAM-001.
-[PASS] Uses LGT-001.
-[PASS] Uses STYLE-001.
-[PASS] Uses BRAND-001.
-[PASS] Includes Negative Prompt.
-[PASS] Supports shot-by-shot production.
-[PASS] Ready for AI video generation.
+请严格参考上传的角色身份卡和故事板生成视频。
+角色外观以身份卡为准。
+跳跳必须保持真实小狗本体形态，不要半人拟人化，不要人类身体，不要人类手掌，不要人类双腿站立。
+镜头构图、动作逻辑、场景连续性和情绪变化以故事板为准。
+必须生成 9:16 竖屏视频。
+
+9:16 竖屏视频，时长 8 秒，电影感生活纪录片风格，温暖真实，高级短视频质感。
+
+角色：
+跳跳是一只穿程序员风格小狗衣服的毛茸茸小狗，真实小狗本体形态，身体轻盈，毛发柔软真实，表情温暖轻松，背着小背包，服装和整体外观保持一致。
+
+场景：
+门外或门口过渡区域，延续傍晚暖光氛围。画面温暖、安静、有生活感。
+
+动作：
+跳跳自然走到暖光里，轻轻停下，回头看一眼或抬头看向前方，表情放松、温暖、自由。动作简洁，不夸张，不摆拍。画面适合最后一句字幕“下班啦，生活开始啦”。
+
+镜头：
+平视低机位或稍近一点的收尾镜头，画面稳定，适合作为温暖结尾。
+
+灯光：
+温暖柔和，带一点傍晚金色氛围，不要过曝。
+
+情绪：
+温暖、轻松、自由、生活开始。
+
+负面要求：
+不要横屏，不要 16:9，不要半人身体，不要人类手掌，不要人类手臂，不要人类双腿站立，不要角色变形，不要广告摆拍感，不要赛博朋克，不要恐怖风，不要过曝，不要表情夸张。
 ```
 
 ---
 
-# 11. Next Production Action（下一步生产动作）
+# 15. Runtime Reminder（执行提醒）
+
+实际执行时：
 
 ```text
-1. Copy Shot 1 prompt into Jimeng / Veo / Runway.
-2. Generate 2–3 versions.
-3. Select the most stable version.
-4. Run COMMAND-005 visual consistency check.
-5. Repeat for Shot 2–6.
-6. Save selected clips into production/PROJ-001/clips/.
-7. Continue to cover package generation.
+1. 先用身份卡 Prompt 生成小狗本体形态的 Jump Identity Card v02
+2. 再用故事板 Prompt 生成 8 格 Storyboard v02
+3. 再拿身份卡 + 故事板 + 每个 Shot 的视频 Prompt 去即梦生成
+```
+
+优先生成：
+
+```text
+SHOT-001-v03
+SHOT-001-v04
+SHOT-001-v05
+```
+
+重点检查：
+
+```text
+[ ] 是否 9:16 竖屏
+[ ] 是否保持小狗本体形态
+[ ] 是否穿衣服
+[ ] 是否没有半人身体
+[ ] 是否没有人类手掌
+[ ] 是否没有双腿站立
+[ ] 是否符合工作结束情绪
 ```
 
 ---
 
-# Changelog（更新记录）
+# 16. Changelog（更新记录）
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | 2026 | Initial shot-by-shot video prompt production file |
+| 3.0 | 2026 | Revised Jump from anthropomorphic humanoid dog to real dog-form character wearing clothes |
