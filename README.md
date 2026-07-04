@@ -36,6 +36,8 @@ Workflow Templates
 +
 Operating Commands
 +
+Prompt Runtime Rules
++
 Runtime Docs
 +
 Examples
@@ -74,6 +76,7 @@ docs/studio-os/CODEX.md
 docs/studio-os/COMMANDS.md
 docs/studio-os/WORKFLOWS.md
 docs/studio-os/AGENTS.md
+docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 Recommended reading order:
@@ -84,6 +87,7 @@ Recommended reading order:
 3. docs/studio-os/COMMANDS.md
 4. docs/studio-os/WORKFLOWS.md
 5. docs/studio-os/AGENTS.md
+6. docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ---
@@ -143,6 +147,8 @@ agents/
 ↓
 workflows/
 ↓
+prompt runtime/
+↓
 commands/
 ↓
 docs/studio-os/
@@ -157,6 +163,7 @@ Knowledge Nodes define rules.
 Database Records define production entities.
 Agents define creative roles.
 Workflows define execution order.
+Prompt Runtime defines model-readable prompt execution.
 Commands trigger operations.
 Runtime Docs explain how to use the system.
 Examples show expected outputs.
@@ -223,6 +230,9 @@ skip Database Records
 skip consistency checks
 invent unapproved canon
 treat Notion as the source of truth
+use raw internal IDs as model-facing prompt language
+turn Jump into a humanoid, human or unclothed ordinary pet dog
+ignore black-and-white rough pencil storyboard rules
 ```
 
 Before formal production output, use:
@@ -326,7 +336,8 @@ tiaotiao-studio-os/
 │   │   ├── CODEX.md
 │   │   ├── COMMANDS.md
 │   │   ├── WORKFLOWS.md
-│   │   └── AGENTS.md
+│   │   ├── AGENTS.md
+│   │   └── PROMPT-RUNTIME-RULES.md
 │   ├── creator-bible/
 │   └── changelog/
 │
@@ -341,7 +352,7 @@ tiaotiao-studio-os/
 
 # System Layer Overview（系统层总览）
 
-TSOS 当前由 7 个核心层组成：
+TSOS 当前由 8 个核心层组成：
 
 ```text
 Knowledge Layer
@@ -351,6 +362,8 @@ Production Database
 AI Agents
 ↓
 Workflow Templates
+↓
+Prompt Runtime Layer
 ↓
 Operating Commands
 ↓
@@ -467,7 +480,52 @@ WORKFLOW-004 — Publishing Workflow
 
 ---
 
-## 5. Operating Commands（操作命令）
+## 5. Prompt Runtime Layer（提示词运行层）
+
+Path：
+
+```text
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+commands/COMMAND-002.md
+commands/COMMAND-005.md
+workflows/WORKFLOW-002.md
+workflows/WORKFLOW-003.md
+agents/director/AGENT-001.md
+agents/prompt-engineer/AGENT-002.md
+production/PROJ-001/VIDEO-PROMPTS.md
+```
+
+Purpose：
+
+定义模型可执行 Prompt 的结构、可读性和审查方式。
+
+当前标准结构：
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Model-readable check
+↓
+COMMAND-005 review
+```
+
+核心规则：
+
+```text
+Internal system language is not model language.
+```
+
+内部编号可以用于 GitHub、Notion、Review 和 Changelog。
+
+模型可复制 Prompt 必须写成自然语言，不能依赖裸露内部 ID。
+
+---
+
+## 6. Operating Commands（操作命令）
 
 Path：
 
@@ -491,7 +549,7 @@ COMMAND-005 — Run Consistency Check
 
 ---
 
-## 6. Runtime Docs（运行文档）
+## 7. Runtime Docs（运行文档）
 
 Path：
 
@@ -512,11 +570,12 @@ CODEX.md
 COMMANDS.md
 WORKFLOWS.md
 AGENTS.md
+PROMPT-RUNTIME-RULES.md
 ```
 
 ---
 
-## 7. Examples（示例层）
+## 8. Examples（示例层）
 
 Path：
 
@@ -554,6 +613,7 @@ COMMAND-003-storyboard.md
 7. docs/studio-os/COMMANDS.md
 8. docs/studio-os/WORKFLOWS.md
 9. docs/studio-os/AGENTS.md
+10. docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ---
@@ -588,6 +648,20 @@ Run COMMAND-004.
 
 ```text
 Run COMMAND-005.
+```
+
+当前视频 Prompt 生产结构：
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Model-readable check
+↓
+COMMAND-005 review
 ```
 
 ---
@@ -634,6 +708,7 @@ PROJ-001
 | Find command usage | commands/README.md |
 | Find workflow usage | workflows/README.md |
 | Find agent usage | agents/README.md |
+| Understand prompt runtime | docs/studio-os/PROMPT-RUNTIME-RULES.md |
 | Find database records | database/README.md |
 | Find example outputs | examples/README.md |
 
@@ -665,6 +740,9 @@ skip Database Records
 skip consistency checks
 invent unapproved canon
 treat Notion as the source of truth
+use raw internal IDs as model-facing prompt language
+turn Jump into a humanoid, human or unclothed ordinary pet dog
+ignore black-and-white rough pencil storyboard rules
 ```
 
 正式输出前，建议运行：

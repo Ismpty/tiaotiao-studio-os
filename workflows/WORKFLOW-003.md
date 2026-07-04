@@ -1,7 +1,7 @@
 # WORKFLOW-003 — Storyboard to Video Workflow（分镜到视频工作流）
 
 > Canonical Workflow Template（官方工作流模板）  
-> Version：1.0  
+> Version：2.0
 > Status：Active
 
 ---
@@ -12,17 +12,44 @@
 
 Storyboard to Video Workflow 是 TiaoTiao Studio OS 的分镜到视频生成工作流。
 
-它用于把已经完成的 Storyboard Output 转化为可执行的视频镜头生成包，包括镜头拆分、视频提示词、摄影参数、动作连续性、灯光一致性、负面提示词和片段组装规则。
+它用于把已经确认的身份卡、故事板和通用视频 Prompt，转化为可生成、可审查、可剪辑的视频片段。
 
-这个 Workflow 不负责重新写故事，也不负责重新设计角色。
+从 v2.0 开始，本 Workflow 不再为每个 Shot 复制一份长视频 Prompt。
 
-它只负责把已经确认的分镜内容转化为可生成、可检查、可组装的视频片段。
+镜头细节归属故事板。
+
+视频生成时使用：
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Current Shot Name
+↓
+COMMAND-005 review
+```
 
 ## English
 
-Storyboard to Video Workflow transforms approved storyboard outputs into executable AI video generation packages.
+Storyboard to Video Workflow transforms an approved identity card, approved storyboard and universal video prompt into executable video clips.
 
-It converts storyboard shots into video prompts, cinematography instructions, motion continuity rules, lighting requirements, negative prompts and assembly notes.
+Starting from v2.0, shot details belong to the storyboard, and video generation uses a compact universal prompt with the uploaded identity card, uploaded storyboard and current shot name.
+
+---
+
+# Source of Truth Rule（事实来源规则）
+
+```text
+GitHub = Source of Truth
+Notion = Visual Management Layer
+```
+
+本 Workflow 必须以 GitHub 文件为正式依据。
+
+Notion 只能用于可视化管理和进度追踪，不能作为最终事实来源。
 
 ---
 
@@ -30,13 +57,15 @@ It converts storyboard shots into video prompts, cinematography instructions, mo
 
 本工作流的目标是：
 
-- 将分镜转化为可直接生成的视频镜头
-- 保持 Jump 角色一致性
-- 保持镜头之间动作连续
-- 保持办公室环境、灯光、色彩一致
-- 避免 AI 视频生成中的角色漂移
-- 避免镜头之间风格不统一
-- 让视频片段可以进入剪辑阶段
+- 用身份卡锁定 Jump 角色外观
+- 用故事板锁定镜头细节
+- 用通用视频 Prompt 执行逐镜头生成
+- 避免每个 Shot 产生重复长 Prompt
+- 保持 Jump 是真实小狗本体形态、穿衣服的角色
+- 保持故事板黑白粗略铅笔线稿风格
+- 保持故事板彩色动态标注系统
+- 保持镜头之间动作、道具、灯光和情绪连续
+- 让每个视频片段可以进入 `COMMAND-005` 审查和剪辑阶段
 
 ---
 
@@ -46,14 +75,27 @@ It converts storyboard shots into video prompts, cinematography instructions, mo
 
 ```text
 PROJ-001 — Jump After Work Pilot Project
+《跳跳下班啦》
+```
+
+默认故事比例：
+
+```text
+Office / clock-out part: 10%–20%
+After-work life montage: 80%–90%
 ```
 
 ---
 
-# Required Database Records（必需数据库记录）
+# Required Source References（必需内部来源）
 
-| Database | Record | Purpose |
+以下内部编号用于 GitHub 文档、Notion 管理、Review、Changelog 和一致性检查。
+
+它们不得裸露在模型可复制 Prompt 中。
+
+| Source | Record | Purpose |
 |---|---|---|
+| Project DB | PROJ-001 | 项目目标 |
 | Character DB | CHAR-001 | Jump 角色身份 |
 | Episode DB | EP-001 | 剧集设定 |
 | Story DB | STORY-001 | 故事目标 |
@@ -61,9 +103,8 @@ PROJ-001 — Jump After Work Pilot Project
 | Motion DB | MOT-001 | 动作连续性 |
 | Camera DB | CAM-001 | 镜头语言 |
 | Lighting DB | LGT-001 | 灯光一致性 |
-| Prompt DB | PROMPT-001 | 主提示词 |
+| Prompt DB | PROMPT-001 | 提示词规则 |
 | Asset DB | ASSET-001 | 角色参考资产 |
-| Project DB | PROJ-001 | 项目目标 |
 
 ---
 
@@ -89,9 +130,22 @@ PROJ-001 — Jump After Work Pilot Project
 | Agent | Role |
 |---|---|
 | AGENT-001 | Storyboard Agent |
-| AGENT-002 | Prompt Agent |
+| AGENT-002 | Prompt Engineer Agent |
 | AGENT-003 | Cinematography Agent |
 | AGENT-005 | Editing Agent |
+
+---
+
+# Runtime Ownership（运行职责归属）
+
+```text
+Identity Card = character appearance
+Storyboard = shot details
+Universal Video Prompt = model execution rules
+COMMAND-005 = consistency review
+```
+
+不得把身份卡、故事板和视频 Prompt 混成一段长 Prompt。
 
 ---
 
@@ -100,544 +154,369 @@ PROJ-001 — Jump After Work Pilot Project
 标准执行顺序：
 
 ```text
-1. Storyboard Input Review
+1. Runtime Input Review
 ↓
-2. Shot Segmentation
+2. Identity Card Verification
 ↓
-3. Video Prompt Generation
+3. Storyboard Verification
 ↓
-4. Cinematography Enhancement
+4. Universal Video Prompt Setup
 ↓
-5. Motion Continuity Setup
+5. Shot Execution Plan
 ↓
-6. Lighting and Style Lock
+6. Clip Generation Package
 ↓
-7. Negative Prompt Setup
+7. Clip Review with COMMAND-005
 ↓
-8. Video Clip Generation Package
+8. Iteration Notes
 ↓
-9. Clip Review
-↓
-10. Assembly Notes
+9. Assembly Notes
 ```
 
 ---
 
-# Stage 1 — Storyboard Input Review（分镜输入检查）
+# Stage 1 — Runtime Input Review（运行输入检查）
 
 ## Input（输入）
 
 读取：
 
 ```text
-Storyboard Output
+Identity Card Prompt
+Storyboard Prompt / Storyboard Output
+Universal Video Prompt
 PROJ-001
 CHAR-001
-STORY-001
 ASSET-001
+STORY-001
 ```
 
 ## Task（任务）
 
-检查分镜是否已经具备：
+确认是否具备：
 
-- 镜头编号
-- 镜头名称
-- 镜头时长
-- 叙事功能
-- 画面描述
-- 角色动作
-- 镜头语言
-- 灯光要求
-- 负面提示词
-- 连续性备注
+- 可上传的 Jump 身份卡
+- 可上传的故事板
+- 通用视频 Prompt
+- 目标模型
+- 画幅比例
+- Shot List
+- 每个 Shot 的名称、时长和叙事功能
 
 ## Output（输出）
 
 ```text
-Storyboard Review Result
+Runtime Input Review Result
 ```
 
 ## Required Check（必须检查）
 
 ```text
-[ ] 是否存在完整 Shot List
-[ ] 每个镜头是否有明确故事功能
-[ ] 每个镜头是否引用 CHAR-001
-[ ] 每个镜头是否引用 ASSET-001
-[ ] 是否没有新增未确认设定
+[ ] 是否存在 Identity Card Prompt
+[ ] 是否存在 Storyboard Prompt / Storyboard Output
+[ ] 是否存在 Universal Video Prompt
+[ ] 是否明确目标模型
+[ ] 是否明确逐镜头生成方式
+[ ] 是否没有把 Notion 当作 Source of Truth
 ```
 
 ---
 
-# Stage 2 — Shot Segmentation（镜头拆分）
+# Stage 2 — Identity Card Verification（身份卡验证）
 
 ## Task（任务）
 
-将分镜拆成独立视频生成单元。
+验证身份卡是否足以锁定 Jump 外观。
 
-每个视频片段应包含：
+必须检查：
 
 ```text
-Shot ID
+[ ] Jump 是否是真实小狗本体形态
+[ ] Jump 是否保持四足小狗身体结构
+[ ] Jump 是否有蓬松毛发
+[ ] Jump 是否穿程序员风格小狗衣服
+[ ] Jump 是否可保留小包 / 工牌 / 项圈挂饰
+[ ] Jump 是否可保留少量火龙果粉色点缀
+[ ] 是否明确禁止半人身体、人类手掌、人类手臂、人类双腿站立和人类身体比例
+[ ] 是否明确禁止变成人类、其他动物或无衣服普通宠物狗
+[ ] 模型可复制区是否没有裸露内部 ID
+```
+
+## Output（输出）
+
+```text
+Identity Card Verification Result
+```
+
+---
+
+# Stage 3 — Storyboard Verification（故事板验证）
+
+## Task（任务）
+
+验证故事板是否足以锁定镜头细节。
+
+故事板必须说明：
+
+```text
+Shot Number
 Shot Name
 Duration
-Start State
-Action
-End State
-Camera
-Motion
-Lighting
-Environment
+Story Function
+Character Position
+Dog Movement Direction
+Prop Interaction
+Camera Movement
+Lighting / Mood
+Continuity / Transition
+```
+
+## Fixed Storyboard Style（固定故事板风格）
+
+故事板主体必须是：
+
+```text
+黑白线条
+粗略铅笔线条
+极简细节
+快速动态描绘
+简单解剖结构
+清晰轮廓
+轻盈、动态、未完成感
+导演前期预演分镜草图风格
+```
+
+## Color Annotation System（彩色标注系统）
+
+```text
+Red / 红色：camera movement / 镜头运动
+Blue / 蓝色：character or dog movement / 角色动作、小狗动作
+Yellow / 黄色：prop interaction / 道具、交互
+Green / 绿色：lighting or mood / 灯光、情绪
+Purple / 紫色：continuity or transition / 连续性、转场
+```
+
+## Required Check（必须检查）
+
+```text
+[ ] 故事板主体是否是黑白粗略铅笔线稿
+[ ] 故事板是否保留彩色动态标注系统
+[ ] 每个 Shot 是否有明确镜头内容
+[ ] 每个 Shot 是否有明确动作方向
+[ ] 每个 Shot 是否有明确道具和灯光变化
+[ ] 每个 Shot 是否有明确连续性提示
+[ ] 故事板是否没有变成彩色成片插画、真实渲染或儿童绘本风
+```
+
+## Output（输出）
+
+```text
+Storyboard Verification Result
+```
+
+---
+
+# Stage 4 — Universal Video Prompt Setup（通用视频提示词设置）
+
+## Task（任务）
+
+确认通用视频 Prompt 可用于逐镜头生成。
+
+通用视频 Prompt 必须保持紧凑，并使用以下结构：
+
+```text
+请严格参考上传的角色身份卡和故事板生成视频。
+
+本次只生成故事板中的：
+[SHOT NUMBER AND NAME]
+
+角色外观以身份卡为准。
+镜头内容以故事板对应 Shot 为准。
+
+视频规格：
+[duration / aspect ratio / frame style]
+
+动作要求：
+[natural dog-form movement, no humanoid movement]
+
+镜头要求：
+[camera movement and framing rule]
+
+灯光和情绪：
+[lighting and mood rule]
+
+连续性要求：
+[match previous and next storyboard shots]
+
+负面要求：
+[forbidden character, style, motion, camera, lighting and continuity drift]
+```
+
+## Required Check（必须检查）
+
+```text
+[ ] 是否引用上传身份卡
+[ ] 是否引用上传故事板
+[ ] 是否要求替换 [SHOT NUMBER AND NAME]
+[ ] 是否避免重复大量 Shot 细节
+[ ] 是否包含角色、动作、镜头、灯光、风格和连续性负面规则
+[ ] 模型可复制区是否没有裸露内部 ID
+```
+
+## Output（输出）
+
+```text
+Universal Video Prompt Verification Result
+```
+
+---
+
+# Stage 5 — Shot Execution Plan（逐镜头执行计划）
+
+## Task（任务）
+
+把故事板中的每个 Shot 转化为视频生成任务。
+
+每个视频任务只需要指向：
+
+```text
+Uploaded Identity Card
+Uploaded Storyboard
+Universal Video Prompt
+Current Shot Number and Name
+Target Model
+Duration
+Aspect Ratio
 Continuity Notes
+Review Status
 ```
 
 ## Output（输出）
 
 ```text
-Video Shot Units
+Shot Execution Plan
 ```
 
 ---
 
-# Video Shot Unit Template（视频镜头单元模板）
+# Shot Execution Unit Template（逐镜头执行单元模板）
 
 ```text
-Shot ID:
-Shot Name:
-Duration:
-Story Function:
-Start State:
-Action:
-End State:
-Character:
-Environment:
-Camera:
-Motion:
-Lighting:
-Asset Reference:
-Continuity Notes:
-```
-
----
-
-# Stage 3 — Video Prompt Generation（视频提示词生成）
-
-## Agent（执行智能体）
-
-```text
-AGENT-002 — Prompt Agent
-```
-
-## Input（输入）
-
-读取：
-
-```text
-Video Shot Units
-PROMPT-001
-CHAR-001
-ENV-001
-MOT-001
-CAM-001
-LGT-001
-ASSET-001
-STYLE-001
-COLOR-001
-BRAND-001
-```
-
-## Task（任务）
-
-为每个镜头生成视频 Prompt。
-
-必须包含：
-
-- Duration
-- Subject
-- Start Frame
-- Action
-- End Frame
-- Camera Movement
-- Motion Description
-- Lighting
-- Style
-- Negative Prompt
-
-## Output（输出）
-
-```text
-Shot-by-Shot Video Prompts
-```
-
----
-
-# Standard Video Prompt Template（标准视频提示词模板）
-
-```text
-Duration:
-6–8 seconds
-
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
-
-Start Frame:
-Describe the opening state of the shot.
-
-Action:
-Describe the exact movement or action.
-
-End Frame:
-Describe how the shot should end.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera movement, cinematic documentary style.
-
-Motion:
-Natural movement, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement.
-
-Lighting:
-Warm Studio Lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows.
-
-Environment:
-TiaoTiao Studio Office, warm modern creator studio, realistic programmer workspace.
-
-Mood:
-Freedom, warmth, relaxation, everyday joy.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth.
-
-Negative Prompt:
-Do not change Jump's species, no human version, no sliding feet, no robotic motion, no game animation, no cyberpunk lighting, no horror mood, no extreme wide-angle distortion.
-```
-
----
-
-# Stage 4 — Cinematography Enhancement（摄影增强）
-
-## Agent（执行智能体）
-
-```text
-AGENT-003 — Cinematography Agent
-```
-
-## Input（输入）
-
-读取：
-
-```text
-Shot-by-Shot Video Prompts
-CAM-001
-LGT-001
-SHOT-001
-STYLE-001
-```
-
-## Task（任务）
-
-为每个视频 Prompt 增强摄影信息：
-
-- Lens
-- Camera Height
-- Camera Movement
-- Frame Size
-- Composition
-- Depth of Field
-- Cinematic Notes
-
-## Output（输出）
-
-```text
-Cinematography-Enhanced Video Prompts
-```
-
----
-
-# Cinematography Add-on Template（摄影增强模板）
-
-```text
-Lens:
-35mm
-
-Camera Height:
-Eye level
-
-Camera Movement:
-Natural hero tracking / side tracking / rear follow / gentle push-in
-
-Composition:
-Jump occupies 35–45% of frame, environment occupies 55–65%, clear forward space, no obstruction.
-
-Depth of Field:
-Natural depth, soft background falloff, clear subject separation.
-
-Cinematic Notes:
-Warm cinematic documentary realism, subtle handheld energy, realistic depth compression.
-```
-
----
-
-# Stage 5 — Motion Continuity Setup（动作连续性设置）
-
-## Input（输入）
-
-读取：
-
-```text
-MOT-001
-MOTIONLANG-001
-Storyboard Output
-```
-
-## Task（任务）
-
-为镜头之间建立连续性。
-
-检查：
-
-- Jump 起始位置
-- Jump 结束位置
-- 行走方向
-- 手部动作
-- 尾巴动作
-- 表情变化
-- 背包状态
-- 电脑是否关闭
-- 门是否打开
-- 光线是否连续
-
-## Output（输出）
-
-```text
-Motion Continuity Map
-```
-
----
-
-# Motion Continuity Checklist（动作连续性检查表）
-
-```text
-[ ] Shot 起始动作是否接上上一镜头
-[ ] Shot 结束动作是否能接下一镜头
-[ ] Jump 是否没有瞬移
-[ ] 脚步是否没有滑动
-[ ] 身体重心是否真实
-[ ] 尾巴动作是否自然
-[ ] 表情变化是否合理
-[ ] 背包 / 道具状态是否连续
-```
-
----
-
-# Stage 6 — Lighting and Style Lock（灯光与风格锁定）
-
-## Input（输入）
-
-读取：
-
-```text
-LGT-001
-STYLE-001
-COLOR-001
-ENV-001
-```
-
-## Task（任务）
-
-锁定所有镜头的视觉一致性：
-
-- 暖色工作室灯光
-- 屏幕柔光
-- 台灯实用光
-- 傍晚窗光
-- 火龙果粉点缀
-- 真实电影感
-- 生活方式叙事
-
-## Output（输出）
-
-```text
-Lighting and Style Lock Notes
-```
-
----
-
-# Visual Lock Rules（视觉锁定规则）
-
-```text
-[ ] 所有镜头保持暖色室内光
-[ ] 不出现赛博朋克蓝光
-[ ] 不出现恐怖片高反差
-[ ] 不出现过度 RGB 灯效
-[ ] 不改变办公室空间基调
-[ ] 不改变 Jump 服装主视觉
-[ ] 不改变品牌色点缀
-[ ] 不出现游戏渲染感
-```
-
----
-
-# Stage 7 — Negative Prompt Setup（负面提示词设置）
-
-## Task（任务）
-
-为每个镜头生成负面提示词。
-
-负面提示词必须覆盖：
-
-- 角色错误
-- 动作错误
-- 镜头错误
-- 灯光错误
-- 风格错误
-- 环境错误
-- 品牌错误
-
-## Output（输出）
-
-```text
-Shot Negative Prompt Set
-```
-
----
-
-# Standard Video Negative Prompt（标准视频负面提示词）
-
-```text
-Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not change outfit, do not remove Fire Dragon Fruit Pink accents, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, floating body, mechanical tail movement, impossible motion, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, inconsistent environment, aggressive expression, cheap CGI look.
-```
-
----
-
-# Stage 8 — Video Clip Generation Package（视频片段生成包）
-
-## Task（任务）
-
-为每个镜头输出完整生成包。
-
-## Output（输出）
-
-```text
-Video Clip Generation Package
-```
-
----
-
-# Clip Package Template（片段生成包模板）
-
-```text
-# Shot Video Package
-
-Shot ID:
+Shot Number:
 Shot Name:
 Duration:
 Target Model:
 Aspect Ratio:
-Source Records:
-
-Video Prompt:
-
-Cinematography Add-on:
-
-Negative Prompt:
-
+Uploaded Identity Card:
+Uploaded Storyboard:
+Universal Video Prompt:
+Current Shot Placeholder:
 Continuity Notes:
-
-Review Checklist:
+COMMAND-005 Review Status:
 ```
 
 ---
 
-# Target Model Notes（目标模型备注）
-
-## Kling
-
-适合：
-
-- 人物动作
-- 镜头运动
-- 生活化短镜头
-
-重点写清：
-
-```text
-动作起点
-动作终点
-镜头运动
-角色连续性
-```
-
----
-
-## Veo
-
-适合：
-
-- 电影感
-- 复杂环境
-- 自然运动
-- 连续叙事
-
-重点写清：
-
-```text
-场景情绪
-电影语言
-动作节奏
-空间关系
-```
-
----
-
-## Runway
-
-适合：
-
-- 镜头片段
-- 视觉测试
-- 图片转视频
-- 局部动作生成
-
-重点写清：
-
-```text
-主体不要变形
-动作不要过度
-镜头不要漂移
-```
-
----
-
-# Stage 9 — Clip Review（片段检查）
+# Stage 6 — Clip Generation Package（片段生成包）
 
 ## Task（任务）
 
-每个生成片段必须检查：
+为每个 Shot 输出生成包。
+
+## Output（输出）
 
 ```text
-[ ] Jump 是否保持小狗身份
-[ ] 毛发是否清晰
-[ ] 身体是否苗条
-[ ] 服装是否一致
-[ ] 动作是否自然
-[ ] 脚步是否不滑
-[ ] 镜头是否稳定可信
-[ ] 灯光是否符合 LGT-001
-[ ] 环境是否符合 ENV-001
-[ ] 情绪是否符合 EMOTION-001
-[ ] 是否可接入下一镜头
+Clip Generation Package
+```
+
+---
+
+# Clip Generation Package Template（片段生成包模板）
+
+```text
+# Clip Generation Package
+
+## Source References
+
+## Uploaded Identity Card
+
+## Uploaded Storyboard
+
+## Universal Video Prompt
+
+## Current Shot
+
+## Target Model
+
+## Duration
+
+## Aspect Ratio
+
+## Continuity Notes
+
+## Negative Rules
+
+## COMMAND-005 Review Checklist
+```
+
+---
+
+# Stage 7 — Clip Review with COMMAND-005（使用 COMMAND-005 审片）
+
+## Task（任务）
+
+每个生成片段必须使用 `COMMAND-005` 审查。
+
+必须检查：
+
+```text
+[ ] Jump 是否保持真实小狗本体形态
+[ ] Jump 是否穿程序员风格小狗衣服
+[ ] 是否没有人类手掌、人类手臂、人类双腿站立或人类身体比例
+[ ] 毛发、配件、品牌色点缀是否连续
+[ ] 动作是否符合小狗身体结构
+[ ] 脚步是否没有滑动
+[ ] 身体是否没有漂浮
+[ ] 镜头是否符合故事板对应 Shot
+[ ] 灯光和情绪是否符合故事板对应 Shot
+[ ] 是否能接入上一镜头和下一镜头
 ```
 
 ## Output（输出）
 
 ```text
-Clip Review Notes
+COMMAND-005 Clip Review Result
+Pass / Needs Revision
+Revision Notes
 ```
 
 ---
 
-# Stage 10 — Assembly Notes（组装备注）
+# Stage 8 — Iteration Notes（迭代备注）
+
+## Task（任务）
+
+如果片段未通过审查，只能根据问题归因修改对应层：
+
+```text
+角色外观漂移 → 修改 Identity Card Prompt
+镜头内容错误 → 修改 Storyboard Prompt / Storyboard Output
+模型执行不清楚 → 修改 Universal Video Prompt
+单个片段生成失败 → 重新生成该 Shot
+剪辑衔接问题 → 记录到 Assembly Notes
+```
+
+不得为了修一个片段而临时改变 Jump 核心设定、故事目标或品牌语言。
+
+## Output（输出）
+
+```text
+Iteration Notes
+```
+
+---
+
+# Stage 9 — Assembly Notes（组装备注）
 
 ## Agent（执行智能体）
 
@@ -645,21 +524,11 @@ Clip Review Notes
 AGENT-005 — Editing Agent
 ```
 
-## Input（输入）
-
-读取：
-
-```text
-Approved Video Clips
-Editing Output
-MUSIC-001
-BRAND-001
-```
-
 ## Task（任务）
 
 输出：
 
+- 已通过审查的片段列表
 - 镜头排列顺序
 - 建议剪辑点
 - 转场方式
@@ -681,16 +550,15 @@ Video Assembly Notes
 完整工作流最终应输出：
 
 ```text
-1. Storyboard Review Result
-2. Video Shot Units
-3. Shot-by-Shot Video Prompts
-4. Cinematography-Enhanced Video Prompts
-5. Motion Continuity Map
-6. Lighting and Style Lock Notes
-7. Shot Negative Prompt Set
-8. Video Clip Generation Package
-9. Clip Review Notes
-10. Video Assembly Notes
+1. Runtime Input Review Result
+2. Identity Card Verification Result
+3. Storyboard Verification Result
+4. Universal Video Prompt Verification Result
+5. Shot Execution Plan
+6. Clip Generation Package
+7. COMMAND-005 Clip Review Result
+8. Iteration Notes
+9. Video Assembly Notes
 ```
 
 ---
@@ -703,30 +571,15 @@ Video Assembly Notes
 Run WORKFLOW-003 for PROJ-001.
 
 Input:
-Storyboard Output from AGENT-001
-
-Use:
-CHAR-001
-EP-001
-STORY-001
-ENV-001
-MOT-001
-CAM-001
-LGT-001
-PROMPT-001
-ASSET-001
-PROJ-001
-
-Use Agents:
-AGENT-002
-AGENT-003
-AGENT-005
+Identity Card Prompt
+Storyboard Prompt / Storyboard Output
+Universal Video Prompt
 
 Target Model:
-Kling / Veo / Runway
+Jimeng / Kling / Veo / Runway
 
 Output:
-Shot-by-shot video generation package.
+Shot execution plan and clip generation packages using uploaded identity card, uploaded storyboard and universal video prompt.
 ```
 
 ---
@@ -735,14 +588,15 @@ Shot-by-shot video generation package.
 
 ## Must Do（必须）
 
-- 必须基于已确认分镜
-- 必须逐镜头输出视频生成包
-- 必须引用 ASSET-001
-- 必须保持 Jump 角色一致
-- 必须保持动作连续
-- 必须保持灯光统一
-- 必须包含负面提示词
-- 必须输出片段检查标准
+- 必须基于已确认身份卡
+- 必须基于已确认故事板
+- 必须使用通用视频 Prompt
+- 必须逐镜头替换当前 Shot 名称
+- 必须保持 Jump 是真实小狗本体形态并穿衣服
+- 必须保持故事板黑白粗略铅笔线稿风格
+- 必须保留故事板彩色动态标注系统
+- 必须检查模型可复制 Prompt 是否没有裸露内部 ID
+- 必须用 `COMMAND-005` 审查生成片段
 
 ---
 
@@ -750,52 +604,25 @@ Shot-by-shot video generation package.
 
 - 不得重新改写故事
 - 不得重新设计 Jump
+- 不得把 Jump 改成人形、半人身体或无衣服普通宠物狗
 - 不得忽略分镜顺序
+- 不得把所有 Shot 细节重复塞进每个视频 Prompt
+- 不得让模型可复制 Prompt 依赖裸露内部 ID
 - 不得省略连续性检查
-- 不得省略负面提示词
-- 不得生成无法执行的视频提示词
+- 不得省略负面规则
 - 不得使用与品牌冲突的风格
 
 ---
 
 # Related Files（关联文件）
 
-## Database Records
-
 ```text
-database/characters/CHAR-001.md
-database/episodes/EP-001.md
-database/stories/STORY-001.md
-database/environments/ENV-001.md
-database/motions/MOT-001.md
-database/cameras/CAM-001.md
-database/lighting/LGT-001.md
-database/prompts/PROMPT-001.md
-database/assets/ASSET-001.md
-database/projects/PROJ-001.md
-```
-
-## Knowledge Nodes
-
-```text
-knowledge/style/STYLE-001.md
-knowledge/color/COLOR-001.md
-knowledge/world/WORLD-001.md
-knowledge/emotion/EMOTION-001.md
-knowledge/camera-language/SHOT-001.md
-knowledge/motion-language/MOTIONLANG-001.md
-knowledge/outfit/OUTFIT-001.md
-knowledge/music/MUSIC-001.md
-knowledge/story-formula/STORYFORMULA-001.md
-knowledge/brand-language/BRAND-001.md
-```
-
-## Agents
-
-```text
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+commands/COMMAND-002.md
+commands/COMMAND-005.md
+workflows/WORKFLOW-002.md
 agents/director/AGENT-001.md
 agents/prompt-engineer/AGENT-002.md
-agents/cinematographer/AGENT-003.md
 agents/editor/AGENT-005.md
 ```
 
@@ -807,10 +634,9 @@ agents/editor/AGENT-005.md
 
 - Storyboard to Video
 - AI Video Generation
-- Shot Prompt Production
+- Shot Execution Plan
 - Clip Review
 - Motion Continuity Check
-- Cinematography Enhancement
 - Video Assembly
 - Series Production
 
@@ -820,4 +646,5 @@ agents/editor/AGENT-005.md
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026 | Updated workflow to use identity card, storyboard, universal video prompt and COMMAND-005 clip review |
 | 1.0 | 2026 | Initial canonical workflow template |

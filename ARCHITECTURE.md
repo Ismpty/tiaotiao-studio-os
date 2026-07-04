@@ -28,7 +28,7 @@ Studio OS
 
 > Version：1.0  
 > Status：Active  
-> Scope：Agents / Workflows / Commands / Runtime Docs / Navigation Index
+> Scope：Agents / Workflows / Commands / Prompt Runtime / Runtime Docs / Navigation Index
 
 ---
 
@@ -46,6 +46,7 @@ Studio OS
 - Runtime Docs
 - Examples
 - Navigation Index
+- Prompt Runtime Layer
 
 这意味着 TSOS 已经可以被 ChatGPT、Codex、Cursor、Claude 等 AI 工具读取、理解、调用和执行。
 
@@ -69,6 +70,8 @@ database/
 agents/
 ↓
 workflows/
+↓
+prompt runtime/
 ↓
 commands/
 ↓
@@ -259,7 +262,91 @@ Workflows 不定义角色规则，也不覆盖 Knowledge / Database。
 
 ---
 
-# Layer 5 — Operating Commands（操作命令层）
+# Layer 5 — Prompt Runtime Layer（提示词运行层）
+
+## Path
+
+```text
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+commands/COMMAND-002.md
+commands/COMMAND-005.md
+workflows/WORKFLOW-002.md
+workflows/WORKFLOW-003.md
+agents/director/AGENT-001.md
+agents/prompt-engineer/AGENT-002.md
+production/PROJ-001/VIDEO-PROMPTS.md
+```
+
+## Role
+
+Prompt Runtime Layer 定义模型可执行提示词如何被组织、复制和审查。
+
+它负责回答：
+
+```text
+AI 模型真正看到的 Prompt 应该长什么样？
+```
+
+## Current Prompt Runtime Architecture
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Model-readable check
+↓
+COMMAND-005 review
+```
+
+## Core Principle
+
+```text
+Internal system language is not model language.
+```
+
+内部编号可以用于 GitHub 文档、Notion 管理、Review、Changelog 和一致性检查。
+
+但模型可复制 Prompt 必须是自然语言，不能依赖裸露内部 ID。
+
+## Runtime Ownership
+
+```text
+Identity Card = character appearance
+Storyboard = shot details
+Universal Video Prompt = model execution rules
+COMMAND-005 = consistency review
+```
+
+## Storyboard Runtime Standard
+
+所有故事板主体必须是：
+
+```text
+black-and-white line art
+rough pencil lines
+minimal details
+fast dynamic sketching
+simple anatomy
+clear silhouettes
+unfinished director storyboard / previs sketch feeling
+```
+
+同时保留彩色动态标注系统：
+
+```text
+Red = camera movement
+Blue = character / dog movement
+Yellow = prop interaction
+Green = lighting / mood
+Purple = continuity / transition
+```
+
+---
+
+# Layer 6 — Operating Commands（操作命令层）
 
 ## Path
 
@@ -297,7 +384,7 @@ Commands 是入口，不是自由发挥提示词。
 
 ---
 
-# Layer 6 — Runtime Docs（运行文档层）
+# Layer 7 — Runtime Docs（运行文档层）
 
 ## Path
 
@@ -318,6 +405,7 @@ docs/studio-os/CODEX.md
 docs/studio-os/COMMANDS.md
 docs/studio-os/WORKFLOWS.md
 docs/studio-os/AGENTS.md
+docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ## Core Principle
@@ -328,7 +416,7 @@ Runtime Docs explain how to operate TSOS.
 
 ---
 
-# Layer 7 — Examples（示例层）
+# Layer 8 — Examples（示例层）
 
 ## Path
 
@@ -451,6 +539,8 @@ Database References
 ↓
 Knowledge Constraints
 ↓
+Prompt Runtime Packaging
+↓
 Output Generation
 ↓
 Consistency Check
@@ -485,8 +575,8 @@ Consistency Check
 
 | Agent | Responsibility |
 |---|---|
-| AGENT-001 | Storyboard planning |
-| AGENT-002 | Prompt generation |
+| AGENT-001 | Storyboard planning, black-and-white rough pencil storyboard structure and color annotations |
+| AGENT-002 | Model-readable prompt package generation |
 | AGENT-003 | Cinematography planning |
 | AGENT-004 | Script writing |
 | AGENT-005 | Editing planning |
@@ -616,6 +706,7 @@ COMMAND-005 — Run Consistency Check
 | Phase 6 | Operating Commands | Completed |
 | Phase 7 | Runtime Docs and Examples | Completed |
 | Phase 8 | Index and Navigation Layer | Completed |
+| Prompt Runtime Update | Prompt Runtime Layer | In Progress |
 
 ---
 
@@ -641,27 +732,29 @@ Extensible
 6. Runtime Documentation Layer
 7. Example Output Layer
 8. Navigation Index Layer
+9. Prompt Runtime Layer
 ```
 
 ---
 
 # Next Architecture Goal（下一阶段架构目标）
 
-Phase 8 完成后，下一阶段可以进入：
+当前下一阶段目标：
 
 ```text
-Phase 9 — Validation and Test Runs
+Prompt Runtime Alignment and Validation
 ```
 
 目标：
 
 ```text
-Run COMMAND-001
-Run COMMAND-002
-Run COMMAND-003
-Run COMMAND-004
-Run COMMAND-005
-Validate outputs against TSOS Source of Truth
+Update COMMAND-005
+Update WORKFLOW-003
+Update AGENT-001
+Update ARCHITECTURE.md
+Update README.md
+Update CHANGELOG.md
+Validate outputs against TSOS Source of Truth and Prompt Runtime Rules
 ```
 
 ---

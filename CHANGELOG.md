@@ -20,7 +20,12 @@ Universal Video Prompt
 ### Changed
 
 - Updated the expected role of `COMMAND-002` from generating a single video prompt to generating a complete video prompt package.
+- Updated `COMMAND-005` to check model-readable prompts, raw internal ID usage, identity card existence, storyboard style, color annotation system and universal video prompt structure.
+- Updated `WORKFLOW-002` to follow Identity Card Prompt → Storyboard Prompt → Universal Video Prompt → Model-readable check → COMMAND-005 review.
+- Updated `WORKFLOW-003` to generate video clips from uploaded identity card, uploaded storyboard and compact universal video prompt instead of duplicated shot-level long prompts.
+- Updated `AGENT-001` to own black-and-white rough pencil storyboard structure and colored annotation requirements.
 - Updated the expected role of `AGENT-002` from basic prompt writing to model-readable prompt package generation.
+- Updated `ARCHITECTURE.md` and `README.md` to document the Prompt Runtime Layer.
 - Standardized TSOS storyboard style as black-and-white rough pencil line art.
 - Added the requirement that storyboards must retain colored dynamic annotation systems.
 - Defined shot detail ownership:
@@ -960,7 +965,7 @@ Ready for Real Asset Generation
 
 | File | Path | Status |
 |---|---|---|
-| Shot-by-Shot Video Prompts | production/PROJ-001/VIDEO-PROMPTS.md | Production Ready |
+| Video Prompt Package | production/PROJ-001/VIDEO-PROMPTS.md | Production Ready |
 | Cover Package | production/PROJ-001/COVER-PACKAGE.md | Production Ready |
 | Publishing Package | production/PROJ-001/PUBLISHING-PACKAGE.md | Production Ready |
 | Post-Publish Tracker | production/PROJ-001/POST-PUBLISH-TRACKER.md | Production Ready |
@@ -970,7 +975,7 @@ Ready for Real Asset Generation
 
 ## VIDEO-PROMPTS.md
 
-用于正式生成 PROJ-001 的逐镜头 AI 视频片段。
+用于正式生成 PROJ-001 的视频提示词包和逐镜头 AI 视频片段。
 
 覆盖：
 
@@ -1205,12 +1210,13 @@ BRAND-001 — TiaoTiao Studio Brand Language
 所有真实生成资产必须遵守：
 
 ```text
-Jump must remain an anthropomorphic fluffy female dog programmer.
+Jump must remain a real dog-form character wearing programmer-style dog clothes.
 ASSET-001 must be referenced.
 Jump must not become human.
 Jump must not become another animal.
 Jump must not lose fluffy fur.
-Jump must not become muscular.
+Jump must not become a humanoid body, human hands, human arms, human legs or human body proportions.
+Jump must not become an unclothed ordinary pet dog.
 Jump must not lose programmer identity.
 No cyberpunk visual direction.
 No horror visual direction.

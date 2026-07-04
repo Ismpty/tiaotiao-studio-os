@@ -1,7 +1,7 @@
 # COMMAND-005 — Run Consistency Check（运行一致性检查）
 
 > Canonical Operating Command（官方操作命令）  
-> Version：1.0  
+> Version：2.0
 > Status：Active
 
 ---
@@ -26,6 +26,31 @@ Run Consistency Check is the consistency verification command of TiaoTiao Studio
 
 It checks whether any project output, storyboard, prompt, script, editing plan, publishing package or generated result follows the TSOS source of truth.
 
+From v2.0, this command also checks the Prompt Runtime Architecture:
+
+```text
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Model-readable check
+```
+
+---
+
+# Source of Truth Rule（事实来源规则）
+
+```text
+GitHub = Source of Truth
+Notion = Visual Management Layer
+```
+
+本命令必须以 GitHub 文件为正式依据。
+
+Notion 只能作为可视化管理层、任务看板和同步界面，不能作为最终事实来源。
+
 ---
 
 # Command Goal（命令目标）
@@ -41,6 +66,9 @@ It checks whether any project output, storyboard, prompt, script, editing plan, 
 - 检查镜头一致性
 - 检查灯光一致性
 - 检查提示词一致性
+- 检查 Prompt Runtime 架构一致性
+- 检查模型可复制 Prompt 是否模型可读
+- 检查故事板黑白铅笔线稿和彩色标注系统
 - 检查品牌语言一致性
 - 检查是否偏离 Frozen Roadmap
 - 发现并标记需要修改的问题
@@ -163,11 +191,13 @@ PROJ-001 — Jump After Work Pilot Project
 ↓
 8. Check Story / Emotion / Brand Consistency
 ↓
-9. Check Workflow Compliance
+9. Check Prompt Runtime Compliance
 ↓
-10. Identify Issues
+10. Check Workflow Compliance
 ↓
-11. Output Consistency Report
+11. Identify Issues
+↓
+12. Output Consistency Report
 ```
 
 ---
@@ -178,7 +208,7 @@ PROJ-001 — Jump After Work Pilot Project
 
 ```text
 Check Target:
-Storyboard / Prompt / Script / Editing Plan / Publishing Package / Generated Image / Generated Video / Project Package
+Storyboard / Prompt / Prompt Package / Script / Editing Plan / Publishing Package / Generated Image / Generated Video / Project Package
 
 Project:
 PROJ-001 / Custom Project ID
@@ -249,9 +279,10 @@ Issue Found
 9. Lighting Check
 10. Story / Brand Check
 11. Workflow Compliance Check
-12. Issue List
-13. Fix Suggestions
-14. Final Pass / Fail Result
+12. Prompt Runtime Compliance Check
+13. Issue List
+14. Fix Suggestions
+15. Final Pass / Fail Result
 ```
 
 ---
@@ -285,11 +316,13 @@ Issue Found
 
 ## 11. Workflow Compliance Check
 
-## 12. Issue List
+## 12. Prompt Runtime Compliance Check
 
-## 13. Fix Suggestions
+## 13. Issue List
 
-## 14. Final Result
+## 14. Fix Suggestions
+
+## 15. Final Result
 ```
 
 ---
@@ -378,18 +411,20 @@ COLOR-001
 必须检查：
 
 ```text
-[ ] Jump 是否仍然是拟人化小狗
-[ ] Jump 是否保持女性角色设定
+[ ] Jump 是否保持真实小狗本体形态
+[ ] Jump 是否保持四足小狗解剖结构
 [ ] Jump 是否保持程序员身份
 [ ] Jump 是否保持毛茸茸质感
-[ ] Jump 是否保持苗条体型
+[ ] Jump 是否穿程序员风格小狗衣服
+[ ] Jump 是否可保留小包 / 工牌 / 项圈挂饰
 [ ] Jump 表情是否友好温暖
 [ ] Jump 是否没有变成人类
 [ ] Jump 是否没有变成其他动物
-[ ] Jump 是否没有变成肌肉型角色
+[ ] Jump 是否没有出现人类手掌、人类手臂、人类双腿或人类身体比例
+[ ] Jump 是否没有变成无衣服的普通宠物狗
 [ ] Jump 是否没有失去品牌色识别
-[ ] Jump 是否参考 ASSET-001
-[ ] Jump 服装是否符合 OUTFIT-001
+[ ] 内部检查是否参考 ASSET-001
+[ ] 服装检查是否符合 OUTFIT-001
 ```
 
 ---
@@ -598,13 +633,95 @@ WORKFLOW-002
 必须检查：
 
 ```text
-[ ] Prompt 是否引用 Source Records
-[ ] Prompt 是否引用 ASSET-001
+[ ] Prompt 是否列出 Source References 用于内部审查
+[ ] Prompt 是否在内部审查区引用 ASSET-001
 [ ] Prompt 是否包含 Negative Prompt
 [ ] Prompt 是否适配目标模型
 [ ] Prompt 是否没有临时修改 Jump
 [ ] Prompt 是否没有省略关键视觉约束
 [ ] Prompt 是否可直接执行
+[ ] 模型可复制区域是否没有裸露内部 ID
+[ ] 内部 ID 是否已经展开成自然语言描述
+```
+
+---
+
+# Prompt Runtime Compliance Check（提示词运行架构合规检查）
+
+默认对照：
+
+```text
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+COMMAND-002
+WORKFLOW-002
+AGENT-002
+```
+
+必须检查：
+
+```text
+[ ] 是否包含 Identity Card Prompt
+[ ] 是否包含 Storyboard Prompt
+[ ] 是否包含 Universal Video Prompt
+[ ] 是否包含 Model-readable check
+[ ] Identity Card Prompt 是否完整描述 Jump 的角色外观
+[ ] Identity Card Prompt 是否明确 Jump 是真实小狗本体形态并穿衣服
+[ ] Storyboard Prompt 是否使用黑白粗略铅笔线稿
+[ ] Storyboard Prompt 是否保留彩色动态标注系统
+[ ] Storyboard Prompt 是否没有变成彩色成片插画、真实渲染或儿童绘本风
+[ ] Universal Video Prompt 是否引用上传身份卡
+[ ] Universal Video Prompt 是否引用上传故事板
+[ ] Universal Video Prompt 是否使用当前 Shot 名称执行
+[ ] Universal Video Prompt 是否避免重复大量 Shot 细节
+[ ] Shot 细节是否归属 Storyboard
+[ ] 模型可复制区域是否没有裸露 CHAR-001 / ASSET-001 / STYLE-001 / BRAND-001 等内部编号
+[ ] 内部来源是否已翻译成模型可读自然语言
+```
+
+## Forbidden Model-Facing Prompt Patterns（模型提示词禁止写法）
+
+模型可复制 Prompt 中禁止只写：
+
+```text
+consistent with ASSET-001
+follow CHAR-001
+use STYLE-001
+match BRAND-001
+based on ENV-001
+```
+
+必须改写成自然语言，例如：
+
+```text
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿程序员风格小狗衣服，可以有小背包、工牌、项圈挂饰和少量火龙果粉色点缀。禁止半人身体、人类手掌、人类手臂、人类双腿站立和人类身体比例。
+```
+
+---
+
+# Storyboard Runtime Check（故事板运行检查）
+
+默认对照：
+
+```text
+COMMAND-003
+WORKFLOW-002
+WORKFLOW-003
+AGENT-001
+```
+
+必须检查：
+
+```text
+[ ] 故事板主体是否是黑白线条
+[ ] 故事板主体是否是粗略铅笔线稿
+[ ] 故事板是否保持极简细节、快速动态描绘、简单解剖结构和清晰轮廓
+[ ] 故事板是否有导演前期预演分镜草图感
+[ ] 红色标注是否用于镜头运动
+[ ] 蓝色标注是否用于角色 / 小狗动作
+[ ] 黄色标注是否用于道具 / 交互
+[ ] 绿色标注是否用于灯光 / 情绪
+[ ] 紫色标注是否用于连续性 / 转场
+[ ] 彩色标注是否清楚但没有把故事板主体变成彩色成片
 ```
 
 ---
@@ -863,6 +980,12 @@ Character, visual, brand and cover safety consistency report.
 - 必须读取 10 个 Database Records
 - 必须读取 10 个 Knowledge Nodes
 - 必须检查 ASSET-001
+- 必须检查 GitHub 是否仍是 Source of Truth
+- 必须检查 Notion 是否只作为 Visual Management Layer
+- 必须检查模型可复制 Prompt 是否模型可读
+- 必须检查模型可复制 Prompt 是否没有裸露内部 ID
+- 必须检查 Identity Card Prompt / Storyboard Prompt / Universal Video Prompt 结构
+- 必须检查故事板黑白铅笔线稿和彩色动态标注系统
 - 必须标记问题严重级别
 - 必须给出修改建议
 - 必须给出最终 PASS / FAIL
@@ -876,6 +999,12 @@ Character, visual, brand and cover safety consistency report.
 - 不得忽略 Jump 身份错误
 - 不得忽略品牌冲突
 - 不得跳过 ASSET-001
+- 不得把 Notion 当作 Source of Truth
+- 不得让模型可复制 Prompt 依赖 CHAR-001 / ASSET-001 / STYLE-001 / BRAND-001 等裸露内部编号
+- 不得接受缺少身份卡的正式视频 Prompt 包
+- 不得接受缺少故事板的正式视频 Prompt 包
+- 不得接受彩色成片插画作为故事板主体
+- 不得接受 Jump 被改成人形、半人身体或无衣服普通宠物狗
 - 不得用主观审美替代 TSOS 规范
 - 不得为了效率省略检查项
 - 不得自动修改 Source of Truth
@@ -892,6 +1021,7 @@ commands/COMMAND-001.md
 commands/COMMAND-002.md
 commands/COMMAND-003.md
 commands/COMMAND-004.md
+docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ## Workflows
@@ -968,4 +1098,5 @@ agents/publisher/AGENT-006.md
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026 | Added Prompt Runtime checks for model-readable prompts, identity card, storyboard style, color annotation system and universal video prompt structure |
 | 1.0 | 2026 | Initial canonical operating command |
