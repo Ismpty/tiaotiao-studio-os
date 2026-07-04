@@ -318,7 +318,7 @@ End frame should feel open and reusable as a series ending.
 
 ---
 
-# 3. Prompt Output（提示词输出）
+# 3. Prompt Package Output（提示词包输出）
 
 ## Prompt Purpose
 
@@ -329,40 +329,55 @@ Generate a 45-second vertical AI video for PROJ-001 — Jump After Work Pilot Pr
 ## Target Model
 
 ```text
-Kling / Veo / Runway
+Jimeng / 即梦
+Backup: Veo / Runway
 ```
 
-## Base Video Prompt
+## Identity Card Prompt
 
 ```text
-Create a warm cinematic short video for the Jump After Work series.
+Create a character identity card for Jump.
 
-Main character:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
+Jump is a fluffy real dog-form character wearing programmer-style dog clothes. Jump must keep four-legged dog anatomy, dog proportions, fluffy fur and a warm friendly expression. Jump may have a small backpack, badge or collar charm, and subtle dragon-fruit pink accent details.
 
-Scene:
-TiaoTiao Studio Office, a warm modern creator studio with a realistic programmer desk, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant.
+Do not turn Jump into a humanoid body, human hands, human arms, human legs, bipedal human standing pose, another animal or an unclothed ordinary pet dog.
+```
 
-Story:
-Jump finishes work, closes the laptop, packs her backpack and walks out of the studio. The story feeling is that work ends and life begins again.
+## Storyboard Prompt
+
+```text
+Create a black-and-white rough pencil storyboard for a 45-second vertical short video.
+
+The storyboard should use minimal details, fast dynamic sketching, simple anatomy, clear silhouettes and an unfinished director previs feeling. Keep colored annotations: red for camera movement, blue for Jump's dog movement, yellow for prop interaction, green for lighting / mood, and purple for continuity / transition.
+
+The story shows Jump finishing work, closing the laptop, packing a small backpack, walking through the warm creator studio, opening the door and entering warm after-work light.
+```
+
+## Universal Video Prompt
+
+```text
+Please generate video by strictly following the uploaded character identity card and storyboard.
+
+This generation is only for:
+[SHOT NUMBER AND NAME]
+
+Character appearance follows the identity card.
+Shot content follows the matching storyboard shot.
 
 Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera movement, cinematic documentary realism, subtle handheld energy, environmental storytelling.
+Natural eye-level 35mm documentary feeling. Camera movement must serve the storyboard.
 
 Motion:
-Natural walking, relaxed pace, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement.
+Jump must move like a real dog-form character with grounded paw contact and realistic weight shift. No human walking, no humanoid pose.
 
 Lighting:
-Warm Studio Lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows.
+Warm studio light, soft screen glow, practical desk lamp and golden-hour after-work light.
 
 Mood:
-Freedom, relaxation, warmth, everyday joy.
+Freedom, relaxation, warmth and life beginning again after work.
 
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth, high-quality film still.
-
-Brand:
-Warm, optimistic, honest, creative, lifestyle-focused TiaoTiao Studio brand language.
+Negative:
+Do not change Jump's species, do not turn Jump into a human, humanoid character, another animal or an unclothed ordinary pet dog. Do not use human hands, human arms, human legs, bipedal human standing pose, cyberpunk blue lighting, horror mood, game animation, sliding feet, floating body, drone orbit or FPS camera.
 ```
 
 ## Negative Prompt
@@ -627,8 +642,8 @@ or
 # 8. Final Consistency Checklist（最终一致性检查）
 
 ```text
-[PASS] Jump remains an anthropomorphic fluffy female dog programmer.
-[PASS] Jump keeps fluffy fur and slim body.
+[PASS] Jump remains a real dog-form character wearing clothes.
+[PASS] Jump keeps four-legged dog anatomy, fluffy fur and dog proportions.
 [PASS] ASSET-001 is referenced.
 [PASS] OUTFIT-001 is not violated.
 [PASS] COLOR-001 is respected through Fire Dragon Fruit Pink accents.
@@ -655,8 +670,8 @@ PASS
 
 ```text
 1. Review the storyboard.
-2. Select target video model: Kling / Veo / Runway.
-3. Generate shot-by-shot prompts using COMMAND-002.
+2. Generate identity card, storyboard and universal video prompt using COMMAND-002.
+3. Upload identity card and storyboard to Jimeng / 即梦.
 4. Convert storyboard to video clip packages using WORKFLOW-003.
 5. Generate video clips.
 6. Run COMMAND-005 consistency check on generated clips.

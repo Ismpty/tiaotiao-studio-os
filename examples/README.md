@@ -154,19 +154,14 @@ COMMAND-002 — Generate Short Video Prompt
 ## Covers
 
 ```text
-Prompt Purpose
-Target Model
-Source Records
+Source References
 Prompt Task Brief
-Base Prompt
-Kling-Specific Prompt
-Veo-Specific Prompt
-Runway-Specific Prompt
-Negative Prompt
-Chinese Production Notes
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check Report
+COMMAND-005 Review Result
 Usage Notes
-Next Actions
 ```
 
 ## Use When
@@ -176,7 +171,7 @@ Next Actions
 例如：
 
 ```text
-运行 COMMAND-002，生成 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ```text
@@ -184,7 +179,7 @@ Next Actions
 ```
 
 ```text
-给分镜生成逐镜头视频 Prompt。
+给分镜生成可逐镜头执行的 Universal Video Prompt。
 ```
 
 ---

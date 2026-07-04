@@ -1,314 +1,182 @@
-# COMMAND-002 Prompt Example — Short Video Prompt Package
+# COMMAND-002 Prompt Example — Video Prompt Package
 
 > Example Output（示例输出）  
 > Command：COMMAND-002  
 > Workflow：WORKFLOW-002  
 > Agent：AGENT-002  
 > Project：PROJ-001  
-> Version：1.0  
+> Version：2.0
 > Status：Example
 
 ---
 
-# 1. Prompt Purpose（提示词用途）
+# 1. Source References（内部来源）
 
-## 中文
-
-生成一条适用于《跳跳下班啦》的 9:16 竖屏 AI 视频 Prompt。
-
-该 Prompt 用于生成 Jump 下班后离开工作室的温暖电影感短视频镜头。
-
-## English
-
-Generate a 9:16 vertical AI video prompt for the Jump After Work series.
-
-This prompt is used to create a warm cinematic short-video shot of Jump leaving the studio after work.
-
----
-
-# 2. Target Model（目标模型）
-
-推荐用于：
+以下来源只用于 GitHub / Notion / Review / Consistency Check，不应裸露在模型可复制 Prompt 中。
 
 ```text
-Kling
-Veo
-Runway
-```
-
-默认：
-
-```text
-Kling
-```
-
----
-
-# 3. Source Records（来源记录）
-
-## Database Records
-
-```text
+PROJ-001 — Jump After Work Pilot Project
 CHAR-001 — Jump
+ASSET-001 — Jump Character Reference Pack
 STORY-001 — Work Ends, Adventure Begins
 ENV-001 — TiaoTiao Studio Office
 MOT-001 — Natural Walking
 CAM-001 — Hero Tracking Camera
 LGT-001 — Warm Studio Lighting
 PROMPT-001 — Jump After Work Master Prompt
-ASSET-001 — Jump Character Reference Pack
-PROJ-001 — Jump After Work Pilot Project
-```
-
-## Knowledge Nodes
-
-```text
 STYLE-001 — Cinematic Documentary
 COLOR-001 — Fire Dragon Fruit Palette
-WORLD-001 — TiaoTiao Universe
 EMOTION-001 — Freedom
-SHOT-001 — Hero Tracking Shot
-MOTIONLANG-001 — Natural Walking Language
-OUTFIT-001 — Programmer Outfit System
 BRAND-001 — TiaoTiao Studio Brand Language
 ```
 
 ---
 
-# 4. Prompt Task Brief（提示词任务简报）
+# 2. Prompt Task Brief（提示词任务简报）
 
 ```text
-Prompt Type:
-Video Prompt
-
-Target Model:
-Kling
-
-Aspect Ratio:
-9:16
-
-Duration:
-6–8 seconds
+Project:
+PROJ-001 — Jump After Work Pilot Project
 
 Target Platform:
 小红书 / 抖音 / 视频号 / YouTube Shorts / TikTok / Instagram Reels
 
-Language:
-English prompt with Chinese production notes
+Target Model:
+Jimeng / 即梦
 
-Core Emotion:
-Freedom
-
-Scene:
-TiaoTiao Studio Office
-
-Main Action:
-Jump finishes work, packs her backpack and walks toward the office exit.
-```
-
----
-
-# 5. Base Prompt（基础提示词）
-
-```text
-Create a warm cinematic vertical short video for the Jump After Work series.
-
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, wearing her default programmer outfit with Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
-
-Scene:
-TiaoTiao Studio Office, a warm modern creator studio with a realistic programmer desk, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant. The office feels clean but lived-in, warm, creative and not corporate.
-
-Action:
-Jump has just finished work. She closes the laptop, gently packs her backpack, then walks naturally toward the office exit. Her body language is relaxed and light, expressing the feeling that life begins again after work.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing, natural camera motion, subtle handheld documentary energy, environmental storytelling. The camera follows Jump like a quiet companion.
-
-Motion:
-Natural walking, relaxed pace, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement, no robotic motion.
-
-Lighting:
-Warm Studio Lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows, cozy creator studio mood.
-
-Mood:
-Freedom, relaxation, warmth, everyday joy, gentle after-work relief.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth, high-quality film still, soft warm atmosphere.
-
-Brand Consistency:
-Warm, optimistic, honest, creative and lifestyle-focused TiaoTiao Studio brand language.
-```
-
----
-
-# 6. Kling-Specific Prompt（Kling 专用提示词）
-
-```text
-Duration:
-6–8 seconds
+Backup Models:
+Veo / Runway
 
 Aspect Ratio:
 9:16 vertical video
 
-Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, consistent with ASSET-001. She wears her default programmer outfit with subtle Fire Dragon Fruit Pink brand accents.
-
-Start Frame:
-Jump is inside TiaoTiao Studio Office at the end of the workday. She sits near a warm programmer desk with laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and a small plant. The laptop screen and desk lamp create a soft warm glow.
-
-Action:
-Jump closes the laptop, gently puts her notebook and headphones into her backpack, then stands up and walks naturally toward the office exit. Her movement is relaxed, grounded and realistic. Her tail moves subtly with her walking rhythm.
-
-End Frame:
-Jump reaches the office exit and turns slightly toward the warm outside light. The mood suggests that work has ended and life begins again.
-
-Camera:
-Hero tracking camera, 35mm lens, eye-level framing. The camera follows Jump smoothly and naturally with subtle handheld documentary energy. No fast zoom, no drone orbit, no FPS view.
-
-Motion:
-Natural walking, realistic weight transfer, grounded foot contact, soft body mechanics, relaxed shoulders, subtle head movement, gentle tail motion.
-
-Lighting:
-Warm interior lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows, cozy creator studio atmosphere.
-
-Environment:
-Warm modern creator studio office, realistic programmer workspace, clean but lived-in, white and warm gray base, Fire Dragon Fruit Pink accents.
-
-Mood:
-Freedom, relaxation, warmth, everyday joy, quiet after-work happiness.
-
-Style:
-Cinematic documentary realism, lifestyle storytelling, natural color balance, realistic depth, soft warm atmosphere, high-quality film still.
-
-Continuity:
-Keep Jump's species, outfit, fur texture, slim body and warm expression consistent throughout the clip. Keep the office layout stable and coherent.
+Runtime Structure:
+Identity Card Prompt
+↓
+Storyboard Prompt
+↓
+Universal Video Prompt
+↓
+Model-readable check
+↓
+COMMAND-005 review
 ```
 
 ---
 
-# 7. Veo-Specific Prompt（Veo 专用提示词）
+# 3. Identity Card Prompt（身份卡提示词）
 
 ```text
-Create a 6–8 second vertical cinematic video.
+请生成一张角色身份卡，用于锁定跳跳在后续视频生成中的外观一致性。
 
-The scene takes place inside TiaoTiao Studio Office, a warm modern creator studio at the end of the workday. Jump, an anthropomorphic fluffy female dog programmer with a slim body, soft realistic fur and a friendly warm expression, closes her laptop, packs her backpack and walks naturally toward the office exit.
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗角色，穿程序员风格小狗衣服。她必须保持四足小狗身体结构、小狗比例、蓬松毛发和温暖友好的表情。她可以背小包、戴工牌或项圈挂饰，身上可以有少量火龙果粉色点缀。
 
-The video should feel like a live-action cinematic documentary moment: warm practical desk lamp, soft screen glow, golden-hour light spilling through the window, gentle shadows and a calm creator-studio atmosphere.
+身份卡应清楚展示跳跳的正面、侧面和简单动作姿态。服装应像小狗可以穿的程序员风格服装，而不是人类身体上的衣服。整体感觉温暖、真实、生活化，有创作者气质。
 
-Use a 35mm eye-level hero tracking camera. The camera follows Jump naturally as she leaves the desk and walks across the studio. The movement should be grounded and realistic, with subtle handheld energy and environmental storytelling.
-
-Jump's motion should be natural: realistic weight transfer, grounded foot contact, relaxed shoulders, subtle head movement and soft tail motion.
-
-The mood is freedom, warmth and everyday joy — the feeling that work has ended and life begins again.
-
-Keep Jump consistent with ASSET-001: anthropomorphic fluffy female dog programmer, slim body, default programmer outfit, Fire Dragon Fruit Pink brand accents, no species change, no human version.
+禁止把跳跳画成半人身体、人类手掌、人类手臂、人类双腿站立、人类身体比例、直立人形角色、其他动物、无衣服普通宠物狗、肌肉角色或恐怖 / 赛博朋克风格角色。
 ```
 
 ---
 
-# 8. Runway-Specific Prompt（Runway 专用提示词）
+# 4. Storyboard Prompt（故事板提示词）
 
 ```text
-Vertical 9:16 cinematic video, 6–8 seconds.
+请为《跳跳下班啦》生成 9:16 竖屏短视频故事板。
 
-Jump, an anthropomorphic fluffy female dog programmer with a slim body and warm friendly expression, finishes work in a warm modern creator studio office. She closes her laptop, packs her backpack and walks naturally toward the office exit.
+故事板主体必须是黑白粗略铅笔线稿，保持极简细节、快速动态描绘、简单解剖结构、清晰轮廓和导演前期预演分镜草图感。不要做成彩色成片插画、真实渲染成片、精修概念图、儿童绘本风或漫画上色成稿。
 
-Camera follows her at eye level with a 35mm hero tracking shot. Natural documentary camera movement, subtle handheld energy, realistic depth, warm interior lighting, practical desk lamp, soft screen glow, golden-hour window spill.
+跳跳必须保持真实小狗本体形态，穿程序员风格小狗衣服，可以背小包、戴工牌或项圈挂饰，有少量火龙果粉色点缀。故事板中的跳跳动作必须符合小狗身体结构，不要出现人类手掌、人类手臂、人类双腿站立或人类身体比例。
 
-Keep movement realistic and grounded. No sliding feet, no robotic motion, no floating body. Keep Jump's fluffy fur, outfit, body shape and Fire Dragon Fruit Pink accents consistent. Warm cinematic documentary realism, lifestyle storytelling, calm after-work freedom.
+请输出 6 个镜头：
+
+Shot 1 — Work Ending，6 秒：跳跳在温暖的创作者工作室桌前结束代码工作，电脑屏幕和台灯发出柔和暖光。
+Shot 2 — Decision Moment，6 秒：跳跳看向窗外的傍晚光，轻轻合上电脑，表情从专注变成期待。
+Shot 3 — Packing Up，7 秒：跳跳把笔记本、耳机和小物件放进小背包，道具动作温柔清楚。
+Shot 4 — Walking Out，10 秒：跳跳背着小包，用自然小狗动作穿过工作室，镜头平视跟拍。
+Shot 5 — Door Exit，8 秒：跳跳到达门口，门打开，室内暖光过渡到下班后的金色光。
+Shot 6 — Warm Ending，8 秒：跳跳进入下班后的光线中，画面停留在温暖、自由、生活重新开始的情绪上。
+
+请保留彩色动态标注系统：
+红色箭头表示镜头运动。
+蓝色箭头表示跳跳 / 小狗动作方向。
+黄色圈注表示道具互动。
+绿色标注表示灯光和情绪变化。
+紫色标注表示连续性和转场。
 ```
 
 ---
 
-# 9. Negative Prompt（负面提示词）
+# 5. Universal Video Prompt（通用视频提示词）
 
 ```text
-Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not change outfit, do not remove Fire Dragon Fruit Pink accents, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, floating body, mechanical tail movement, impossible motion, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, inconsistent environment, aggressive expression, cheap CGI look, hard-selling commercial mood, clickbait visual style.
+请严格参考上传的角色身份卡和故事板生成视频。
+
+本次只生成故事板中的：
+[SHOT NUMBER AND NAME]
+
+角色外观以身份卡为准。
+镜头内容以故事板对应 Shot 为准。
+
+视频规格：
+9:16 竖屏，单镜头 6–10 秒，温暖真实的生活方式短视频质感。
+
+动作要求：
+跳跳必须保持真实小狗本体形态和四足小狗身体结构。动作要自然、有真实重心、脚步不滑、身体不漂浮。不要出现人类式走路、人类手掌、人类手臂、人类双腿站立或人类身体比例。
+
+镜头要求：
+使用自然平视镜头，35mm 生活化纪录片视角，镜头运动必须服务故事，不要炫技，不要无人机环绕，不要第一人称游戏视角。
+
+灯光和情绪：
+保持温暖工作室灯光、柔和屏幕光、台灯光和傍晚金色光。情绪是下班后的自由、轻松、温暖和生活重新开始。
+
+连续性要求：
+严格匹配故事板中的前后镜头关系，保持跳跳服装、毛发、小包、工牌 / 项圈挂饰、火龙果粉色点缀、道具状态和光线方向连续。
+
+负面要求：
+不要改变跳跳的物种。不要把跳跳变成人类、半人角色、其他动物或无衣服普通宠物狗。不要出现人类手掌、人类手臂、人类双腿站立、人类身体比例、恐怖、暴力、黑暗反乌托邦、赛博朋克蓝光、霓虹科幻光、游戏动画感、机器人动作、滑步、漂浮身体、极端广角畸变、无人机环绕、第一人称镜头、杂乱办公室、冷冰冰公司办公室、强销售广告感或标题党风格。
 ```
 
 ---
 
-# 10. Chinese Production Notes（中文制作备注）
+# 6. Runtime Usage Example（运行方式示例）
 
 ```text
-画幅：
-9:16 竖屏
-
-视频时长：
-6–8 秒
-
-核心画面：
-跳跳结束工作，关掉电脑，收拾背包，走向办公室门口。
-
-情绪：
-下班后的轻松、自由、温暖、生活重新开始。
-
-镜头：
-35mm 视角，平视跟拍，不要俯视，不要炫技，不要游戏感。
-
-动作：
-自然行走，脚步不能滑，身体不能漂浮，尾巴自然轻微摆动。
-
-灯光：
-温暖室内光，台灯，屏幕柔光，傍晚窗光，不要赛博朋克蓝光。
-
-角色：
-必须保持跳跳是拟人化毛茸茸小狗程序员，身体苗条，表情温暖，不能变成人。
+1. Use the Identity Card Prompt to generate or confirm Jump's identity card.
+2. Use the Storyboard Prompt to generate the black-and-white rough pencil storyboard with colored annotations.
+3. Upload the identity card and storyboard to Jimeng / 即梦.
+4. Use the Universal Video Prompt.
+5. Replace [SHOT NUMBER AND NAME] with the target storyboard shot.
+6. Generate one shot at a time.
+7. Run COMMAND-005 review for every generated clip.
 ```
 
 ---
 
-# 11. Consistency Checklist（一致性检查）
+# 7. Model-readable Check Report（模型可读检查报告）
 
 ```text
-[PASS] Prompt uses CHAR-001 — Jump.
-[PASS] Prompt references ASSET-001 for character consistency.
-[PASS] Jump remains an anthropomorphic fluffy female dog programmer.
-[PASS] Jump keeps fluffy fur and slim body.
-[PASS] Default programmer outfit is preserved.
-[PASS] Fire Dragon Fruit Pink accents are preserved.
-[PASS] ENV-001 office environment is used.
-[PASS] MOT-001 natural walking is used.
-[PASS] CAM-001 hero tracking camera is used.
-[PASS] LGT-001 warm studio lighting is used.
-[PASS] STYLE-001 cinematic documentary realism is maintained.
-[PASS] BRAND-001 warm and optimistic tone is maintained.
-[PASS] Negative Prompt is included.
-[PASS] No cyberpunk, horror, game-render or dark dystopian style is introduced.
-[PASS] No unapproved canon is added.
+[PASS] Identity Card Prompt is model-readable natural language.
+[PASS] Storyboard Prompt is model-readable natural language.
+[PASS] Universal Video Prompt is model-readable natural language.
+[PASS] Model-copyable prompt sections do not rely on raw internal IDs.
+[PASS] Jump is described as a real dog-form character wearing clothes.
+[PASS] Humanoid body, human hands, human arms, human legs and human proportions are forbidden.
+[PASS] Storyboard style is black-and-white rough pencil line art.
+[PASS] Storyboard color annotation system is preserved.
+[PASS] Shot details belong to the storyboard.
+[PASS] Universal Video Prompt is compact and shot-placeholder based.
 ```
 
-## Final Result
+---
+
+# 8. COMMAND-005 Review Result（COMMAND-005 审查结果）
 
 ```text
+Result:
 PASS
-```
 
----
-
-# 12. Usage Notes（使用备注）
-
-```text
-This prompt is generated from TSOS Source of Truth.
-
-Do not manually rewrite Jump's identity.
-Do not remove ASSET-001 references.
-Use the Negative Prompt together with the main prompt.
-For best continuity, generate each storyboard shot separately and run COMMAND-005 after generation.
-```
-
----
-
-# 13. Next Actions（下一步）
-
-```text
-1. Select target model: Kling / Veo / Runway.
-2. Use the model-specific prompt.
-3. Generate a 6–8 second test clip.
-4. Run COMMAND-005 to check character and motion consistency.
-5. If passed, continue with WORKFLOW-003 for shot-by-shot video generation.
+Reason:
+The prompt package follows the current Prompt Runtime Architecture, preserves Jump as a real dog-form character wearing clothes, keeps storyboard body style black-and-white rough pencil line art, retains colored annotations, and avoids raw internal IDs in model-copyable prompt sections.
 ```
 
 ---
@@ -317,4 +185,5 @@ For best continuity, generate each storyboard shot separately and run COMMAND-00
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026 | Updated example to Identity Card Prompt, Storyboard Prompt and Universal Video Prompt structure |
 | 1.0 | 2026 | Initial COMMAND-002 prompt example |

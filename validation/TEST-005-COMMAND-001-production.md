@@ -243,29 +243,26 @@ Jump identity remains consistent.
 ## Source
 
 ```text
-TEST-002 — COMMAND-002 Prompt Validation
+TEST-002 — COMMAND-002 Prompt Package Validation
 ```
 
 ## Prompt Package Includes
 
 ```text
-Prompt Purpose
-Target Model
-Source Records
-Base Prompt
-Shot-by-shot Prompts
-Model-Specific Prompt Validation
-Negative Prompt
-Chinese Production Notes
-Consistency Checklist
+Source References
+Prompt Task Brief
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 ```
 
 ## Target Models
 
 ```text
-Kling
-Veo
-Runway
+Jimeng / 即梦
+Backup: Veo / Runway
 ```
 
 ## Required Prompt Constraints
@@ -278,8 +275,11 @@ Runway
 [PASS] MOT-001 is referenced.
 [PASS] CAM-001 is referenced.
 [PASS] LGT-001 is referenced.
-[PASS] Negative Prompt is included.
-[PASS] Target model adaptation is included.
+[PASS] Identity Card Prompt is included.
+[PASS] Storyboard Prompt is included.
+[PASS] Universal Video Prompt is included.
+[PASS] Model-readable check is included.
+[PASS] Model-copyable prompts do not rely on raw internal IDs.
 ```
 
 ## Validation Result
@@ -540,13 +540,14 @@ PASS
 ## Character
 
 ```text
-[PASS] Jump remains an anthropomorphic fluffy female dog programmer.
-[PASS] Jump keeps fluffy fur texture.
-[PASS] Jump keeps slim body.
+[PASS] Jump remains a real dog-form character wearing clothes.
+[PASS] Jump keeps four-legged dog anatomy.
+[PASS] Jump keeps fluffy fur texture and dog proportions.
 [PASS] Jump keeps warm friendly expression.
 [PASS] Jump keeps programmer identity.
 [PASS] Jump is not changed into a human.
 [PASS] Jump is not changed into another animal.
+[PASS] Jump is not changed into an unclothed ordinary pet dog.
 [PASS] ASSET-001 is referenced.
 [PASS] OUTFIT-001 is not violated.
 ```
@@ -655,8 +656,8 @@ Proceed to Phase 9 summary and CHANGELOG update.
 
 ```text
 1. Use TEST-001 storyboard as production storyboard reference.
-2. Use TEST-002 prompts to generate individual AI video clips.
-3. Generate clips shot by shot in Kling / Veo / Runway.
+2. Use TEST-002 identity card, storyboard and universal video prompt package.
+3. Generate clips shot by shot in Jimeng / 即梦, with Veo / Runway as backup.
 4. Run COMMAND-005 on generated clips after production.
 5. Assemble clips according to editing structure.
 6. Prepare cover image using publishing package.

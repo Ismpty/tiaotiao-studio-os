@@ -5,7 +5,7 @@
 > Target：Run Consistency Check  
 > Project：PROJ-001  
 > Status：PASS  
-> Version：1.0
+> Version：2.0
 
 ---
 
@@ -13,21 +13,25 @@
 
 ## 中文
 
-本测试用于验证 `COMMAND-005 — Run Consistency Check` 是否可以正确检查 TEST-001 分镜输出和 TEST-002 Prompt 输出是否符合 TSOS Source of Truth。
+本测试用于验证 `COMMAND-005 — Run Consistency Check` 是否可以正确检查 TEST-001 分镜输出和 TEST-002 提示词包输出是否符合 TSOS Source of Truth 与 Prompt Runtime Rules。
 
 本次测试重点检查：
 
 - 是否正确调用 COMMAND-005
-- 是否正确读取 10 个 Production Database Records
-- 是否正确读取 10 个 Knowledge Nodes
-- 是否能检查 Jump 角色一致性
-- 是否能检查世界观、风格、色彩、动作、镜头、灯光和品牌语言
-- 是否能发现偏离 Source of Truth 的风险
-- 是否能输出 PASS / FAIL / PASS WITH MINOR FIXES
+- 是否正确读取 Production Database Records
+- 是否正确读取 Knowledge Nodes
+- 是否检查 GitHub 是 Source of Truth
+- 是否检查 Notion 只作为 Visual Management Layer
+- 是否检查 Jump 真实小狗本体形态和穿衣服规则
+- 是否检查故事板黑白粗略铅笔线稿风格
+- 是否检查故事板彩色动态标注系统
+- 是否检查 Identity Card Prompt / Storyboard Prompt / Universal Video Prompt 结构
+- 是否检查模型可复制 Prompt 不依赖裸露内部 ID
+- 是否输出 PASS / FAIL / PASS WITH MINOR FIXES
 
 ## English
 
-This test validates whether COMMAND-005 can correctly check TEST-001 storyboard output and TEST-002 prompt output against TSOS Source of Truth.
+This test validates whether COMMAND-005 can check the updated storyboard and prompt package against TSOS Source of Truth and Prompt Runtime Rules.
 
 ---
 
@@ -38,7 +42,7 @@ Run COMMAND-005.
 
 Check Target:
 TEST-001 COMMAND-003 Storyboard Output
-TEST-002 COMMAND-002 Prompt Output
+TEST-002 COMMAND-002 Prompt Package Output
 
 Project:
 PROJ-001
@@ -55,11 +59,10 @@ Consistency report with PASS / FAIL result.
 
 ---
 
-# 3. Source Records（来源记录）
-
-## Database Records
+# 3. Source References（内部来源）
 
 ```text
+PROJ-001 — Jump After Work Pilot Project
 CHAR-001 — Jump
 EP-001 — Jump After Work
 STORY-001 — Work Ends, Adventure Begins
@@ -69,12 +72,6 @@ CAM-001 — Hero Tracking Camera
 LGT-001 — Warm Studio Lighting
 PROMPT-001 — Jump After Work Master Prompt
 ASSET-001 — Jump Character Reference Pack
-PROJ-001 — Jump After Work Pilot Project
-```
-
-## Knowledge Nodes
-
-```text
 STYLE-001 — Cinematic Documentary
 COLOR-001 — Fire Dragon Fruit Palette
 WORLD-001 — TiaoTiao Universe
@@ -85,9 +82,17 @@ OUTFIT-001 — Programmer Outfit System
 MUSIC-001 — Lifestyle Music Language
 STORYFORMULA-001 — Work Ends, Adventure Begins
 BRAND-001 — TiaoTiao Studio Brand Language
+docs/studio-os/PROMPT-RUNTIME-RULES.md
+COMMAND-002
+WORKFLOW-002
+WORKFLOW-003
+AGENT-001
+AGENT-002
 ```
 
-## Checked Outputs
+---
+
+# 4. Checked Outputs（被检查输出）
 
 ```text
 validation/TEST-001-COMMAND-003-storyboard.md
@@ -96,383 +101,150 @@ validation/TEST-002-COMMAND-002-prompt.md
 
 ---
 
-# 4. Consistency Summary（一致性总结）
-
-## Result
+# 5. Consistency Summary（一致性总结）
 
 ```text
+Result:
 PASS
+
+Summary:
+TEST-001 and TEST-002 follow TSOS Source of Truth and current Prompt Runtime Rules.
+
+TEST-001 confirms the storyboard uses black-and-white rough pencil line art, preserves colored annotations and keeps Jump as a real dog-form character wearing clothes.
+
+TEST-002 confirms COMMAND-002 outputs Identity Card Prompt, Storyboard Prompt and Universal Video Prompt, with model-readable natural language and no reliance on raw internal IDs in model-copyable prompt sections.
 ```
-
-## 中文总结
-
-TEST-001 和 TEST-002 均符合 TSOS Source of Truth。
-
-分镜输出能够正确保持 Jump 角色一致性，并按照 STORYFORMULA-001 完成 Work → Decision → Packing Up → Walking Out → Door Exit → Warm Reflection 的故事节奏。
-
-Prompt 输出能够正确引用 CHAR-001、ASSET-001、ENV-001、MOT-001、CAM-001、LGT-001 和 PROMPT-001，并包含 Negative Prompt 与模型适配说明。
-
-未发现 Critical、Major 或 Minor 级别问题。
-
-## English Summary
-
-TEST-001 and TEST-002 both follow TSOS Source of Truth.
-
-The storyboard output keeps Jump consistent and follows the expected story formula.  
-The prompt output correctly references required database records, includes negative prompts and supports model-specific generation.
 
 ---
 
-# 5. Character Consistency Check（角色一致性检查）
-
-默认对照：
+# 6. Source of Truth Check（事实来源检查）
 
 ```text
-CHAR-001
-ASSET-001
-OUTFIT-001
-COLOR-001
+[PASS] GitHub is treated as Source of Truth.
+[PASS] Notion is treated only as Visual Management Layer.
+[PASS] Internal source records are used for review and traceability.
+[PASS] No Notion-only content overrides GitHub rules.
 ```
 
-## Checklist
+---
+
+# 7. Character Consistency Check（角色一致性检查）
 
 ```text
-[PASS] Jump remains an anthropomorphic fluffy female dog programmer.
-[PASS] Jump keeps fluffy fur texture.
-[PASS] Jump keeps slim body.
-[PASS] Jump keeps warm friendly expression.
-[PASS] Jump keeps programmer identity.
+[PASS] Jump remains a real dog-form character.
+[PASS] Jump keeps four-legged dog anatomy.
+[PASS] Jump keeps dog proportions.
+[PASS] Jump keeps fluffy fur.
+[PASS] Jump wears programmer-style dog clothes.
+[PASS] Jump may keep small backpack, badge or collar charm.
+[PASS] Jump may keep subtle dragon-fruit pink accents.
 [PASS] Jump is not turned into a human.
-[PASS] Jump is not changed into another animal.
-[PASS] Jump is not redesigned as muscular.
-[PASS] Jump keeps Fire Dragon Fruit Pink accents.
-[PASS] ASSET-001 is referenced in storyboard and prompt outputs.
-[PASS] OUTFIT-001 is not violated.
-```
-
-## Result
-
-```text
-PASS
+[PASS] Jump is not turned into another animal.
+[PASS] Jump is not turned into an unclothed ordinary pet dog.
+[PASS] Human hands are forbidden.
+[PASS] Human arms are forbidden.
+[PASS] Human legs are forbidden.
+[PASS] Bipedal human standing pose is forbidden.
+[PASS] Human body proportions are forbidden.
 ```
 
 ---
 
-# 6. World Consistency Check（世界观一致性检查）
-
-默认对照：
+# 8. Storyboard Runtime Check（故事板运行检查）
 
 ```text
-WORLD-001
-EP-001
-STORY-001
-PROJ-001
+[PASS] Storyboard body uses black-and-white line art.
+[PASS] Storyboard body uses rough pencil lines.
+[PASS] Storyboard uses minimal details.
+[PASS] Storyboard uses fast dynamic sketching.
+[PASS] Storyboard uses simple anatomy.
+[PASS] Storyboard uses clear silhouettes.
+[PASS] Storyboard has unfinished director previs sketch feeling.
+[PASS] Storyboard avoids full-color concept art.
+[PASS] Storyboard avoids polished illustration.
+[PASS] Storyboard avoids realistic final render.
+[PASS] Storyboard avoids children's picture book style.
+[PASS] Storyboard avoids fully colored comic style.
 ```
 
-## Checklist
+---
+
+# 9. Storyboard Color Annotation Check（故事板彩色标注检查）
+
+```text
+[PASS] Red is used for camera movement.
+[PASS] Blue is used for character / dog movement.
+[PASS] Yellow is used for prop interaction.
+[PASS] Green is used for lighting / mood.
+[PASS] Purple is used for continuity / transition.
+[PASS] Colored annotations remain annotations only.
+[PASS] Colored annotations do not turn storyboard body into full-color final art.
+```
+
+---
+
+# 10. Prompt Runtime Compliance Check（提示词运行架构合规检查）
+
+```text
+[PASS] Identity Card Prompt exists.
+[PASS] Storyboard Prompt exists.
+[PASS] Universal Video Prompt exists.
+[PASS] Model-readable check exists.
+[PASS] COMMAND-005 review exists.
+[PASS] Identity Card Prompt owns character appearance.
+[PASS] Storyboard Prompt owns shot details.
+[PASS] Universal Video Prompt owns model execution rules.
+[PASS] Universal Video Prompt refers to uploaded identity card.
+[PASS] Universal Video Prompt refers to uploaded storyboard.
+[PASS] Universal Video Prompt uses [SHOT NUMBER AND NAME].
+[PASS] Universal Video Prompt avoids duplicated long shot details.
+```
+
+---
+
+# 11. Model-readable Prompt Check（模型可读提示词检查）
+
+```text
+[PASS] Model-copyable prompt sections use natural language.
+[PASS] Source IDs are limited to Source References and review sections.
+[PASS] Model-copyable prompt sections do not rely on "consistent with ASSET-001".
+[PASS] Model-copyable prompt sections do not rely on "follow CHAR-001".
+[PASS] Model-copyable prompt sections do not rely on "use STYLE-001".
+[PASS] Model-copyable prompt sections do not rely on "match BRAND-001".
+[PASS] Character, style, scene and brand requirements are expanded into natural language.
+```
+
+---
+
+# 12. World / Style / Brand Check（世界观、风格、品牌检查）
 
 ```text
 [PASS] Output remains within TiaoTiao Universe.
-[PASS] Output serves the Jump After Work series.
-[PASS] Output does not introduce unapproved worldbuilding.
-[PASS] Output does not introduce horror, violence, dystopian or dark canon.
-[PASS] Output keeps the everyday creator lifestyle tone.
-[PASS] Output supports PROJ-001 pilot project goal.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 7. Visual Style Check（视觉风格检查）
-
-默认对照：
-
-```text
-STYLE-001
-BRAND-001
-```
-
-## Checklist
-
-```text
-[PASS] Cinematic documentary realism is maintained.
-[PASS] Lifestyle storytelling tone is maintained.
-[PASS] Output avoids game-render visual language.
-[PASS] Output avoids cheap CGI direction.
-[PASS] Output avoids excessive cartoon exaggeration.
-[PASS] Output avoids horror visual style.
-[PASS] Output avoids cyberpunk visual direction.
-[PASS] Output keeps TiaoTiao Studio warm, realistic and optimistic visual tone.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 8. Color Check（色彩检查）
-
-默认对照：
-
-```text
-COLOR-001
-```
-
-## Checklist
-
-```text
-[PASS] Natural warm color tone is maintained.
-[PASS] Fire Dragon Fruit Pink remains a brand accent.
-[PASS] Brand color is not overused.
-[PASS] Output avoids cold cyberpunk blue as main color.
-[PASS] Output avoids over-saturated RGB lighting.
-[PASS] Color direction does not damage Jump's subject recognition.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 9. Emotion Check（情绪检查）
-
-默认对照：
-
-```text
-EMOTION-001
-STORYFORMULA-001
-BRAND-001
-```
-
-## Checklist
-
-```text
-[PASS] Freedom is expressed clearly.
-[PASS] After-work relaxation is expressed.
-[PASS] Warmth, healing and everyday life feeling are maintained.
-[PASS] Output does not create workplace anxiety.
-[PASS] Output does not turn into workplace complaint.
-[PASS] Output avoids forced melodrama.
-[PASS] Output avoids negative oppressive tone.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 10. Motion Check（动作检查）
-
-默认对照：
-
-```text
-MOT-001
-MOTIONLANG-001
-```
-
-## Checklist
-
-```text
-[PASS] Natural walking is referenced.
-[PASS] Realistic weight transfer is required.
-[PASS] Grounded foot contact is required.
-[PASS] Subtle tail movement is included.
-[PASS] Robotic movement is forbidden.
-[PASS] Sliding feet are forbidden.
-[PASS] Floating body is forbidden.
-[PASS] Game animation movement is forbidden.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 11. Camera Check（镜头检查）
-
-默认对照：
-
-```text
-CAM-001
-SHOT-001
-```
-
-## Checklist
-
-```text
-[PASS] Camera language serves story.
-[PASS] 35mm natural perspective is used.
-[PASS] Eye-level framing is maintained.
-[PASS] Hero tracking camera is referenced.
-[PASS] Rear follow and gentle push-in are used appropriately.
-[PASS] Extreme wide-angle distortion is forbidden.
-[PASS] FPS game view is forbidden.
-[PASS] Drone orbit is forbidden.
-[PASS] Impossible camera movement is forbidden.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 12. Lighting Check（灯光检查）
-
-默认对照：
-
-```text
-LGT-001
-STYLE-001
-COLOR-001
-```
-
-## Checklist
-
-```text
-[PASS] Warm Studio Lighting is used.
-[PASS] Practical desk lamp is referenced.
-[PASS] Soft screen glow is referenced.
-[PASS] Golden-hour window spill is referenced.
-[PASS] Gentle shadows are preserved.
-[PASS] Cyberpunk blue lighting is forbidden.
-[PASS] Horror high contrast is forbidden.
-[PASS] Stage spotlight look is forbidden.
-[PASS] Over-saturated RGB lights are forbidden.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 13. Story / Brand Check（故事与品牌检查）
-
-默认对照：
-
-```text
-STORYFORMULA-001
-BRAND-001
-EP-001
-PROJ-001
-```
-
-## Checklist
-
-```text
-[PASS] Story follows Work Ends, Adventure Begins.
-[PASS] Work → Decision → Packing Up → Walking Out → Door Exit → Warm Reflection structure is clear.
-[PASS] The theme “life begins again after work” is maintained.
-[PASS] Brand tone is warm, optimistic and honest.
+[PASS] Output serves Jump After Work.
+[PASS] Output keeps warm, optimistic and honest brand tone.
+[PASS] Output avoids horror, violence, dystopian and cyberpunk direction.
 [PASS] Output avoids hard-selling tone.
 [PASS] Output avoids clickbait.
-[PASS] Output avoids false promise.
-[PASS] Output supports PROJ-001 as a pilot project.
-```
-
-## Result
-
-```text
-PASS
+[PASS] Output does not introduce unapproved canon.
 ```
 
 ---
 
-# 14. Prompt Consistency Check（提示词一致性检查）
-
-默认对照：
+# 13. Workflow Compliance Check（工作流合规检查）
 
 ```text
-PROMPT-001
-COMMAND-002
-WORKFLOW-002
-AGENT-002
-```
-
-## Checklist
-
-```text
-[PASS] Prompt references Source Records.
-[PASS] Prompt references ASSET-001.
-[PASS] Prompt includes Negative Prompt.
-[PASS] Prompt supports target models: Kling / Veo / Runway.
-[PASS] Prompt does not modify Jump identity.
-[PASS] Prompt includes character consistency constraints.
-[PASS] Prompt includes motion restrictions.
-[PASS] Prompt includes camera restrictions.
-[PASS] Prompt includes lighting restrictions.
-[PASS] Prompt is executable for AI video generation.
-```
-
-## Result
-
-```text
-PASS
-```
-
----
-
-# 15. Workflow Compliance Check（工作流合规检查）
-
-默认对照：
-
-```text
-WORKFLOW-001
-WORKFLOW-002
-WORKFLOW-003
-COMMAND-003
-COMMAND-002
-```
-
-## Checklist
-
-```text
-[PASS] TEST-001 follows COMMAND-003 output structure.
+[PASS] TEST-001 follows COMMAND-003 storyboard validation structure.
 [PASS] TEST-001 follows AGENT-001 storyboard responsibilities.
-[PASS] TEST-001 includes Storyboard Summary.
-[PASS] TEST-001 includes Story Beat Breakdown.
-[PASS] TEST-001 includes Shot List.
-[PASS] TEST-001 includes Shot Details.
-[PASS] TEST-001 includes Camera / Motion / Lighting Mapping.
-[PASS] TEST-002 follows COMMAND-002 output structure.
-[PASS] TEST-002 follows AGENT-002 prompt responsibilities.
-[PASS] TEST-002 includes Base Prompt.
-[PASS] TEST-002 includes Shot-by-shot Prompts.
-[PASS] TEST-002 includes Negative Prompt.
+[PASS] TEST-002 follows COMMAND-002 prompt package structure.
+[PASS] TEST-002 follows AGENT-002 prompt runtime responsibilities.
+[PASS] TEST-002 follows WORKFLOW-002 output structure.
+[PASS] Prompt package can feed WORKFLOW-003.
 [PASS] Both tests preserve TSOS Source of Truth.
 ```
 
-## Result
-
-```text
-PASS
-```
-
 ---
 
-# 16. Issue List（问题列表）
+# 14. Issue List（问题列表）
 
 | Severity | Area | Issue | Source of Truth | Suggested Fix |
 |---|---|---|---|---|
@@ -480,43 +252,31 @@ PASS
 
 ---
 
-# 17. Fix Suggestions（修改建议）
+# 15. Fix Suggestions（修改建议）
 
 ```text
 No required fixes.
 
 Optional future improvement:
-When running real AI video generation, each generated clip should be checked again using COMMAND-005 because model output may drift even if the prompt is correct.
+Update broader examples and end-to-end production validation files so every sample uses the new Prompt Runtime Architecture.
 ```
 
 ---
 
-# 18. Final Result（最终结果）
+# 16. Final Result（最终结果）
 
 ```text
 Final Result:
 PASS
 
 Reason:
-TEST-001 and TEST-002 follow TSOS Source of Truth, preserve Jump character consistency, include required Database Records and Knowledge Nodes, and avoid forbidden style, motion, lighting and branding directions.
+TEST-001 and TEST-002 follow TSOS Source of Truth, preserve Jump as a real dog-form character wearing clothes, use black-and-white rough pencil storyboard style with colored annotations, and follow the Identity Card Prompt + Storyboard Prompt + Universal Video Prompt architecture.
 
 Required Fixes:
 None.
 
 Next Action:
-Continue to TEST-004 — COMMAND-004 Publishing Package Validation.
-```
-
----
-
-# 19. Next Validation Action（下一步验证）
-
-```text
-Run TEST-004:
-COMMAND-004 — Generate Publishing Package
-
-Purpose:
-Validate whether TSOS can generate platform-ready publishing titles, captions, hashtags, cover text, publishing checklist and post-publish review metrics.
+Continue to TEST-004 — COMMAND-004 Publishing Package Validation, or update broader examples before the next validation run.
 ```
 
 ---
@@ -525,4 +285,5 @@ Validate whether TSOS can generate platform-ready publishing titles, captions, h
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026 | Updated COMMAND-005 validation for Prompt Runtime Rules, model-readable prompts and storyboard runtime checks |
 | 1.0 | 2026 | Initial COMMAND-005 consistency check validation test |
