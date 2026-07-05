@@ -52,11 +52,13 @@ production/PROJ-001/review/SHOT-REVIEW-TEMPLATE.md
 | Shot | Generated Versions | Approved Version | Status | Notes |
 |---|---:|---|---|---|
 | Shot 1 — Work Ending | 0 | TBD | Not Started | TBD |
-| Shot 2 — Decision Moment | 0 | TBD | Not Started | TBD |
-| Shot 3 — Packing Up | 0 | TBD | Not Started | TBD |
-| Shot 4 — Walking Out | 0 | TBD | Not Started | High motion risk |
-| Shot 5 — Door Exit | 0 | TBD | Not Started | High motion / continuity risk |
-| Shot 6 — Warm Ending | 0 | TBD | Not Started | Lighting / emotion risk |
+| Shot 2 — Clock Out | 0 | TBD | Not Started | High motion / backpack continuity risk |
+| Shot 3 — Dinner Time | 0 | TBD | Not Started | Prop / food action risk |
+| Shot 4 — Supermarket Walk | 0 | TBD | Not Started | Walking / shelf continuity risk |
+| Shot 5 — Movie Night | 0 | TBD | Not Started | Screen light / prop risk |
+| Shot 6 — Street Snack | 0 | TBD | Not Started | Night lighting / food prop risk |
+| Shot 7 — Night Walk | 0 | TBD | Not Started | High motion / sliding feet risk |
+| Shot 8 — Life Begins | 0 | TBD | Not Started | Lighting / emotion risk |
 
 ---
 
@@ -214,7 +216,7 @@ Generate Shot 1 v01.
 
 ---
 
-# 7. Shot 2 — Decision Moment Iterations
+# 7. Shot 2 — Clock Out Iterations
 
 ## Target
 
@@ -238,7 +240,7 @@ No exaggerated acting
 
 ```text
 Shot:
-Shot 2 — Decision Moment
+Shot 2 — Clock Out
 
 Clip File:
 TBD
@@ -270,7 +272,7 @@ Generate Shot 2 v01.
 
 ---
 
-# 8. Shot 3 — Packing Up Iterations
+# 8. Shot 3 — Dinner Time Iterations
 
 ## Target
 
@@ -294,7 +296,7 @@ Object handling natural
 
 ```text
 Shot:
-Shot 3 — Packing Up
+Shot 3 — Dinner Time
 
 Clip File:
 TBD
@@ -326,7 +328,7 @@ Generate Shot 3 v01.
 
 ---
 
-# 9. Shot 4 — Walking Out Iterations
+# 9. Shot 4 — Supermarket Walk Iterations
 
 ## Target
 
@@ -365,7 +367,7 @@ Shot 4 是本项目动作风险最高的镜头之一。
 
 ```text
 Shot:
-Shot 4 — Walking Out
+Shot 4 — Supermarket Walk
 
 Clip File:
 TBD
@@ -397,7 +399,7 @@ Generate Shot 4 v01.
 
 ---
 
-# 10. Shot 5 — Door Exit Iterations
+# 10. Shot 5 — Movie Night Iterations
 
 ## Target
 
@@ -418,14 +420,14 @@ Continuity with Shot 4 and Shot 6
 
 ## High-Risk Notes
 
-Shot 5 同时有动作、道具和光线转换风险。
+Shot 5 同时有屏幕光、道具和情绪稳定风险。
 
 重点检查：
 
 ```text
-门是否自然打开
-手部是否变形
-门外光是否过曝
+屏幕光是否柔和
+前爪和肢体是否变形
+爆米花 / 小毯子等道具是否稳定
 空间是否能接 Shot 6
 ```
 
@@ -435,7 +437,7 @@ Shot 5 同时有动作、道具和光线转换风险。
 
 ```text
 Shot:
-Shot 5 — Door Exit
+Shot 5 — Movie Night
 
 Clip File:
 TBD
@@ -467,7 +469,7 @@ Generate Shot 5 v01.
 
 ---
 
-# 11. Shot 6 — Warm Ending Iterations
+# 11. Shot 6 — Street Snack Iterations
 
 ## Target
 
@@ -492,7 +494,7 @@ Final caption can be added later
 
 ```text
 Shot:
-Shot 6 — Warm Ending
+Shot 6 — Street Snack
 
 Clip File:
 TBD
@@ -658,7 +660,7 @@ YES / NO
 3. Record result in ITERATION-LOG.md.
 4. Generate additional versions if needed.
 5. Approve the best version.
-6. Repeat for Shot 2–6.
+6. Repeat for Shot 2–8.
 ```
 
 ---

@@ -71,6 +71,7 @@ docs/studio-os/
 Current runtime docs:
 
 ```text
+docs/studio-os/START-HERE.md
 docs/studio-os/RUNTIME.md
 docs/studio-os/CODEX.md
 docs/studio-os/COMMANDS.md
@@ -82,12 +83,13 @@ docs/studio-os/PROMPT-RUNTIME-RULES.md
 Recommended reading order:
 
 ```text
-1. docs/studio-os/RUNTIME.md
-2. docs/studio-os/CODEX.md
-3. docs/studio-os/COMMANDS.md
-4. docs/studio-os/WORKFLOWS.md
-5. docs/studio-os/AGENTS.md
-6. docs/studio-os/PROMPT-RUNTIME-RULES.md
+1. docs/studio-os/START-HERE.md
+2. docs/studio-os/RUNTIME.md
+3. docs/studio-os/CODEX.md
+4. docs/studio-os/COMMANDS.md
+5. docs/studio-os/WORKFLOWS.md
+6. docs/studio-os/AGENTS.md
+7. docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ---
@@ -599,21 +601,26 @@ COMMAND-003-storyboard.md
 
 # Quick Start（快速开始）
 
+Fastest entry point:
+
+```text
+docs/studio-os/START-HERE.md
+```
+
 ## For AI Tools（给 AI 工具）
 
 推荐读取顺序：
 
 ```text
-1. README.md
-2. ARCHITECTURE.md
-3. CHANGELOG.md
-4. docs/studio-os/INDEX.md
+1. AGENTS.md
+2. CODEX-HANDOFF.md
+3. docs/studio-os/START-HERE.md
+4. README.md
 5. docs/studio-os/RUNTIME.md
-6. docs/studio-os/CODEX.md
-7. docs/studio-os/COMMANDS.md
-8. docs/studio-os/WORKFLOWS.md
-9. docs/studio-os/AGENTS.md
-10. docs/studio-os/PROMPT-RUNTIME-RULES.md
+6. docs/studio-os/COMMANDS.md
+7. docs/studio-os/WORKFLOWS.md
+8. docs/studio-os/AGENTS.md
+9. docs/studio-os/PROMPT-RUNTIME-RULES.md
 ```
 
 ---

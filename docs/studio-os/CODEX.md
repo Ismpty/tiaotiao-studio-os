@@ -50,18 +50,21 @@ Codex 不能把 Notion 当成最终设定来源。
 Codex 在执行任何任务前，应该按照以下顺序读取：
 
 ```text
-1. README.md
-2. ARCHITECTURE.md
-3. CHANGELOG.md
-4. docs/studio-os/RUNTIME.md
-5. docs/studio-os/CODEX.md
-6. knowledge/README.md
-7. knowledge/
-8. database/
-9. agents/
-10. workflows/
-11. commands/
-12. examples/
+1. AGENTS.md
+2. CODEX-HANDOFF.md
+3. docs/studio-os/START-HERE.md
+4. README.md
+5. ARCHITECTURE.md
+6. CHANGELOG.md
+7. docs/studio-os/RUNTIME.md
+8. docs/studio-os/CODEX.md
+9. knowledge/README.md
+10. knowledge/
+11. database/
+12. agents/
+13. workflows/
+14. commands/
+15. examples/
 ```
 
 ---
@@ -71,6 +74,9 @@ Codex 在执行任何任务前，应该按照以下顺序读取：
 Codex 在修改或生成内容前，至少应读取：
 
 ```text
+AGENTS.md
+CODEX-HANDOFF.md
+docs/studio-os/START-HERE.md
 README.md
 ARCHITECTURE.md
 CHANGELOG.md

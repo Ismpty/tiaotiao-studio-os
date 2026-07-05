@@ -409,7 +409,7 @@ A gentle reminder that life can begin again after work.
 ```text
 [ ] 文字必须放在 3:4 安全区内。
 [ ] 不要遮挡 Jump 的脸。
-[ ] 不要遮挡 Jump 的手部动作。
+[ ] 不要遮挡 Jump 的前爪和关键动作。
 [ ] 不要遮挡背包、门口、电脑等关键叙事物件。
 [ ] 主标题不超过一行或两行。
 [ ] 副标题简短，不要解释太多。

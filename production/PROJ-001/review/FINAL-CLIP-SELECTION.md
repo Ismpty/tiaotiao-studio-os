@@ -13,13 +13,13 @@
 
 ## 中文
 
-本文件用于在 Shot 1–6 都完成生成和审片后，记录最终进入剪辑的片段版本。
+本文件用于在 Shot 1–8 都完成生成和审片后，记录最终进入剪辑的片段版本。
 
 它的作用是：
 
 - 确认每个镜头最终选用哪个版本
 - 记录为什么选择该版本
-- 检查 6 个镜头之间是否连续
+- 检查 8 个镜头之间是否连续
 - 检查最终片段是否可以进入剪辑
 - 避免把未通过审片的片段误放入最终剪辑
 
@@ -76,11 +76,13 @@ Jump 变成人类或其他动物的片段
 | Shot | Selected Clip | Review Result | Review File | Selection Reason |
 |---|---|---|---|---|
 | Shot 1 — Work Ending | TBD | TBD | TBD | TBD |
-| Shot 2 — Decision Moment | TBD | TBD | TBD | TBD |
-| Shot 3 — Packing Up | TBD | TBD | TBD | TBD |
-| Shot 4 — Walking Out | TBD | TBD | TBD | TBD |
-| Shot 5 — Door Exit | TBD | TBD | TBD | TBD |
-| Shot 6 — Warm Ending | TBD | TBD | TBD | TBD |
+| Shot 2 — Clock Out | TBD | TBD | TBD | TBD |
+| Shot 3 — Dinner Time | TBD | TBD | TBD | TBD |
+| Shot 4 — Supermarket Walk | TBD | TBD | TBD | TBD |
+| Shot 5 — Movie Night | TBD | TBD | TBD | TBD |
+| Shot 6 — Street Snack | TBD | TBD | TBD | TBD |
+| Shot 7 — Night Walk | TBD | TBD | TBD | TBD |
+| Shot 8 — Life Begins | TBD | TBD | TBD | TBD |
 
 ---
 
@@ -101,6 +103,8 @@ production/PROJ-001/clips/approved/SHOT-003-approved.mp4
 production/PROJ-001/clips/approved/SHOT-004-approved.mp4
 production/PROJ-001/clips/approved/SHOT-005-approved.mp4
 production/PROJ-001/clips/approved/SHOT-006-approved.mp4
+production/PROJ-001/clips/approved/SHOT-007-approved.mp4
+production/PROJ-001/clips/approved/SHOT-008-approved.mp4
 ```
 
 ---
@@ -161,7 +165,7 @@ PASS / PASS WITH MINOR FIXES / FAIL
 ## Shot
 
 ```text
-Shot 2 — Decision Moment
+Shot 2 — Clock Out
 ```
 
 ## Expected Function
@@ -212,7 +216,7 @@ PASS / PASS WITH MINOR FIXES / FAIL
 ## Shot
 
 ```text
-Shot 3 — Packing Up
+Shot 3 — Dinner Time
 ```
 
 ## Expected Function
@@ -263,7 +267,7 @@ PASS / PASS WITH MINOR FIXES / FAIL
 ## Shot
 
 ```text
-Shot 4 — Walking Out
+Shot 4 — Supermarket Walk
 ```
 
 ## Expected Function
@@ -315,7 +319,7 @@ PASS / PASS WITH MINOR FIXES / FAIL
 ## Shot
 
 ```text
-Shot 5 — Door Exit
+Shot 5 — Movie Night
 ```
 
 ## Expected Function
@@ -366,7 +370,7 @@ PASS / PASS WITH MINOR FIXES / FAIL
 ## Shot
 
 ```text
-Shot 6 — Warm Ending
+Shot 6 — Street Snack
 ```
 
 ## Expected Function
@@ -549,7 +553,7 @@ COMMAND-005 — Run Consistency Check
 检查对象：
 
 ```text
-Selected Shot 1–6 clips
+Selected Shot 1–8 clips
 Final clip continuity
 Final edit readiness
 ```
@@ -574,7 +578,7 @@ FAIL
 # 17. Next Action（下一步动作）
 
 ```text
-1. Generate Shot 1–6 clips.
+1. Generate Shot 1–8 clips.
 2. Review each clip using SHOT-REVIEW-TEMPLATE.md.
 3. Update ITERATION-LOG.md.
 4. Fill this FINAL-CLIP-SELECTION.md.

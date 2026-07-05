@@ -78,16 +78,19 @@ Notion 用于管理、查看和同步 Production Records，但不作为最终规
 AI 工具进入 TSOS 后，必须优先按照以下顺序读取：
 
 ```text
-1. README.md
-2. ARCHITECTURE.md
-3. CHANGELOG.md
-4. knowledge/README.md
-5. database/
-6. agents/
-7. workflows/
-8. commands/
-9. docs/
-10. examples/
+1. AGENTS.md
+2. CODEX-HANDOFF.md
+3. docs/studio-os/START-HERE.md
+4. README.md
+5. ARCHITECTURE.md
+6. CHANGELOG.md
+7. knowledge/README.md
+8. database/
+9. agents/
+10. workflows/
+11. commands/
+12. docs/
+13. examples/
 ```
 
 ---
@@ -97,6 +100,9 @@ AI 工具进入 TSOS 后，必须优先按照以下顺序读取：
 运行任何正式任务前，至少需要读取：
 
 ```text
+AGENTS.md
+CODEX-HANDOFF.md
+docs/studio-os/START-HERE.md
 README.md
 ARCHITECTURE.md
 CHANGELOG.md
@@ -430,7 +436,8 @@ BRAND-001
 
 ```text
 [ ] 引用 Source Records
-[ ] 引用 ASSET-001
+[ ] 在 Source References 中引用 ASSET-001
+[ ] 在模型可见 Prompt 中把 ASSET-001 转写成自然语言角色描述
 [ ] 包含 Negative Prompt
 [ ] 说明目标模型
 [ ] 保持角色一致

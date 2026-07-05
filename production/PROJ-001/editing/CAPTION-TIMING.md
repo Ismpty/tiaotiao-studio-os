@@ -94,11 +94,13 @@ PROJ-001 — Jump After Work Pilot Project
 | Timecode | Shot | Caption |
 |---|---|---|
 | 0:00–0:06 | Shot 1 — Work Ending | 今天的代码写完了 |
-| 0:06–0:12 | Shot 2 — Decision Moment | 电脑一关，生活上线 |
-| 0:12–0:19 | Shot 3 — Packing Up | 想出去走走 |
-| 0:19–0:29 | Shot 4 — Walking Out | 不远，也可以是冒险 |
-| 0:29–0:37 | Shot 5 — Door Exit | 把时间还给自己一点点 |
-| 0:37–0:45 | Shot 6 — Warm Ending | 下班啦，生活开始啦 |
+| 0:06–0:12 | Shot 2 — Clock Out | 电脑一关，生活上线 |
+| 0:12–0:19 | Shot 3 — Dinner Time | 先好好吃一顿 |
+| 0:19–0:25 | Shot 4 — Supermarket Walk | 顺路逛逛，也算冒险 |
+| 0:25–0:31 | Shot 5 — Movie Night | 今晚只看喜欢的 |
+| 0:31–0:36 | Shot 6 — Street Snack | 给自己一点小奖励 |
+| 0:36–0:41 | Shot 7 — Night Walk | 时间终于属于自己 |
+| 0:41–0:45 | Shot 8 — Life Begins | 下班啦，生活开始啦 |
 
 ---
 
@@ -120,13 +122,13 @@ Placement:
 Lower-middle safe area.
 
 Avoid:
-不要遮挡 Jump 的手和键盘。
+不要遮挡 Jump 的前爪、电脑和桌面动作。
 不要放在电脑屏幕正上方。
 ```
 
 ---
 
-## Shot 2 — Decision Moment
+## Shot 2 — Clock Out
 
 ```text
 Time:
@@ -136,88 +138,128 @@ Caption:
 电脑一关，生活上线
 
 Purpose:
-这是全片核心记忆点，也是系列核心情绪。
+快速完成从办公室到下班后的转场。
 
 Placement:
 Lower-middle or middle-left safe area.
 
 Avoid:
-不要遮挡 Jump 的脸。
-不要遮挡关电脑动作。
+不要遮挡 Jump 的脸、背包和四足走路动作。
 ```
 
 ---
 
-## Shot 3 — Packing Up
+## Shot 3 — Dinner Time
 
 ```text
 Time:
 0:12–0:19
 
 Caption:
-想出去走走
+先好好吃一顿
 
 Purpose:
-从工作状态进入生活状态。
+建立下班后生活蒙太奇的第一段。
 
 Placement:
 Lower-middle safe area.
 
 Avoid:
-不要遮挡背包、笔记本、耳机和手部动作。
+不要遮挡餐盘、小碗和 Jump 的脸。
 ```
 
 ---
 
-## Shot 4 — Walking Out
+## Shot 4 — Supermarket Walk
 
 ```text
 Time:
-0:19–0:29
+0:19–0:25
 
 Caption:
-不远，也可以是冒险
+顺路逛逛，也算冒险
 
 Purpose:
-强化“下班后的路也是小冒险”的系列感。
+表现下班后小小自由感。
 
 Placement:
 Lower-middle safe area.
 
 Avoid:
-不要遮挡 Jump 的脚步和身体运动。
-不要让字幕过大影响行走镜头。
+不要遮挡货架、购物篮和 Jump 的脚步。
 ```
 
 ---
 
-## Shot 5 — Door Exit
+## Shot 5 — Movie Night
 
 ```text
 Time:
-0:29–0:37
+0:25–0:31
 
 Caption:
-把时间还给自己一点点
+今晚只看喜欢的
 
 Purpose:
-完成从办公室到下班后世界的情绪转折。
+给视频增加安静、松弛的生活片段。
 
 Placement:
 Lower-middle safe area.
 
 Avoid:
-不要遮挡开门动作。
-不要遮挡门外暖光。
+不要遮挡屏幕光、爆米花或 Jump 的表情。
 ```
 
 ---
 
-## Shot 6 — Warm Ending
+## Shot 6 — Street Snack
 
 ```text
 Time:
-0:37–0:45
+0:31–0:36
+
+Caption:
+给自己一点小奖励
+
+Purpose:
+表现夜晚小吃带来的轻松奖励感。
+
+Placement:
+Lower-middle or center-lower safe area.
+
+Avoid:
+不要遮挡 Jump 的脸。
+不要遮挡小吃和暖光。
+```
+
+---
+
+## Shot 7 — Night Walk
+
+```text
+Time:
+0:36–0:41
+
+Caption:
+时间终于属于自己
+
+Purpose:
+把情绪推到自由、安静、松弛。
+
+Placement:
+Lower-middle safe area.
+
+Avoid:
+不要遮挡 Jump 的脚步和夜晚街景。
+```
+
+---
+
+## Shot 8 — Life Begins
+
+```text
+Time:
+0:41–0:45
 
 Caption:
 下班啦，生活开始啦
@@ -294,7 +336,7 @@ central 3:4 safe area
 画面下方偏中
 避开平台底部 UI
 避开 Jump 的脸
-避开 Jump 的手部动作
+避开 Jump 的前爪动作
 避开关键叙事物件
 ```
 
@@ -461,9 +503,9 @@ Maximum:
 ```text
 [ ] 字幕是否在安全区内
 [ ] 字幕是否没有遮挡 Jump 的脸
-[ ] 字幕是否没有遮挡 Jump 的手部动作
+[ ] 字幕是否没有遮挡 Jump 的前爪和关键动作
 [ ] 字幕是否没有遮挡脚步动作
-[ ] 字幕是否没有遮挡门口转场
+[ ] 字幕是否没有遮挡生活场景转场
 [ ] 字幕是否在手机上清晰可读
 [ ] 字幕是否没有错别字
 [ ] 字幕是否没有乱码

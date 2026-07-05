@@ -410,7 +410,6 @@ AGENT-005 — Editing Agent
 6. Clip Generation Package
 7. COMMAND-005 Clip Review Result
 8. Iteration Notes
-9. Video Assembly Notes
 9. Clip Review Notes
 10. Video Assembly Notes
 ```

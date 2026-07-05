@@ -431,7 +431,7 @@ Text:
 下班啦 / 生活开始啦
 ```
 
-## Variation C — Walking Out
+## Variation C — Clock Out
 
 ```text
 Rear follow feeling, Jump walking toward exit, studio behind her.

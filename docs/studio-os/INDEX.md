@@ -45,21 +45,25 @@ Notion = Visual Management Layer
 AI 工具进入仓库后，建议按以下顺序读取：
 
 ```text
-1. README.md
-2. ARCHITECTURE.md
-3. CHANGELOG.md
-4. docs/studio-os/INDEX.md
-5. docs/studio-os/RUNTIME.md
-6. docs/studio-os/CODEX.md
-7. docs/studio-os/COMMANDS.md
-8. docs/studio-os/WORKFLOWS.md
-9. docs/studio-os/AGENTS.md
-10. knowledge/README.md
-11. database/
-12. commands/
-13. workflows/
-14. agents/
-15. examples/
+1. AGENTS.md
+2. CODEX-HANDOFF.md
+3. docs/studio-os/START-HERE.md
+4. README.md
+5. ARCHITECTURE.md
+6. CHANGELOG.md
+7. docs/studio-os/INDEX.md
+8. docs/studio-os/RUNTIME.md
+9. docs/studio-os/CODEX.md
+10. docs/studio-os/COMMANDS.md
+11. docs/studio-os/WORKFLOWS.md
+12. docs/studio-os/AGENTS.md
+13. docs/studio-os/PROMPT-RUNTIME-RULES.md
+14. knowledge/README.md
+15. database/
+16. commands/
+17. workflows/
+18. agents/
+19. examples/
 ```
 
 ---
@@ -76,6 +80,12 @@ workflows/
 commands/
 docs/studio-os/
 examples/
+```
+
+Fastest direct-use guide:
+
+```text
+docs/studio-os/START-HERE.md
 ```
 
 ---

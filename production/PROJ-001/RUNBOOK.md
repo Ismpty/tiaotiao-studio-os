@@ -75,6 +75,7 @@ Publishing:
 
 ```text
 production/PROJ-001/VIDEO-PROMPTS.md
+production/PROJ-001/STATUS.md
 production/PROJ-001/COVER-PACKAGE.md
 production/PROJ-001/PUBLISHING-PACKAGE.md
 production/PROJ-001/POST-PUBLISH-TRACKER.md
@@ -121,11 +122,13 @@ mkdir -p production/PROJ-001/editing
 
 # 5. Production Overview（生产总流程）
 
-## Step 1 — Generate Shot 1–6 in Jimeng
+## Step 1 — Generate Shot 1–8 in Jimeng
 
 ```text
 使用 production/PROJ-001/VIDEO-PROMPTS.md
-复制每个 Shot 的 Jimeng Prompt
+上传身份卡和故事板
+复制 Universal Video Prompt
+为每次生成填写 Current Shot
 在即梦中逐镜头生成
 每个镜头生成 2–3 个版本
 ```
@@ -304,8 +307,8 @@ production/PROJ-001/VIDEO-PROMPTS.md
 复制：
 
 ```text
-Shot 1 — Work Ending
-Jimeng Prompt
+Universal Video Prompt
+Current Shot: Shot 1 — Work Ending
 ```
 
 生成：
@@ -345,7 +348,7 @@ production/PROJ-001/review/SHOT-001-v01-review.md
 ```text
 [ ] Jump 是否稳定
 [ ] 毛茸茸质感是否稳定
-[ ] 手是否自然离开键盘
+[ ] 前爪动作是否自然且不像人手
 [ ] 电脑是否打开
 [ ] 工作结束情绪是否成立
 [ ] 灯光是否温暖
@@ -353,20 +356,22 @@ production/PROJ-001/review/SHOT-001-v01-review.md
 
 ---
 
-## Repeat for Shot 2–6
+## Repeat for Shot 2–8
 
 按顺序生成：
 
 ```text
 Shot 1 — Work Ending
-Shot 2 — Decision Moment
-Shot 3 — Packing Up
-Shot 4 — Walking Out
-Shot 5 — Door Exit
-Shot 6 — Warm Ending
+Shot 2 — Clock Out
+Shot 3 — Dinner Time
+Shot 4 — Supermarket Walk
+Shot 5 — Movie Night
+Shot 6 — Street Snack
+Shot 7 — Night Walk
+Shot 8 — Life Begins
 ```
 
-生成顺序不要跳过 Shot 4 和 Shot 5 的审片，因为这两个动作风险最高。
+生成顺序不要跳过 Shot 2、Shot 4 和 Shot 7 的审片，因为四足行走和场景切换最容易造成角色漂移。
 
 ---
 
@@ -375,18 +380,20 @@ Shot 6 — Warm Ending
 | Shot | Risk Level | Main Risk |
 |---|---|---|
 | Shot 1 | Medium | 脸部 / 桌面真实感 |
-| Shot 2 | Medium | 表情 / 关电脑动作 |
-| Shot 3 | High | 手部 / 物件变形 |
-| Shot 4 | Very High | 行走 / 滑步 / 跟拍 |
-| Shot 5 | Very High | 开门 / 光线转换 / 连续性 |
-| Shot 6 | Medium | 情绪 / 过曝 / 结尾感 |
+| Shot 2 | Very High | 四足走出办公室 / 背包连续性 |
+| Shot 3 | Medium | 餐桌道具 / 避免像人吃饭 |
+| Shot 4 | High | 超市行走 / 货架和购物篮稳定 |
+| Shot 5 | Medium | 屏幕光 / 爆米花和毯子道具 |
+| Shot 6 | Medium | 小吃道具 / 夜间暖光 |
+| Shot 7 | Very High | 夜晚四足行走 / 滑步 / 街景连续性 |
+| Shot 8 | Medium | 结尾情绪 / 过曝 / 角色脸部稳定 |
 
 优先多生成版本：
 
 ```text
+Shot 2
 Shot 4
-Shot 5
-Shot 3
+Shot 7
 ```
 
 ---
@@ -411,18 +418,18 @@ Add:
 Grounded foot contact, realistic weight transfer, natural walking mechanics, feet stay connected to the floor, no sliding feet, no floating body.
 ```
 
-## Hand Distortion
+## Paw / Limb Distortion
 
 ```text
 Add:
-Simplify hand movement, natural object handling, clear hand position, no melting fingers, no extra fingers, no distorted paws or hands.
+Simplify paw movement, keep dog paws natural, no human hands, no fingers, no human arms, no distorted paws, no extra limbs.
 ```
 
-## Door Problem
+## Door / Exit Problem
 
 ```text
 Add:
-Simple natural door opening action, one clear hand reaches the door handle, door opens smoothly, no object morphing, no hand distortion.
+Simple natural exit action, Jump walks through an already open or automatically opening door, no human hand reaching for a handle, no object morphing, no human-like door opening.
 ```
 
 ## Lighting Drift
@@ -470,7 +477,7 @@ FAIL
 2. 新建项目。
 3. 设置画幅：9:16。
 4. 导入 approved clips。
-5. 按 Shot 1–6 顺序放入时间线。
+5. 按 Shot 1–8 顺序放入时间线。
 ```
 
 ---
@@ -482,19 +489,25 @@ FAIL
 Shot 1 — Work Ending
 
 0:06–0:12
-Shot 2 — Decision Moment
+Shot 2 — Clock Out
 
 0:12–0:19
-Shot 3 — Packing Up
+Shot 3 — Dinner Time
 
-0:19–0:29
-Shot 4 — Walking Out
+0:19–0:25
+Shot 4 — Supermarket Walk
 
-0:29–0:37
-Shot 5 — Door Exit
+0:25–0:31
+Shot 5 — Movie Night
 
-0:37–0:45
-Shot 6 — Warm Ending
+0:31–0:36
+Shot 6 — Street Snack
+
+0:36–0:41
+Shot 7 — Night Walk
+
+0:41–0:45
+Shot 8 — Life Begins
 ```
 
 ---
@@ -546,7 +559,7 @@ Shot 6 — Warm Ending
 下方偏中
 3:4 安全区内
 不遮挡 Jump 脸部
-不遮挡手部动作
+不遮挡前爪动作
 不遮挡脚步
 ```
 
@@ -807,8 +820,8 @@ production/PROJ-001/VIDEO-PROMPTS.md
 复制：
 
 ```text
-Shot 1 — Work Ending
-Jimeng Prompt
+Universal Video Prompt
+Current Shot: Shot 1 — Work Ending
 ```
 
 生成：

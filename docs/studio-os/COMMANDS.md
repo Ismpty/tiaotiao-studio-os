@@ -272,13 +272,16 @@ Run COMMAND-002.
 
 ## Important Rule
 
-任何 Prompt 必须包含：
+任何 Prompt Package 必须包含：
 
 ```text
-ASSET-001
+Source References that cite ASSET-001
+model-facing natural language character description
 Negative Prompt
 Consistency Checklist
 ```
+
+Model-facing prompt sections must not rely on raw internal IDs such as `ASSET-001`.
 
 ---
 
@@ -395,11 +398,13 @@ Run COMMAND-003.
 
 ```text
 Shot 1 — Work Ending
-Shot 2 — Decision Moment
-Shot 3 — Packing Up
-Shot 4 — Walking Out
-Shot 5 — Door Exit
-Shot 6 — Warm Ending
+Shot 2 — Clock Out
+Shot 3 — Dinner Time
+Shot 4 — Supermarket Walk
+Shot 5 — Movie Night
+Shot 6 — Street Snack
+Shot 7 — Night Walk
+Shot 8 — Life Begins
 ```
 
 ---

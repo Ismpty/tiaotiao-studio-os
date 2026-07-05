@@ -163,11 +163,11 @@ production/PROJ-001/final/PROJ-001-cover.png
 # 7. Pre-Export Video Checklist（视频导出前检查）
 
 ```text
-[ ] Shot 1–6 已全部通过审片。
+[ ] Shot 1–8 已全部通过审片。
 [ ] 已填写 FINAL-CLIP-SELECTION.md。
 [ ] 所有片段都来自 clips/approved/。
 [ ] 没有使用 review result = FAIL 的片段。
-[ ] Shot 1–6 顺序正确。
+[ ] Shot 1–8 顺序正确。
 [ ] 视频总时长约 45 秒。
 [ ] 画幅为 9:16。
 [ ] Jump 没有变成人类。
@@ -176,7 +176,7 @@ production/PROJ-001/final/PROJ-001-cover.png
 [ ] Jump 服装基本稳定。
 [ ] Jump 程序员身份清楚。
 [ ] 画面没有赛博朋克 / 恐怖 / 游戏感。
-[ ] 场景符合 TiaoTiao Studio Office。
+[ ] 场景符合“办公室快速开场 + 下班后一晚生活蒙太奇”。
 [ ] 情绪符合下班后的自由感。
 ```
 
@@ -190,9 +190,9 @@ production/PROJ-001/final/PROJ-001-cover.png
 [ ] 字幕没有乱码。
 [ ] 字幕在安全区内。
 [ ] 字幕没有遮挡 Jump 的脸。
-[ ] 字幕没有遮挡 Jump 的手部动作。
+[ ] 字幕没有遮挡 Jump 的前爪和关键动作。
 [ ] 字幕没有遮挡脚步动作。
-[ ] 字幕没有遮挡门口转场。
+[ ] 字幕没有遮挡生活场景转场。
 [ ] 字幕在手机上清晰可读。
 [ ] 字幕样式统一。
 [ ] 字幕语气符合 BRAND-001。

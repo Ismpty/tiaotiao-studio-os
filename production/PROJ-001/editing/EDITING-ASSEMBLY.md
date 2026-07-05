@@ -15,7 +15,7 @@
 
 本文件用于指导《跳跳下班啦》试播项目的最终剪辑装配。
 
-当 Shot 1–6 的视频片段通过审片后，剪辑应按照本文件进行组装，确保：
+当 Shot 1–8 的视频片段通过审片后，剪辑应按照本文件进行组装，确保：
 
 - 镜头顺序正确
 - 故事情绪完整
@@ -29,7 +29,7 @@
 
 This file defines the editing assembly guide for PROJ-001 — Jump After Work Pilot Project.
 
-After Shot 1–6 clips are approved, the final edit should be assembled according to this guide.
+After Shot 1–8 clips are approved, the final edit should be assembled according to this guide.
 
 ---
 
@@ -79,6 +79,8 @@ production/PROJ-001/clips/approved/SHOT-003-approved.mp4
 production/PROJ-001/clips/approved/SHOT-004-approved.mp4
 production/PROJ-001/clips/approved/SHOT-005-approved.mp4
 production/PROJ-001/clips/approved/SHOT-006-approved.mp4
+production/PROJ-001/clips/approved/SHOT-007-approved.mp4
+production/PROJ-001/clips/approved/SHOT-008-approved.mp4
 ```
 
 禁止使用：
@@ -126,19 +128,25 @@ Secondary Platforms:
 Shot 1 — Work Ending
 
 0:06–0:12
-Shot 2 — Decision Moment
+Shot 2 — Clock Out
 
 0:12–0:19
-Shot 3 — Packing Up
+Shot 3 — Dinner Time
 
-0:19–0:29
-Shot 4 — Walking Out
+0:19–0:25
+Shot 4 — Supermarket Walk
 
-0:29–0:37
-Shot 5 — Door Exit
+0:25–0:31
+Shot 5 — Movie Night
 
-0:37–0:45
-Shot 6 — Warm Ending
+0:31–0:36
+Shot 6 — Street Snack
+
+0:36–0:41
+Shot 7 — Night Walk
+
+0:41–0:45
+Shot 8 — Life Begins
 ```
 
 ---
@@ -150,15 +158,19 @@ Shot 6 — Warm Ending
 ```text
 Work
 ↓
-Decision
+Clock Out
 ↓
-Packing Up
+Dinner
 ↓
-Walking Out
+Supermarket
 ↓
-Door Exit
+Movie Night
 ↓
-Warm Reflection
+Street Snack
+↓
+Night Walk
+↓
+Life Begins
 ```
 
 ## Editing Feeling
@@ -168,10 +180,10 @@ Warm Reflection
 安静、工作结束、轻微松一口气
 
 中段：
-收拾、起身、走出办公室
+吃饭、逛超市、看电影、买小吃
 
 后段：
-温暖、自由、生活重新开始
+夜晚散步、温暖、自由、生活重新开始
 ```
 
 剪辑节奏不应该过快，也不应该拖沓。
@@ -188,7 +200,7 @@ Warm Reflection
 
 剪辑要求：
 Shot 1 结尾保留 Jump 手离开键盘的动作。
-Shot 2 开头接 Jump 看向窗外或关电脑动作。
+Shot 2 开头接 Jump 看向窗外或离开办公室动作。
 
 避免：
 不要直接从键盘动作跳到门口。
@@ -304,8 +316,8 @@ Light transition
 ```text
 [ ] 放在安全区内
 [ ] 不遮挡 Jump 的脸
-[ ] 不遮挡 Jump 的手部动作
-[ ] 不遮挡背包、电脑、门等关键叙事物件
+[ ] 不遮挡 Jump 的前爪和关键动作
+[ ] 不遮挡背包、电脑、食物、购物篮、屏幕光等关键叙事物件
 [ ] 不超过画面承载
 [ ] 字体清晰
 [ ] 语气温暖
@@ -510,7 +522,7 @@ Jump 是主角。
 粗剪完成后检查：
 
 ```text
-[ ] Shot 1–6 顺序正确
+[ ] Shot 1–8 顺序正确
 [ ] 总时长约 45 秒
 [ ] 每个镜头都有叙事功能
 [ ] Jump 角色没有明显跳变
@@ -606,7 +618,7 @@ FAIL
 # 22. Next Action（下一步动作）
 
 ```text
-1. Prepare approved Shot 1–6 clips.
+1. Prepare approved Shot 1–8 clips.
 2. Assemble clips according to timeline.
 3. Add captions.
 4. Add music and sound design.

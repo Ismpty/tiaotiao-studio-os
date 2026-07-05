@@ -151,7 +151,7 @@ Jump 变成恐怖 / 赛博朋克 / 游戏角色
 [ ] 身体有真实重心
 [ ] 脚步没有明显滑动
 [ ] 身体没有漂浮
-[ ] 手部动作没有严重变形
+[ ] 前爪动作没有严重变形
 [ ] 尾巴动作自然
 [ ] 行走节奏轻松
 [ ] 动作符合下班后的放松感
@@ -176,7 +176,7 @@ Shot 4 和 Shot 5 是动作风险最高的镜头，必须重点检查：
 严重滑步
 身体漂浮
 四肢扭曲
-手部融化
+前爪或肢体融化
 尾巴机械乱动
 角色瞬移
 门或道具穿模严重
@@ -344,7 +344,7 @@ A small ordinary moment becomes meaningful.
 [ ] 视频清晰
 [ ] 主体不糊
 [ ] 脸部不崩
-[ ] 手部不崩
+[ ] 前爪和肢体不崩
 [ ] 物体不严重变形
 [ ] 没有明显闪烁
 [ ] 没有严重画面撕裂
@@ -572,7 +572,7 @@ Keep TiaoTiao Studio Office consistent, warm modern creator workspace, laptop, k
 3. Generate 2–3 variations.
 4. Review each variation using this guide.
 5. Select approved Shot 1.
-6. Repeat for Shot 2–6.
+6. Repeat for Shot 2–8.
 7. Store approved clips in production/PROJ-001/clips/approved/.
 8. Continue to editing assembly.
 ```

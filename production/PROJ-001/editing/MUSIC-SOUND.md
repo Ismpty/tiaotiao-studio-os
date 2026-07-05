@@ -161,93 +161,133 @@ Do not make the office feel stressful.
 
 ---
 
-## Shot 2 — Decision Moment
+## Shot 2 — Clock Out
 
 ```text
 Music:
 Warm melody begins or becomes slightly clearer.
 
 Sound Effects:
-Laptop closing sound.
-Soft chair movement.
+Soft office door ambience.
+Small backpack fabric movement.
 Very light room ambience.
 
 Feeling:
-A small emotional decision.
+Leaving work, life beginning.
 
 Avoid:
 Do not use dramatic sound hit.
-Do not make laptop closing sound too sharp.
+Do not make the exit feel like escape.
 ```
 
 ---
 
-## Shot 3 — Packing Up
+## Shot 3 — Dinner Time
 
 ```text
 Music:
 Light rhythm continues.
 
 Sound Effects:
-Backpack zipper.
-Notebook movement.
-Headphones or small object sound.
-Soft fabric movement.
+Soft restaurant ambience.
+Small bowl or plate sound.
+Warm room tone.
 
 Feeling:
-Daily routine, tactile transition.
+First relaxed meal after work.
 
 Avoid:
-Do not make object sounds too loud.
-Do not over-design every object.
+Do not make eating sounds loud.
+Do not make it feel like an advertisement.
 ```
 
 ---
 
-## Shot 4 — Walking Out
+## Shot 4 — Supermarket Walk
 
 ```text
 Music:
 Music opens slightly, more movement, but still gentle.
 
 Sound Effects:
-Soft footsteps.
+Soft supermarket ambience.
+Light shelf or basket sound.
 Backpack fabric movement.
-Subtle tail / body movement sound only if natural.
 
 Feeling:
-Freedom begins.
+Small everyday adventure.
 
 Avoid:
 Do not use strong beat drop.
-Do not make footsteps heavy or dramatic.
+Do not make store sounds noisy or commercial.
 ```
 
 ---
 
-## Shot 5 — Door Exit
+## Shot 5 — Movie Night
 
 ```text
 Music:
-Warm lift, slightly brighter emotion.
+Music becomes softer and more cozy.
 
 Sound Effects:
-Door handle.
-Door opening.
-Soft outside ambience entering.
+Soft screen ambience.
+Very light popcorn or blanket movement.
+Quiet room tone.
 
 Feeling:
-Transition from work to after-work life.
+Settled, cozy, personal time.
 
 Avoid:
-No dramatic escape sound.
-No loud door slam.
-No harsh wind.
+No loud cinema trailer sound.
+No exaggerated comedy sound.
 ```
 
 ---
 
-## Shot 6 — Warm Ending
+## Shot 6 — Street Snack
+
+```text
+Music:
+Light warm lift.
+
+Sound Effects:
+Soft street ambience.
+Paper bag sound.
+Small warm snack stall ambience.
+
+Feeling:
+Tiny reward after work.
+
+Avoid:
+Do not make food sounds too literal.
+Do not make it feel like food advertising.
+```
+
+---
+
+## Shot 7 — Night Walk
+
+```text
+Music:
+Gentle emotional build, still restrained.
+
+Sound Effects:
+Soft night street ambience.
+Light footsteps only if natural.
+Warm shopfront room tone.
+
+Feeling:
+Time belongs to Jump again.
+
+Avoid:
+No heavy walking sound.
+No lonely or sad atmosphere.
+```
+
+---
+
+## Shot 8 — Life Begins
 
 ```text
 Music:
@@ -257,7 +297,7 @@ Soft ending tail.
 Sound Effects:
 Light evening ambience.
 Soft city or room tone.
-Optional small breath / quiet pause feeling.
+Optional quiet pause feeling.
 
 Feeling:
 Life begins again after work.

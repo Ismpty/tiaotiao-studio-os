@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## 2026 — Runtime Quickstart Readiness Update
+
+### Added
+
+- Added `docs/studio-os/START-HERE.md` as the shortest direct-use guide for TSOS.
+- Added `production/PROJ-001/STATUS.md` as the current production status dashboard.
+
+### Changed
+
+- Updated `README.md`, `docs/studio-os/INDEX.md`, `docs/studio-os/RUNTIME.md` and `docs/studio-os/CODEX.md` to route AI tools through `START-HERE.md`.
+- Clarified that model-facing prompt sections must use natural language descriptions instead of relying on raw internal IDs such as `ASSET-001`.
+- Fixed duplicated output numbering in `docs/studio-os/WORKFLOWS.md` for `WORKFLOW-003`.
+- Updated PROJ-001 production docs from the old 6-shot office-exit structure to the current 8-shot after-work life montage.
+- Updated `production/PROJ-001/VIDEO-PROMPTS.md` to use Universal Video Prompt + Current Shot instead of duplicated long per-shot prompts.
+
+### Reason
+
+This makes TSOS easier to use directly: a new AI tool or human operator can start from one file, route to the correct command, and avoid fabricating production values that still require real assets or platform data.
+
 ## 2026 — Runtime Path Readiness Update
 
 ### Changed

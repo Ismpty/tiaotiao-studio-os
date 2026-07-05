@@ -132,10 +132,36 @@ knowledge/
 
 This keeps the actual repository structure aligned with README, INDEX, RUNTIME, commands, workflows and agent references.
 
+## Completed Runtime Quickstart Pass
+
+TSOS now has a direct-use entry guide:
+
+```text
+docs/studio-os/START-HERE.md
+```
+
+The following runtime entry docs route AI tools through it:
+
+- `README.md`
+- `docs/studio-os/INDEX.md`
+- `docs/studio-os/RUNTIME.md`
+- `docs/studio-os/CODEX.md`
+
+This guide defines:
+
+- fastest command routing
+- required reading for AI tools
+- prompt runtime architecture
+- Jump character constraints
+- storyboard style constraints
+- current production boundary
+- direct-use checklist
+
 ## Current PROJ-001 State
 
 PROJ-001 — Jump After Work Pilot Project / 《跳跳下班啦》 has production docs for:
 
+- current status dashboard
 - prompt package
 - storyboard package
 - cover package
@@ -149,6 +175,12 @@ PROJ-001 — Jump After Work Pilot Project / 《跳跳下班啦》 has productio
 - iteration logs
 - post-publish tracker
 
+Current production status file:
+
+```text
+production/PROJ-001/STATUS.md
+```
+
 Some production files intentionally contain TBD values.
 
 Do not fabricate final clip selections, review decisions, export outcomes, platform metrics or post-publish data.
@@ -160,15 +192,16 @@ Only replace TBD values after real production assets or real publishing data exi
 If the user asks to continue system development:
 
 1. Read `AGENTS.md` and this file first.
-2. Run `git status --short`.
-3. Check whether the requested file is already aligned with:
+2. Read `docs/studio-os/START-HERE.md`.
+3. Run `git status --short`.
+4. Check whether the requested file is already aligned with:
    - GitHub Source of Truth
    - Notion Visual Management Layer
    - model-readable prompt rules
    - Jump real dog-form rule
    - black-and-white rough pencil storyboard rule
    - colored annotation system
-4. Prefer updating existing OS files rather than creating new files.
+5. Prefer updating existing OS files rather than creating new files.
 
 Recommended next work:
 
