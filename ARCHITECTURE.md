@@ -9,7 +9,7 @@ Studio OS
 
 ├── Database
 
-├── Knowledge
+├── knowledge
 
 ├── Production
 

@@ -129,12 +129,20 @@ After-work life examples:
 
 ## Current Completed Updates
 
-The following files were recently updated or should exist:
+The current prompt runtime upgrade has been completed and committed.
 
-- docs/studio-os/PROMPT-RUNTIME-RULES.md
-- commands/COMMAND-002.md
-- agents/prompt-engineer/AGENT-002.md
-- production/PROJ-001/VIDEO-PROMPTS.md
+Completed system updates:
+
+- `docs/studio-os/PROMPT-RUNTIME-RULES.md` defines model-facing prompt runtime rules.
+- `commands/COMMAND-002.md` generates the Identity Card Prompt, Storyboard Prompt and Universal Video Prompt package.
+- `commands/COMMAND-005.md` reviews model-readability, storyboard style, colored annotations and prompt runtime compliance.
+- `workflows/WORKFLOW-002.md` follows Identity Card Prompt → Storyboard Prompt → Universal Video Prompt → Model-readable check → COMMAND-005 review.
+- `workflows/WORKFLOW-003.md` uses uploaded identity card, uploaded storyboard and universal video prompt as the video generation runtime.
+- `agents/director/AGENT-001.md` owns black-and-white rough pencil storyboard structure and colored annotation requirements.
+- `agents/prompt-engineer/AGENT-002.md` owns model-readable prompt package generation.
+- `ARCHITECTURE.md`, `README.md` and `CHANGELOG.md` document the Prompt Runtime Layer.
+- `production/PROJ-001/VIDEO-PROMPTS.md` follows the new prompt runtime architecture.
+- The canonical knowledge directory is lowercase `knowledge/`.
 
 ## Next Tasks
 
@@ -142,41 +150,32 @@ Continue OS development from the current point.
 
 Priority tasks:
 
-1. Update workflows/WORKFLOW-002.md
-   - Convert Short Video Prompt Workflow to the new structure:
-     Identity Card Prompt
-     ↓
-     Storyboard Prompt
-     ↓
-     Universal Video Prompt
-     ↓
-     Model-readable check
-     ↓
-     COMMAND-005 review
+1. Keep the repository structure aligned with documented runtime paths.
+   - Use `knowledge/`, `database/`, `agents/`, `workflows/`, `commands/`, `docs/studio-os/`, `examples/`, `validation/` and `production/`.
+   - Do not introduce alternate directory names for canonical runtime layers.
 
-2. Update commands/COMMAND-005.md
-   - Add checks for:
-     model-readable prompts
-     no raw internal IDs in model-facing prompt
-     storyboard black-and-white pencil style
-     color annotation system
-     identity card existence
-     universal video prompt structure
+2. Continue PROJ-001 only from real production state.
+   - Do not fabricate final clip, publishing, analytics or post-publish values.
+   - Keep TBD values where real generated clips, review decisions or platform metrics do not exist yet.
 
-3. Update workflows/WORKFLOW-003.md
-   - Align Storyboard to Video Workflow with identity card + storyboard + universal video prompt.
+3. For any new video prompt package, use:
+   - Identity Card Prompt
+   - Storyboard Prompt
+   - Universal Video Prompt
+   - Model-readable check
+   - COMMAND-005 review
 
-4. Update agents/director/AGENT-001.md
-   - Add responsibility for black-and-white pencil storyboard structure and color annotations.
+4. Before generating or revising model-facing prompts, verify:
+   - no raw internal IDs are required by the model
+   - Jump remains a real dog-form character wearing clothes
+   - storyboard style remains black-and-white rough pencil line art
+   - colored annotation system remains present
+   - GitHub remains Source of Truth and Notion remains only Visual Management Layer
 
-5. Update ARCHITECTURE.md
-   - Add Prompt Runtime Layer.
-
-6. Update README.md
-   - Add current OS operating structure.
-
-7. Update CHANGELOG.md
-   - Record the new prompt runtime architecture.
+5. If asked to continue system development, first check:
+   - `CODEX-HANDOFF.md`
+   - `git status --short`
+   - whether the requested files are already aligned with the prompt runtime architecture
 
 ## Editing Rules
 

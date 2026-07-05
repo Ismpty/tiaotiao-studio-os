@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026 — Runtime Path Readiness Update
+
+### Changed
+
+- Normalized the canonical knowledge layer directory from `Knowledge/` to `knowledge/`.
+- Updated `AGENTS.md` so current Codex instructions reflect the completed prompt runtime upgrade instead of the previous pending task list.
+- Updated `CODEX-HANDOFF.md` with the current runtime state, completed prompt architecture work and the lowercase `knowledge/` path rule.
+
+### Reason
+
+The runtime docs, commands, workflows, agents and examples already reference `knowledge/` as the canonical path.
+
+This update aligns the actual repository structure with the documented runtime architecture so AI tools can follow the documented paths directly.
+
 ## 2026 — Prompt Runtime Architecture Update
 
 ### Added
