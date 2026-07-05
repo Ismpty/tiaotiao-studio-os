@@ -122,6 +122,7 @@ knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
 knowledge/camera-language/SHOT-001.md
+knowledge/camera-language/SHOT-002.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md

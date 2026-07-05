@@ -104,6 +104,19 @@ Green = lighting / mood
 Purple = continuity / transition
 ```
 
+## Camera Language Update
+
+The camera-language knowledge layer now includes:
+
+```text
+SHOT-001 — Hero Tracking Shot
+SHOT-002 — Six-View Scene Lock
+```
+
+`SHOT-002` was adapted from the user-provided Douyin note about AI camera language and scene consistency.
+
+Use `SHOT-002` when a storyboard or video prompt needs to keep scene layout, light direction, color, props and character appearance stable while changing camera position.
+
 ## Completed Prompt Runtime Upgrade
 
 The following system files have already been aligned with the new prompt runtime architecture:

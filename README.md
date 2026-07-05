@@ -266,7 +266,8 @@ tiaotiao-studio-os/
 │   ├── emotion/
 │   │   └── EMOTION-001.md
 │   ├── camera-language/
-│   │   └── SHOT-001.md
+│   │   ├── SHOT-001.md
+│   │   └── SHOT-002.md
 │   ├── motion-language/
 │   │   └── MOTIONLANG-001.md
 │   ├── outfit/
@@ -396,6 +397,7 @@ COLOR-001
 WORLD-001
 EMOTION-001
 SHOT-001
+SHOT-002
 MOTIONLANG-001
 OUTFIT-001
 MUSIC-001

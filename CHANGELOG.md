@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## 2026 — Camera Language Expansion Update
+
+### Added
+
+- Added `knowledge/camera-language/SHOT-002.md` — Six-View Scene Lock.
+- Added six-view camera consistency language for AI image / video generation:
+  - front eye-level wide view
+  - 45-degree side medium view
+  - low-angle view
+  - oblique high-angle view
+  - vertical top-down view
+  - reverse eye-level lookback view
+
+### Changed
+
+- Updated `knowledge/README.md`, `README.md`, `docs/studio-os/INDEX.md` and `docs/studio-os/RUNTIME.md` to include `SHOT-002`.
+- Updated `commands/COMMAND-003.md` and `commands/COMMAND-005.md` so storyboard generation and consistency review can read `SHOT-002`.
+- Updated `production/PROJ-001/VIDEO-PROMPTS.md` so storyboard and video generation use scene-locking rules: keep layout, lighting, color, props and character appearance stable while changing only camera position.
+
+### Source
+
+Adapted into TSOS from a Douyin note by `AIGC视觉笔记` about AI camera language and six-view scene consistency:
+
+```text
+https://v.douyin.com/64wFfK0_zuM/
+```
+
 ## 2026 — Runtime Quickstart Readiness Update
 
 ### Added

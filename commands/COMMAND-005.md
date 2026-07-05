@@ -134,6 +134,7 @@ PROJ-001 — Jump After Work Pilot Project
 | World | WORLD-001 |
 | Emotion | EMOTION-001 |
 | Camera Language | SHOT-001 |
+| Camera Consistency | SHOT-002 |
 | Motion Language | MOTIONLANG-001 |
 | Outfit | OUTFIT-001 |
 | Music | MUSIC-001 |
@@ -553,6 +554,7 @@ MOTIONLANG-001
 ```text
 CAM-001
 SHOT-001
+SHOT-002
 ```
 
 必须检查：
@@ -1056,6 +1058,7 @@ knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
 knowledge/camera-language/SHOT-001.md
+knowledge/camera-language/SHOT-002.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md

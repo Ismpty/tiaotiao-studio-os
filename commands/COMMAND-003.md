@@ -127,6 +127,7 @@ PROJ-001 — Jump After Work Pilot Project
 | World | WORLD-001 |
 | Emotion | EMOTION-001 |
 | Camera Language | SHOT-001 |
+| Camera Consistency | SHOT-002 |
 | Motion Language | MOTIONLANG-001 |
 | Outfit | OUTFIT-001 |
 | Music | MUSIC-001 |
@@ -462,6 +463,7 @@ ENV-001 — TiaoTiao Studio Office
 ```text
 CAM-001 — Hero Tracking Camera
 SHOT-001 — Hero Tracking Shot
+SHOT-002 — Six-View Scene Lock
 ```
 
 ---
@@ -575,7 +577,7 @@ Laptop is still open. Backpack is visible nearby.
 [ ] 内部审查是否参考 ASSET-001
 [ ] 服装是否符合 OUTFIT-001
 [ ] 场景是否符合 ENV-001
-[ ] 镜头是否符合 CAM-001 / SHOT-001
+[ ] 镜头是否符合 CAM-001 / SHOT-001 / SHOT-002
 [ ] 动作是否符合 MOT-001 / MOTIONLANG-001
 [ ] 灯光是否符合 LGT-001
 [ ] 情绪是否符合 EMOTION-001
@@ -722,6 +724,7 @@ knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
 knowledge/camera-language/SHOT-001.md
+knowledge/camera-language/SHOT-002.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md

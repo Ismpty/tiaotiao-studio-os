@@ -70,6 +70,7 @@ Production databases should reference these knowledge nodes instead of duplicati
 ## Camera Language
 
 - SHOT-001 — Hero Tracking Shot
+- SHOT-002 — Six-View Scene Lock
 
 ## Motion Language
 
@@ -146,6 +147,8 @@ WORLD-001
 EMOTION-001
 
 SHOT-001
+
+SHOT-002
 
 MOTIONLANG-001
 
