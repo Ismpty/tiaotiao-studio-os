@@ -106,7 +106,7 @@ STYLE-001 + COLOR-001 + WORLD-001 + EMOTION-001 + STORYFORMULA-001 + BRAND-001
 ```text
 Create a warm cinematic scene for the Jump After Work series.
 
-Main character: Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly expression, warm optimistic personality, wearing her default programmer outfit with Fire Dragon Fruit Pink brand accents.
+Main character: Jump, a fluffy real dog-form character wearing programmer-style dog clothes. Jump must keep four-legged dog anatomy, dog proportions, fluffy fur, friendly expression, warm optimistic personality, optional small backpack / badge / collar charm, and subtle Fire Dragon Fruit Pink brand accents.
 
 Scene context: Jump has just finished work inside TiaoTiao Studio Office. The environment is a warm modern creator studio with a realistic programmer desk, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant.
 
@@ -114,7 +114,7 @@ Story feeling: Work ends, adventure begins. The mood should express freedom, rel
 
 Camera: Hero tracking camera, 35mm lens, eye-level framing, natural camera motion, cinematic documentary style, subtle handheld energy, environmental storytelling.
 
-Motion: Natural walking, relaxed pace, realistic weight transfer, grounded foot contact, soft body mechanics, subtle tail movement, friendly expression.
+Motion: Natural dog-form walking, relaxed pace, realistic weight transfer, grounded paw contact, soft body mechanics, subtle tail movement, friendly expression. Do not use human walking or humanoid posing.
 
 Lighting: Warm studio lighting, practical desk lamp, soft screen glow, golden-hour window spill, gentle shadows, cozy creator studio mood.
 
@@ -128,7 +128,7 @@ Brand consistency: Follow TiaoTiao Studio brand language. Keep the image warm, o
 # Negative Prompt（负面提示词）
 
 ```text
-Do not change Jump's species, do not turn Jump into a human, do not remove fluffy fur, do not make Jump muscular, do not use horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, or inconsistent outfit.
+Do not change Jump's species, do not turn Jump into a human, humanoid character, other animal or unclothed ordinary pet dog. Do not use human hands, human arms, human legs, bipedal human standing pose, human body proportions, horror, violence, dark dystopian mood, cyberpunk blue lighting, neon sci-fi glow, game animation, robotic movement, sliding feet, extreme wide-angle distortion, drone orbit, FPS camera, artificial camera shake, over-saturated RGB lights, messy office, cold corporate office, or inconsistent outfit.
 ```
 
 ---

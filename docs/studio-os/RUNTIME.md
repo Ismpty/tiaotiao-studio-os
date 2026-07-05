@@ -213,7 +213,7 @@ agents/
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -269,7 +269,7 @@ commands/
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check
@@ -290,7 +290,7 @@ Run COMMAND-001.
 ```
 
 ```text
-运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ```text
@@ -397,7 +397,7 @@ AI 工具在运行 TSOS 时必须遵守：
 任何涉及 Jump 的任务，都必须保持：
 
 ```text
-Jump = anthropomorphic fluffy female dog programmer
+Jump = real dog-form character wearing programmer-style dog clothes
 ```
 
 必须引用：
@@ -637,7 +637,7 @@ chore(changelog): update phase checkpoint
 
 ```text
 Issue Found:
-The request changes Jump from an anthropomorphic fluffy dog into a human.
+The request changes Jump from a real dog-form character into a human.
 
 Source of Truth:
 CHAR-001

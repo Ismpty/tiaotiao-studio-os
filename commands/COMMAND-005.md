@@ -918,7 +918,7 @@ Consistency report with pass / fail result.
 用户输入：
 
 ```text
-运行 COMMAND-005，检查这份 Kling 视频 Prompt。
+运行 COMMAND-005，检查这份视频 Prompt Package。
 ```
 
 系统应执行：

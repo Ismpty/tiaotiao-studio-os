@@ -59,7 +59,7 @@ Agents 决定每一步由哪个专业角色完成。
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -73,7 +73,7 @@ AGENT-006 — Publishing Agent
 | Agent | Name | Role Group | File | Primary Use |
 |---|---|---|---|---|
 | AGENT-001 | Storyboard Agent | Director | director/AGENT-001.md | 分镜规划 |
-| AGENT-002 | Prompt Agent | Prompt Engineer | prompt-engineer/AGENT-002.md | 提示词生成 |
+| AGENT-002 | Prompt Engineer Agent | Prompt Engineer | prompt-engineer/AGENT-002.md | 模型可读提示词包生成 |
 | AGENT-003 | Cinematography Agent | Cinematographer | cinematographer/AGENT-003.md | 摄影方案 |
 | AGENT-004 | Script Agent | Writer | writer/AGENT-004.md | 脚本文案 |
 | AGENT-005 | Editing Agent | Editor | editor/AGENT-005.md | 剪辑方案 |
@@ -156,16 +156,16 @@ WORKFLOW-003
 Project Summary
 Story Beat Breakdown
 Shot List
-Shot-by-Shot Prompt
+Storyboard Prompt
 Camera / Motion / Lighting Mapping
-Negative Prompt
+Storyboard Color Annotation Plan
 Continuity Checklist
 Production Notes
 ```
 
 ---
 
-# AGENT-002 — Prompt Agent
+# AGENT-002 — Prompt Engineer Agent
 
 ## File
 
@@ -183,7 +183,7 @@ Prompt Engineer
 
 AGENT-002 是提示词工程智能体。
 
-它负责把 Database Records、Knowledge Nodes 和其他 Agent 输出转化为可执行的 AI 图片、视频、封面、分镜和角色一致性 Prompt。
+它负责把 Database Records、Knowledge Nodes 和其他 Agent 输出转化为模型可读的视频提示词包。
 
 ## Use When（使用场景）
 
@@ -191,14 +191,11 @@ AGENT-002 是提示词工程智能体。
 
 ```text
 生成视频 Prompt
-生成图片 Prompt
-生成 Kling Prompt
-生成 Veo Prompt
-生成 Runway Prompt
-生成 Midjourney Prompt
-生成 Flux / ComfyUI Prompt
-生成封面 Prompt
-生成角色一致性 Prompt
+生成 Identity Card Prompt
+生成 Storyboard Prompt
+生成 Universal Video Prompt
+生成 Jimeng / Veo / Runway 视频执行 Prompt
+检查模型可读性
 ```
 
 ## Related Commands
@@ -222,10 +219,11 @@ WORKFLOW-003
 ```text
 Prompt Purpose
 Source Records
-Base Prompt
-Model-Specific Prompt
-Negative Prompt
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 Usage Notes
 ```
 
@@ -504,7 +502,7 @@ Brand Safety Check
 ```text
 AGENT-001 Storyboard Agent
 ↓
-AGENT-002 Prompt Agent
+AGENT-002 Prompt Engineer Agent
 ↓
 AGENT-003 Cinematography Agent
 ↓
@@ -621,7 +619,7 @@ Frozen Roadmap
 任何 Agent 只要涉及 Jump，都必须保持：
 
 ```text
-Jump = anthropomorphic fluffy female dog programmer
+Jump = real dog-form character wearing programmer-style dog clothes
 ```
 
 必须引用：

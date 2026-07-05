@@ -92,7 +92,7 @@ PROJ-001 — Jump After Work Pilot Project
 | Agent | Role |
 |---|---|
 | AGENT-001 | Storyboard Agent |
-| AGENT-002 | Prompt Agent |
+| AGENT-002 | Prompt Engineer Agent |
 | AGENT-003 | Cinematography Agent |
 | AGENT-004 | Script Agent |
 | AGENT-005 | Editing Agent |
@@ -109,7 +109,7 @@ PROJ-001 — Jump After Work Pilot Project
 ↓
 2. Storyboard Planning
 ↓
-3. Prompt Generation
+3. Prompt Package Generation
 ↓
 4. Cinematography Planning
 ↓
@@ -222,12 +222,12 @@ Storyboard Output
 
 ---
 
-# Stage 3 — Prompt Generation（提示词生成）
+# Stage 3 — Prompt Package Generation（提示词包生成）
 
 ## Agent（执行智能体）
 
 ```text
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 ```
 
 ## Input（输入）
@@ -252,27 +252,28 @@ BRAND-001
 
 生成：
 
-- 图片 Prompt
-- 视频 Prompt
-- 镜头 Prompt
-- 角色一致性 Prompt
-- 负面提示词
-- 模型适配版本
+- Identity Card Prompt
+- Storyboard Prompt
+- Universal Video Prompt
+- Model-readable Check
+- COMMAND-005 Review
 
 ## Output（输出）
 
 ```text
-Prompt Output
+Prompt Package Output
 ```
 
 ## Required Check（必须检查）
 
 ```text
-[ ] 是否保持 Jump 是拟人化小狗
+[ ] 是否保持 Jump 是真实小狗本体形态
+[ ] 是否保持 Jump 穿程序员风格小狗衣服
 [ ] 是否保留毛茸茸质感
-[ ] 是否引用 ASSET-001
+[ ] 内部审查是否引用 ASSET-001
+[ ] 模型可复制 Prompt 是否没有裸露内部 ID
 [ ] 是否禁止赛博朋克、恐怖、游戏感
-[ ] 是否适配目标模型
+[ ] 是否包含 Universal Video Prompt
 ```
 
 ---

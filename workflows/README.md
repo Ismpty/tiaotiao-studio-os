@@ -70,7 +70,7 @@ WORKFLOW-004 — Publishing Workflow
 | Workflow | Name | File | Primary Use |
 |---|---|---|---|
 | WORKFLOW-001 | Jump After Work Production Workflow | WORKFLOW-001.md | 完整生产流程 |
-| WORKFLOW-002 | Short Video Prompt Workflow | WORKFLOW-002.md | 短视频 Prompt 生成 |
+| WORKFLOW-002 | Short Video Prompt Workflow | WORKFLOW-002.md | 视频 Prompt Package 生成 |
 | WORKFLOW-003 | Storyboard to Video Workflow | WORKFLOW-003.md | 分镜转视频生成包 |
 | WORKFLOW-004 | Publishing Workflow | WORKFLOW-004.md | 发布包生成 |
 
@@ -132,7 +132,7 @@ PROJ-001
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -179,7 +179,7 @@ workflows/WORKFLOW-002.md
 
 WORKFLOW-002 是短视频提示词生成工作流。
 
-它用于把 TSOS 中的 Project、Storyboard、Character、Environment、Camera、Lighting、Motion、Asset 和 Knowledge Nodes 转化为可直接用于 AI 图片 / 视频生成的 Prompt。
+它用于把 TSOS 中的 Project、Storyboard、Character、Environment、Camera、Lighting、Motion、Asset 和 Knowledge Nodes 转化为模型可读的视频提示词包。
 
 ## Use When（使用场景）
 
@@ -187,12 +187,11 @@ WORKFLOW-002 是短视频提示词生成工作流。
 
 ```text
 生成视频 Prompt
-生成 Kling Prompt
-生成 Veo Prompt
-生成 Runway Prompt
-生成图片 Prompt
-生成封面 Prompt
-生成角色一致性 Prompt
+生成 Identity Card Prompt
+生成 Storyboard Prompt
+生成 Universal Video Prompt
+生成模型可读视频提示词包
+生成 Jimeng / Veo / Runway 视频执行 Prompt
 ```
 
 使用：
@@ -224,7 +223,7 @@ PROJ-001
 ## Required Agent
 
 ```text
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 ```
 
 ## Optional Agent Inputs
@@ -241,25 +240,24 @@ AGENT-005 Editing Output
 ```text
 1. Prompt Task Setup
 2. Source Record Collection
-3. Shot Context Extraction
-4. Prompt Variable Mapping
-5. Base Prompt Generation
-6. Model Adaptation
-7. Negative Prompt Generation
-8. Consistency Check
-9. Final Prompt Package
+3. Identity Card Prompt
+4. Storyboard Prompt
+5. Universal Video Prompt
+6. Model-readable Check
+7. COMMAND-005 Review
+8. Final Prompt Package
 ```
 
 ## Expected Output
 
 ```text
 Prompt Purpose
-Target Model
-Source Records
-Base Prompt
-Model-Specific Prompt
-Negative Prompt
-Consistency Checklist
+Source References
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 Usage Notes
 ```
 
@@ -268,9 +266,11 @@ Usage Notes
 WORKFLOW-002 必须始终包含：
 
 ```text
-ASSET-001
-Negative Prompt
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 ```
 
 ---
@@ -347,7 +347,7 @@ PROJ-001
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-005 — Editing Agent
 ```
@@ -357,48 +357,44 @@ AGENT-005 — Editing Agent
 ```text
 1. Storyboard Input Review
 2. Shot Segmentation
-3. Video Prompt Generation
-4. Cinematography Enhancement
-5. Motion Continuity Setup
-6. Lighting and Style Lock
-7. Negative Prompt Setup
-8. Video Clip Generation Package
-9. Clip Review
-10. Assembly Notes
+3. Storyboard Verification
+4. Universal Video Prompt Setup
+5. Shot Execution Plan
+6. Clip Generation Package
+7. Clip Review with COMMAND-005
+8. Iteration Notes
+9. Assembly Notes
 ```
 
 ## Expected Output
 
 ```text
 Storyboard Review Result
-Video Shot Units
-Shot-by-Shot Video Prompts
-Cinematography-Enhanced Video Prompts
-Motion Continuity Map
-Lighting and Style Lock Notes
-Shot Negative Prompt Set
-Video Clip Generation Package
-Clip Review Notes
+Identity Card Verification Result
+Storyboard Verification Result
+Universal Video Prompt Verification Result
+Shot Execution Plan
+Clip Generation Package
+COMMAND-005 Clip Review Result
+Iteration Notes
 Video Assembly Notes
 ```
 
 ## Required Rule
 
-WORKFLOW-003 必须逐镜头输出，不得只输出一条总 Prompt。
+WORKFLOW-003 必须使用上传身份卡、上传故事板和 Universal Video Prompt 逐镜头执行。
 
-每个镜头都必须包含：
+每个镜头执行单元必须包含：
 
 ```text
-Shot ID
+Uploaded Identity Card
+Uploaded Storyboard
+Universal Video Prompt
+Current Shot Number and Name
+Target Model
 Duration
-Start State
-Action
-End State
-Camera
-Motion
-Lighting
-Negative Prompt
 Continuity Notes
+COMMAND-005 Review Status
 ```
 
 ---
@@ -521,12 +517,11 @@ WORKFLOW-004 必须避免：
 |---|---|
 | 完整生产流程 | WORKFLOW-001 |
 | 从分镜到发布全部生成 | WORKFLOW-001 |
-| 生成短视频 Prompt | WORKFLOW-002 |
-| 生成图片 Prompt | WORKFLOW-002 |
-| 生成视频 Prompt | WORKFLOW-002 |
-| 生成封面 Prompt | WORKFLOW-002 |
+| 生成视频 Prompt Package | WORKFLOW-002 |
+| 生成身份卡 + 故事板 + 通用视频 Prompt | WORKFLOW-002 |
+| 生成 Jimeng / Veo / Runway 视频执行 Prompt | WORKFLOW-002 |
 | 分镜转视频片段 | WORKFLOW-003 |
-| 分镜转 Kling / Veo / Runway 包 | WORKFLOW-003 |
+| 分镜转 Jimeng / Veo / Runway 片段生成包 | WORKFLOW-003 |
 | 生成发布包 | WORKFLOW-004 |
 | 生成标题、正文、标签 | WORKFLOW-004 |
 | 发布前检查 / 发布后复盘 | WORKFLOW-004 |

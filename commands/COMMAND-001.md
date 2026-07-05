@@ -123,7 +123,7 @@ PROJ-001 — Jump After Work Pilot Project
 | Agent | Role | Purpose |
 |---|---|---|
 | AGENT-001 | Storyboard Agent | 生成分镜方案 |
-| AGENT-002 | Prompt Agent | 生成 AI Prompt |
+| AGENT-002 | Prompt Engineer Agent | 生成模型可读提示词包 |
 | AGENT-003 | Cinematography Agent | 生成摄影方案 |
 | AGENT-004 | Script Agent | 生成脚本文案 |
 | AGENT-005 | Editing Agent | 生成剪辑方案 |
@@ -146,7 +146,7 @@ PROJ-001 — Jump After Work Pilot Project
 ↓
 5. Run AGENT-001 Storyboard Agent
 ↓
-6. Run AGENT-002 Prompt Agent
+6. Run AGENT-002 Prompt Engineer Agent
 ↓
 7. Run AGENT-003 Cinematography Agent
 ↓
@@ -327,12 +327,12 @@ Production Notes
 
 ---
 
-# Stage 3 — Prompt Output（提示词输出）
+# Stage 3 — Prompt Package Output（提示词包输出）
 
 ## Agent
 
 ```text
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 ```
 
 ## Output Should Include
@@ -340,11 +340,11 @@ AGENT-002 — Prompt Agent
 ```text
 Prompt Purpose
 Source Records
-Target Model
-Base Prompt
-Model-Specific Prompt
-Negative Prompt
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 Usage Notes
 ```
 
@@ -502,7 +502,8 @@ Brand Safety Check
 本命令结束前必须检查：
 
 ```text
-[ ] Jump 是否仍然是拟人化小狗
+[ ] Jump 是否保持真实小狗本体形态
+[ ] Jump 是否穿程序员风格小狗衣服
 [ ] Jump 是否保持程序员身份
 [ ] Jump 外观是否参考 ASSET-001
 [ ] 世界观是否符合 WORLD-001

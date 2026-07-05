@@ -97,7 +97,7 @@ BRAND-001 — TiaoTiao Studio Brand Language
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent

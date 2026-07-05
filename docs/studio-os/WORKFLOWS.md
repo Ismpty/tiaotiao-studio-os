@@ -72,7 +72,7 @@ WORKFLOW-004 — Publishing Workflow
 | Workflow | Name | Primary Use |
 |---|---|---|
 | WORKFLOW-001 | Jump After Work Production Workflow | 完整生产流程 |
-| WORKFLOW-002 | Short Video Prompt Workflow | 短视频 Prompt 生成 |
+| WORKFLOW-002 | Short Video Prompt Workflow | 视频 Prompt Package 生成 |
 | WORKFLOW-003 | Storyboard to Video Workflow | 分镜转视频生成包 |
 | WORKFLOW-004 | Publishing Workflow | 发布包生成 |
 
@@ -137,7 +137,7 @@ PROJ-001
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -191,11 +191,11 @@ workflows/WORKFLOW-002.md
 
 WORKFLOW-002 是短视频提示词生成工作流。
 
-它用于把 Project、Storyboard、Character、Environment、Camera、Lighting、Motion、Asset 和 Knowledge Nodes 转化为可直接用于 AI 图片 / 视频生成的 Prompt。
+它用于把 Project、Storyboard、Character、Environment、Camera、Lighting、Motion、Asset 和 Knowledge Nodes 转化为模型可读的视频提示词包。
 
 它不重新设计角色，也不改写故事。
 
-它只负责生成稳定、清晰、可复制、可执行的提示词。
+它只负责生成稳定、清晰、可复制、可执行的 Identity Card Prompt、Storyboard Prompt 和 Universal Video Prompt。
 
 ## When to Use（什么时候使用）
 
@@ -203,12 +203,11 @@ WORKFLOW-002 是短视频提示词生成工作流。
 
 ```text
 生成视频 Prompt
-生成 Kling Prompt
-生成 Veo Prompt
-生成 Runway Prompt
-生成图片 Prompt
-生成封面 Prompt
-生成角色一致性 Prompt
+生成视频 Prompt Package
+生成 Identity Card Prompt
+生成 Storyboard Prompt
+生成 Universal Video Prompt
+生成 Jimeng / Veo / Runway 视频执行 Prompt
 ```
 
 应该使用：
@@ -240,7 +239,7 @@ PROJ-001
 ## Required Agent
 
 ```text
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 ```
 
 ## Optional Agent Inputs
@@ -257,33 +256,31 @@ AGENT-005 — Editing Output
 ```text
 1. Prompt Task Setup
 ↓
-2. Source Record Collection
+2. Source Reference Collection
 ↓
-3. Shot Context Extraction
+3. Identity Card Prompt
 ↓
-4. Prompt Variable Mapping
+4. Storyboard Prompt
 ↓
-5. Base Prompt Generation
+5. Universal Video Prompt
 ↓
-6. Model Adaptation
+6. Model-readable Check
 ↓
-7. Negative Prompt Generation
+7. COMMAND-005 Review
 ↓
-8. Consistency Check
-↓
-9. Final Prompt Package
+8. Final Prompt Package
 ```
 
 ## Expected Output
 
 ```text
-1. Prompt Purpose
-2. Target Model
-3. Source Records
-4. Base Prompt
-5. Model-Specific Prompt
-6. Negative Prompt
-7. Consistency Checklist
+1. Source References
+2. Prompt Task Brief
+3. Identity Card Prompt
+4. Storyboard Prompt
+5. Universal Video Prompt
+6. Model-readable Check Report
+7. COMMAND-005 Review Result
 8. Usage Notes
 ```
 
@@ -292,9 +289,11 @@ AGENT-005 — Editing Output
 WORKFLOW-002 必须始终包含：
 
 ```text
-ASSET-001
-Negative Prompt
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 ```
 
 ---
@@ -373,7 +372,7 @@ PROJ-001
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-005 — Editing Agent
 ```
@@ -395,24 +394,23 @@ AGENT-005 — Editing Agent
 ↓
 7. Negative Prompt Setup
 ↓
-8. Video Clip Generation Package
+8. Iteration Notes
 ↓
-9. Clip Review
-↓
-10. Assembly Notes
+9. Assembly Notes
 ```
 
 ## Expected Output
 
 ```text
-1. Storyboard Review Result
-2. Video Shot Units
-3. Shot-by-Shot Video Prompts
-4. Cinematography-Enhanced Video Prompts
-5. Motion Continuity Map
-6. Lighting and Style Lock Notes
-7. Shot Negative Prompt Set
-8. Video Clip Generation Package
+1. Runtime Input Review Result
+2. Identity Card Verification Result
+3. Storyboard Verification Result
+4. Universal Video Prompt Verification Result
+5. Shot Execution Plan
+6. Clip Generation Package
+7. COMMAND-005 Clip Review Result
+8. Iteration Notes
+9. Video Assembly Notes
 9. Clip Review Notes
 10. Video Assembly Notes
 ```
@@ -568,11 +566,11 @@ WORKFLOW-004 必须避免：
 | User Request | Workflow |
 |---|---|
 | 完整生产流程 | WORKFLOW-001 |
-| 生成短视频 Prompt | WORKFLOW-002 |
-| 生成图片 Prompt | WORKFLOW-002 |
-| 生成视频 Prompt | WORKFLOW-002 |
+| 生成视频 Prompt Package | WORKFLOW-002 |
+| 生成身份卡 + 故事板 + 通用视频 Prompt | WORKFLOW-002 |
+| 生成 Jimeng / Veo / Runway 视频执行 Prompt | WORKFLOW-002 |
 | 分镜转视频片段 | WORKFLOW-003 |
-| 分镜转 Kling / Veo / Runway 包 | WORKFLOW-003 |
+| 分镜转 Jimeng / Veo / Runway 包 | WORKFLOW-003 |
 | 生成发布包 | WORKFLOW-004 |
 | 生成标题、正文、标签 | WORKFLOW-004 |
 | 发布前检查 / 发布后复盘 | WORKFLOW-004 |
@@ -776,7 +774,7 @@ Complete production package.
 User：
 
 ```text
-把这个分镜转成 Kling 视频生成包。
+把这个分镜转成 Jimeng / 即梦 视频生成包。
 ```
 
 Runtime：
@@ -794,7 +792,7 @@ Continuity Check
 Output：
 
 ```text
-Shot-by-shot video generation package.
+Shot execution package using uploaded identity card, uploaded storyboard and universal video prompt.
 ```
 
 ---

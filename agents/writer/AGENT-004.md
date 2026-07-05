@@ -68,7 +68,7 @@ Script Agent 可读取其他 Agent 的输出：
 | Agent | Output |
 |---|---|
 | AGENT-001 — Storyboard Agent | Shot list, story beat breakdown |
-| AGENT-002 — Prompt Agent | Prompt purpose, source records, prompt structure |
+| AGENT-002 — Prompt Engineer Agent | Prompt task brief and prompt package structure |
 | AGENT-003 — Cinematography Agent | Visual strategy, shot-by-shot cinematography notes |
 
 ---

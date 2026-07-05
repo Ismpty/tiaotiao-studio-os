@@ -242,7 +242,7 @@ agents/publisher/AGENT-006.md
 | Agent | Role | Path |
 |---|---|---|
 | AGENT-001 | Storyboard Agent | agents/director/AGENT-001.md |
-| AGENT-002 | Prompt Agent | agents/prompt-engineer/AGENT-002.md |
+| AGENT-002 | Prompt Engineer Agent | agents/prompt-engineer/AGENT-002.md |
 | AGENT-003 | Cinematography Agent | agents/cinematographer/AGENT-003.md |
 | AGENT-004 | Script Agent | agents/writer/AGENT-004.md |
 | AGENT-005 | Editing Agent | agents/editor/AGENT-005.md |
@@ -340,7 +340,7 @@ commands/COMMAND-005.md
 | Command | Purpose | Path |
 |---|---|---|
 | COMMAND-001 | Run Jump After Work Production | commands/COMMAND-001.md |
-| COMMAND-002 | Generate Short Video Prompt | commands/COMMAND-002.md |
+| COMMAND-002 | Generate Video Prompt Package | commands/COMMAND-002.md |
 | COMMAND-003 | Generate Storyboard | commands/COMMAND-003.md |
 | COMMAND-004 | Generate Publishing Package | commands/COMMAND-004.md |
 | COMMAND-005 | Run Consistency Check | commands/COMMAND-005.md |
@@ -434,7 +434,7 @@ examples/COMMAND-003-storyboard.md
 | User Task 用户任务 | Read First | Then Read |
 |---|---|---|
 | 完整生产一条视频 | COMMAND-001 | WORKFLOW-001 + all agents |
-| 生成短视频 Prompt | COMMAND-002 | WORKFLOW-002 + AGENT-002 |
+| 生成视频 Prompt Package | COMMAND-002 | WORKFLOW-002 + AGENT-002 |
 | 生成分镜 | COMMAND-003 | AGENT-001 + WORKFLOW-001 |
 | 分镜转视频 | WORKFLOW-003 | AGENT-002 + AGENT-003 |
 | 生成发布包 | COMMAND-004 | WORKFLOW-004 + AGENT-006 |

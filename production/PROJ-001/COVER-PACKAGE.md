@@ -113,13 +113,13 @@ OUTFIT-001 — Programmer Outfit System
 封面中 Jump 必须保持：
 
 ```text
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
+Jump, a fluffy real dog-form character wearing programmer-style dog clothes, four-legged dog anatomy, dog proportions, friendly warm expression, soft realistic fur texture, optional small backpack / badge / collar charm, subtle Fire Dragon Fruit Pink brand accents.
 ```
 
 禁止：
 
 ```text
-Do not turn Jump into a human.
+Do not turn Jump into a human, humanoid body, human hands, human arms, human legs, bipedal human standing pose, another animal or an unclothed ordinary pet dog.
 Do not change Jump into another animal.
 Do not remove fluffy fur.
 Do not make Jump muscular.
@@ -269,7 +269,7 @@ Midjourney / Flux / ComfyUI / ChatGPT Image
 Create a high-quality 9:16 vertical video cover image for the Jump After Work series.
 
 Subject:
-Jump, an anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, wearing her default programmer outfit with subtle Fire Dragon Fruit Pink brand accents, consistent with ASSET-001.
+Jump, a fluffy real dog-form character wearing programmer-style dog clothes, four-legged dog anatomy, dog proportions, friendly warm expression, soft realistic fur texture, subtle Fire Dragon Fruit Pink brand accents.
 
 Scene:
 TiaoTiao Studio Office at the end of the workday. Warm modern creator studio, realistic programmer workspace, laptop, keyboard, monitor, desk lamp, notebook, coffee cup, backpack, headphones and small plant. The office is clean but lived-in, warm and creative.
@@ -315,7 +315,7 @@ AI 生成文字容易出错。推荐：
 Create a 9:16 vertical video cover image for the Jump After Work series.
 
 Main visual:
-Jump, an anthropomorphic fluffy female dog programmer, standing near the warm office exit after work, carrying a backpack, soft realistic fur, slim body, friendly expression, default programmer outfit with Fire Dragon Fruit Pink brand accents.
+Jump, a fluffy real dog-form character near the warm office exit after work, carrying a small backpack, wearing programmer-style dog clothes, soft realistic fur, friendly expression, subtle Fire Dragon Fruit Pink brand accents.
 
 Scene:
 Warm TiaoTiao Studio Office, cozy creator workspace, golden-hour light, cinematic documentary realism, soft depth, lifestyle storytelling.
@@ -497,7 +497,7 @@ Life Begins
 [ ] Aspect ratio is 9:16.
 [ ] Resolution is at least 1080 × 1920 px.
 [ ] Jump is clear and not distorted.
-[ ] Jump remains anthropomorphic fluffy female dog programmer.
+[ ] Jump remains a real dog-form character wearing clothes.
 [ ] Jump is not turned into human.
 [ ] Text is readable on mobile.
 [ ] Text is inside safe area.

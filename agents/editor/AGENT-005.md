@@ -67,7 +67,7 @@ Editing Agent 可读取其他 Agent 的输出：
 | Agent | Output |
 |---|---|
 | AGENT-001 — Storyboard Agent | Shot list, shot function, storyboard structure |
-| AGENT-002 — Prompt Agent | Prompt body, negative prompt, model-specific prompt |
+| AGENT-002 — Prompt Engineer Agent | Identity card prompt, storyboard prompt, universal video prompt |
 | AGENT-003 — Cinematography Agent | Cinematography notes, camera movement, lighting plan |
 | AGENT-004 — Script Agent | Voiceover, captions, ending line |
 

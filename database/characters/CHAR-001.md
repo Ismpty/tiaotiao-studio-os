@@ -1,7 +1,7 @@
 # CHAR-001 — Jump（跳跳）
 
 > Canonical Character Record（官方角色记录）
-> Version：1.1
+> Version：2.0
 > Status：Active
 
 ---
@@ -15,13 +15,13 @@
 | ID               | CHAR-001                   |
 | English Name 英文名 | Jump                       |
 | Chinese Name 中文名 | 跳跳                         |
-| Species 物种       | Anthropomorphic Dog（拟人化小狗） |
+| Species 物种       | Real dog-form character（真实小狗本体角色） |
 | Gender 性别        | Female（女）                  |
 | Occupation 职业    | Programmer（程序员）            |
 | Role 角色定位        | Main Character（主角）         |
 | Universe 世界观     | WORLD-001                  |
 | Status 状态        | Active                     |
-| Version 版本       | 1.1                        |
+| Version 版本       | 2.0                        |
 
 ---
 
@@ -92,9 +92,13 @@ Growth（成长）
 
 Jump 必须保持：
 
+* 真实小狗本体形态 real dog-form body
+* 四足小狗身体结构 four-legged dog anatomy
+* 小狗比例 dog proportions
 * 毛茸茸 fluffy fur
-* 苗条 slim body
+* 程序员风格小狗衣服 programmer-style dog clothes
 * 友善表情 friendly expression
+* 小包 / 工牌 / 项圈挂饰等可选配件 optional small backpack, badge or collar charm
 * 火龙果粉品牌识别元素 Fire Dragon Fruit Pink brand accent
 * 真实电影质感 cinematic realism
 
@@ -104,7 +108,10 @@ Jump 必须保持：
 
 ## Must Keep（必须保持）
 
-* 保持拟人化小狗身份
+* 保持真实小狗本体形态
+* 保持四足小狗身体结构
+* 保持小狗比例
+* 保持穿程序员风格小狗衣服
 * 保持程序员身份
 * 保持火龙果粉视觉识别
 * 保持真实毛发质感
@@ -114,11 +121,17 @@ Jump 必须保持：
 
 ## Never Change（禁止修改）
 
-* 不要变成真人
-* 不要变成肌肉型角色
+* 不要变成人类
+* 不要变成半人身体
+* 不要出现人类手掌
+* 不要出现人类手臂
+* 不要出现人类双腿站立
+* 不要出现人类身体比例
+* 不要变成其他动物
+* 不要变成无衣服普通宠物狗
 * 不要改成暗黑、恐怖或暴力风格
 * 不要去掉毛茸茸质感
-* 不要改变核心身份：程序员小狗
+* 不要改变核心身份：穿衣服的程序员小狗角色
 
 ---
 
@@ -168,3 +181,4 @@ MOTIONLANG-001
 | ------- | ---- | ------------------------------------ |
 | 1.0     | 2026 | Initial canonical character record   |
 | 1.1     | 2026 | Updated to reference Knowledge Layer |
+| 2.0     | 2026 | Updated Jump to real dog-form character wearing clothes |

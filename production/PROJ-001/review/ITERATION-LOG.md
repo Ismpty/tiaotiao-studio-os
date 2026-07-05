@@ -546,7 +546,7 @@ Generate Shot 6 v01.
 ## Character Drift Fix
 
 ```text
-Keep Jump exactly consistent with ASSET-001. Maintain the same anthropomorphic fluffy female dog identity, face shape, soft realistic fur texture, slim body, default programmer outfit and Fire Dragon Fruit Pink accents throughout the entire clip.
+Keep Jump as a fluffy real dog-form character wearing programmer-style dog clothes. Maintain four-legged dog anatomy, dog proportions, soft realistic fur texture, outfit continuity and Fire Dragon Fruit Pink accents throughout the entire clip.
 ```
 
 ## Sliding Feet Fix

@@ -189,7 +189,7 @@ AI Agents 定义执行角色。
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -368,7 +368,7 @@ Commands 是用户调用 TSOS 的操作入口。
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check

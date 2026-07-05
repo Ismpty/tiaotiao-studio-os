@@ -26,6 +26,9 @@ Universal Video Prompt
 - Updated `AGENT-001` to own black-and-white rough pencil storyboard structure and colored annotation requirements.
 - Updated the expected role of `AGENT-002` from basic prompt writing to model-readable prompt package generation.
 - Updated `ARCHITECTURE.md` and `README.md` to document the Prompt Runtime Layer.
+- Updated canonical source records for Jump, asset references, prompt records and project requirements to use the real dog-form character wearing clothes rule.
+- Updated command, workflow, agent and runtime navigation docs to use Video Prompt Package terminology.
+- Updated PROJ-001 cover, production checklist, publishing checklist, runbook and review docs to remove old humanoid / anthropomorphic positive character language.
 - Standardized TSOS storyboard style as black-and-white rough pencil line art.
 - Added the requirement that storyboards must retain colored dynamic annotation systems.
 - Defined shot detail ownership:

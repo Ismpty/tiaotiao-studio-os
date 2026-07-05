@@ -70,7 +70,7 @@ Cinematography Agent 可读取其他 Agent 的输出：
 | Agent | Output |
 |---|---|
 | AGENT-001 — Storyboard Agent | Shot list, story function, shot descriptions |
-| AGENT-002 — Prompt Agent | Base prompt, model-specific prompt, negative prompt |
+| AGENT-002 — Prompt Engineer Agent | Identity card prompt, storyboard prompt, universal video prompt |
 
 ---
 
@@ -368,7 +368,7 @@ Negative Visual Notes:
 
 # AI Visual Prompt Add-ons（AI 视觉增强模块）
 
-Cinematography Agent 可以为 Prompt Agent 提供摄影增强词。
+Cinematography Agent 可以为 Prompt Engineer Agent 提供摄影增强词。
 
 默认模块：
 
@@ -516,7 +516,7 @@ Negative Visual Notes:
 Cinematography Agent 的输出必须满足：
 
 - 可直接用于 AI 视频生成
-- 可直接给摄影 / 分镜 / Prompt Agent 使用
+- 可直接给摄影 / 分镜 / Prompt Engineer Agent 使用
 - 每个镜头都有明确视觉目的
 - 每个镜头能追溯到 TSOS 记录
 - 保持电影感真实

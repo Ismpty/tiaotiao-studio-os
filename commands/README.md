@@ -57,7 +57,7 @@ Commands 负责启动正确的执行流程。
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check
@@ -70,7 +70,7 @@ COMMAND-005 — Run Consistency Check
 | Command | Name | File | Primary Use |
 |---|---|---|---|
 | COMMAND-001 | Run Jump After Work Production | COMMAND-001.md | 启动完整生产流程 |
-| COMMAND-002 | Generate Short Video Prompt | COMMAND-002.md | 生成图片 / 视频 Prompt |
+| COMMAND-002 | Generate Video Prompt Package | COMMAND-002.md | 生成身份卡 / 故事板 / 通用视频 Prompt |
 | COMMAND-003 | Generate Storyboard | COMMAND-003.md | 生成分镜 |
 | COMMAND-004 | Generate Publishing Package | COMMAND-004.md | 生成发布包 |
 | COMMAND-005 | Run Consistency Check | COMMAND-005.md | 检查一致性 |
@@ -131,7 +131,7 @@ Next Production Actions
 
 ---
 
-# COMMAND-002 — Generate Short Video Prompt
+# COMMAND-002 — Generate Video Prompt Package
 
 ## File
 
@@ -141,7 +141,7 @@ commands/COMMAND-002.md
 
 ## Use When（使用场景）
 
-当用户需要生成 AI 图片、视频、封面或角色一致性 Prompt 时使用。
+当用户需要生成视频生产提示词包时使用。
 
 示例：
 
@@ -150,11 +150,11 @@ Run COMMAND-002.
 ```
 
 ```text
-运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ```text
-给这个分镜生成 Veo 视频提示词。
+给这个分镜生成可逐镜头执行的 Universal Video Prompt。
 ```
 
 ## Calls（调用）
@@ -168,12 +168,13 @@ AGENT-002
 
 ```text
 Prompt Purpose
-Target Model
-Source Records
-Base Prompt
-Model-Specific Prompt
-Negative Prompt
-Consistency Checklist
+Source References
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Runtime Usage Example
+Model-readable Check
+COMMAND-005 Review
 Usage Notes
 ```
 
@@ -182,9 +183,11 @@ Usage Notes
 必须包含：
 
 ```text
-ASSET-001
-Negative Prompt
-Consistency Checklist
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 ```
 
 ---
@@ -375,10 +378,9 @@ PASS WITH MINOR FIXES
 |---|---|
 | 完整做一条视频 | COMMAND-001 |
 | 从分镜到发布都生成 | COMMAND-001 |
-| 生成视频 Prompt | COMMAND-002 |
-| 生成 Kling / Veo / Runway Prompt | COMMAND-002 |
-| 生成图片 Prompt | COMMAND-002 |
-| 生成封面 Prompt | COMMAND-002 |
+| 生成视频 Prompt Package | COMMAND-002 |
+| 生成身份卡 + 故事板 + 通用视频 Prompt | COMMAND-002 |
+| 生成 Jimeng / Veo / Runway 视频执行 Prompt | COMMAND-002 |
 | 生成分镜 | COMMAND-003 |
 | 拆镜头 | COMMAND-003 |
 | 做 Storyboard | COMMAND-003 |

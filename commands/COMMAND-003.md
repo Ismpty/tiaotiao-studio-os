@@ -568,10 +568,11 @@ Laptop is still open. Backpack is visible nearby.
 ```text
 [ ] 每个镜头是否有明确叙事功能
 [ ] 每个镜头是否可以连接到下一镜头
-[ ] Jump 是否保持拟人化小狗身份
+[ ] Jump 是否保持真实小狗本体形态
+[ ] Jump 是否保持四足小狗身体结构
 [ ] Jump 是否保持毛茸茸质感
-[ ] Jump 是否保持苗条体型
-[ ] Jump 是否参考 ASSET-001
+[ ] Jump 是否穿程序员风格小狗衣服
+[ ] 内部审查是否参考 ASSET-001
 [ ] 服装是否符合 OUTFIT-001
 [ ] 场景是否符合 ENV-001
 [ ] 镜头是否符合 CAM-001 / SHOT-001

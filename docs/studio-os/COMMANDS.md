@@ -62,7 +62,7 @@ Consistency Check
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check
@@ -75,7 +75,7 @@ COMMAND-005 — Run Consistency Check
 | Command | Name | Primary Use |
 |---|---|---|
 | COMMAND-001 | Run Jump After Work Production | 启动完整生产流程 |
-| COMMAND-002 | Generate Short Video Prompt | 生成图片 / 视频 Prompt |
+| COMMAND-002 | Generate Video Prompt Package | 生成身份卡 / 故事板 / 通用视频 Prompt |
 | COMMAND-003 | Generate Storyboard | 生成分镜 |
 | COMMAND-004 | Generate Publishing Package | 生成发布包 |
 | COMMAND-005 | Run Consistency Check | 运行一致性检查 |
@@ -183,7 +183,7 @@ Run COMMAND-001.
 
 ---
 
-# COMMAND-002 — Generate Short Video Prompt
+# COMMAND-002 — Generate Video Prompt Package
 
 ## File
 
@@ -193,12 +193,12 @@ commands/COMMAND-002.md
 
 ## 中文说明
 
-COMMAND-002 用于生成 AI 图片、视频、封面、角色、环境或镜头 Prompt。
+COMMAND-002 用于生成视频生产提示词包。
 
 它的重点是：
 
 ```text
-把 TSOS Source Records 转化为可执行 Prompt
+把 TSOS Source Records 转化为模型可读的 Identity Card Prompt、Storyboard Prompt 和 Universal Video Prompt
 ```
 
 而不是重新设计角色或重新写故事。
@@ -209,12 +209,9 @@ COMMAND-002 用于生成 AI 图片、视频、封面、角色、环境或镜头 
 
 ```text
 生成视频 Prompt
-生成 Kling Prompt
-生成 Veo Prompt
-生成小红书 9:16 视频提示词
-生成封面图 Prompt
-生成角色一致性 Prompt
-生成短视频 Prompt
+生成视频 Prompt Package
+生成身份卡 + 故事板 + 通用视频 Prompt
+生成 Jimeng / Veo / Runway 视频执行 Prompt
 ```
 
 应该调用：
@@ -232,7 +229,7 @@ WORKFLOW-002 — Short Video Prompt Workflow
 ## Default Agent
 
 ```text
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 ```
 
 ## Required Records
@@ -256,20 +253,21 @@ Run COMMAND-002.
 ```
 
 ```text
-运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ## Expected Output
 
 ```text
-1. Prompt Purpose
-2. Target Model
-3. Source Records
-4. Base Prompt
-5. Model-Specific Prompt
-6. Negative Prompt
-7. Consistency Checklist
-8. Usage Notes
+1. Source References
+2. Prompt Task Brief
+3. Identity Card Prompt
+4. Storyboard Prompt
+5. Universal Video Prompt
+6. Runtime Usage Example
+7. Model-readable Check Report
+8. COMMAND-005 Review Result
+9. Usage Notes
 ```
 
 ## Important Rule
@@ -610,7 +608,7 @@ Run COMMAND-005.
 ```
 
 ```text
-运行 COMMAND-005，检查这个 Kling Prompt 是否符合跳跳设定。
+运行 COMMAND-005，检查这个视频 Prompt Package 是否符合跳跳设定。
 ```
 
 ## Expected Output
@@ -658,10 +656,9 @@ PASS WITH MINOR FIXES
 |---|---|
 | 做完整一条《跳跳下班啦》 | COMMAND-001 |
 | 从分镜到发布都生成 | COMMAND-001 |
-| 生成 AI 视频 Prompt | COMMAND-002 |
-| 生成 Kling / Veo / Runway Prompt | COMMAND-002 |
-| 生成 Midjourney / Flux 图片 Prompt | COMMAND-002 |
-| 生成封面 Prompt | COMMAND-002 |
+| 生成 AI 视频 Prompt Package | COMMAND-002 |
+| 生成身份卡 + 故事板 + 通用视频 Prompt | COMMAND-002 |
+| 生成 Jimeng / Veo / Runway 视频执行 Prompt | COMMAND-002 |
 | 生成分镜 | COMMAND-003 |
 | 拆镜头 | COMMAND-003 |
 | 做 Storyboard | COMMAND-003 |
@@ -825,7 +822,7 @@ Command 不得以 Notion 内容覆盖 GitHub 内容。
 任何涉及 Jump 的 Command，都必须保持：
 
 ```text
-Jump = anthropomorphic fluffy female dog programmer
+Jump = real dog-form character wearing programmer-style dog clothes
 ```
 
 必须引用：
@@ -845,12 +842,12 @@ BRAND-001
 任何 Prompt Command 都必须包含：
 
 ```text
-Source Records
-Target Model
-Base Prompt
-Model-Specific Prompt
-Negative Prompt
-Consistency Checklist
+Source References
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
+Model-readable Check
+COMMAND-005 Review
 Usage Notes
 ```
 
@@ -914,12 +911,12 @@ Run continuity checklist
 
 ---
 
-## Example 2 — Generate Kling Prompt
+## Example 2 — Generate Video Prompt Package
 
 User：
 
 ```text
-运行 COMMAND-002，生成 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 System：

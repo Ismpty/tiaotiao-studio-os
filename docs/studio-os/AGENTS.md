@@ -62,7 +62,7 @@ Database Records 和 Knowledge Nodes 决定不能偏离什么。
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -76,7 +76,7 @@ AGENT-006 — Publishing Agent
 | Agent | Name | Role Group | Primary Use |
 |---|---|---|---|
 | AGENT-001 | Storyboard Agent | Director | 分镜规划 |
-| AGENT-002 | Prompt Agent | Prompt Engineer | 提示词生成 |
+| AGENT-002 | Prompt Engineer Agent | Prompt Engineer | 模型可读提示词包生成 |
 | AGENT-003 | Cinematography Agent | Cinematographer | 摄影方案 |
 | AGENT-004 | Script Agent | Writer | 脚本文案 |
 | AGENT-005 | Editing Agent | Editor | 剪辑方案 |
@@ -168,9 +168,9 @@ BRAND-001
 Project Summary
 Story Beat Breakdown
 Shot List
-Shot-by-Shot Prompt
+Storyboard Prompt
 Camera / Motion / Lighting Mapping
-Negative Prompt
+Storyboard Color Annotation Plan
 Continuity Checklist
 Production Notes
 ```
@@ -198,7 +198,7 @@ Production Notes
 
 ---
 
-# AGENT-002 — Prompt Agent
+# AGENT-002 — Prompt Engineer Agent
 
 ## File
 
@@ -210,7 +210,7 @@ agents/prompt-engineer/AGENT-002.md
 
 AGENT-002 是提示词工程智能体。
 
-它负责把 TSOS 中的 Database Records、Knowledge Nodes 和其他 Agent 输出转化为可执行的 AI 图片、视频、封面、分镜和角色一致性 Prompt。
+它负责把 TSOS 中的 Database Records、Knowledge Nodes 和其他 Agent 输出转化为模型可读的视频提示词包。
 
 它不负责重新设计角色，也不负责修改故事方向。
 
@@ -221,13 +221,11 @@ AGENT-002 是提示词工程智能体。
 ```text
 生成视频 Prompt
 生成图片 Prompt
-生成 Kling Prompt
-生成 Veo Prompt
-生成 Runway Prompt
-生成 Midjourney Prompt
-生成 Flux / ComfyUI Prompt
-生成封面 Prompt
-生成角色一致性 Prompt
+生成 Identity Card Prompt
+生成 Storyboard Prompt
+生成 Universal Video Prompt
+生成 Jimeng / Veo / Runway 视频执行 Prompt
+检查模型可读性
 ```
 
 应该使用：
@@ -294,7 +292,9 @@ BRAND-001
 ```text
 Prompt Purpose
 Source Records
-Base Prompt
+Identity Card Prompt
+Storyboard Prompt
+Universal Video Prompt
 Model-Specific Prompt
 Negative Prompt
 Consistency Checklist
@@ -812,7 +812,7 @@ Brand Safety Check
 ```text
 AGENT-001 Storyboard Agent
 ↓
-AGENT-002 Prompt Agent
+AGENT-002 Prompt Engineer Agent
 ↓
 AGENT-003 Cinematography Agent
 ↓
@@ -910,7 +910,7 @@ Frozen Roadmap
 任何 Agent 只要涉及 Jump，都必须保持：
 
 ```text
-Jump = anthropomorphic fluffy female dog programmer
+Jump = real dog-form character wearing programmer-style dog clothes
 ```
 
 必须引用：
@@ -1022,7 +1022,7 @@ Continuity Checklist
 User：
 
 ```text
-运行 COMMAND-002，生成 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 Runtime：

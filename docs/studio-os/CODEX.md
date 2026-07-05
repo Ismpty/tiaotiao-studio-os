@@ -288,7 +288,7 @@ Knowledge Nodes + Database Records
 任何涉及 Jump 的生成，Codex 必须保持：
 
 ```text
-Jump = anthropomorphic fluffy female dog programmer
+Jump = real dog-form character wearing programmer-style dog clothes
 ```
 
 必须遵守：
@@ -679,7 +679,7 @@ commit message
 
 ```text
 Issue Found:
-The request changes Jump from an anthropomorphic fluffy dog into a human.
+The request changes Jump from a real dog-form character into a human.
 
 Source of Truth:
 CHAR-001
@@ -733,7 +733,7 @@ Codex 应该：
 ## User Input
 
 ```text
-运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ## Codex Should Read
@@ -759,7 +759,7 @@ knowledge/brand-language/BRAND-001.md
 ## Prompt Purpose
 ## Target Model
 ## Source Records
-## Base Prompt
+## Identity Card Prompt / Storyboard Prompt / Universal Video Prompt
 ## Model-Specific Prompt
 ## Negative Prompt
 ## Consistency Checklist

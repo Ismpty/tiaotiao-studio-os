@@ -194,10 +194,10 @@ BRAND-001 — TiaoTiao Studio Brand Language
 每个生成片段都必须检查：
 
 ```text
-[ ] Jump 是否仍然是拟人化毛茸茸小狗
-[ ] Jump 是否保持女性角色设定
+[ ] Jump 是否保持真实小狗本体形态
+[ ] Jump 是否保持四足小狗身体结构
 [ ] Jump 是否保持程序员身份
-[ ] Jump 是否保持苗条体型
+[ ] Jump 是否穿程序员风格小狗衣服
 [ ] Jump 毛发是否稳定
 [ ] Jump 服装是否稳定
 [ ] Fire Dragon Fruit Pink 是否作为点缀出现

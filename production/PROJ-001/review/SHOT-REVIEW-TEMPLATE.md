@@ -132,10 +132,11 @@ TBD
 ## Checklist
 
 ```text
-[ ] Jump 仍然是拟人化毛茸茸小狗
+[ ] Jump 保持真实小狗本体形态
+[ ] Jump 保持四足小狗身体结构
 [ ] Jump 没有变成人类
 [ ] Jump 没有变成其他动物
-[ ] Jump 保持女性角色设定
+[ ] Jump 穿程序员风格小狗衣服
 [ ] Jump 保持程序员身份
 [ ] Jump 保持苗条体型
 [ ] Jump 毛发清晰且稳定
@@ -493,7 +494,7 @@ Jump 变成其他动物
 
 ```text
 Add:
-Keep Jump exactly consistent with ASSET-001. Do not change species, face shape, fur texture, body shape or outfit.
+Keep Jump as a fluffy real dog-form character wearing programmer-style dog clothes. Do not change species, dog-form body, four-legged anatomy, fur texture, outfit or dragon-fruit pink accent details.
 ```
 
 ## If Sliding Feet

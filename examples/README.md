@@ -144,7 +144,7 @@ examples/COMMAND-002-prompt.md
 ## Related Command
 
 ```text
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 ```
 
 ## Purpose

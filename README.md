@@ -100,7 +100,7 @@ Current commands:
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check
@@ -119,7 +119,7 @@ Run COMMAND-001.
 ```
 
 ```text
-运行 COMMAND-002，生成小红书 9:16 Kling 视频 Prompt。
+运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ```text
@@ -448,7 +448,7 @@ Purpose：
 
 ```text
 AGENT-001 — Storyboard Agent
-AGENT-002 — Prompt Agent
+AGENT-002 — Prompt Engineer Agent
 AGENT-003 — Cinematography Agent
 AGENT-004 — Script Agent
 AGENT-005 — Editing Agent
@@ -541,7 +541,7 @@ Purpose：
 
 ```text
 COMMAND-001 — Run Jump After Work Production
-COMMAND-002 — Generate Short Video Prompt
+COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
 COMMAND-005 — Run Consistency Check

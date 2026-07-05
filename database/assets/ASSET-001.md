@@ -1,7 +1,7 @@
 # ASSET-001 — Jump Character Reference Pack（跳跳角色参考资产包）
 
 > Canonical Asset Record（官方资产记录）  
-> Version：1.0  
+> Version：2.0
 > Status：Active
 
 ---
@@ -79,9 +79,11 @@ It keeps Jump visually consistent across images, videos, covers, storyboards and
 
 必须保持：
 
-- Jump 是拟人化小狗
+- Jump 是真实小狗本体形态的角色
+- Jump 保持四足小狗身体结构
+- Jump 保持小狗比例
 - 毛茸茸质感清晰
-- 身体苗条
+- 穿程序员风格小狗衣服
 - 表情友好温暖
 - 程序员身份明确
 - 默认服装遵循 OUTFIT-001
@@ -114,7 +116,7 @@ BRAND-001
 推荐 Prompt：
 
 ```text
-Use Jump character reference, anthropomorphic fluffy female dog programmer, slim body, friendly warm expression, soft realistic fur texture, default programmer outfit, Fire Dragon Fruit Pink brand accents, cinematic documentary realism, consistent character identity
+Use the Jump character reference: a fluffy real dog-form character wearing programmer-style dog clothes, four-legged dog anatomy, dog proportions, friendly warm expression, soft realistic fur texture, small backpack / badge / collar charm allowed, subtle Fire Dragon Fruit Pink accents, cinematic documentary realism, consistent character identity.
 ```
 
 ---
@@ -124,7 +126,7 @@ Use Jump character reference, anthropomorphic fluffy female dog programmer, slim
 禁止：
 
 ```text
-human character, non-dog character, muscular body, no fur, dark horror redesign, cyberpunk armor, inconsistent outfit, exaggerated jewelry, different species, aggressive expression, brand color missing
+human character, humanoid body, human hands, human arms, human legs, bipedal human standing pose, human body proportions, non-dog character, unclothed ordinary pet dog, no fur, dark horror redesign, cyberpunk armor, inconsistent outfit, exaggerated jewelry, different species, aggressive expression, brand color missing
 ```
 
 ---
@@ -167,6 +169,15 @@ database/assets/ASSET-001.md
 - Prompt Engineering
 - Asset Management
 - Project Production
+
+---
+
+# Changelog（更新记录）
+
+| Version | Date | Changes |
+|---|---|---|
+| 2.0 | 2026 | Updated asset consistency rules to real dog-form Jump wearing clothes |
+| 1.0 | 2026 | Initial canonical asset record |
 
 ---
 

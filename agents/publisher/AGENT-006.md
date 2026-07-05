@@ -67,7 +67,7 @@ Publishing Agent 可读取其他 Agent 的输出：
 | Agent | Output |
 |---|---|
 | AGENT-001 — Storyboard Agent | Shot list, story structure |
-| AGENT-002 — Prompt Agent | Final prompt, negative prompt |
+| AGENT-002 — Prompt Engineer Agent | Final prompt package and review notes |
 | AGENT-003 — Cinematography Agent | Visual strategy, shot notes |
 | AGENT-004 — Script Agent | Title options, voiceover, captions, ending line |
 | AGENT-005 — Editing Agent | Timeline, captions, music, export notes |
