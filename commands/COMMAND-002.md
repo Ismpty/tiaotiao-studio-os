@@ -21,7 +21,7 @@ Storyboard Prompt
 Universal Video Prompt
 ```
 
-该结构用于提高角色一致性、镜头准确性、动作连续性和模型可执行性。
+该结构用于提高主体一致性、镜头准确性、动作连续性和模型可执行性。
 
 ---
 
@@ -47,6 +47,8 @@ AI video prompt
 
 ```text
 Project ID
+Subject Mode
+Subject Type
 Main Character
 Story / Episode
 Target Platform
@@ -55,20 +57,33 @@ Visual Style
 Character Form Rule
 ```
 
-对于《跳跳下班啦》当前默认项目：
+对于《小保安和他的古人朋友们》当前默认项目：
 
 ```text
 Project:
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 
 Character:
-Jump / 跳跳
+Jump / 跳跳 / AI 博物馆小保安
 
 Character Form:
 Real dog-form character wearing clothes
 
 Toolchain:
 Jimeng / 即梦
+```
+
+对于非 Jump 项目或临时创作主体：
+
+```text
+Subject Mode:
+Custom Subject Mode
+
+Subject Type:
+Human / Animal / Plant / Object / Scene Subject / Mascot / Other
+
+Subject Brief:
+用户提供的主体描述、参考图、品牌资料或故事设定
 ```
 
 ---
@@ -86,6 +101,10 @@ ENV-001
 STYLE-001
 COLOR-001
 EMOTION-001
+SUBJECT-001
+RELIC-001
+VISUALPARAM-001
+BLOCKING-001
 BRAND-001
 ```
 
@@ -107,7 +126,7 @@ match BRAND-001
 必须展开成：
 
 ```text
-跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿程序员风格小狗衣服，可以有小背包、工牌、项圈挂饰和少量火龙果粉色点缀。禁止半人身体、人类手掌、人类手臂、人类双腿站立。
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，在 AI 博物馆里担任认真值班的小保安。她可以穿小狗尺寸的保安背心、小帽子、工牌或巡逻配件，也可以保留少量火龙果粉色点缀。禁止半人身体、人类手掌、人类手臂、人类双腿站立。
 ```
 
 ---
@@ -129,27 +148,37 @@ match BRAND-001
 
 # 7. Identity Card Prompt Requirements（身份卡提示词要求）
 
-身份卡 Prompt 必须用于锁定角色外观。
+身份卡 Prompt 必须用于锁定主体外观、结构和连续性。
+
+默认引用：
+
+```text
+SUBJECT-001 — Generic Subject Identity Card Grammar
+```
 
 必须包含：
 
 ```text
-角色名称
-物种
-身体形态
-体貌特征
-毛发特征
-服装
-配件
-颜色点缀
-禁止漂移规则
+主体名称
+主体类型
+核心视觉身份
+形状 / 身体结构
+比例 / 尺寸
+材质 / 表面质感
+颜色系统
+识别特征
+服装 / 配件 / 道具（如适用）
+运动 / 行为方式
+环境关系
+连续性锁定
+负面约束
 ```
 
-对于 Jump，必须明确：
+对于 Jump Mode，必须明确：
 
 ```text
 真实小狗本体形态
-穿程序员风格小狗衣服
+穿小狗尺寸的 AI 博物馆小保安服装或已确认小狗服装
 可以背小包
 可以有工牌 / 项圈挂饰
 有少量火龙果粉色点缀
@@ -158,6 +187,18 @@ match BRAND-001
 禁止人类手臂
 禁止人类双腿站立
 ```
+
+对于 Custom Subject Mode，身份卡必须按主体类型展开：
+
+```text
+人物：年龄段、体型、脸部特征、发型、服装、姿态、职业或角色功能。
+动物：物种、体型、毛发或皮肤、耳朵尾巴四肢、自然动作、是否穿戴配件。
+植物：品种、株型、叶片、花果、枝干、盆器或生长环境、季节状态。
+物体 / 产品：形状、材质、尺寸、功能部件、品牌或标识、使用场景。
+场景主体：空间结构、入口出口、关键道具、光源、动线和视觉焦点。
+```
+
+Custom Subject Mode 不得自动套用 Jump 的小狗形态、小保安服装、火龙果粉色点缀或 AI 博物馆故事结构，除非用户明确要求。
 
 ---
 
@@ -174,6 +215,8 @@ match BRAND-001
 灯光变化
 情绪变化
 镜头衔接
+基础画面参数
+复杂空间调度图
 ```
 
 ## Fixed Storyboard Style
@@ -234,24 +277,95 @@ match BRAND-001
 通用结构必须为：
 
 ```text
-请严格参考上传的角色身份卡和故事板生成视频。
+请严格参考上传的主体身份卡和故事板生成视频。
 
 本次只生成故事板中的：
 [SHOT NUMBER AND NAME]
 
-角色外观以身份卡为准。
+主体外观以身份卡为准。
 镜头内容以故事板对应 Shot 为准。
 视频规格、动作要求、场景要求、镜头要求、灯光情绪和负面要求如下……
 ```
 
 ---
 
-# 11. Shot Detail Ownership（镜头细节归属）
+# 11. Visual Parameter Requirements（画面参数要求）
+
+`COMMAND-002` 必须把基础画面参数转写成模型可读自然语言。
+
+默认引用：
+
+```text
+VISUALPARAM-001 — AIGC Base Visual Parameter Grammar
+```
+
+视频 Prompt 至少应明确：
+
+```text
+format / aspect ratio
+shot size
+camera angle / height
+lens
+composition
+depth of field
+lighting
+color / tone
+texture detail
+motion
+continuity locks
+negative constraints
+```
+
+模型可复制区域不能只写：
+
+```text
+use VISUALPARAM-001
+```
+
+必须写成自然语言，例如：
+
+```text
+使用竖屏 9:16 画幅，低位小狗视角平视机位，35mm 自然纪录片镜头，中等景深，暖色柔和实用光，真实毛发和布料质感，并保持跳跳的小狗身体结构、衣服、小包和场景比例连续。
+```
+
+---
+
+# 12. Scene Blocking Map Requirements（场景调度图要求）
+
+当视频涉及多人对话、追逐、打斗、复杂走位、一镜到底或多次镜头切换时，`COMMAND-002` 必须支持使用俯视场景调度图。
+
+默认引用：
+
+```text
+BLOCKING-001 — Overhead Scene Blocking Map
+```
+
+模型可复制 Prompt 不能只写：
+
+```text
+use BLOCKING-001
+```
+
+必须写成自然语言，例如：
+
+```text
+请严格参考上传的俯视场景调度图。保持场景平面布局、角色初始站位、移动箭头、摄影机路径、门、道具、障碍物和左右关系一致。不要交换角色位置，不要反转移动方向，不要改变房间布局。
+```
+
+如果场景不复杂，可以写：
+
+```text
+No overhead blocking map required for this simple single-character shot.
+```
+
+---
+
+# 13. Shot Detail Ownership（镜头细节归属）
 
 `COMMAND-002` 必须遵守以下职责划分：
 
 ```text
-Identity Card = 角色外观
+Identity Card = 主体外观 / 结构 / 连续性
 Storyboard = 镜头细节
 Universal Video Prompt = 模型执行规则
 ```
@@ -260,7 +374,7 @@ Universal Video Prompt = 模型执行规则
 
 ---
 
-# 12. Default Jump Character Form Rule（跳跳角色形态规则）
+# 14. Default Jump Character Form Rule（跳跳角色形态规则）
 
 当前 Jump 系列默认规则：
 
@@ -287,42 +401,72 @@ No bipedal human standing pose.
 
 ---
 
-# 13. Default Story Structure Rule（默认故事结构规则）
+# 15. Custom Subject Mode Rule（自定义主体模式规则）
 
-《跳跳下班啦》系列不应只展示离开办公室。
+当本命令用于 Jump 之外的人物、动物、植物、物体、产品、场景或新 IP 时，必须进入 Custom Subject Mode。
+
+Custom Subject Mode 必须遵守：
+
+```text
+以用户提供的主体描述、参考图或品牌资料为基础。
+使用 SUBJECT-001 生成完整主体身份卡。
+模型可复制 Prompt 必须用自然语言描述主体，不得只写 SUBJECT-001 或内部编号。
+故事板继续使用黑白粗略铅笔线稿。
+故事板继续保留红 / 蓝 / 黄 / 绿 / 紫彩色动态标注系统。
+视频 Prompt 必须引用上传的主体身份卡和故事板。
+COMMAND-005 必须检查主体类型、连续性锁定和负面约束。
+```
+
+Custom Subject Mode 禁止：
+
+```text
+自动把主体改成 Jump。
+自动套用 Jump 的小狗身体、小保安服装、小包、工牌、项圈挂饰或火龙果粉色点缀。
+自动套用《小保安和他的古人朋友们》的 AI 博物馆故事结构。
+把人物、动物、植物、产品或场景主体混成另一个未确认主体。
+```
+
+---
+
+# 16. Default AI Museum Story Structure Rule（默认 AI 博物馆故事结构规则）
+
+《小保安和他的古人朋友们》系列不应只展示博物馆空镜或文物静态展示。
 
 默认结构：
 
 ```text
-少量下班动作
+闭馆 / 小保安巡逻
 +
-大量下班后的生活
+文物朋友苏醒与古今误会
++
+无厘头升级与温暖解决
 ```
 
 推荐比例：
 
 ```text
-办公室部分：10%–20%
-下班后生活：80%–90%
+闭馆巡逻：10%–20%
+文物朋友苏醒与误会：50%–60%
+无厘头升级与温暖解决：20%–30%
 ```
 
-生活片段可以包括：
+博物馆片段可以包括：
 
 ```text
-吃饭
-逛超市
-看电影
-买小吃
-散步
-回家
-洗澡
-睡前放松
-周末户外
+闭馆巡逻
+展柜 AI 扫描
+文物朋友从古画 / 器物 / 神兽纹样中苏醒
+古人朋友误解现代展厅规则
+文物抢展位
+跳跳认真开小狗保安单
+扫地机器人被误会成妖怪
+古籍找 Wi-Fi
+温暖和解
 ```
 
 ---
 
-# 14. COMMAND-002 Output Example（输出示例）
+# 17. COMMAND-002 Output Example（输出示例）
 
 执行本命令时，应输出类似结构：
 
@@ -335,7 +479,7 @@ STYLE-001
 BRAND-001
 
 Identity Card Prompt:
-用于生成角色身份卡。
+用于生成主体身份卡。
 
 Storyboard Prompt:
 用于生成黑白铅笔线条故事板，并保留彩色动态标注系统。
@@ -346,35 +490,44 @@ Universal Video Prompt:
 
 ---
 
-# 15. Runtime Usage（运行方式）
+# 18. Runtime Usage（运行方式）
 
 真实生产时执行顺序：
 
 ```text
 1. Generate Identity Card
-2. Generate Storyboard
-3. Upload Identity Card + Storyboard to video model
-4. Use Universal Video Prompt
-5. Replace [SHOT NUMBER AND NAME]
-6. Generate clip
-7. Review clip
-8. Iterate if needed
+2. Generate Overhead Scene Blocking Map when needed
+3. Generate Storyboard
+4. Upload Identity Card + Storyboard + Blocking Map to video model when applicable
+5. Use Universal Video Prompt
+6. Replace [SHOT NUMBER AND NAME]
+7. Generate clip
+8. Review clip
+9. Iterate if needed
 ```
 
 ---
 
-# 16. Review Checklist（检查清单）
+# 19. Review Checklist（检查清单）
 
 生成 Prompt 后，必须检查：
 
 ```text
 [ ] 是否包含身份卡 Prompt
+[ ] 是否明确 Jump Mode / Custom Subject Mode
 [ ] 是否包含故事板 Prompt
 [ ] 是否包含通用视频 Prompt
 [ ] 模型可复制区域是否没有裸露内部编号
 [ ] 内部编号是否已翻译成自然语言
+[ ] Custom Subject 是否符合 SUBJECT-001 的主体身份卡字段
+[ ] Custom Subject 是否没有误套 Jump 专属规则
+[ ] 文物朋友是否符合 RELIC-001 的来源、材质、纹样和文化身份
+[ ] 是否没有把文物朋友做成现代网红、恐怖鬼魂或欧美怪物
 [ ] 故事板是否使用黑白铅笔线条风格
 [ ] 故事板是否保留彩色动态标注系统
+[ ] 画面参数是否明确、模型可读且符合 VISUALPARAM-001
+[ ] 复杂空间是否需要俯视场景调度图
+[ ] 若使用调度图，Prompt 是否用自然语言引用其站位、动线和摄影机路径
 [ ] 视频 Prompt 是否避免重复 Shot 细节
 [ ] 角色形态规则是否清楚
 [ ] 负面要求是否清楚
@@ -382,7 +535,7 @@ Universal Video Prompt:
 
 ---
 
-# 17. Related Files（相关文件）
+# 20. Related Files（相关文件）
 
 ```text
 docs/studio-os/PROMPT-RUNTIME-RULES.md
@@ -390,13 +543,21 @@ production/PROJ-001/VIDEO-PROMPTS.md
 commands/COMMAND-005.md
 workflows/WORKFLOW-002.md
 agents/prompt-engineer/AGENT-002.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 ```
 
 ---
 
-# 18. Changelog（更新记录）
+# 21. Changelog（更新记录）
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.4 | 2026 | Updated default prompt package command for AI Museum relic-friend series |
+| 2.3 | 2026 | Added SUBJECT-001 generic subject identity support and Custom Subject Mode |
+| 2.2 | 2026 | Added BLOCKING-001 overhead scene blocking map requirements |
+| 2.1 | 2026 | Added VISUALPARAM-001 visual parameter requirements for model-readable prompt packages |
 | 2.0 | 2026 | Updated COMMAND-002 to generate identity card prompt, storyboard prompt and universal video prompt |
 | 1.0 | 2026 | Initial short video prompt command |

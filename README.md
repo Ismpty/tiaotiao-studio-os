@@ -10,6 +10,7 @@ This repository manages:
 
 - Creator Bible
 - Knowledge Base
+- Reference Library
 - Production Database
 - AI Agents
 - Prompt System
@@ -27,6 +28,8 @@ It is not only a document collection. It contains:
 
 ```text
 Knowledge Nodes
++
+Reference Capture
 +
 Production Database Records
 +
@@ -101,7 +104,7 @@ Commands are the main entry points for using TSOS.
 Current commands:
 
 ```text
-COMMAND-001 — Run Jump After Work Production
+COMMAND-001 — Run Little Security Guard Production
 COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
@@ -143,6 +146,8 @@ Run COMMAND-001.
 ```text
 knowledge/
 ↓
+reference/
+↓
 database/
 ↓
 agents/
@@ -162,6 +167,7 @@ Meaning:
 
 ```text
 Knowledge Nodes define rules.
+Reference Capture stores external study material before it becomes a rule.
 Database Records define production entities.
 Agents define creative roles.
 Workflows define execution order.
@@ -178,22 +184,22 @@ Examples show expected outputs.
 Unless otherwise specified, TSOS defaults to:
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 Default core records:
 
 ```text
 CHAR-001 — Jump
-EP-001 — Jump After Work
-STORY-001 — Work Ends, Adventure Begins
-ENV-001 — TiaoTiao Studio Office
+EP-001 — Little Security Guard and His Ancient Friends
+STORY-001 — Museum Night, Relic Friends Wake Up
+ENV-001 — AI Museum Night Gallery
 MOT-001 — Natural Walking
 CAM-001 — Hero Tracking Camera
-LGT-001 — Warm Studio Lighting
-PROMPT-001 — Jump After Work Master Prompt
+LGT-001 — Warm Museum Night Lighting
+PROMPT-001 — Little Security Guard Museum Master Prompt
 ASSET-001 — Jump Character Reference Pack
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 ---
@@ -226,6 +232,7 @@ Any AI tool using TSOS must not:
 change Jump's core identity
 change TiaoTiao Universe worldbuilding
 change Brand Language
+change a confirmed Custom Subject identity card
 skip ASSET-001
 skip Knowledge Nodes
 skip Database Records
@@ -234,6 +241,7 @@ invent unapproved canon
 treat Notion as the source of truth
 use raw internal IDs as model-facing prompt language
 turn Jump into a humanoid, human or unclothed ordinary pet dog
+apply Jump-only dog-form rules to Custom Subject Mode
 ignore black-and-white rough pencil storyboard rules
 ```
 
@@ -265,9 +273,19 @@ tiaotiao-studio-os/
 │   │   └── WORLD-001.md
 │   ├── emotion/
 │   │   └── EMOTION-001.md
+│   ├── subject-identity/
+│   │   └── SUBJECT-001.md
+│   ├── museum-relic-friends/
+│   │   └── RELIC-001.md
+│   ├── visual-parameters/
+│   │   └── VISUALPARAM-001.md
+│   ├── scene-blocking/
+│   │   └── BLOCKING-001.md
 │   ├── camera-language/
 │   │   ├── SHOT-001.md
 │   │   └── SHOT-002.md
+│   ├── transition-language/
+│   │   └── TRANSITION-001.md
 │   ├── motion-language/
 │   │   └── MOTIONLANG-001.md
 │   ├── outfit/
@@ -396,8 +414,11 @@ STYLE-001
 COLOR-001
 WORLD-001
 EMOTION-001
+VISUALPARAM-001
+BLOCKING-001
 SHOT-001
 SHOT-002
+TRANSITION-001
 MOTIONLANG-001
 OUTFIT-001
 MUSIC-001
@@ -476,7 +497,7 @@ Purpose：
 包括：
 
 ```text
-WORKFLOW-001 — Jump After Work Production Workflow
+WORKFLOW-001 — Little Security Guard Production Workflow
 WORKFLOW-002 — Short Video Prompt Workflow
 WORKFLOW-003 — Storyboard to Video Workflow
 WORKFLOW-004 — Publishing Workflow
@@ -544,7 +565,7 @@ Purpose：
 包括：
 
 ```text
-COMMAND-001 — Run Jump After Work Production
+COMMAND-001 — Run Little Security Guard Production
 COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
@@ -629,7 +650,7 @@ docs/studio-os/START-HERE.md
 
 ## For Production（用于生产）
 
-完整生产一条《跳跳下班啦》内容：
+完整生产一条《小保安和他的古人朋友们》内容：
 
 ```text
 Run COMMAND-001.
@@ -639,6 +660,15 @@ Run COMMAND-001.
 
 ```text
 Run COMMAND-002.
+```
+
+生成非 Jump 主体的身份卡、故事板和视频 Prompt：
+
+```text
+Run COMMAND-002 in Custom Subject Mode.
+
+Subject Type:
+Human / Animal / Plant / Object / Scene Subject / Mascot / Other
 ```
 
 生成分镜：
@@ -678,7 +708,7 @@ COMMAND-005 review
 # Current Default Project（当前默认项目）
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 默认核心链路：
@@ -718,6 +748,8 @@ PROJ-001
 | Find workflow usage | workflows/README.md |
 | Find agent usage | agents/README.md |
 | Understand prompt runtime | docs/studio-os/PROMPT-RUNTIME-RULES.md |
+| Generate custom subject identity | knowledge/subject-identity/SUBJECT-001.md |
+| Understand AI Museum relic friends | knowledge/museum-relic-friends/RELIC-001.md |
 | Find database records | database/README.md |
 | Find example outputs | examples/README.md |
 
@@ -743,14 +775,19 @@ GitHub 负责保存所有正式规则、记录、命令、工作流、智能体�
 change Jump's core identity
 change TiaoTiao Universe worldbuilding
 change Brand Language
+change a confirmed Custom Subject identity card
 skip ASSET-001
 skip Knowledge Nodes
 skip Database Records
 skip consistency checks
+ignore transition continuity
+ignore base visual parameters
+ignore scene blocking for complex spatial scenes
 invent unapproved canon
 treat Notion as the source of truth
 use raw internal IDs as model-facing prompt language
 turn Jump into a humanoid, human or unclothed ordinary pet dog
+apply Jump-only dog-form rules to Custom Subject Mode
 ignore black-and-white rough pencil storyboard rules
 ```
 

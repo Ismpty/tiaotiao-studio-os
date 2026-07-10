@@ -12,9 +12,9 @@
 
 Generate Storyboard 是 TiaoTiao Studio OS 的分镜生成命令。
 
-它用于快速调用 `WORKFLOW-001` 中的 Storyboard Planning 阶段，或直接调用 `AGENT-001 — Storyboard Agent`，将 TSOS 中的 Project、Story、Character、Environment、Motion、Camera、Lighting、Asset 和 Knowledge Nodes 转化为可执行的分镜方案。
+它用于快速调用 `WORKFLOW-001` 中的 Storyboard Planning 阶段，或直接调用 `AGENT-001 — Storyboard Agent`，将 TSOS 中的 Project、Story、Subject / Character、Environment、Motion、Camera、Transition、Lighting、Asset 和 Knowledge Nodes 转化为可执行的分镜方案。
 
-这个 Command 不负责重新创造故事设定，也不修改 Jump 角色。
+这个 Command 不负责重新创造故事设定，也不修改已确认的主体身份。Jump Mode 下不得修改 Jump 角色；Custom Subject Mode 下不得修改用户已确认的主体身份卡。
 
 它只负责把已经确认的 TSOS 内容拆解成清晰、稳定、可生产的镜头结构。
 
@@ -37,6 +37,7 @@ It calls the Storyboard Planning stage of WORKFLOW-001 or directly runs AGENT-00
 - 匹配角色、环境、动作、镜头、灯光和资产引用
 - 输出可进入 Prompt / Video / Editing 阶段的分镜方案
 - 保持 Jump 角色一致性
+- 支持人物、动物、植物、物体、产品、场景或新 IP 的自定义主体分镜
 - 保持 TSOS 世界观、品牌和视觉语言一致性
 
 ---
@@ -60,7 +61,7 @@ Output production-ready storyboard.
 中文调用方式：
 
 ```text
-运行 COMMAND-003，为《跳跳下班啦》生成分镜。
+运行 COMMAND-003，为《小保安和他的古人朋友们》生成分镜。
 ```
 
 ---
@@ -70,7 +71,7 @@ Output production-ready storyboard.
 本命令默认调用：
 
 ```text
-WORKFLOW-001 — Jump After Work Production Workflow
+WORKFLOW-001 — Little Security Guard Production Workflow
 ```
 
 只执行其中的：
@@ -96,7 +97,17 @@ AGENT-001 — Storyboard Agent
 本命令默认服务：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
+```
+
+非 Jump 项目或临时主体使用：
+
+```text
+Subject Mode:
+Custom Subject Mode
+
+Subject Identity:
+用户已确认的主体身份卡，按 SUBJECT-001 展开
 ```
 
 ---
@@ -122,12 +133,17 @@ PROJ-001 — Jump After Work Pilot Project
 
 | Category | Knowledge Node |
 |---|---|
+| Subject Identity | SUBJECT-001 |
+| Relic Friends | RELIC-001 |
 | Style | STYLE-001 |
 | Color | COLOR-001 |
 | World | WORLD-001 |
 | Emotion | EMOTION-001 |
+| Visual Parameters | VISUALPARAM-001 |
+| Scene Blocking | BLOCKING-001 |
 | Camera Language | SHOT-001 |
 | Camera Consistency | SHOT-002 |
+| Transition Language | TRANSITION-001 |
 | Motion Language | MOTIONLANG-001 |
 | Outfit | OUTFIT-001 |
 | Music | MUSIC-001 |
@@ -145,7 +161,7 @@ PROJ-001 — Jump After Work Pilot Project
 ↓
 2. Load Story Record
 ↓
-3. Load Character Record
+3. Load Subject Identity / Character Record
 ↓
 4. Load Environment / Motion / Camera / Lighting Records
 ↓
@@ -175,6 +191,12 @@ PROJ-001 — Jump After Work Pilot Project
 ```text
 Target Duration:
 30s / 45s / 60s
+
+Subject Mode:
+Jump Mode / Custom Subject Mode
+
+Subject Type:
+Jump / Human / Animal / Plant / Object / Scene Subject / Mascot / Other
 
 Shot Count:
 4 shots / 6 shots / 8 shots
@@ -221,13 +243,17 @@ Detailed
 - Jump 的核心身份
 - Jump 的角色外观
 - Jump 的默认服装系统
+- 文物朋友的来源文物、材质、纹样、色彩和文化身份
+- Custom Subject 的已确认主体类型
+- Custom Subject 的核心视觉身份
+- Custom Subject 的连续性锁定
 - TiaoTiao Universe 世界观
 - Brand Language
 - Master Knowledge Nodes
 - Database Record ID
 - Frozen Roadmap
 
-如果用户输入与 TSOS Source of Truth 冲突，Command 必须拒绝该修改，并回到现有记录。
+如果用户输入与 TSOS Source of Truth 或已确认的主体身份卡冲突，Command 必须拒绝该修改，并回到现有记录。
 
 ---
 
@@ -240,7 +266,7 @@ Detailed
 2. Story Beat Breakdown
 3. Shot List
 4. Shot Details
-5. Camera / Motion / Lighting Mapping
+5. Camera / Motion / Transition / Lighting Mapping
 6. Prompt Notes
 7. Continuity Checklist
 8. Next Production Actions
@@ -263,7 +289,7 @@ Detailed
 
 ## 4. Shot Details
 
-## 5. Camera / Motion / Lighting Mapping
+## 5. Camera / Motion / Transition / Lighting Mapping
 
 ## 6. Prompt Notes
 
@@ -276,48 +302,42 @@ Detailed
 
 # Story Beat Breakdown Rules（故事节奏拆解规则）
 
-默认引用：
+默认故事节奏：
 
 ```text
-STORYFORMULA-001 — Work Ends, Adventure Begins
-```
-
-标准故事节奏：
-
-```text
-Work
+Museum Closing
 ↓
-Decision
+Jump Patrol
 ↓
-Exploration
+Relic Friend Awakening
 ↓
-Discovery
+Ancient-Modern Misunderstanding
 ↓
-Emotion
+Absurd Escalation
 ↓
-Reflection
+Warm Resolution
 ```
 
 对于 `PROJ-001`，默认映射为：
 
 ```text
-Work:
-Jump finishes coding.
+Museum Closing:
+The AI museum closes and the night gallery becomes quiet.
 
-Decision:
-Jump closes the laptop and decides to leave.
+Jump Patrol:
+Jump, a real dog-form little security guard, patrols the gallery in dog-size museum security clothing.
 
-Exploration:
-Jump packs her backpack and walks through the studio.
+Relic Friend Awakening:
+A Chinese relic, ancient painting figure, artifact, beast motif or mythic object wakes up while retaining its source material and patterns.
 
-Discovery:
-A warm after-work moment begins.
+Ancient-Modern Misunderstanding:
+The relic friend misunderstands a modern museum rule, device, visitor habit or AI system.
 
-Emotion:
-Jump feels free and relaxed.
+Absurd Escalation:
+The misunderstanding becomes a strange, funny, harmless museum incident.
 
-Reflection:
-Life begins again after work.
+Warm Resolution:
+Jump gently solves the incident, and the relic friend becomes a friend instead of a problem.
 ```
 
 ---
@@ -327,12 +347,12 @@ Life begins again after work.
 本命令默认生成 6 个镜头：
 
 ```text
-Shot 1 — Work Ending
-Shot 2 — Decision Moment
-Shot 3 — Packing Up
-Shot 4 — Walking Out
-Shot 5 — Door Exit
-Shot 6 — Warm Ending
+Shot 1 — Museum Closing
+Shot 2 — Little Security Guard Patrol
+Shot 3 — Relic Friend Awakens
+Shot 4 — Ancient-Modern Misunderstanding
+Shot 5 — Absurd Museum Incident
+Shot 6 — Warm Gallery Ending
 ```
 
 ---
@@ -347,11 +367,15 @@ Shot Name:
 Duration:
 Story Function:
 Visual Description:
+Subject Identity:
 Character:
 Environment:
 Camera:
+Visual Parameters:
+Blocking Map:
 Motion:
 Lighting:
+Transition To Next Shot:
 Asset Reference:
 Emotion:
 Prompt Notes:
@@ -383,12 +407,12 @@ Shot 3
 示例：
 
 ```text
-Work Ending
-Decision Moment
-Packing Up
-Walking Out
-Door Exit
-Warm Ending
+Museum Closing
+Little Security Guard Patrol
+Relic Friend Awakens
+Ancient-Modern Misunderstanding
+Absurd Museum Incident
+Warm Gallery Ending
 ```
 
 ---
@@ -414,9 +438,10 @@ Warm Ending
 示例：
 
 ```text
-Establish Jump's workday ending.
-Show Jump making the decision to leave.
-Create emotional transition from work to life.
+Establish the AI museum after closing.
+Show Jump beginning a serious little security guard patrol.
+Reveal the relic friend awakening and misunderstanding the modern museum world.
+Resolve the absurd incident with warmth.
 ```
 
 ---
@@ -437,11 +462,25 @@ Create emotional transition from work to life.
 
 ## Character
 
-必须引用：
+Jump Mode 必须引用：
 
 ```text
 CHAR-001 — Jump
 ASSET-001 — Jump Character Reference Pack
+```
+
+Custom Subject Mode 必须引用用户已确认的主体身份卡，并按 SUBJECT-001 用自然语言写出主体外观、结构、比例、材质、颜色、识别特征、行为方式、连续性锁定和负面约束。
+
+模型可复制区域不能只写：
+
+```text
+use SUBJECT-001
+```
+
+必须写成自然语言，例如：
+
+```text
+主体是一株放在陶土盆里的小型柠檬树，矮壮主干、椭圆深绿叶片、几颗未成熟青绿色小柠檬和一颗黄色成熟柠檬，叶片有轻微蜡质反光，整体比例必须保持盆栽小树而不是森林大树。
 ```
 
 ---
@@ -451,7 +490,7 @@ ASSET-001 — Jump Character Reference Pack
 默认引用：
 
 ```text
-ENV-001 — TiaoTiao Studio Office
+ENV-001 — AI Museum Night Gallery
 ```
 
 ---
@@ -464,6 +503,65 @@ ENV-001 — TiaoTiao Studio Office
 CAM-001 — Hero Tracking Camera
 SHOT-001 — Hero Tracking Shot
 SHOT-002 — Six-View Scene Lock
+```
+
+---
+
+## Visual Parameters
+
+默认引用：
+
+```text
+VISUALPARAM-001 — AIGC Base Visual Parameter Grammar
+```
+
+每个镜头必须说明基础画面参数：
+
+```text
+Format:
+Shot Size:
+Camera Angle / Height:
+Lens:
+Composition:
+Depth of Field:
+Lighting:
+Color / Tone:
+Texture Detail:
+Continuity Locks:
+```
+
+这些参数必须服务分镜，而不是把黑白铅笔故事板变成彩色成片插画。
+
+---
+
+## Blocking Map
+
+默认引用：
+
+```text
+BLOCKING-001 — Overhead Scene Blocking Map
+```
+
+当场景包含多人、复杂走位、追逐、打斗、一镜到底或空间关系容易崩坏时，必须先输出俯视场景调度图。
+
+Blocking Map 必须说明：
+
+```text
+Scene Boundary:
+Entrances / Exits:
+Props / Obstacles:
+Character Starting Positions:
+Movement Paths:
+Camera Start Position:
+Camera Path:
+Shot / Beat Points:
+Continuity Locks:
+```
+
+简单单角色镜头可写：
+
+```text
+No overhead blocking map required.
 ```
 
 ---
@@ -484,7 +582,31 @@ MOTIONLANG-001 — Natural Walking Language
 默认引用：
 
 ```text
-LGT-001 — Warm Studio Lighting
+LGT-001 — Warm Museum Night Lighting
+```
+
+---
+
+## Transition To Next Shot
+
+默认引用：
+
+```text
+TRANSITION-001 — Universal AI Video Transition Grammar
+```
+
+每个镜头必须说明它如何连接到下一个镜头。
+
+若该镜头为最后一个镜头，写：
+
+```text
+End hold / no next transition.
+```
+
+转场描述必须使用模型可读自然语言，不能只写：
+
+```text
+use TRANSITION-001
 ```
 
 ---
@@ -504,61 +626,70 @@ EMOTION-001 — Freedom
 ```text
 Shot 1
 Shot Name:
-Work Ending
+Museum Closing
 
 Duration:
 6 seconds
 
 Story Function:
-Establish that Jump has finished a day of work.
+Establish the AI museum after closing and the start of Jump's night patrol.
 
 Visual Description:
-Jump sits at her desk inside TiaoTiao Studio Office. The computer screen casts a soft warm glow on her fluffy face. Her posture relaxes as the workday comes to an end.
+The AI museum gallery is closed and quiet. Display cases glow softly. Jump, a fluffy real dog-form little security guard wearing a dog-size museum security vest, badge and collar charm, trots into frame with a tiny patrol light.
 
 Character:
 CHAR-001 — Jump
 ASSET-001 — Jump Character Reference Pack
 
 Environment:
-ENV-001 — TiaoTiao Studio Office
+ENV-001 — AI Museum Night Gallery
 
 Camera:
-Medium desk shot, 35mm lens, eye-level camera.
+Medium dog-height tracking shot, 35mm lens, calm museum perspective.
+
+Visual Parameters:
+Vertical 9:16 frame, medium shot, low dog-height eye-level camera, 35mm natural documentary lens, moderate depth of field, warm museum display light, realistic fur, cloth and artifact texture.
+
+Blocking Map:
+No overhead blocking map required for this simple desk shot.
 
 Motion:
-Small relaxed body movement, hands leaving the keyboard.
+Natural four-legged dog walking, tiny patrol light swaying gently.
 
 Lighting:
-LGT-001 — Warm Studio Lighting
+LGT-001 — Warm Museum Night Lighting
+
+Transition To Next Shot:
+Soft display-case glow blooms across the frame and reveals the next artifact.
 
 Emotion:
-Calm, slight relief.
+Calm, curious, slightly serious.
 
 Prompt Notes:
-Warm cinematic documentary realism, realistic programmer workspace, soft screen glow.
+Warm cinematic documentary realism, AI museum night gallery, soft display-case glow, respectful Chinese relic atmosphere.
 
 Negative Notes:
-No cold corporate office, no cyberpunk lighting, no game render.
+No human security guard, no humanoid dog body, no horror museum, no cyberpunk neon, no game render.
 
 Continuity Notes:
-Laptop is still open. Backpack is visible nearby.
+Jump's dog-size security outfit, badge and patrol light remain visible. The museum gallery layout stays consistent.
 ```
 
 ---
 
-# Camera / Motion / Lighting Mapping（镜头动作灯光映射）
+# Camera / Motion / Transition / Lighting Mapping（镜头动作转场灯光映射）
 
 输出必须包含一张映射表：
 
 ```text
-| Shot | Camera | Motion | Lighting | Asset |
-|---|---|---|---|---|
-| Shot 1 | CAM-001 | Desk movement | LGT-001 | ASSET-001 |
-| Shot 2 | CAM-001 | Subtle smile | LGT-001 | ASSET-001 |
-| Shot 3 | Close-up | Object handling | LGT-001 | ASSET-001 |
-| Shot 4 | CAM-001 | MOT-001 | LGT-001 | ASSET-001 |
-| Shot 5 | CAM-001 | MOT-001 | LGT-001 | ASSET-001 |
-| Shot 6 | Static / Slow push | Emotional hold | LGT-001 / Golden hour | ASSET-001 |
+| Shot | Camera | Motion | Transition To Next Shot | Lighting | Asset |
+|---|---|---|---|---|---|
+| Shot 1 | CAM-001 | Museum patrol walk | Display-case glow reveal | LGT-001 | ASSET-001 |
+| Shot 2 | Dog-height tracking | MOT-001 | Patrol light sweep | LGT-001 | ASSET-001 |
+| Shot 3 | Close-up / slow push | Relic activation | Artifact texture match cut | LGT-001 | ASSET-001 + RELIC-001 |
+| Shot 4 | Medium two-subject shot | Misunderstanding action | Object/action bridge | LGT-001 | ASSET-001 + RELIC-001 |
+| Shot 5 | CAM-001 / blocking-aware | Absurd escalation | Motion continuation | LGT-001 | ASSET-001 + RELIC-001 |
+| Shot 6 | Static / Slow push | Warm resolution hold | End hold | LGT-001 | ASSET-001 + RELIC-001 |
 ```
 
 ---
@@ -570,14 +701,23 @@ Laptop is still open. Backpack is visible nearby.
 ```text
 [ ] 每个镜头是否有明确叙事功能
 [ ] 每个镜头是否可以连接到下一镜头
+[ ] 是否明确 Jump Mode / Custom Subject Mode
 [ ] Jump 是否保持真实小狗本体形态
 [ ] Jump 是否保持四足小狗身体结构
 [ ] Jump 是否保持毛茸茸质感
-[ ] Jump 是否穿程序员风格小狗衣服
+[ ] Jump 是否穿小狗尺寸的 AI 博物馆小保安服装或已确认小狗服装
+[ ] 文物朋友是否保留来源文物、材质、纹样、色彩和文化身份
+[ ] 文物朋友是否没有变成现代网红、恐怖鬼魂、廉价吉祥物或欧美奇幻怪物
+[ ] Custom Subject 是否符合已确认主体身份卡
+[ ] Custom Subject 是否没有误套 Jump 的小狗形态、服装、配件或故事比例
 [ ] 内部审查是否参考 ASSET-001
 [ ] 服装是否符合 OUTFIT-001
 [ ] 场景是否符合 ENV-001
+[ ] 基础画面参数是否符合 VISUALPARAM-001
+[ ] 复杂空间是否符合 BLOCKING-001
 [ ] 镜头是否符合 CAM-001 / SHOT-001 / SHOT-002
+[ ] 转场是否符合 TRANSITION-001
+[ ] 每个转场是否有可见载体、锚点和清晰揭示
 [ ] 动作是否符合 MOT-001 / MOTIONLANG-001
 [ ] 灯光是否符合 LGT-001
 [ ] 情绪是否符合 EMOTION-001
@@ -669,11 +809,13 @@ Shot Count:
 - 必须调用 AGENT-001
 - 必须读取 PROJ-001
 - 必须读取 CHAR-001
+- 必须在 Custom Subject Mode 下读取或生成已确认主体身份卡
 - 必须读取 STORY-001
 - 必须读取 ENV-001
 - 必须读取 ASSET-001
 - 必须生成 Shot List
 - 必须生成 Shot Details
+- 必须生成 Transition To Next Shot
 - 必须执行 Continuity Checklist
 - 必须输出下一步动作
 
@@ -682,9 +824,11 @@ Shot Count:
 ## Never Do（禁止）
 
 - 不得重新设计 Jump
+- 不得重新设计已确认的 Custom Subject
 - 不得修改故事核心
 - 不得临时改变世界观
 - 不得省略 ASSET-001
+- 不得在 Custom Subject Mode 中只写 SUBJECT-001 而不展开主体自然语言
 - 不得输出空泛镜头
 - 不得只输出画面灵感
 - 不得跳过一致性检查
@@ -719,12 +863,16 @@ database/projects/PROJ-001.md
 ## Knowledge Nodes
 
 ```text
+knowledge/subject-identity/SUBJECT-001.md
 knowledge/style/STYLE-001.md
 knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/camera-language/SHOT-001.md
 knowledge/camera-language/SHOT-002.md
+knowledge/transition-language/TRANSITION-001.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md
@@ -759,4 +907,8 @@ agents/director/AGENT-001.md
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4 | 2026 | Added SUBJECT-001 custom subject storyboard support |
+| 1.3 | 2026 | Added BLOCKING-001 overhead scene blocking map requirements for complex spatial planning |
+| 1.2 | 2026 | Added VISUALPARAM-001 visual parameter requirements for storyboard planning |
+| 1.1 | 2026 | Added TRANSITION-001 requirements for shot-to-shot transition planning |
 | 1.0 | 2026 | Initial canonical operating command |

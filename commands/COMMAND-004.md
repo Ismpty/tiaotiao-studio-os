@@ -64,7 +64,7 @@ Output platform-ready publishing package.
 中文调用方式：
 
 ```text
-运行 COMMAND-004，为《跳跳下班啦》生成发布包。
+运行 COMMAND-004，为《小保安和他的古人朋友们》生成发布包。
 ```
 
 ---
@@ -94,7 +94,8 @@ AGENT-006 — Publishing Agent
 本命令默认服务：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
+《小保安和他的古人朋友们》
 ```
 
 ---
@@ -121,6 +122,7 @@ PROJ-001 — Jump After Work Pilot Project
 | Music | MUSIC-001 |
 | Style | STYLE-001 |
 | Color | COLOR-001 |
+| Relic Friends | RELIC-001 |
 
 ---
 
@@ -288,29 +290,29 @@ Detailed
 
 适合：
 
-- 生活方式表达
-- 治愈感标题
+- AI 博物馆夜间日常
+- 小保安和文物朋友的系列识别
 - 轻故事正文
 - 高识别封面
-- 温暖陪伴感
+- 无厘头反差和文化错位喜剧
 
 标题方向：
 
 ```text
-下班啦，生活开始啦
-电脑一关，生活上线
-忙了一天，也要好好生活
-跳跳下班啦，今天也认真生活了
+闭馆以后，古人朋友醒了
+小保安今天又遇到大事了
+AI 博物馆夜班也太离谱了
+这件文物说它要当销冠
 ```
 
 正文风格：
 
 ```text
-电脑一关，生活上线。
+AI 博物馆闭馆以后，真正的热闹才开始。
 
-忙了一天，也要把时间还给自己一点点。
+小保安跳跳认真巡逻，古人朋友认真添乱。
 
-今天的跳跳，下班后也认真生活了。
+今晚的展厅，又被它们过成了大型无厘头现场。
 ```
 
 ---
@@ -328,9 +330,9 @@ Detailed
 标题方向：
 
 ```text
-电脑一关，生活上线
-下班啦，生活开始啦
-今天也认真生活了
+闭馆以后，文物开始上班
+小保安和古人朋友的夜班
+AI 博物馆今晚又出事了
 ```
 
 ---
@@ -348,9 +350,9 @@ Detailed
 标题方向：
 
 ```text
-忙了一天，也要好好生活
-下班后的时间，属于自己
-今天也认真生活了
+闭馆以后，朋友们才刚刚上班
+今晚的 AI 博物馆有点热闹
+小保安和古人朋友们
 ```
 
 ---
@@ -367,16 +369,16 @@ Detailed
 Title direction：
 
 ```text
-Jump After Work
-Life Begins After Work
-A Little Adventure After Work
-After Work, Life Begins
+The Little Security Guard and His Ancient Friends
+After Closing, the Relics Wake Up
+AI Museum Night Shift
+Jump's Weird Museum Patrol
 ```
 
 Description direction：
 
 ```text
-Jump finishes work and starts a small everyday adventure.
+Jump, a real dog-form little security guard, patrols an AI museum where Chinese relic friends wake up after closing.
 ```
 
 ---
@@ -393,9 +395,9 @@ Jump finishes work and starts a small everyday adventure.
 Title direction：
 
 ```text
-Life begins after work
-After work, a little adventure
-Jump clocks out
+After closing, the relics wake up
+Jump's weird museum night shift
+The AI museum is not quiet tonight
 ```
 
 ---
@@ -413,7 +415,7 @@ Jump clocks out
 Caption direction：
 
 ```text
-A small reminder to give yourself a little life after work.
+A warm absurd night inside an AI museum, starring Jump and his ancient relic friends.
 ```
 
 ---
@@ -434,20 +436,20 @@ A small reminder to give yourself a little life after work.
 推荐中文标题：
 
 ```text
-下班啦，生活开始啦
-电脑一关，生活上线
-忙了一天，也要好好生活
-下班后的路，也可以是冒险
-今天也认真生活了
+闭馆以后，古人朋友醒了
+小保安今天又遇到大事了
+AI 博物馆夜班也太离谱了
+这件文物说它要当销冠
+闭馆以后，朋友们才刚刚上班
 ```
 
 推荐英文标题：
 
 ```text
-Jump After Work
-Life Begins After Work
-After Work, Life Begins
-A Little Adventure After Work
+The Little Security Guard and His Ancient Friends
+After Closing, the Relics Wake Up
+AI Museum Night Shift
+Jump's Weird Museum Patrol
 ```
 
 禁止标题：
@@ -476,17 +478,18 @@ This Will Shock You
 - 不夸张
 - 不过度解释
 - 保持 Jump 系列气质
+- 尊重中国文物和神话意象，不恐怖化、不廉价吉祥物化
 
 ---
 
 # Caption Template — Chinese（中文正文模板）
 
 ```text
-电脑一关，生活上线。
+AI 博物馆闭馆以后，真正的热闹才开始。
 
-忙了一天，也要把时间还给自己一点点。
+小保安跳跳认真巡逻，古人朋友认真添乱。
 
-今天的跳跳，下班后也认真生活了。
+今晚的展厅，又被它们过成了大型无厘头现场。
 ```
 
 ---
@@ -494,9 +497,9 @@ This Will Shock You
 # Caption Template — English（英文正文模板）
 
 ```text
-Jump finishes work and starts a small everyday adventure.
+Jump is on night patrol at the AI museum.
 
-A gentle reminder that life can begin again after work.
+After closing, the ancient relic friends wake up and turn the gallery into a warm, absurd little adventure.
 ```
 
 ---
@@ -516,12 +519,11 @@ A gentle reminder that life can begin again after work.
 # Chinese Hashtag Set（中文标签组）
 
 ```text
-#跳跳下班啦
-#下班后的生活
-#治愈系短片
+#小保安和他的古人朋友们
+#AI博物馆
+#文物朋友
+#国风AI
 #AI动画
-#生活方式
-#程序员日常
 #原创IP
 ```
 
@@ -530,13 +532,13 @@ A gentle reminder that life can begin again after work.
 # English Hashtag Set（英文标签组）
 
 ```text
-#JumpAfterWork
-#AfterWorkLife
+#LittleSecurityGuard
+#AIMuseum
+#RelicFriends
 #AIAnimation
 #OriginalCharacter
-#SliceOfLife
-#LifestyleAnimation
-#CreativeStudio
+#ChineseRelics
+#AbsurdComedy
 ```
 
 ---
@@ -575,10 +577,10 @@ A gentle reminder that life can begin again after work.
 
 ```text
 主标题：
-下班啦
+闭馆以后
 
 副标题：
-生活开始啦
+朋友们醒了
 ```
 
 ---
@@ -587,10 +589,10 @@ A gentle reminder that life can begin again after work.
 
 ```text
 主标题：
-电脑一关
+小保安
 
 副标题：
-生活上线
+今天又遇到大事了
 ```
 
 ---
@@ -599,10 +601,10 @@ A gentle reminder that life can begin again after work.
 
 ```text
 主标题：
-跳跳下班啦
+AI 博物馆
 
 副标题：
-今天也认真生活了
+今晚不太安静
 ```
 
 ---
@@ -664,6 +666,7 @@ A gentle reminder that life can begin again after work.
 [ ] 是否符合 BRAND-001
 [ ] 是否符合平台发布规范
 [ ] 是否准备好发布后复盘记录
+[ ] 文案是否尊重中国文物，不恐怖化、不廉价吉祥物化
 ```
 
 ---
@@ -725,6 +728,8 @@ Next Iteration:
 [ ] 是否没有虚假承诺
 [ ] 是否符合 BRAND-001
 [ ] 是否保持 Jump 系列温暖气质
+[ ] 是否保持“小保安和他的古人朋友们”的 AI 博物馆系列识别
+[ ] 是否没有把文物朋友写成恐怖鬼魂、现代网红或欧美奇幻怪物
 [ ] 是否适合目标平台
 [ ] 是否支持发布后复盘
 ```
@@ -763,7 +768,7 @@ Platform-ready publishing package for 小红书.
 用户输入：
 
 ```text
-运行 COMMAND-004，给《跳跳下班啦》生成 YouTube Shorts 发布包。
+运行 COMMAND-004，给《小保安和他的古人朋友们》生成 YouTube Shorts 发布包。
 ```
 
 系统应执行：

@@ -1,7 +1,9 @@
-# STORY-001 — Work Ends, Adventure Begins（下班，就是冒险的开始）
+# STORY-001 — Museum Night, Relic Friends Wake Up（闭馆以后，古人朋友醒来了）
 
-> Canonical Story Record（官方故事记录）  
-> Version：1.1  
+> Canonical Story Record（官方故事记录）
+>
+> Version：2.0
+>
 > Status：Approved
 
 ---
@@ -12,11 +14,11 @@
 
 ### 中文
 
-跳跳结束一天工作后，决定给自己一个新的小冒险。
+AI 博物馆闭馆后，小保安跳跳巡逻展厅，却遇见一个被 AI 系统激活的中国文物朋友，并被卷入一场奇葩无厘头的古今误会。
 
 ### English
 
-After finishing work, Jump chooses to start a new little adventure.
+After the AI Museum closes, Jump patrols as the little security guard and meets a Chinese relic friend awakened by the museum system, leading to an absurd warm misunderstanding between ancient logic and modern rules.
 
 ---
 
@@ -25,12 +27,16 @@ After finishing work, Jump chooses to start a new little adventure.
 | Category 分类 | Knowledge Node 知识节点 |
 |---|---|
 | Character 角色 | CHAR-001 — Jump |
-| Episode 剧集 | EP-001 — Jump After Work |
+| Episode 剧集 | EP-001 — Little Security Guard and His Ancient Friends |
+| Subject Identity 主体身份 | SUBJECT-001 — Generic Subject Identity Card Grammar |
+| Relic Friends 文物朋友 | RELIC-001 — AI Museum Relic Friends Grammar |
 | World 世界观 | WORLD-001 — TiaoTiao Universe |
 | Style 视觉风格 | STYLE-001 — Cinematic Documentary |
 | Emotion 情绪 | EMOTION-001 — Freedom |
-| Story Formula 故事公式 | STORYFORMULA-001 — Work Ends, Adventure Begins |
-| Camera 镜头语言 | SHOT-001 — Hero Tracking Shot |
+| Visual Parameters 画面参数 | VISUALPARAM-001 — AIGC Base Visual Parameter Grammar |
+| Scene Blocking 场景调度 | BLOCKING-001 — Overhead Scene Blocking Map |
+| Camera 镜头语言 | SHOT-001 / SHOT-002 |
+| Transition 转场语言 | TRANSITION-001 — Universal AI Video Transition Grammar |
 | Music 音乐语言 | MUSIC-001 — Lifestyle Music Language |
 | Brand 品牌语言 | BRAND-001 — TiaoTiao Studio Brand Language |
 
@@ -38,9 +44,9 @@ After finishing work, Jump chooses to start a new little adventure.
 
 # Theme（主题）
 
-自由并不是逃离工作。
+文物不是沉默的展品。
 
-而是认真工作之后，依然认真生活。
+当它们被 AI 博物馆唤醒，历史就会用很认真、很离谱、很可爱的方式和现代生活打招呼。
 
 ---
 
@@ -48,61 +54,71 @@ After finishing work, Jump chooses to start a new little adventure.
 
 ## Beginning（开始）
 
-跳跳关闭电脑。
+AI 博物馆闭馆。
 
-收拾背包。
+夜间值班灯亮起。
 
-结束一天工作。
+跳跳穿着小保安制服，保持真实小狗本体形态，开始认真巡逻。
 
 ---
 
 ## Development（发展）
 
-她开始今天的新计划：
+一个文物朋友被激活：
 
-- 可能是冲浪
-- 可能是露营
-- 可能只是去公园散步
-- 可能是去咖啡馆坐一会儿
+- 古画女仙从绢本里走出来
+- 青铜器自称今天展厅“销冠”
+- 陶俑坚持要排队打卡
+- 瓷瓶认为自己应该站 C 位
+- 神兽纹样从展柜边缘跑出来巡场
+- 古籍书卷误以为 Wi-Fi 是天书
 
-重点不是目的地，而是她重新进入生活。
+重点不是硬科普，而是文物朋友用古代逻辑误解现代博物馆。
 
 ---
 
 ## Climax（高潮）
 
-遇见一个意外的小惊喜。
+误会升级成一个奇葩事件。
 
 例如：
 
-- 夕阳
-- 小动物
-- 陌生人的善意
-- 一阵风
-- 一家安静的小店
-- 一次成功的小尝试
+- 文物朋友抢占主展位
+- 古画人物投诉展柜灯光“不够仙”
+- 青铜器把扫码讲解当成封官仪式
+- 神兽把扫地机器人当成入侵妖怪
+- 女仙坚持带瑞兽进入员工通道
+- 跳跳认真开罚单，但因为爪子太小按不动机器
 
 ---
 
 ## Ending（结尾）
 
-一句轻松的话：
+跳跳用认真、善意和小狗式笨拙解决问题。
 
-> 下班啦，生活开始啦。
+古人朋友理解了一点现代规则，跳跳也理解了一点文物的骄傲。
+
+结尾保留轻松温暖的一句：
+
+```text
+闭馆以后，朋友们才刚刚上班。
+```
 
 ---
 
 # Emotional Journey（情绪曲线）
 
-疲惫  
-↓  
-期待  
-↓  
-兴奋  
-↓  
-治愈  
-↓  
-满足
+认真值班
+↓
+疑惑
+↓
+震惊
+↓
+手忙脚乱
+↓
+无厘头爆笑
+↓
+温暖和解
 
 ---
 
@@ -110,14 +126,18 @@ After finishing work, Jump chooses to start a new little adventure.
 
 推荐镜头：
 
-- SHOT-001 — Hero Tracking Shot
-- Wide Shot
-- Close-up Smile
-- Sunset Ending
+- Museum Closing Wide Shot
+- Low Dog-height Patrol Shot
+- Relic Activation Close-up
+- Reaction Shot between Jump and Relic Friend
+- Overhead Blocking Map for multi-character museum chaos
+- Warm Ending Hold
 
 推荐音乐：
 
-- MUSIC-001 — Lifestyle Music Language
+- `MUSIC-001 — Lifestyle Music Language`
+
+可加入轻微古风乐器、博物馆夜间环境声和喜剧停顿。
 
 ---
 
@@ -132,15 +152,25 @@ CHAR-001
 +
 EP-001
 +
+ENV-001
++
+SUBJECT-001
++
+RELIC-001
++
 WORLD-001
 +
 STYLE-001
 +
 EMOTION-001
 +
-STORYFORMULA-001
+VISUALPARAM-001
 +
-SHOT-001
+BLOCKING-001
++
+SHOT-001 / SHOT-002
++
+TRANSITION-001
 +
 MUSIC-001
 +
@@ -166,5 +196,6 @@ BRAND-001
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | 2026 | Initial canonical story record |
+| 2.0 | 2026 | Pivoted story to AI Museum relic-friend comedy structure |
 | 1.1 | 2026 | Updated to reference Knowledge Layer |
+| 1.0 | 2026 | Initial Work Ends, Adventure Begins story record |

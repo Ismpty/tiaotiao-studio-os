@@ -16,10 +16,10 @@ Do not treat Notion as the canonical source.
 
 ## Current Main Project
 
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 
 Chinese title:
-《跳跳下班啦》
+《小保安和他的古人朋友们》
 
 ## Core Character Rule
 
@@ -29,7 +29,7 @@ Required:
 - real dog body form
 - four-legged dog anatomy
 - fluffy fur
-- programmer-style dog clothing
+- dog-size AI Museum little security guard clothing or approved dog clothing
 - small backpack / badge / collar charm allowed
 - dragon-fruit pink accent details allowed
 
@@ -107,25 +107,25 @@ Even though the storyboard body is black-and-white pencil sketch, dynamic annota
 - Green: lighting / mood
 - Purple: continuity / transition
 
-## Default Story Rule for Jump After Work
+## Default Story Rule for Little Security Guard
 
-The series should not spend most of the time showing only the act of leaving work.
+The series should not spend most of the time showing only empty museum shots or static relic displays.
 
-Default ratio:
+Default structure:
 
-- Office / clock-out part: 10%–20%
-- After-work life montage: 80%–90%
+- Museum closing / Jump patrol: 10%–20%
+- Relic friend awakening and misunderstanding: 50%–60%
+- Absurd escalation and warm resolution: 20%–30%
 
-After-work life examples:
-- dinner
-- supermarket
-- movie night
-- street snack
-- night walk
-- going home
-- bath
-- bedtime relaxation
-- weekend outdoor life
+AI Museum daily examples:
+- closing-time patrol
+- relic friend awakens
+- ancient painting figure walks out of a display
+- bronze vessel claims it is the sales champion of the gallery
+- porcelain object complains about lighting
+- mythic beast mistakes a robot vacuum for a demon
+- ancient book asks for Wi-Fi
+- Jump seriously handles a museum incident
 
 ## Current Completed Updates
 

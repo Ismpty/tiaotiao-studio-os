@@ -59,11 +59,12 @@ AI 工具进入仓库后，建议按以下顺序读取：
 12. docs/studio-os/AGENTS.md
 13. docs/studio-os/PROMPT-RUNTIME-RULES.md
 14. knowledge/README.md
-15. database/
-16. commands/
-17. workflows/
-18. agents/
-19. examples/
+15. reference/README.md
+16. database/
+17. commands/
+18. workflows/
+19. agents/
+20. examples/
 ```
 
 ---
@@ -74,6 +75,7 @@ TSOS 当前由以下系统层组成：
 
 ```text
 knowledge/
+reference/
 database/
 agents/
 workflows/
@@ -107,6 +109,8 @@ Knowledge Layer 定义长期稳定的创作规则。
 ```text
 这个世界是什么？
 角色视觉风格是什么？
+基础画面参数是什么？
+复杂场景如何调度？
 品牌语言是什么？
 镜头语言是什么？
 动作语言是什么？
@@ -121,8 +125,13 @@ knowledge/style/STYLE-001.md
 knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/camera-language/SHOT-001.md
 knowledge/camera-language/SHOT-002.md
+knowledge/transition-language/TRANSITION-001.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md
@@ -139,7 +148,11 @@ knowledge/brand-language/BRAND-001.md
 品牌语言
 世界观
 角色情绪
+主体身份卡
+基础画面参数
+场景调度
 镜头语言
+转场语言
 动作语言
 服装系统
 音乐方向
@@ -152,7 +165,47 @@ Knowledge Nodes 不应被临时修改。
 
 ---
 
-# 2. Production Database（生产数据库）
+# 2. Reference Library（参考素材库）
+
+## Path
+
+```text
+reference/
+```
+
+## Purpose
+
+Reference Library 记录外部素材、创作者研究和平台案例。
+
+它回答：
+
+```text
+这个外部案例来自哪里？
+我们实际采集到了什么？
+哪些镜头、视角、转场、动作或风格值得提炼？
+哪些内容还没有被验证？
+```
+
+## Core Files
+
+```text
+reference/README.md
+reference/creators/README.md
+reference/creators/DLHU827-CAMERA-STUDY.md
+reference/creators/MOLU-TRANSITION-STUDY.md
+reference/creators/CYBER-AZHI-VISUAL-PARAMETER-STUDY.md
+reference/creators/YIFAN-OVERHEAD-BLOCKING-STUDY.md
+```
+
+## Rule
+
+Reference 不是最终规则层。
+
+只有经过来源复核、模型可读转写和 TSOS 兼容检查后，才能晋升到 `knowledge/`。
+
+---
+
+# 3. Production Database（生产数据库）
 
 ## Path
 
@@ -214,7 +267,7 @@ Database Records 应引用 Knowledge Nodes，不应重复制造新规则。
 
 ---
 
-# 3. Agents（智能体层）
+# 4. Agents（智能体层）
 
 ## Path
 
@@ -269,7 +322,7 @@ Agents 只能执行任务，不能修改 Source of Truth。
 
 ---
 
-# 4. Workflows（工作流层）
+# 5. Workflows（工作流层）
 
 ## Path
 
@@ -303,7 +356,7 @@ workflows/WORKFLOW-004.md
 
 | Workflow | Purpose | Path |
 |---|---|---|
-| WORKFLOW-001 | Jump After Work Production Workflow | workflows/WORKFLOW-001.md |
+| WORKFLOW-001 | Little Security Guard Production Workflow | workflows/WORKFLOW-001.md |
 | WORKFLOW-002 | Short Video Prompt Workflow | workflows/WORKFLOW-002.md |
 | WORKFLOW-003 | Storyboard to Video Workflow | workflows/WORKFLOW-003.md |
 | WORKFLOW-004 | Publishing Workflow | workflows/WORKFLOW-004.md |
@@ -318,7 +371,7 @@ Workflow 决定执行顺序，不覆盖 Knowledge 或 Database。
 
 ---
 
-# 5. Commands（命令层）
+# 6. Commands（命令层）
 
 ## Path
 
@@ -350,7 +403,7 @@ commands/COMMAND-005.md
 
 | Command | Purpose | Path |
 |---|---|---|
-| COMMAND-001 | Run Jump After Work Production | commands/COMMAND-001.md |
+| COMMAND-001 | Run Little Security Guard Production | commands/COMMAND-001.md |
 | COMMAND-002 | Generate Video Prompt Package | commands/COMMAND-002.md |
 | COMMAND-003 | Generate Storyboard | commands/COMMAND-003.md |
 | COMMAND-004 | Generate Publishing Package | commands/COMMAND-004.md |
@@ -366,7 +419,7 @@ Commands 是入口，不是自由发挥提示词。
 
 ---
 
-# 6. Runtime Docs（运行文档层）
+# 7. Runtime Docs（运行文档层）
 
 ## Path
 
@@ -406,7 +459,7 @@ docs/studio-os/AGENTS.md
 
 ---
 
-# 7. Examples（示例层）
+# 8. Examples（示例层）
 
 ## Path
 
@@ -446,6 +499,8 @@ examples/COMMAND-003-storyboard.md
 |---|---|---|
 | 完整生产一条视频 | COMMAND-001 | WORKFLOW-001 + all agents |
 | 生成视频 Prompt Package | COMMAND-002 | WORKFLOW-002 + AGENT-002 |
+| 生成 AI 博物馆文物朋友视频 | COMMAND-002 | RELIC-001 + WORKFLOW-002 + COMMAND-005 |
+| 生成非 Jump 主体身份卡 / 故事板 / Prompt | COMMAND-002 | SUBJECT-001 + WORKFLOW-002 + COMMAND-005 |
 | 生成分镜 | COMMAND-003 | AGENT-001 + WORKFLOW-001 |
 | 分镜转视频 | WORKFLOW-003 | AGENT-002 + AGENT-003 |
 | 生成发布包 | COMMAND-004 | WORKFLOW-004 + AGENT-006 |
@@ -485,7 +540,7 @@ knowledge/brand-language/BRAND-001.md
 当前默认项目为：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 默认读取：
@@ -511,9 +566,14 @@ agents/prompt-engineer/AGENT-002.md
 database/prompts/PROMPT-001.md
 database/characters/CHAR-001.md
 database/assets/ASSET-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
 knowledge/style/STYLE-001.md
 knowledge/color/COLOR-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/brand-language/BRAND-001.md
+knowledge/transition-language/TRANSITION-001.md
 ```
 
 ---
@@ -532,8 +592,13 @@ database/environments/ENV-001.md
 database/cameras/CAM-001.md
 database/lighting/LGT-001.md
 database/assets/ASSET-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
 knowledge/story-formula/STORYFORMULA-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/brand-language/BRAND-001.md
+knowledge/transition-language/TRANSITION-001.md
 ```
 
 ---
@@ -562,12 +627,17 @@ commands/COMMAND-005.md
 database/characters/CHAR-001.md
 database/assets/ASSET-001.md
 database/projects/PROJ-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
 knowledge/style/STYLE-001.md
 knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/brand-language/BRAND-001.md
+knowledge/transition-language/TRANSITION-001.md
 ```
 
 ---

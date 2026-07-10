@@ -56,7 +56,7 @@ Commands 负责启动正确的执行流程。
 # Current Commands（当前命令）
 
 ```text
-COMMAND-001 — Run Jump After Work Production
+COMMAND-001 — Run Little Security Guard Production
 COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
@@ -69,7 +69,7 @@ COMMAND-005 — Run Consistency Check
 
 | Command | Name | File | Primary Use |
 |---|---|---|---|
-| COMMAND-001 | Run Jump After Work Production | COMMAND-001.md | 启动完整生产流程 |
+| COMMAND-001 | Run Little Security Guard Production | COMMAND-001.md | 启动完整生产流程 |
 | COMMAND-002 | Generate Video Prompt Package | COMMAND-002.md | 生成身份卡 / 故事板 / 通用视频 Prompt |
 | COMMAND-003 | Generate Storyboard | COMMAND-003.md | 生成分镜 |
 | COMMAND-004 | Generate Publishing Package | COMMAND-004.md | 生成发布包 |
@@ -77,7 +77,7 @@ COMMAND-005 — Run Consistency Check
 
 ---
 
-# COMMAND-001 — Run Jump After Work Production
+# COMMAND-001 — Run Little Security Guard Production
 
 ## File
 
@@ -87,7 +87,7 @@ commands/COMMAND-001.md
 
 ## Use When（使用场景）
 
-当用户需要完整生产一条《跳跳下班啦》内容时使用。
+当用户需要完整生产一条《小保安和他的古人朋友们》内容时使用。
 
 示例：
 
@@ -96,11 +96,11 @@ Run COMMAND-001.
 ```
 
 ```text
-运行 COMMAND-001，启动《跳跳下班啦》完整生产流程。
+运行 COMMAND-001，启动《小保安和他的古人朋友们》完整生产流程。
 ```
 
 ```text
-做一条完整的跳跳下班啦视频，从分镜到发布包。
+做一条完整的小保安和古人朋友视频，从分镜到发布包。
 ```
 
 ## Calls（调用）
@@ -151,6 +151,10 @@ Run COMMAND-002.
 
 ```text
 运行 COMMAND-002，生成身份卡 + 故事板 + 通用视频 Prompt。
+```
+
+```text
+运行 COMMAND-002 in Custom Subject Mode，为人物、动物、植物、产品或场景主体生成身份卡 + 故事板 + 通用视频 Prompt。
 ```
 
 ```text
@@ -328,6 +332,7 @@ Run COMMAND-005.
 ```text
 Checks all relevant Database Records
 Checks all relevant Knowledge Nodes
+Checks Subject Mode and Custom Subject identity cards when applicable
 Checks Agent / Workflow / Command compliance
 ```
 
@@ -335,7 +340,8 @@ Checks Agent / Workflow / Command compliance
 
 ```text
 Consistency Summary
-Character Consistency Check
+Subject Mode Check
+Subject / Character Consistency Check
 World Consistency Check
 Visual Style Check
 Color Check

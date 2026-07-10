@@ -40,7 +40,12 @@ Production databases should reference these knowledge nodes instead of duplicati
 | Color | Brand color system | ✅ |
 | World | World building | ✅ |
 | Emotion | Emotional framework | ✅ |
+| Subject Identity | Generic identity card grammar | ✅ |
+| Museum Relic Friends | AI Museum relic-friend character grammar | ✅ |
+| Visual Parameters | AIGC base image / video parameter grammar | ✅ |
+| Scene Blocking | Overhead scene blocking and spatial choreography | ✅ |
 | Camera Language | Cinematic shot language | ✅ |
+| Transition Language | Reusable video transition grammar | ✅ |
 | Motion Language | Motion principles | ✅ |
 | Outfit | Character outfit system | ✅ |
 | Music | Music language | ✅ |
@@ -67,10 +72,30 @@ Production databases should reference these knowledge nodes instead of duplicati
 
 - EMOTION-001 — Freedom
 
+## Subject Identity
+
+- SUBJECT-001 — Generic Subject Identity Card Grammar
+
+## Museum Relic Friends
+
+- RELIC-001 — AI Museum Relic Friends Grammar
+
+## Visual Parameters
+
+- VISUALPARAM-001 — AIGC Base Visual Parameter Grammar
+
+## Scene Blocking
+
+- BLOCKING-001 — Overhead Scene Blocking Map
+
 ## Camera Language
 
 - SHOT-001 — Hero Tracking Shot
 - SHOT-002 — Six-View Scene Lock
+
+## Transition Language
+
+- TRANSITION-001 — Universal AI Video Transition Grammar
 
 ## Motion Language
 
@@ -146,9 +171,19 @@ WORLD-001
 
 EMOTION-001
 
+SUBJECT-001
+
+RELIC-001
+
+VISUALPARAM-001
+
+BLOCKING-001
+
 SHOT-001
 
 SHOT-002
+
+TRANSITION-001
 
 MOTIONLANG-001
 
@@ -166,4 +201,9 @@ BRAND-001
 
 | Version | Date | Changes |
 |---------|------|----------|
+| 1.5 | 2026 | Added RELIC-001 AI Museum Relic Friends Grammar |
+| 1.4 | 2026 | Added SUBJECT-001 Generic Subject Identity Card Grammar |
+| 1.3 | 2026 | Added BLOCKING-001 Overhead Scene Blocking Map |
+| 1.2 | 2026 | Added VISUALPARAM-001 AIGC Base Visual Parameter Grammar |
+| 1.1 | 2026 | Added TRANSITION-001 Universal AI Video Transition Grammar |
 | 1.0 | 2026 | Initial Knowledge Index |

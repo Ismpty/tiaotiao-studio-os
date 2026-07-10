@@ -1,5 +1,180 @@
 # CHANGELOG
 
+## 2026 — AI Museum Relic Friends Series Pivot
+
+### Added
+
+- Added `knowledge/museum-relic-friends/RELIC-001.md` — AI Museum Relic Friends Grammar.
+- Added `reference/creators/AI-MUSEUM-RELIC-COMEDY-STUDY.md` to record the user-provided Douyin direction for the new series concept.
+
+### Changed
+
+- Pivoted `PROJ-001`, `EP-001`, `STORY-001`, `ENV-001` and `PROMPT-001` from the previous after-work pilot into `Little Security Guard and His Ancient Friends（小保安和他的古人朋友们）`.
+- Updated Jump's active series role to a real dog-form AI Museum little security guard wearing dog-size security clothing or another confirmed dog outfit.
+- Updated the default story engine to: Museum Closing → Jump Patrol → Relic Friend Awakening → Ancient-Modern Misunderstanding → Absurd Escalation → Warm Resolution.
+- Updated COMMAND-001/002/003/004/005 and WORKFLOW-001/002/003/004 so production, storyboard, prompt runtime, review and publishing flows all recognize AI Museum relic friends.
+- Updated `ASSET-001`, `LGT-001`, core docs and handoff docs for the AI Museum night gallery setting and relic-friend identity checks.
+
+### Rule
+
+Jump remains a real dog-form character wearing clothes. Relic friends must preserve their Chinese artifact, painting, material, pattern and cultural identity, and model-facing prompts must expand internal IDs into natural language.
+
+## 2026 — Generic Subject Identity Update
+
+### Added
+
+- Added `knowledge/subject-identity/SUBJECT-001.md` — Generic Subject Identity Card Grammar.
+- Added `Custom Subject Mode` for humans, animals, plants, objects, products, scene subjects, mascots and new IP characters.
+- Added a reusable identity card field system covering subject type, core visual identity, structure, proportion, material, color, distinctive features, behavior, environment relationship, continuity locks and negative constraints.
+
+### Changed
+
+- Updated `COMMAND-002` to generate prompt packages for both `Jump Mode` and `Custom Subject Mode`.
+- Updated `COMMAND-003` so storyboard generation can read an approved custom subject identity card.
+- Updated `COMMAND-005` with `Subject Mode Check` and custom subject consistency checks.
+- Updated `WORKFLOW-002` to include subject mode selection before Identity Card Prompt, Storyboard Prompt and Universal Video Prompt generation.
+- Updated `README.md`, `docs/studio-os/INDEX.md`, `docs/studio-os/RUNTIME.md`, `docs/studio-os/START-HERE.md`, `knowledge/README.md` and `CODEX-HANDOFF.md` to recognize `SUBJECT-001`.
+
+### Rule
+
+Jump remains a real dog-form character wearing clothes. Custom subjects must not inherit Jump-only dog-form rules unless explicitly requested.
+
+## 2026 — Scene Blocking Grammar Update
+
+### Added
+
+- Added `knowledge/scene-blocking/BLOCKING-001.md` — Overhead Scene Blocking Map.
+- Added a reusable top-down spatial planning system for:
+  - multi-person dialogue
+  - complex walking paths
+  - chase scenes
+  - action / fight blocking
+  - one-take camera movement
+  - camera switching
+  - left-right / front-back / distance continuity
+- Added `reference/creators/YIFAN-OVERHEAD-BLOCKING-STUDY.md` for the user-provided Douyin video reference attributed to `一帆老师`.
+
+### Changed
+
+- Updated `COMMAND-002` so video prompt packages can reference an uploaded overhead scene blocking map when spatial complexity requires it.
+- Updated `COMMAND-003` so storyboard shot details can carry a Blocking Map section.
+- Updated `COMMAND-005` with a dedicated `Scene Blocking Check`.
+- Updated `README.md`, `docs/studio-os/INDEX.md`, `docs/studio-os/RUNTIME.md`, `docs/studio-os/START-HERE.md`, `knowledge/README.md`, `reference/README.md`, `reference/creators/README.md` and `CODEX-HANDOFF.md` to recognize `BLOCKING-001`.
+
+### Source
+
+Adapted into TSOS from a user-provided Douyin video reference about AI overhead scene blocking maps:
+
+```text
+https://v.douyin.com/uE5U0gh3o8s/
+https://www.douyin.com/video/7658676046082909425
+```
+
+The Douyin share page returned an anti-crawler script during capture, so TSOS does not claim full transcription of the original video.
+
+## 2026 — Visual Parameter Grammar Update
+
+### Added
+
+- Added `knowledge/visual-parameters/VISUALPARAM-001.md` — AIGC Base Visual Parameter Grammar.
+- Added a reusable visual parameter block for:
+  - format / canvas
+  - shot size
+  - camera angle / height
+  - lens / focal length
+  - composition
+  - depth of field
+  - lighting
+  - color / tone
+  - texture / detail
+  - motion / temporal parameters
+  - continuity parameters
+  - negative constraints
+- Added `reference/creators/CYBER-AZHI-VISUAL-PARAMETER-STUDY.md` for the user-provided Douyin note by `赛博阿智pro`.
+
+### Changed
+
+- Updated `COMMAND-002` so video prompt packages must include model-readable visual parameters.
+- Updated `COMMAND-003` so storyboard shot details can carry a Visual Parameters block.
+- Updated `COMMAND-005` with a dedicated `Visual Parameter Check`.
+- Updated `README.md`, `docs/studio-os/INDEX.md`, `docs/studio-os/RUNTIME.md`, `docs/studio-os/START-HERE.md`, `knowledge/README.md`, `reference/README.md`, `reference/creators/README.md` and `CODEX-HANDOFF.md` to recognize `VISUALPARAM-001`.
+
+### Source
+
+Adapted into TSOS from a user-provided Douyin note reference by `赛博阿智pro` about AIGC basic visual parameters:
+
+```text
+https://v.douyin.com/L5OdepTLrX4/
+https://www.douyin.com/note/7657167225338987919
+```
+
+The Douyin share page returned an anti-crawler script during capture, so TSOS does not claim full transcription of the original note.
+
+## 2026 — Transition Language Expansion Update
+
+### Added
+
+- Added `knowledge/transition-language/TRANSITION-001.md` — Universal AI Video Transition Grammar.
+- Added eight reusable transition families:
+  - light / shadow transitions
+  - action occlusion transitions
+  - camera movement transitions
+  - natural material transitions
+  - emotional flashback transitions
+  - time passage transitions
+  - spatial crossing transitions
+  - classical editing transitions
+- Added `reference/creators/MOLU-TRANSITION-STUDY.md` for the user-provided Douyin note by `末鹿`.
+
+### Changed
+
+- Updated `COMMAND-003` so storyboard outputs include `Transition To Next Shot`.
+- Updated `COMMAND-005` with a dedicated `Transition Check`.
+- Updated `README.md`, `docs/studio-os/INDEX.md`, `docs/studio-os/RUNTIME.md`, `docs/studio-os/START-HERE.md`, `knowledge/README.md`, `reference/README.md`, `reference/creators/README.md` and `CODEX-HANDOFF.md` to recognize `TRANSITION-001`.
+
+### Source
+
+Adapted into TSOS from a Douyin note by `末鹿` about AI video transition prompts:
+
+```text
+https://v.douyin.com/ogjaLe3sFsY/
+https://www.douyin.com/note/7657192620547935498
+```
+
+Source metadata and image URI fingerprints are recorded in:
+
+```text
+reference/creators/MOLU-TRANSITION-STUDY.md
+```
+
+Image-level OCR of all source slides remains pending, so TSOS does not claim full transcription of the original 100 prompts.
+
+## 2026 — Creator Reference Intake Update
+
+### Added
+
+- Added `reference/README.md` as the source-capture layer for external creative references.
+- Added `reference/creators/README.md` for creator research studies.
+- Added `reference/creators/DLHU827-CAMERA-STUDY.md` as the DLHU827 Douyin camera / view language study intake file.
+
+### Changed
+
+- Updated `README.md`, `docs/studio-os/INDEX.md` and `CODEX-HANDOFF.md` to recognize `reference/` as the staging layer before external patterns can become canonical `knowledge/` rules.
+
+### Source Status
+
+Public search and Douyin page attempts did not expose a complete post index for `DLHU827`.
+
+The user later provided the Douyin collection link:
+
+```text
+https://v.douyin.com/Vtb6L7Mw1Mw/
+```
+
+This resolves to Mix ID `7643424899830122534` for `ai学习日记提示词分享持续更新中`.
+
+The DLHU827 file now records the collection metadata and all 36 episode item IDs, while keeping per-item visual / caption extraction marked as pending.
+
 ## 2026 — Camera Language Expansion Update
 
 ### Added

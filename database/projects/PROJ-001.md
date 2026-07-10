@@ -1,8 +1,10 @@
-# PROJ-001 — Jump After Work Pilot Project（跳跳下班啦试播项目）
+# PROJ-001 — Little Security Guard and His Ancient Friends（小保安和他的古人朋友们）
 
-> Canonical Project Record（官方项目记录）  
-> Version：1.0  
-> Status：Storyboard
+> Canonical Project Record（官方项目记录）
+>
+> Version：2.0
+>
+> Status：Concept Pivot / System Upgrade
 
 ---
 
@@ -10,15 +12,27 @@
 
 ## 中文
 
-Jump After Work Pilot Project 是《跳跳下班啦》系列的第一个正式试播项目。
+《小保安和他的古人朋友们》是 TiaoTiao Studio OS 的新主项目方向。
 
-它的目标不是一次性做出完整系列，而是验证 TSOS Phase 3 中已经建立的数据库记录是否能够真正组合成可生产的短视频项目。
+小保安是 Jump / 跳跳。跳跳仍然必须保持真实小狗本体形态并穿衣服，只是她在新系列中的日常身份从“下班后的程序员小狗”转为“AI 博物馆里的小保安”。
+
+古人朋友是中国文物、古画人物、器物、神兽纹样和历史图像在 AI 博物馆中被激活后的朋友们。
+
+系列核心是：
+
+```text
+一只认真值班的小狗保安
++
+一群从中国文物里活过来的古人朋友
++
+AI 博物馆里的奇葩无厘头日常
+```
 
 ## English
 
-Jump After Work Pilot Project is the first official pilot project for the Jump After Work series.
+Little Security Guard and His Ancient Friends is the new main project direction for TiaoTiao Studio OS.
 
-Its purpose is to validate whether the Phase 3 production database records can work together as a real short-video production package.
+Jump remains a real dog-form character wearing clothes, now working as a small security guard in an AI Museum. The ancient friends are Chinese relics, painting figures, artifacts, mythic motifs and historical images activated into living characters.
 
 ---
 
@@ -26,13 +40,13 @@ Its purpose is to validate whether the Phase 3 production database records can w
 
 本项目用于验证：
 
-- Jump 角色一致性
-- 下班叙事公式是否成立
-- 办公室环境是否可复用
-- 自然行走动作是否稳定
-- 主角跟拍镜头是否适合系列化
-- 温暖工作室灯光是否符合品牌气质
-- PROMPT-001 是否能作为主提示词长期复用
+- Jump 作为“小保安”的角色一致性
+- 中国文物朋友的身份卡、故事板和视频 Prompt 是否可复用
+- AI 博物馆环境是否能支撑系列化无厘头短剧
+- 文物激活、文化错位和现代安保规则之间的喜剧机制是否成立
+- Jump 的真实小狗形态规则是否能在新职业身份下保持稳定
+- `RELIC-001` 是否能作为文物朋友的长期规则节点
+- Prompt Runtime 是否能支持多主体、多文物、多场景的短视频生产
 
 ---
 
@@ -55,12 +69,16 @@ Its purpose is to validate whether the Phase 3 production database records can w
 
 | Category 分类 | Knowledge Node 知识节点 |
 |---|---|
+| Subject Identity 主体身份 | SUBJECT-001 — Generic Subject Identity Card Grammar |
+| Relic Friends 文物朋友 | RELIC-001 — AI Museum Relic Friends Grammar |
 | Style 视觉风格 | STYLE-001 — Cinematic Documentary |
 | Color 配色 | COLOR-001 — Fire Dragon Fruit Palette |
 | World 世界观 | WORLD-001 — TiaoTiao Universe |
 | Emotion 情绪 | EMOTION-001 — Freedom |
-| Story Formula 故事公式 | STORYFORMULA-001 — Work Ends, Adventure Begins |
-| Camera Language 镜头语言 | SHOT-001 — Hero Tracking Shot |
+| Visual Parameters 画面参数 | VISUALPARAM-001 — AIGC Base Visual Parameter Grammar |
+| Scene Blocking 场景调度 | BLOCKING-001 — Overhead Scene Blocking Map |
+| Camera Language 镜头语言 | SHOT-001 / SHOT-002 |
+| Transition Language 转场语言 | TRANSITION-001 — Universal AI Video Transition Grammar |
 | Motion Language 动作语言 | MOTIONLANG-001 — Natural Walking Language |
 | Outfit 服装 | OUTFIT-001 — Programmer Outfit System |
 | Music 音乐语言 | MUSIC-001 — Lifestyle Music Language |
@@ -72,115 +90,100 @@ Its purpose is to validate whether the Phase 3 production database records can w
 
 ## Type（类型）
 
-Short Video
+Short Video / AI Museum Comedy Series
 
 ## Duration（时长）
 
 推荐：
 
-`30–60 seconds`
+```text
+20–60 seconds
+```
 
 ## Platform（平台）
 
 适用于：
 
-- YouTube Shorts
-- TikTok
-- 小红书
 - 抖音
+- 小红书
 - 视频号
+- TikTok
+- YouTube Shorts
 - Instagram Reels
 
 ---
 
-# Core Story（核心故事）
+# Core Story Engine（核心故事引擎）
 
 ## 中文
 
-跳跳结束一天工作，关掉电脑，收拾背包，从温暖的工作室里走出。
+AI 博物馆闭馆后，跳跳作为小保安认真巡逻。
 
-她没有做什么惊天动地的大事，只是决定给自己一个小小的下班冒险。
+某件中国文物、古画人物、器物或神兽纹样突然被 AI 展厅系统激活，变成跳跳的“古人朋友”。
 
-最后画面落在一句轻松温暖的话：
+古人朋友带着古代逻辑误解现代博物馆规则，引发奇葩无厘头事件。
 
-> 下班啦，生活开始啦。
+跳跳用小狗式认真、善意和一点点笨拙解决问题，最后留下一个轻松、温暖、带一点文化趣味的结尾。
 
-## English
+## Default Episode Flow（默认单集结构）
 
-Jump finishes work, closes her computer, packs her bag and leaves the warm studio.
+```text
+1. Museum Night Trigger
+   AI 博物馆闭馆，展厅系统启动。
 
-Instead of doing something dramatic, she simply chooses a small after-work adventure.
+2. Jump Patrol
+   小保安跳跳开始巡逻。
 
-The ending lands on a warm message: life begins again after work.
+3. Relic Awakening
+   一位古人朋友从文物、古画或展柜中被激活。
+
+4. Absurd Misunderstanding
+   古人朋友误解现代规则，制造奇葩事件。
+
+5. Security Guard Response
+   跳跳认真处理，但因为她是小狗，处理方式可爱又无厘头。
+
+6. Warm Resolution
+   事件被温柔解决，文物朋友和跳跳建立关系。
+```
 
 ---
 
 # Standard Shot Plan（标准镜头规划）
 
-## Shot 1 — Work Ending
+## Shot 1 — Museum Closing
 
-Jump finishes coding at her desk.
-
-References:
-
-- CHAR-001
-- ENV-001
-- LGT-001
+AI 博物馆闭馆，灯光从日间展览切换到夜间值班模式。
 
 ---
 
-## Shot 2 — Decision Moment
+## Shot 2 — Little Security Guard Patrol
 
-Jump looks at the window, smiles slightly, and decides to leave.
-
-References:
-
-- EMOTION-001
-- STORYFORMULA-001
+跳跳穿小保安制服，以真实小狗形态巡逻展厅。
 
 ---
 
-## Shot 3 — Packing Up
+## Shot 3 — Relic Activation
 
-Close-up of keyboard, laptop closing, backpack, coffee cup and desk lamp.
-
-References:
-
-- ENV-001
-- LGT-001
+某件文物、古画人物、器物或神兽纹样被 AI 展厅系统激活。
 
 ---
 
-## Shot 4 — Walking Out
+## Shot 4 — Absurd Cultural Misunderstanding
 
-Jump walks naturally through the studio space.
-
-References:
-
-- MOT-001
-- CAM-001
+古人朋友用古代逻辑误解现代展厅、游客规则、安保流程或 AI 设备。
 
 ---
 
-## Shot 5 — Door Exit
+## Shot 5 — Jump Handles the Incident
 
-Hero tracking camera follows Jump leaving the office.
-
-References:
-
-- CAM-001
-- SHOT-001
+跳跳认真执行小保安职责，和古人朋友产生无厘头互动。
 
 ---
 
-## Shot 6 — Warm Ending
+## Shot 6 — Warm Museum Ending
 
-A gentle ending frame with the feeling that life begins after work.
-
-References:
-
-- MUSIC-001
-- BRAND-001
+问题被解决，古人朋友回到展柜或继续和跳跳成为朋友。
 
 ---
 
@@ -188,13 +191,13 @@ References:
 
 必须保持：
 
-- Jump 是保持真实小狗本体形态、穿程序员风格小狗衣服的角色
-- 画面真实温暖
-- 动作自然
-- 镜头有陪伴感
-- 办公室不能冰冷压抑
-- 故事简单但有情绪转折
-- 结尾要温暖轻松
+- Jump 是真实小狗本体形态，穿衣服，不能变成人
+- Jump 的新职业身份是 AI 博物馆小保安
+- 古人朋友必须来自中国文物、古画、器物或神话纹样
+- 喜剧来自文化错位和规则误解，不是贬低文物
+- AI 博物馆要真实、温暖、带一点智能系统感，不能变成赛博朋克夜店
+- 每集要有明确的文物朋友身份卡
+- 模型可复制 Prompt 不能裸露内部 ID
 
 ---
 
@@ -202,7 +205,9 @@ References:
 
 默认使用：
 
-`PROMPT-001 — Jump After Work Master Prompt`
+```text
+PROMPT-001 — Little Security Guard Museum Master Prompt
+```
 
 工作流：
 
@@ -219,11 +224,11 @@ STORY-001
 +
 ENV-001
 +
-MOT-001
+SUBJECT-001
 +
-CAM-001
+RELIC-001
 +
-LGT-001
+VISUALPARAM-001 / BLOCKING-001 / SHOT-002 / TRANSITION-001
 ```
 
 ---
@@ -232,41 +237,13 @@ LGT-001
 
 本项目成功的标准：
 
-- Jump 角色识别稳定
-- 办公室环境可复用
-- 下班情绪清晰
-- 镜头语言统一
-- 灯光风格统一
-- 可拆分为系列模板
-- 可继续发展为 EP-002、STORY-002、PROJ-002
-
----
-
-# Never Do（禁止项）
-
-禁止：
-
-- 把项目做成职场抱怨
-- 把 Jump 改成真人
-- 使用恐怖或赛博朋克风格
-- 使用强营销文案
-- 让画面变成普通游戏动画
-- 忽略 TSOS 数据库引用
-- 临时更改核心世界观
-
----
-
-# Usage Scope（应用范围）
-
-适用于：
-
-- Short Video Production
-- Storyboard
-- Prompt Test
-- AI Video Generation
-- Cover Design
-- Series Pilot
-- Workflow Validation
+- Jump 的小保安身份稳定
+- Jump 仍是穿衣服的真实小狗，不变成人
+- 古人朋友有清晰文物来源和视觉连续性
+- AI 博物馆环境可复用
+- 每集都有清楚的无厘头文化错位笑点
+- 文物表达尊重、好玩、不低俗
+- Prompt Runtime 能稳定生成身份卡、故事板和逐镜头视频 Prompt
 
 ---
 
@@ -274,4 +251,5 @@ LGT-001
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.0 | 2026 | Initial canonical project record |
+| 2.0 | 2026 | Pivoted PROJ-001 to Little Security Guard and His Ancient Friends |
+| 1.0 | 2026 | Initial Jump After Work pilot project |

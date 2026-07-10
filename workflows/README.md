@@ -57,7 +57,7 @@ Agents 负责执行具体创作职责。
 # Current Workflows（当前工作流）
 
 ```text
-WORKFLOW-001 — Jump After Work Production Workflow
+WORKFLOW-001 — Little Security Guard Production Workflow
 WORKFLOW-002 — Short Video Prompt Workflow
 WORKFLOW-003 — Storyboard to Video Workflow
 WORKFLOW-004 — Publishing Workflow
@@ -69,14 +69,14 @@ WORKFLOW-004 — Publishing Workflow
 
 | Workflow | Name | File | Primary Use |
 |---|---|---|---|
-| WORKFLOW-001 | Jump After Work Production Workflow | WORKFLOW-001.md | 完整生产流程 |
+| WORKFLOW-001 | Little Security Guard Production Workflow | WORKFLOW-001.md | 完整生产流程 |
 | WORKFLOW-002 | Short Video Prompt Workflow | WORKFLOW-002.md | 视频 Prompt Package 生成 |
 | WORKFLOW-003 | Storyboard to Video Workflow | WORKFLOW-003.md | 分镜转视频生成包 |
 | WORKFLOW-004 | Publishing Workflow | WORKFLOW-004.md | 发布包生成 |
 
 ---
 
-# WORKFLOW-001 — Jump After Work Production Workflow
+# WORKFLOW-001 — Little Security Guard Production Workflow
 
 ## File
 
@@ -86,7 +86,7 @@ workflows/WORKFLOW-001.md
 
 ## 中文说明
 
-WORKFLOW-001 是《跳跳下班啦》的完整生产工作流。
+WORKFLOW-001 是《小保安和他的古人朋友们》的完整生产工作流。
 
 它用于把 TSOS 中已经建立的 Knowledge Nodes、Database Records 和 AI Agents 串联起来，形成一套可重复执行的短视频生产流程。
 
@@ -95,7 +95,7 @@ WORKFLOW-001 是《跳跳下班啦》的完整生产工作流。
 当用户需要：
 
 ```text
-完整做一条《跳跳下班啦》
+完整做一条《小保安和他的古人朋友们》
 从项目到分镜、Prompt、脚本、剪辑、发布全部生成
 启动完整生产流程
 生成完整生产包

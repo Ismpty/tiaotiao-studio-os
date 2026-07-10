@@ -17,7 +17,7 @@
 | Chinese Name 中文名 | 跳跳                         |
 | Species 物种       | Real dog-form character（真实小狗本体角色） |
 | Gender 性别        | Female（女）                  |
-| Occupation 职业    | Programmer（程序员）            |
+| Occupation 职业    | AI Museum Little Security Guard / Programmer Origin（AI 博物馆小保安 / 程序员出身） |
 | Role 角色定位        | Main Character（主角）         |
 | Universe 世界观     | WORLD-001                  |
 | Status 状态        | Active                     |
@@ -49,15 +49,15 @@ Jump 默认引用以下官方 Knowledge Nodes：
 
 Jump（跳跳）是 TiaoTiao Studio 的核心角色，也是整个 TiaoTiao Universe 的第一位主角。
 
-她是一只热爱编程、生活、旅行、冲浪和探索世界的小狗。
+在当前主系列《小保安和他的古人朋友们》中，她是一只穿衣服的真实小狗，在 AI 博物馆里担任认真值班的小保安。
 
-她代表的不是超级英雄，而是一个认真工作、认真生活、下班后依然愿意去探索世界的普通创作者。
+她代表的不是超级英雄，而是一个认真、善良、好奇、偶尔笨拙的小狗保安。她会认真执行博物馆规则，也会和被 AI 激活的中国文物朋友们发生奇葩无厘头的温暖日常。
 
 ## English
 
 Jump is the flagship character of TiaoTiao Studio and the first protagonist of the TiaoTiao Universe.
 
-She represents a creative lifestyle built around work, growth, curiosity and freedom.
+In the current main series, Jump works as a little security guard in the AI Museum while remaining a real dog-form character wearing clothes.
 
 ---
 
@@ -71,6 +71,8 @@ She represents a creative lifestyle built around work, growth, curiosity and fre
 * 行动力强 Action-oriented
 * 热爱创造 Creative
 * 喜欢探索 Exploratory
+* 小保安式认真 Serious little security guard energy
+* 面对文物朋友时有一点笨拙但善良 Slightly clumsy but kind with relic friends
 
 ---
 
@@ -96,7 +98,8 @@ Jump 必须保持：
 * 四足小狗身体结构 four-legged dog anatomy
 * 小狗比例 dog proportions
 * 毛茸茸 fluffy fur
-* 程序员风格小狗衣服 programmer-style dog clothes
+* 小狗尺寸的 AI 博物馆小保安服装 dog-size AI Museum little security guard outfit
+* 工牌、小帽子、巡逻配件或已确认小狗服装 badge, tiny cap, patrol accessory or approved dog outfit
 * 友善表情 friendly expression
 * 小包 / 工牌 / 项圈挂饰等可选配件 optional small backpack, badge or collar charm
 * 火龙果粉品牌识别元素 Fire Dragon Fruit Pink brand accent
@@ -111,8 +114,9 @@ Jump 必须保持：
 * 保持真实小狗本体形态
 * 保持四足小狗身体结构
 * 保持小狗比例
-* 保持穿程序员风格小狗衣服
-* 保持程序员身份
+* 保持穿小狗尺寸的 AI 博物馆小保安服装或已确认小狗服装
+* 可以穿 AI 博物馆小保安制服、工牌、小帽子或巡逻配件
+* 保持程序员出身和小保安当前身份
 * 保持火龙果粉视觉识别
 * 保持真实毛发质感
 * 保持温暖、积极、自由的角色气质
@@ -131,7 +135,8 @@ Jump 必须保持：
 * 不要变成无衣服普通宠物狗
 * 不要改成暗黑、恐怖或暴力风格
 * 不要去掉毛茸茸质感
-* 不要改变核心身份：穿衣服的程序员小狗角色
+* 不要改变核心身份：穿衣服的真实小狗角色
+* 不要把小保安身份改成人类保安
 
 ---
 
@@ -182,3 +187,4 @@ MOTIONLANG-001
 | 1.0     | 2026 | Initial canonical character record   |
 | 1.1     | 2026 | Updated to reference Knowledge Layer |
 | 2.0     | 2026 | Updated Jump to real dog-form character wearing clothes |
+| 2.1     | 2026 | Added AI Museum little security guard role |

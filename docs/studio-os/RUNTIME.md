@@ -117,6 +117,15 @@ database/assets/ASSET-001.md
 knowledge/brand-language/BRAND-001.md
 ```
 
+如果任务涉及非 Jump 的人物、动物、植物、物体、产品、场景或新 IP 主体，还必须读取：
+
+```text
+knowledge/subject-identity/SUBJECT-001.md
+commands/COMMAND-002.md
+workflows/WORKFLOW-002.md
+commands/COMMAND-005.md
+```
+
 ---
 
 # Core System Layers（核心系统层）
@@ -154,8 +163,12 @@ STYLE-001
 COLOR-001
 WORLD-001
 EMOTION-001
+SUBJECT-001
+VISUALPARAM-001
+BLOCKING-001
 SHOT-001
 SHOT-002
+TRANSITION-001
 MOTIONLANG-001
 OUTFIT-001
 MUSIC-001
@@ -248,7 +261,7 @@ workflows/
 当前 Workflows：
 
 ```text
-WORKFLOW-001 — Jump After Work Production Workflow
+WORKFLOW-001 — Little Security Guard Production Workflow
 WORKFLOW-002 — Short Video Prompt Workflow
 WORKFLOW-003 — Storyboard to Video Workflow
 WORKFLOW-004 — Publishing Workflow
@@ -275,7 +288,7 @@ commands/
 当前 Commands：
 
 ```text
-COMMAND-001 — Run Jump After Work Production
+COMMAND-001 — Run Little Security Guard Production
 COMMAND-002 — Generate Video Prompt Package
 COMMAND-003 — Generate Storyboard
 COMMAND-004 — Generate Publishing Package
@@ -301,6 +314,10 @@ Run COMMAND-001.
 ```
 
 ```text
+运行 COMMAND-002 in Custom Subject Mode，为新人物、动物、植物、产品或场景主体生成身份卡 + 故事板 + 通用视频 Prompt。
+```
+
+```text
 运行 COMMAND-003，生成 45 秒竖屏分镜。
 ```
 
@@ -320,8 +337,10 @@ AI 工具必须根据用户意图选择正确 Command。
 
 | User Intent 用户意图 | Command |
 |---|---|
-| 完整生产一条《跳跳下班啦》视频 | COMMAND-001 |
+| 完整生产一条《小保安和他的古人朋友们》视频 | COMMAND-001 |
 | 生成图片 / 视频 Prompt | COMMAND-002 |
+| 生成 AI 博物馆文物朋友视频 Prompt | COMMAND-002 + RELIC-001 |
+| 生成非 Jump 主体身份卡 / 故事板 / Prompt | COMMAND-002 + SUBJECT-001 |
 | 生成分镜 | COMMAND-003 |
 | 生成发布标题、正文、标签 | COMMAND-004 |
 | 检查是否符合设定 | COMMAND-005 |
@@ -358,7 +377,7 @@ AI 工具必须根据用户意图选择正确 Command。
 除非用户明确指定其他项目，默认项目为：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 默认角色为：
@@ -370,13 +389,13 @@ CHAR-001 — Jump
 默认剧集为：
 
 ```text
-EP-001 — Jump After Work
+EP-001 — Little Security Guard and His Ancient Friends
 ```
 
 默认故事为：
 
 ```text
-STORY-001 — Work Ends, Adventure Begins
+STORY-001 — Museum Night, Relic Friends Wake Up
 ```
 
 ---
@@ -426,7 +445,7 @@ BRAND-001
 改成肌肉型角色
 改成黑暗恐怖角色
 改成赛博朋克角色
-去掉程序员身份
+把 Jump 改成人类保安或没有衣服的普通宠物狗
 ```
 
 ---
@@ -685,4 +704,5 @@ Consistency Check
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.1 | 2026 | Added SUBJECT-001 and Custom Subject Mode runtime routing |
 | 1.0 | 2026 | Initial runtime guide |

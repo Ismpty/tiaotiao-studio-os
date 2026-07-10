@@ -18,6 +18,8 @@ Programmer Outfit 是 Jump 的默认身份服装，也是 TiaoTiao Studio 最具
 
 它代表的是一种现代创作者、程序员和数字工作者的生活方式，而不是传统意义上的职业制服。
 
+从《小保安和他的古人朋友们》开始，Jump 可以使用 AI Museum Little Security Guard Variant。该变体必须仍然是小狗可穿的服装，不得让 Jump 变成人类保安。
+
 ## English
 
 The Programmer Outfit is Jump's default appearance and the signature costume of TiaoTiao Studio.
@@ -210,6 +212,43 @@ Creative Worker
 
 Comfortable Clothing
 
+AI Museum Little Security Guard
+
+Small security vest
+
+Tiny patrol badge
+
+Dog-size security cap
+
+Museum patrol outfit
+
+---
+
+# AI Museum Security Guard Variant（AI 博物馆小保安变体）
+
+用于《小保安和他的古人朋友们》。
+
+允许：
+
+```text
+小狗尺寸的保安背心
+小狗尺寸的保安帽
+工牌 / 巡逻牌
+小型对讲机或巡逻灯
+反光条但不要太现代刺眼
+深蓝、暖灰、米白和少量火龙果粉点缀
+```
+
+必须保持：
+
+```text
+真实小狗本体形态
+四足小狗身体结构
+服装贴合小狗身体
+不出现人类手臂、人类手掌或人类双腿
+不变成人类保安制服 cosplay
+```
+
 ---
 
 # Forbidden Rules（禁止）
@@ -227,6 +266,12 @@ Comfortable Clothing
 过度朋克。
 
 复杂时装。
+
+把 Jump 变成人类保安。
+
+人类警服比例。
+
+人类制服肩宽和人类袖管。
 
 ---
 
@@ -262,4 +307,5 @@ Animation
 
 | Version | Date | Changes |
 |---------|------|----------|
+| 1.1 | 2026 | Added AI Museum little security guard outfit variant |
 | 1.0 | 2026 | Initial Canonical Knowledge |

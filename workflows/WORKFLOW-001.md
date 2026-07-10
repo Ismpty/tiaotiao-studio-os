@@ -1,4 +1,4 @@
-# WORKFLOW-001 — Jump After Work Production Workflow（跳跳下班啦生产工作流）
+# WORKFLOW-001 — Little Security Guard Production Workflow（小保安和他的古人朋友们生产工作流）
 
 > Canonical Workflow Template（官方工作流模板）  
 > Version：1.0  
@@ -10,7 +10,7 @@
 
 ## 中文
 
-Jump After Work Production Workflow 是 TiaoTiao Studio OS 的第一个完整生产工作流模板。
+Little Security Guard Production Workflow 是 TiaoTiao Studio OS 的默认完整生产工作流模板。
 
 它用于把 TSOS 中已经建立的 Knowledge Nodes、Database Records 和 AI Agents 串联起来，形成一套可重复执行的短视频生产流程。
 
@@ -22,7 +22,7 @@ Jump After Work Production Workflow 是 TiaoTiao Studio OS 的第一个完整生
 
 ## English
 
-Jump After Work Production Workflow is the first complete production workflow template in TiaoTiao Studio OS.
+Little Security Guard Production Workflow is the default complete production workflow template in TiaoTiao Studio OS.
 
 It connects Knowledge Nodes, Database Records and AI Agents into a repeatable short-video production process.
 
@@ -34,9 +34,9 @@ It does not create new canon, modify characters or change brand direction.
 
 本工作流的目标是：
 
-- 让《跳跳下班啦》系列可以稳定生产
+- 让《小保安和他的古人朋友们》系列可以稳定生产
 - 让每次创作都引用同一套 TSOS 记录
-- 避免每次重新解释角色、风格、镜头、灯光和品牌语言
+- 避免每次重新解释 Jump 小保安、文物朋友、AI 博物馆、风格、镜头、灯光和品牌语言
 - 让 AI Agents 按固定顺序协作
 - 让内容从创意进入可执行生产流程
 - 让 GitHub 成为工作流的唯一事实来源
@@ -48,7 +48,7 @@ It does not create new canon, modify characters or change brand direction.
 本 Workflow 默认服务：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
 ```
 
 ---
@@ -58,9 +58,9 @@ PROJ-001 — Jump After Work Pilot Project
 | Database | Record | Purpose |
 |---|---|---|
 | Character DB | CHAR-001 | Jump 角色身份 |
-| Episode DB | EP-001 | 跳跳下班啦剧集设定 |
-| Story DB | STORY-001 | 下班冒险故事 |
-| Environment DB | ENV-001 | 跳跳工作室办公室 |
+| Episode DB | EP-001 | 小保安和他的古人朋友们剧集设定 |
+| Story DB | STORY-001 | AI 博物馆闭馆后文物朋友苏醒故事 |
+| Environment DB | ENV-001 | AI 博物馆夜间展厅 |
 | Motion DB | MOT-001 | 自然行走动作 |
 | Camera DB | CAM-001 | 主角跟拍镜头 |
 | Lighting DB | LGT-001 | 温暖工作室灯光 |
@@ -78,7 +78,13 @@ PROJ-001 — Jump After Work Pilot Project
 | Color | COLOR-001 |
 | World | WORLD-001 |
 | Emotion | EMOTION-001 |
+| Subject Identity | SUBJECT-001 |
+| Relic Friends | RELIC-001 |
+| Visual Parameters | VISUALPARAM-001 |
+| Scene Blocking | BLOCKING-001 |
 | Camera Language | SHOT-001 |
+| Camera Consistency | SHOT-002 |
+| Transition Language | TRANSITION-001 |
 | Motion Language | MOTIONLANG-001 |
 | Outfit | OUTFIT-001 |
 | Music | MUSIC-001 |
@@ -136,6 +142,8 @@ CHAR-001
 EP-001
 STORY-001
 ASSET-001
+SUBJECT-001
+RELIC-001
 ```
 
 ## Task（任务）
@@ -143,6 +151,7 @@ ASSET-001
 确认本次项目的：
 
 - 主角
+- 文物朋友
 - 剧集
 - 故事
 - 情绪
@@ -164,6 +173,8 @@ Project Brief
 [ ] 是否使用 EP-001
 [ ] 是否使用 STORY-001
 [ ] 是否使用 ASSET-001
+[ ] 是否使用 SUBJECT-001
+[ ] 是否使用 RELIC-001
 [ ] 是否没有新增未确认设定
 ```
 
@@ -192,6 +203,12 @@ MOT-001
 CAM-001
 LGT-001
 ASSET-001
+SUBJECT-001
+RELIC-001
+VISUALPARAM-001
+BLOCKING-001
+SHOT-002
+TRANSITION-001
 ```
 
 ## Task（任务）
@@ -203,6 +220,7 @@ ASSET-001
 - 每个镜头的叙事功能
 - 每个镜头的画面描述
 - 每个镜头使用的角色、环境、动作、镜头、灯光和资产引用
+- 每个镜头的文物朋友身份、来源、材质、纹样和行为规则
 
 ## Output（输出）
 
@@ -215,8 +233,10 @@ Storyboard Output
 ```text
 [ ] 每个镜头是否有故事功能
 [ ] Jump 是否保持角色一致
+[ ] Jump 是否保持真实小狗小保安身份
+[ ] 文物朋友是否符合 RELIC-001
 [ ] 是否引用 ASSET-001
-[ ] 是否符合 STORYFORMULA-001
+[ ] 是否符合 STORY-001 / RELIC-001
 [ ] 是否符合 BRAND-001
 ```
 
@@ -245,6 +265,12 @@ LGT-001
 ASSET-001
 STYLE-001
 COLOR-001
+SUBJECT-001
+RELIC-001
+VISUALPARAM-001
+BLOCKING-001
+SHOT-002
+TRANSITION-001
 BRAND-001
 ```
 
@@ -268,8 +294,11 @@ Prompt Package Output
 
 ```text
 [ ] 是否保持 Jump 是真实小狗本体形态
-[ ] 是否保持 Jump 穿程序员风格小狗衣服
+[ ] 是否保持 Jump 穿 AI 博物馆小保安服装或小狗服装
+[ ] 是否保持 Jump 是小保安而不是人类保安
 [ ] 是否保留毛茸茸质感
+[ ] 是否包含文物朋友身份卡
+[ ] 文物朋友是否符合 RELIC-001
 [ ] 内部审查是否引用 ASSET-001
 [ ] 模型可复制 Prompt 是否没有裸露内部 ID
 [ ] 是否禁止赛博朋克、恐怖、游戏感
@@ -353,6 +382,7 @@ CHAR-001
 Storyboard Output
 Cinematography Output
 STORYFORMULA-001
+RELIC-001
 BRAND-001
 EMOTION-001
 MUSIC-001
@@ -378,10 +408,10 @@ Script Output
 ## Required Check（必须检查）
 
 ```text
-[ ] 文案是否温暖真实
-[ ] 是否避免职场焦虑
+[ ] 文案是否温暖、奇葩、无厘头但尊重文物
+[ ] 是否避免职场焦虑、恐怖化和硬科普说教
 [ ] 是否符合 BRAND-001
-[ ] 是否符合 STORYFORMULA-001
+[ ] 是否符合 RELIC-001
 [ ] 是否适合短视频节奏
 ```
 
@@ -516,11 +546,14 @@ Publishing Output
 ```text
 [ ] Jump 身份是否一致
 [ ] Jump 外观是否参考 ASSET-001
+[ ] Jump 是否保持 AI 博物馆小保安身份
+[ ] 文物朋友是否有明确来源、材质、纹样和文化身份
+[ ] 文物朋友是否符合 RELIC-001
 [ ] 世界观是否符合 WORLD-001
 [ ] 风格是否符合 STYLE-001
 [ ] 色彩是否符合 COLOR-001
 [ ] 情绪是否符合 EMOTION-001
-[ ] 故事是否符合 STORYFORMULA-001
+[ ] 故事是否符合 STORY-001 / RELIC-001
 [ ] 镜头是否符合 SHOT-001 / CAM-001
 [ ] 动作是否符合 MOTIONLANG-001 / MOT-001
 [ ] 灯光是否符合 LGT-001
@@ -571,6 +604,12 @@ CAM-001
 LGT-001
 PROMPT-001
 ASSET-001
+SUBJECT-001
+RELIC-001
+VISUALPARAM-001
+BLOCKING-001
+SHOT-002
+TRANSITION-001
 
 Use Agents:
 AGENT-001
@@ -594,6 +633,7 @@ Complete production package.
 - 必须读取现有 TSOS 记录
 - 必须保持 GitHub 为 Source of Truth
 - 必须保留角色一致性
+- 必须保留文物朋友来源和文化身份
 - 必须保留品牌一致性
 - 必须输出可执行内容
 - 必须完成最终一致性检查
@@ -605,6 +645,8 @@ Complete production package.
 - 不得跳过 Database Records
 - 不得跳过 Knowledge Nodes
 - 不得临时修改 Jump 人设
+- 不得把 Jump 改成人类保安
+- 不得把文物朋友做成现代网红、恐怖鬼魂或欧美怪物
 - 不得临时新增世界观
 - 不得改变品牌语言
 - 不得为了效率省略一致性检查
@@ -636,7 +678,13 @@ knowledge/style/STYLE-001.md
 knowledge/color/COLOR-001.md
 knowledge/world/WORLD-001.md
 knowledge/emotion/EMOTION-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 knowledge/camera-language/SHOT-001.md
+knowledge/camera-language/SHOT-002.md
+knowledge/transition-language/TRANSITION-001.md
 knowledge/motion-language/MOTIONLANG-001.md
 knowledge/outfit/OUTFIT-001.md
 knowledge/music/MUSIC-001.md
@@ -661,7 +709,8 @@ agents/publisher/AGENT-006.md
 
 适用于：
 
-- Jump After Work short video production
+- Little Security Guard and His Ancient Friends short video production
+- AI Museum relic-friend comedy production
 - AI video generation workflow
 - Storyboard production
 - Prompt production
@@ -678,4 +727,5 @@ agents/publisher/AGENT-006.md
 
 | Version | Date | Changes |
 |---|---|---|
+| 2.0 | 2026 | Pivoted workflow to AI Museum little security guard and relic-friend comedy production |
 | 1.0 | 2026 | Initial canonical workflow template |

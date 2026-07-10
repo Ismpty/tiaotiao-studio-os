@@ -45,6 +45,8 @@ Notion 只作为可视化管理层，不作为最终事实来源。
 ```text
 CHAR-001
 ASSET-001
+SUBJECT-001
+RELIC-001
 STYLE-001
 BRAND-001
 ENV-001
@@ -81,15 +83,17 @@ follow CHAR-001
 use STYLE-001
 match BRAND-001
 based on ENV-001
+use SUBJECT-001
+use RELIC-001
 ```
 
 原因：
 
 ```text
-模型不知道 ASSET-001 / CHAR-001 / STYLE-001 代表什么。
+模型不知道 SUBJECT-001 / RELIC-001 / ASSET-001 / CHAR-001 / STYLE-001 代表什么。
 ```
 
-如果这些内部编号没有展开成自然语言，模型无法理解角色、风格、场景和品牌规则。
+如果这些内部编号没有展开成自然语言，模型无法理解主体、角色、风格、场景和品牌规则。
 
 ---
 
@@ -109,7 +113,7 @@ ASSET-001 — Jump Character Reference Pack
 模型可读描述：
 
 ```text
-跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿程序员风格小狗衣服，可以背小包、戴工牌或项圈挂饰，有少量火龙果粉色点缀。她必须保持真实小狗身体结构，禁止半人身体、人类手掌、人类手臂、人类双腿站立。
+跳跳是一只保持真实小狗本体形态的毛茸茸小狗，穿小狗尺寸的 AI 博物馆小保安服装，可以背小包、戴工牌、项圈挂饰或小型巡逻配件，有少量火龙果粉色点缀。她必须保持真实小狗身体结构，禁止半人身体、人类手掌、人类手臂、人类双腿站立、人类身体比例和人类保安形象。文物朋友必须保留中国文物、古画、器物或神话纹样来源，不能变成现代网红、恐怖鬼魂、廉价吉祥物或欧美奇幻怪物。
 ```
 
 ---
@@ -167,7 +171,7 @@ Universal Video Prompt
 这三层分别承担不同职责：
 
 ```text
-Identity Card = 角色外观
+Identity Card = 主体外观 / 结构 / 连续性
 Storyboard = 镜头细节
 Universal Video Prompt = 模型执行规则
 ```
@@ -176,7 +180,7 @@ Universal Video Prompt = 模型执行规则
 
 # 8. Identity Card Prompt Rule（身份卡提示词规则）
 
-身份卡用于锁定角色外观。
+身份卡用于锁定主体外观、结构和连续性。
 
 身份卡 Prompt 必须说明：
 
@@ -294,12 +298,12 @@ Universal Video Prompt = 模型执行规则
 正确结构：
 
 ```text
-请严格参考上传的角色身份卡和故事板生成视频。
+请严格参考上传的主体身份卡和故事板生成视频。
 
 本次只生成故事板中的：
 [SHOT NUMBER AND NAME]
 
-角色外观以身份卡为准。
+主体外观以身份卡为准。
 镜头内容以故事板对应 Shot 为准。
 视频规格、动作要求、场景要求、镜头要求、灯光情绪和负面要求如下……
 ```
@@ -313,7 +317,7 @@ Universal Video Prompt = 模型执行规则
 TSOS 规定：
 
 ```text
-身份卡负责角色外观。
+身份卡负责主体外观、结构和连续性。
 故事板负责 Shot 细节。
 通用视频 Prompt 负责模型执行规则。
 ```
@@ -464,7 +468,7 @@ FAIL
 以下情况视为 Prompt Runtime 失败：
 
 ```text
-模型可复制 Prompt 中只写 ASSET-001 / CHAR-001
+模型可复制 Prompt 中只写 SUBJECT-001 / ASSET-001 / CHAR-001
 没有身份卡 Prompt
 没有故事板 Prompt
 故事板变成彩色成片插画
@@ -472,7 +476,7 @@ FAIL
 视频 Prompt 重复冗长
 Jump 被描述成半人拟人角色
 Jump 出现人类手掌 / 人类手臂 / 人类双腿站立
-没有明确禁止角色形态漂移
+没有明确禁止主体身份或角色形态漂移
 ```
 
 ---
@@ -482,6 +486,7 @@ Jump 出现人类手掌 / 人类手臂 / 人类双腿站立
 ```text
 commands/COMMAND-002.md
 commands/COMMAND-005.md
+knowledge/subject-identity/SUBJECT-001.md
 agents/prompt-engineer/AGENT-002.md
 agents/director/AGENT-001.md
 workflows/WORKFLOW-002.md
@@ -513,4 +518,5 @@ v4.0 — Merged shot prompts into universal video prompt
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.1 | 2026 | Added SUBJECT-001 and generic subject identity wording |
 | 1.0 | 2026 | Added TSOS prompt runtime rules |

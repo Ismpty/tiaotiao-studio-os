@@ -1,7 +1,7 @@
 # WORKFLOW-004 — Publishing Workflow（发布工作流）
 
 > Canonical Workflow Template（官方工作流模板）  
-> Version：1.0  
+> Version：2.0
 > Status：Active
 
 ---
@@ -47,7 +47,8 @@ It does not recreate content or modify character canon.
 本 Workflow 默认服务：
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
+PROJ-001 — Little Security Guard and His Ancient Friends
+《小保安和他的古人朋友们》
 ```
 
 ---
@@ -74,6 +75,7 @@ PROJ-001 — Jump After Work Pilot Project
 | Music | MUSIC-001 |
 | Style | STYLE-001 |
 | Color | COLOR-001 |
+| Relic Friends | RELIC-001 |
 
 ---
 
@@ -325,8 +327,8 @@ Use consistent character tags
 重点：
 
 ```text
-Caption should be soft and visual
-Hashtags should support lifestyle identity
+Caption should be warm, absurd and museum-specific
+Hashtags should support AI museum, relic friend and original IP identity
 ```
 
 ---
@@ -364,6 +366,7 @@ Target Platform
 - 不制造焦虑
 - 不使用强营销腔
 - 保持 Jump 系列感
+- 保持“小保安和他的古人朋友们”的 AI 博物馆系列识别
 
 ## Output（输出）
 
@@ -380,11 +383,11 @@ Title Options
 推荐：
 
 ```text
-下班啦，生活开始啦
-电脑一关，生活上线
-忙了一天，也要好好生活
-下班后的路，也可以是冒险
-今天也认真生活了
+闭馆以后，古人朋友醒了
+小保安今天又遇到大事了
+AI 博物馆夜班也太离谱了
+这件文物说它要当销冠
+闭馆以后，朋友们才刚刚上班
 ```
 
 避免：
@@ -404,11 +407,11 @@ Title Options
 Recommended：
 
 ```text
-Jump After Work
-Life Begins After Work
-A Little Adventure After Work
-After Work, Life Begins
-Jump Clocks Out
+The Little Security Guard and His Ancient Friends
+After Closing, the Relics Wake Up
+AI Museum Night Shift
+Jump's Weird Museum Patrol
+The Museum Is Not Quiet Tonight
 ```
 
 Avoid：
@@ -448,6 +451,7 @@ Platform Strategy
 - 不硬广
 - 不焦虑
 - 不夸张
+- 尊重中国文物和神话意象，不恐怖化、不廉价吉祥物化
 
 ## Output（输出）
 
@@ -462,11 +466,11 @@ Caption / Description
 ## 小红书 / 视频号 / 抖音
 
 ```text
-电脑一关，生活上线。
+AI 博物馆闭馆以后，真正的热闹才开始。
 
-忙了一天，也要把时间还给自己一点点。
+小保安跳跳认真巡逻，古人朋友认真添乱。
 
-今天的跳跳，下班后也认真生活了。
+今晚的展厅，又被它们过成了大型无厘头现场。
 ```
 
 ---
@@ -474,9 +478,9 @@ Caption / Description
 ## YouTube Shorts / TikTok / Instagram Reels
 
 ```text
-Jump finishes work and starts a small everyday adventure.
+Jump is on night patrol at the AI museum.
 
-A gentle reminder that life can begin again after work.
+After closing, the ancient relic friends wake up and turn the gallery into a warm, absurd little adventure.
 ```
 
 ---
@@ -508,12 +512,11 @@ Hashtag Set
 ## 中文平台推荐标签
 
 ```text
-#跳跳下班啦
-#下班后的生活
-#治愈系短片
+#小保安和他的古人朋友们
+#AI博物馆
+#文物朋友
+#国风AI
 #AI动画
-#生活方式
-#程序员日常
 #原创IP
 ```
 
@@ -532,13 +535,13 @@ Hashtag Set
 ## English Platform Recommended Tags
 
 ```text
-#JumpAfterWork
-#AfterWorkLife
+#LittleSecurityGuard
+#AIMuseum
+#RelicFriends
 #AIAnimation
 #OriginalCharacter
-#SliceOfLife
-#LifestyleAnimation
-#CreativeStudio
+#ChineseRelics
+#AbsurdComedy
 ```
 
 ---
@@ -584,10 +587,10 @@ Cover Text Suggestions
 
 ```text
 主标题：
-下班啦
+闭馆以后
 
 副标题：
-生活开始啦
+朋友们醒了
 ```
 
 ---
@@ -596,10 +599,10 @@ Cover Text Suggestions
 
 ```text
 主标题：
-电脑一关
+小保安
 
 副标题：
-生活上线
+今天又遇到大事了
 ```
 
 ---
@@ -608,10 +611,10 @@ Cover Text Suggestions
 
 ```text
 主标题：
-跳跳下班啦
+AI 博物馆
 
 副标题：
-今天也认真生活了
+今晚不太安静
 ```
 
 ---
@@ -628,6 +631,7 @@ Cover Text Suggestions
 [ ] 是否符合 STYLE-001
 [ ] 是否符合 COLOR-001
 [ ] 是否符合 BRAND-001
+[ ] 是否符合 AI 博物馆和文物朋友系列识别
 ```
 
 ---

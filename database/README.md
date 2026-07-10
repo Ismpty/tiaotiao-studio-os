@@ -191,12 +191,12 @@ STYLE-001
 不得改成其他动物
 不得去掉毛茸茸质感
 不得改成肌肉型角色
-不得改变程序员身份
+不得把 Jump 从真实小狗小保安改成人类保安
 ```
 
 ---
 
-# EP-001 — Jump After Work
+# EP-001 — Little Security Guard and His Ancient Friends
 
 ## File
 
@@ -212,16 +212,18 @@ Episode DB
 
 ## 中文说明
 
-EP-001 是《跳跳下班啦》的官方剧集记录。
+EP-001 是《小保安和他的古人朋友们》的官方剧集记录。
 
-它定义该系列的默认剧集方向、核心情绪、内容边界和生产目标。
+它定义 AI 博物馆、小保安 Jump、文物朋友、无厘头事件结构、内容边界和生产目标。
 
 ## Use When（使用场景）
 
 当任务涉及：
 
 ```text
-跳跳下班啦
+小保安和他的古人朋友们
+AI 博物馆
+文物朋友
 系列内容
 剧集规划
 短视频生产
@@ -247,7 +249,7 @@ STORYFORMULA-001
 
 ---
 
-# STORY-001 — Work Ends, Adventure Begins
+# STORY-001 — Museum Night, Relic Friends Wake Up
 
 ## File
 
@@ -263,9 +265,9 @@ Story DB
 
 ## 中文说明
 
-STORY-001 是《跳跳下班啦》的核心故事记录。
+STORY-001 是《小保安和他的古人朋友们》的核心故事记录。
 
-它定义“下班，就是冒险的开始”的故事结构和情绪路径。
+它定义“闭馆后小保安巡逻、文物朋友苏醒、古今规则误会、无厘头升级、温暖解决”的故事结构和情绪路径。
 
 ## Use When（使用场景）
 
@@ -277,7 +279,7 @@ STORY-001 是《跳跳下班啦》的核心故事记录。
 脚本
 剧情节奏
 情绪转折
-故事公式应用
+文物朋友喜剧结构
 ```
 
 必须读取：
@@ -289,7 +291,8 @@ STORY-001
 ## Key References
 
 ```text
-STORYFORMULA-001
+RELIC-001
+SUBJECT-001
 EMOTION-001
 BRAND-001
 EP-001
@@ -298,7 +301,7 @@ PROJ-001
 
 ---
 
-# ENV-001 — TiaoTiao Studio Office
+# ENV-001 — AI Museum Night Gallery
 
 ## File
 
@@ -314,19 +317,20 @@ Environment DB
 
 ## 中文说明
 
-ENV-001 是 Jump 的默认工作环境记录。
+ENV-001 是 Jump 当前主系列的默认工作环境记录。
 
-它定义 TiaoTiao Studio Office 的空间特征、道具、光线、氛围和叙事作用。
+它定义 AI 博物馆夜间展厅的空间特征、展柜、展签、AI 扫描光、安保动线、文物朋友激活氛围和叙事作用。
 
 ## Use When（使用场景）
 
 当任务涉及：
 
 ```text
-办公室场景
-工作室环境
-写代码场景
-下班场景
+AI 博物馆
+夜间展厅
+闭馆巡逻
+文物朋友苏醒
+展柜互动
 室内镜头
 环境 Prompt
 ```
@@ -367,7 +371,7 @@ Motion DB
 
 MOT-001 是 Jump 的自然行走动作资产。
 
-它定义 Jump 在下班、散步、旅行、离开办公室等生活化场景中的默认动作方式。
+它定义 Jump 在巡逻、散步、旅行、穿过展厅等生活化场景中的默认动作方式。
 
 ## Use When（使用场景）
 
@@ -375,7 +379,7 @@ MOT-001 是 Jump 的自然行走动作资产。
 
 ```text
 行走动作
-下班离开
+夜间巡逻
 动作连续性
 视频生成
 运动提示词
@@ -458,7 +462,7 @@ BRAND-001
 
 ---
 
-# LGT-001 — Warm Studio Lighting
+# LGT-001 — Warm Museum Night Lighting
 
 ## File
 
@@ -474,7 +478,7 @@ Lighting DB
 
 ## 中文说明
 
-LGT-001 是 Jump 工作室和办公室场景的默认灯光资产。
+LGT-001 是《小保安和他的古人朋友们》的默认 AI 博物馆夜间灯光资产。
 
 它定义温暖室内光、台灯、屏幕柔光、傍晚窗光和柔和阴影。
 
@@ -484,8 +488,8 @@ LGT-001 是 Jump 工作室和办公室场景的默认灯光资产。
 
 ```text
 灯光设计
-办公室灯光
-温暖室内场景
+博物馆夜间灯光
+温暖室内展厅
 视频 Prompt
 摄影方案
 封面视觉
@@ -517,7 +521,7 @@ BRAND-001
 
 ---
 
-# PROMPT-001 — Jump After Work Master Prompt
+# PROMPT-001 — Little Security Guard Museum Master Prompt
 
 ## File
 
@@ -533,9 +537,9 @@ Prompt DB
 
 ## 中文说明
 
-PROMPT-001 是《跳跳下班啦》的主提示词模块。
+PROMPT-001 是《小保安和他的古人朋友们》的主提示词模块。
 
-它用于把角色、故事、场景、动作、镜头、灯光、资产和品牌语言组合成稳定可复用的 Prompt。
+它用于把 Jump 小保安、文物朋友、AI 博物馆、故事、动作、镜头、灯光、资产和品牌语言组合成稳定可复用的 Prompt。
 
 ## Use When（使用场景）
 
@@ -567,6 +571,8 @@ CAM-001
 LGT-001
 STYLE-001
 BRAND-001
+RELIC-001
+SUBJECT-001
 ```
 
 ---
@@ -631,7 +637,7 @@ ASSET-001
 
 ---
 
-# PROJ-001 — Jump After Work Pilot Project
+# PROJ-001 — Little Security Guard and His Ancient Friends
 
 ## File
 
@@ -647,9 +653,9 @@ Project DB
 
 ## 中文说明
 
-PROJ-001 是《跳跳下班啦》的第一个试播项目记录。
+PROJ-001 是《小保安和他的古人朋友们》的当前主项目记录。
 
-它将角色、剧集、故事、环境、动作、镜头、灯光、提示词和资产组合成一个完整生产项目。
+它将 Jump 小保安、剧集、故事、AI 博物馆环境、文物朋友、动作、镜头、灯光、提示词和资产组合成一个完整生产项目。
 
 ## Use When（使用场景）
 
@@ -747,7 +753,7 @@ Notion Title:
 PROJ-001
 
 Page H1:
-# PROJ-001 — Jump After Work Pilot Project（跳跳下班啦试播项目）
+# PROJ-001 — Little Security Guard and His Ancient Friends（小保安和他的古人朋友们）
 ```
 
 ---
@@ -789,7 +795,7 @@ PROJ-001
 ```text
 Jump
 跳跳
-📖 STORY-001 — Work Ends, Adventure Begins
+📖 STORY-001 — Museum Night, Relic Friends Wake Up
 ```
 
 ---

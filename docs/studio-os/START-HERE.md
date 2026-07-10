@@ -10,6 +10,10 @@
 
 TiaoTiao Studio OS is a production operating system for the Jump / 跳跳 short-video IP.
 
+The current main series is Little Security Guard and His Ancient Friends: Jump works as the little security guard in an AI Museum, and Chinese cultural relics become her ancient friends.
+
+It can also generate identity cards, storyboards and video prompt packages for custom subjects such as humans, animals, plants, products, scene subjects or new IP characters when `Custom Subject Mode` is used.
+
 It helps an AI tool or human operator generate repeatable production outputs:
 
 ```text
@@ -24,8 +28,8 @@ consistency review
 The current default project is:
 
 ```text
-PROJ-001 — Jump After Work Pilot Project
-《跳跳下班啦》
+PROJ-001 — Little Security Guard and His Ancient Friends
+《小保安和他的古人朋友们》
 ```
 
 ---
@@ -59,13 +63,28 @@ natural language descriptions
 not raw internal IDs
 ```
 
+Custom Subject Mode must use:
+
+```text
+SUBJECT-001 expanded into natural language
+not Jump-only dog-form rules
+```
+
+Relic friends must use:
+
+```text
+RELIC-001 expanded into natural language
+Chinese cultural relic source retained
+no horror, cyberpunk, Western fantasy or disrespect toward cultural heritage
+```
+
 ---
 
 # Fastest Way To Use TSOS
 
 ## 1. Generate A Complete Production Package
 
-Use when you want the whole Jump After Work project package:
+Use when you want the whole Little Security Guard project package:
 
 ```text
 Run COMMAND-001.
@@ -100,6 +119,16 @@ Universal Video Prompt
 Model-readable check
 ↓
 COMMAND-005 review
+```
+
+For non-Jump subjects, specify:
+
+```text
+Subject Mode:
+Custom Subject Mode
+
+Subject Type:
+Human / Animal / Plant / Object / Scene Subject / Mascot / Other
 ```
 
 ## 3. Generate Storyboard
@@ -157,6 +186,10 @@ docs/studio-os/PROMPT-RUNTIME-RULES.md
 commands/COMMAND-002.md
 workflows/WORKFLOW-002.md
 agents/prompt-engineer/AGENT-002.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 ```
 
 For storyboard generation, also read:
@@ -165,6 +198,11 @@ For storyboard generation, also read:
 commands/COMMAND-003.md
 agents/director/AGENT-001.md
 workflows/WORKFLOW-001.md
+knowledge/subject-identity/SUBJECT-001.md
+knowledge/museum-relic-friends/RELIC-001.md
+knowledge/transition-language/TRANSITION-001.md
+knowledge/visual-parameters/VISUALPARAM-001.md
+knowledge/scene-blocking/BLOCKING-001.md
 ```
 
 For consistency review, also read:
@@ -209,10 +247,17 @@ Before handing output to a model or publishing workflow, check:
 ```text
 [ ] GitHub source files were read
 [ ] Notion was not treated as canonical
+[ ] Subject Mode is clear: Jump Mode or Custom Subject Mode
 [ ] Jump remains a real dog-form character wearing clothes
+[ ] Jump remains the AI Museum little security guard, not a human security guard
+[ ] Relic friends follow RELIC-001 and retain Chinese cultural source identity
+[ ] Custom Subject follows the approved identity card and does not inherit Jump-only rules
 [ ] model-facing prompt does not rely on raw internal IDs
+[ ] base visual parameters are explicit and model-readable
+[ ] complex spatial scenes use an overhead blocking map when needed
 [ ] storyboard uses black-and-white rough pencil line art
 [ ] colored annotation system is preserved
+[ ] transitions have a visible carrier, clear anchor and continuity logic
 [ ] COMMAND-005 review is included
 [ ] unknown real-world production values remain TBD
 ```

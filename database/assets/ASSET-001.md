@@ -43,7 +43,7 @@ It keeps Jump visually consistent across images, videos, covers, storyboards and
 | Style 视觉风格 | STYLE-001 — Cinematic Documentary |
 | Color 配色 | COLOR-001 — Fire Dragon Fruit Palette |
 | Emotion 情绪 | EMOTION-001 — Freedom |
-| Outfit 服装 | OUTFIT-001 — Programmer Outfit System |
+| Outfit 服装 | OUTFIT-001 — Dog Outfit System / AI Museum Security Guard Variant |
 | Brand Language 品牌语言 | BRAND-001 — TiaoTiao Studio Brand Language |
 
 ---
@@ -83,9 +83,9 @@ It keeps Jump visually consistent across images, videos, covers, storyboards and
 - Jump 保持四足小狗身体结构
 - Jump 保持小狗比例
 - 毛茸茸质感清晰
-- 穿程序员风格小狗衣服
+- 穿小狗尺寸的 AI 博物馆小保安服装或其他已确认小狗服装
 - 表情友好温暖
-- 程序员身份明确
+- 小保安身份明确，但仍保持真实小狗本体形态
 - 默认服装遵循 OUTFIT-001
 - 火龙果粉作为品牌识别点缀
 
@@ -116,7 +116,7 @@ BRAND-001
 推荐 Prompt：
 
 ```text
-Use the Jump character reference: a fluffy real dog-form character wearing programmer-style dog clothes, four-legged dog anatomy, dog proportions, friendly warm expression, soft realistic fur texture, small backpack / badge / collar charm allowed, subtle Fire Dragon Fruit Pink accents, cinematic documentary realism, consistent character identity.
+Use the Jump character reference: a fluffy real dog-form character wearing a dog-size AI museum little security guard outfit or another confirmed dog outfit, four-legged dog anatomy, dog proportions, friendly warm expression, soft realistic fur texture, small badge / collar charm / tiny patrol accessory allowed, subtle Fire Dragon Fruit Pink accents, cinematic documentary realism, consistent character identity.
 ```
 
 ---
@@ -126,7 +126,7 @@ Use the Jump character reference: a fluffy real dog-form character wearing progr
 禁止：
 
 ```text
-human character, humanoid body, human hands, human arms, human legs, bipedal human standing pose, human body proportions, non-dog character, unclothed ordinary pet dog, no fur, dark horror redesign, cyberpunk armor, inconsistent outfit, exaggerated jewelry, different species, aggressive expression, brand color missing
+human character, human security guard, humanoid body, human hands, human arms, human legs, bipedal human standing pose, human body proportions, non-dog character, unclothed ordinary pet dog, no fur, dark horror redesign, cyberpunk armor, inconsistent outfit, exaggerated jewelry, different species, aggressive expression, brand color missing
 ```
 
 ---
